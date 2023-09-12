@@ -1,0 +1,652 @@
+@prefix : <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
+
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes
+:causes rdf:type owl:ObjectProperty ;
+        rdfs:domain :Hazard ;
+        rdfs:range :Harm ;
+        rdfs:label "causes" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix
+:hasAcceptanceMatrix rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ManagedRisk ;
+                     rdfs:range :AcceptanceMatrix ;
+                     rdfs:label "has acceptance matrix" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext
+:hasContext rdf:type owl:ObjectProperty ;
+            rdfs:domain :Risk ;
+            rdfs:range :DeviceContext ;
+            rdfs:label "has context" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
+:hasDeviceComponent rdf:type owl:ObjectProperty ;
+                    rdfs:domain :DeviceSpecificHazard ;
+                    rdfs:range :DeviceComponent ;
+                    rdfs:label "has device component" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard
+:hasDeviceSpecificHazard rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain :ManagedRisk ;
+                         rdfs:range :DeviceSpecificHazard ;
+                         rdfs:label "has device specific hazard" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          rdfs:domain :HazardousSituation ;
+          rdfs:range :Event ;
+          rdfs:label "has event" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction
+:hasFunction rdf:type owl:ObjectProperty ;
+             rdfs:domain :DeviceSpecificHazard ;
+             rdfs:range :Function ;
+             rdfs:label "has function" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
+:hasHarm rdf:type owl:ObjectProperty ;
+         rdfs:domain :Risk ;
+         rdfs:range :Harm ;
+         rdfs:label "has harm" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard
+:hasHazard rdf:type owl:ObjectProperty ;
+           rdfs:domain :DeviceSpecificHazard ;
+           rdfs:range :Hazard ;
+           rdfs:label "has hazard" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation
+:hasHazardousSituation rdf:type owl:ObjectProperty ;
+                       rdfs:domain :DeviceSpecificHazard ;
+                       rdfs:range :HazardousSituation ;
+                       rdfs:label "has hazardous situation" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest
+:hasImplementationManifest rdf:type owl:ObjectProperty ;
+                           rdfs:domain :SDA ;
+                           rdfs:range :ImplementationManifest ;
+                           rdfs:label "has implementation manifest" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard
+:hasParentHazard rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Hazard ;
+                 rdfs:range :Hazard ;
+                 rdfs:label "has parent hazard" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk
+:hasPostRisk rdf:type owl:ObjectProperty ;
+             rdfs:domain :ManagedRisk ;
+             rdfs:range :ResidualRisk ,
+                        :Risk ;
+             rdfs:label "has post risk" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk
+:hasPreRisk rdf:type owl:ObjectProperty ;
+            rdfs:domain :ManagedRisk ;
+            rdfs:range :Risk ;
+            rdfs:label "has pre risk" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent
+:hasPreceedingEvent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :Event ;
+                    rdfs:range :Event ;
+                    rdfs:label "has preceeding event" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance
+:hasSafetyAssurance rdf:type owl:ObjectProperty ;
+                    rdfs:domain :AssuranceSDA ;
+                    rdfs:range :SafetyAssurance ;
+                    rdfs:label "has safety assurance" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA
+:hasSubAssuranceSDA rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasSubSDA ;
+                    rdfs:domain :AssuranceSDA ;
+                    rdfs:range :AssuranceSDA ;
+                    rdfs:label "has sub assurance SDA" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI
+:hasSubAssuranceSDAI rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasSubSDA ;
+                     rdfs:domain :AssuranceSDA ;
+                     rdfs:range :AssuranceSDAI ;
+                     rdfs:label "has sub assurance SDAI" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA
+:hasSubRiskSDA rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasSubSDA ;
+               rdfs:domain :RiskSDA ;
+               rdfs:range :RiskSDA ;
+               rdfs:label "has sub risk SDA" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI
+:hasSubRiskSDAI rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasSubSDA ;
+                rdfs:domain :RiskSDA ;
+                rdfs:range :RiskSDAI ;
+                rdfs:label "has sub risk SDAI" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA
+:hasSubSDA rdf:type owl:ObjectProperty ;
+           rdfs:domain :SDA ;
+           rdfs:range :SDA ;
+           rdfs:label "has sub SDA" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy
+:isMitigatedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :ManagedRisk ;
+               rdfs:range :SDA ;
+               rdfs:label "is mitigated by" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent
+:isPartOfDeviceComponent rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain :DeviceComponent ;
+                         rdfs:range :DeviceComponent ;
+                         rdfs:label "is part of device component" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance
+:acceptance rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:boolean .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:float .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability
+:probability rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:integer .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax
+:probabilityMax rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:integer .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
+:severity rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:integer .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax
+:severityMax rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix
+:AcceptanceMatrix rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :RiskMatrix
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :acceptance ;
+                                                               owl:someValuesFrom xsd:boolean
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:comment "A tuple containing the combination of severity, probability and information whether such combination is acceptable or not." ;
+                  rdfs:label "Acceptance matrix" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA
+:AssuranceSDA rdf:type owl:Class ;
+              rdfs:subClassOf :SDA ;
+              owl:disjointWith :RiskSDA ;
+              rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
+              rdfs:label "Assurance SDA" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI
+:AssuranceSDAI rdf:type owl:Class ;
+               rdfs:subClassOf :AssuranceSDA ;
+               rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
+               rdfs:label "Assurance SDAI" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent
+:DeviceComponent rdf:type owl:Class ;
+                 rdfs:comment "A (physical or logical) part of a device." ;
+                 rdfs:label "Device component" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext
+:DeviceContext rdf:type owl:Class ;
+               rdfs:comment "Information about possible environments the device can be used in that may affect probability or severity of some risk." ;
+               rdfs:label "Device context" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard
+:DeviceSpecificHazard rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasDeviceComponent ;
+                                                                   owl:someValuesFrom :DeviceComponent
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasFunction ;
+                                                                   owl:someValuesFrom :Function
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasHazard ;
+                                                                   owl:someValuesFrom :Hazard
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasHazardousSituation ;
+                                                                   owl:someValuesFrom :HazardousSituation
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:comment "Hazard associated with a specific hazardous situation, function and a specific device component." ;
+                      rdfs:label "Device specific hazard" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event
+:Event rdf:type owl:Class ;
+       rdfs:comment "An incidence or occurrence leading to another event and/or (eventually) a hazardous situation." ;
+       rdfs:label "Event" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function
+:Function rdf:type owl:Class ;
+          rdfs:comment "A specific functionality of a device related with the device specific hazard." ;
+          rdfs:label "Function" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm
+:Harm rdf:type owl:Class ;
+      rdfs:comment "Injury or damage to the health of people, or damage to property or the environment." ;
+      rdfs:label "Harm" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard
+:Hazard rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :causes ;
+                              owl:someValuesFrom :Harm
+                            ] ;
+        rdfs:comment "Potential source of harm" ;
+        rdfs:label "Hazard" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation
+:HazardousSituation rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasEvent ;
+                                          owl:someValuesFrom :Event
+                                        ] ;
+                    rdfs:comment "Circumstance in which people, property or the environment is/are exposed to one or more hazards." ;
+                    rdfs:label "Hazardous situation" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest
+:ImplementationManifest rdf:type owl:Class ;
+                        rdfs:comment "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual." ;
+                        rdfs:label "Implemtation manifest" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk
+:ManagedRisk rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasAcceptanceMatrix ;
+                                                          owl:someValuesFrom :AcceptanceMatrix
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasDeviceSpecificHazard ;
+                                                          owl:someValuesFrom :DeviceSpecificHazard
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasPostRisk ;
+                                                          owl:someValuesFrom :ResidualRisk
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasPreRisk ;
+                                                          owl:someValuesFrom :Risk
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :isMitigatedBy ;
+                                                          owl:someValuesFrom :RiskSDA
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:label "Managed risk" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA
+:NonFinalSDA rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSubSDA ;
+                                   owl:someValuesFrom :SDA
+                                 ] ;
+             rdfs:subClassOf :SDA ;
+             rdfs:label "Non final SDA" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk
+:ResidualRisk rdf:type owl:Class ;
+              rdfs:subClassOf :Risk ;
+              rdfs:comment "The original, mitigated risk with lowered value(s) of probability and/or severity." ;
+              rdfs:label "Residual risk" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
+:Risk rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasHarm ;
+                                                   owl:someValuesFrom :Harm
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :probability ;
+                                                   owl:someValuesFrom xsd:integer
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :severity ;
+                                                   owl:someValuesFrom xsd:integer
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:comment "Combination of harm and its associated probability and severity." ;
+      rdfs:label "Risk" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix
+:RiskAcceptanceMatrix rdf:type owl:Class ;
+                      rdfs:comment "Currently without use" ,
+                                   "Defines acceptable and unacceptable combinations of probability and severity of a given risk matrix." ;
+                      rdfs:label "Risk acceptance matrix" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix
+:RiskMatrix rdf:type owl:Class ;
+            rdfs:comment "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)." ;
+            rdfs:label "Risk matrix" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA
+:RiskSDA rdf:type owl:Class ;
+         rdfs:subClassOf :SDA ;
+         rdfs:comment "SDA where the purpose is to mitigate a managed risk." ;
+         rdfs:label "Risk SDA" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI
+:RiskSDAI rdf:type owl:Class ;
+          rdfs:subClassOf :RiskSDA ;
+          rdfs:comment "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA." ;
+          rdfs:label "Risk SDAI" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA
+:SDA rdf:type owl:Class ;
+     rdfs:comment "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
+     rdfs:label "SDA" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance
+:SafetyAssurance rdf:type owl:Class ;
+                 rdfs:comment "A credible reference (or list of such) to the state of the art of achieving safety with respect to a certain class of hazards, e.g. referring to an international norm such as ISO 60601." ;
+                 rdfs:label "Safety assurance" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_Diagnosis
+:Delayed_Diagnosis rdf:type owl:NamedIndividual ,
+                            :Hazard ;
+                   :causes :Delayed_patient_treatment .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk
+:Delayed_diagnosis_ManagedRisk rdf:type owl:NamedIndividual ,
+                                        :ManagedRisk ;
+                               :hasAcceptanceMatrix :RiskMatrixField11 ;
+                               :hasDeviceSpecificHazard :Delayed_diagnosis_due_to_the_system_locked_out ;
+                               :hasPostRisk :residualRisk_delayed_patient_treatment ;
+                               :hasPreRisk :risk_delayed_patient_treatment ;
+                               :isMitigatedBy :SOP .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_due_to_the_system_locked_out
+:Delayed_diagnosis_due_to_the_system_locked_out rdf:type owl:NamedIndividual ;
+                                                :hasDeviceComponent :Software ;
+                                                :hasFunction :Password_protection ;
+                                                :hasHazard :Delayed_Diagnosis ;
+                                                :hasHazardousSituation :System_not_available_for_use .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_patient_treatment
+:Delayed_patient_treatment rdf:type owl:NamedIndividual .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_login
+:Emergency_login rdf:type owl:NamedIndividual ,
+                          :RiskSDAI ;
+                 :hasImplementationManifest :User_Manual .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_user
+:Emergency_user rdf:type owl:NamedIndividual ,
+                         :RiskSDAI ;
+                :hasSubRiskSDA :Emergency_login .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Forgotten_password
+:Forgotten_password rdf:type owl:NamedIndividual ,
+                             :Event .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Password_protection
+:Password_protection rdf:type owl:NamedIndividual ,
+                              :Function .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11
+:RiskMatrixField11 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :acceptance "true"^^xsd:boolean ;
+                   :probability 1 ;
+                   :severity 1 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField12
+:RiskMatrixField12 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 1 ;
+                   :severity 2 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField13
+:RiskMatrixField13 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 1 ;
+                   :severity 3 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField21
+:RiskMatrixField21 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 2 ;
+                   :severity 1 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22
+:RiskMatrixField22 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 2 ;
+                   :severity 2 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField23
+:RiskMatrixField23 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 2 ;
+                   :severity 3 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField31
+:RiskMatrixField31 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 3 ;
+                   :severity 1 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField32
+:RiskMatrixField32 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 3 ;
+                   :severity 2 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33
+:RiskMatrixField33 rdf:type owl:NamedIndividual ,
+                            :RiskMatrix ;
+                   :probability 3 ;
+                   :severity 3 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSdai002
+:RiskSdai002 rdf:type owl:NamedIndividual ;
+             :hasSubRiskSDA :RiskSdai003 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSdai003
+:RiskSdai003 rdf:type owl:NamedIndividual .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SOP
+:SOP rdf:type owl:NamedIndividual ,
+              :RiskSDA ;
+     :hasSubRiskSDA :Emergency_user ,
+                    :RiskSdai002 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Software
+:Software rdf:type owl:NamedIndividual ,
+                   :DeviceComponent .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#System_not_available_for_use
+:System_not_available_for_use rdf:type owl:NamedIndividual ,
+                                       :HazardousSituation ;
+                              :hasEvent :Forgotten_password .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#User_Manual
+:User_Manual rdf:type owl:NamedIndividual .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#residualRisk_delayed_patient_treatment
+:residualRisk_delayed_patient_treatment rdf:type owl:NamedIndividual ;
+                                        :hasHarm :Delayed_patient_treatment ;
+                                        :probability 1 ;
+                                        :severity 2 .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#risk_delayed_patient_treatment
+:risk_delayed_patient_treatment rdf:type owl:NamedIndividual ,
+                                         :Risk ;
+                                :hasHarm :Delayed_patient_treatment ;
+                                :probability 1 ;
+                                :severity 2 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( :AssuranceSDA
+                       :NonFinalSDA
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty :hasSubAssuranceSDA ;
+                    owl:someValuesFrom :AssuranceSDA
+                  ]
+] .
+
+
+[ owl:intersectionOf ( :NonFinalSDA
+                       :RiskSDA
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty :hasSubSDA ;
+                    owl:someValuesFrom :SDA
+                  ]
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DeviceComponent
+                :DeviceContext
+                :DeviceSpecificHazard
+                :Event
+                :Function
+                :Harm
+                :Hazard
+                :HazardousSituation
+                :ImplementationManifest
+                :ManagedRisk
+                :Risk
+                :RiskMatrix
+                :SDA
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
