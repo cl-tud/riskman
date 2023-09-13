@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>The KIMEDS Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/example","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/example","name":"The KIMEDS Ontology", "headline":"TODO: abstract", "dateReleased":"Creation date", "dateModified":"Modified date", "license":"http://creativecommons.org/licenses/by/2.0/", "author":[{"@type":"Person","name":"Dörthe Arndt","url":"https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en"},{"@type":"Person","name":"Piotr Gorczyca","url":"https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en"},{"@type":"Person","name":"Pascal Kettmann","url":"https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en"},{"@type":"Person","name":"Stephan Mennicke","url":"https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke"},{"@type":"Person","name":"Hannes Straß","url":"https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The KIMEDS Ontology</h1>
+<img src="img/kimeds_logo.png" width="50/">
+<h2>Release: Creation date</h2>
+
+
+<dl>
+<dt>Modified on: Modified date</dt>
+<dt>Authors:</dt>
+<dd><a href="https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en">Dörthe Arndt</a>, (<a href="https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic">ICCL, TU Dresden</a>)</dd><dd><a href="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en">Piotr Gorczyca</a>, (<a href="https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic">ICCL, TU Dresden</a>)</dd><dd><a href="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en">Pascal Kettmann</a>, (<a href="https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic">ICCL, TU Dresden</a>)</dd><dd><a href="https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke">Stephan Mennicke</a>, (<a href="https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic">ICCL, TU Dresden</a>)</dd><dd><a href="https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en">Hannes Straß</a>, (<a href="https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic">ICCL, TU Dresden</a>)</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="kimeds-ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="kimeds-ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/2.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY-blue.svg" alt="http://creativecommons.org/licenses/by/2.0/" /></a>
+<a href="http://creativecommons.org/licenses/by/2.0/" rel="license" target="_blank">
+<img src="https://i.creativecommons.org/l/by/2.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+TODO: abstract</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The KIMEDS Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">Assurance SDAI</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA">Non final SDA</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk">Residual risk</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix">Risk acceptance matrix</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">Risk SDAI</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance">Safety assurance</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">causes</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext">has context</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">has device component</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">has device specific hazard</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent">has event</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction">has function</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">has harm</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard">has hazard</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation">has hazardous situation</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest">has implementation manifest</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard">has parent hazard</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">has post risk</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk">has pre risk</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent">has preceeding event</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">has safety assurance</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy">is mitigated by</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent">is part of device component</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
+         <span>acceptance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">
+         <span>id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
+         <span>probability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
+         <span>probability max</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">
+         <span>severity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
+         <span>severity max</span>
+      </a>
+   </li>
+</ul><h4> Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist"/><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The KIMEDS Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">TODO: description</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for The KIMEDS Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The KIMEDS Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">Assurance SDAI</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA">Non final SDA</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk">Residual risk</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix">Risk acceptance matrix</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">Risk SDAI</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance">Safety assurance</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">
+      <h3>Acceptance matrix<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix</p>
+      <div class="comment">
+         <span class="markdown">A tuple containing the combination of severity, probability and information whether such combination is acceptable or not.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">acceptance</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/2001/XMLSchema#boolean"
+               target="_blank"
+               title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">
+      <h3>Assurance SDA<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA</p>
+      <div class="comment">
+         <span class="markdown">A safe design argument (SDA), where the purpose is to make a safety assurance</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">Assurance SDAI</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">has safety assurance</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">
+      <h3>Assurance SDAI<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI</p>
+      <div class="comment">
+         <span class="markdown">A safe design argument (SDA), where the purpose is to make a safety assurance</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">
+      <h3>Device component<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent</p>
+      <div class="comment">
+         <span class="markdown">A (physical or logical) part of a device.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent">is part of device component</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">has device component</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent">is part of device component</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Software"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Software">software</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">
+      <h3>Device context<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext</p>
+      <div class="comment">
+         <span class="markdown">Information about possible environments the device can be used in that may affect probability or severity of some risk.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext">has context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">
+      <h3>Device specific hazard<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard</p>
+      <div class="comment">
+         <span class="markdown">Hazard associated with a specific hazardous situation, function and a specific device component.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>(<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">has device component</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction">has function</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard">has hazard</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation">has hazardous situation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">has device component</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction">has function</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard">has hazard</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation">has hazardous situation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">has device specific hazard</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">
+      <h3>Event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event</p>
+      <div class="comment">
+         <span class="markdown">An incidence or occurrence leading to another event and/or (eventually) a hazardous situation.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent">has preceeding event</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent">has event</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent">has preceeding event</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Forgotten_password"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Forgotten_password">forgotten password</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">
+      <h3>Function<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function</p>
+      <div class="comment">
+         <span class="markdown">A specific functionality of a device related with the device specific hazard.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction">has function</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Password_protection"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Password_protection">password protection</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">
+      <h3>Harm<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm</p>
+      <div class="comment">
+         <span class="markdown">Injury or damage to the health of people, or damage to property or the environment.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">has harm</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">
+      <h3>Hazard<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard</p>
+      <div class="comment">
+         <span class="markdown">Potential source of harm</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard">has parent hazard</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard">has hazard</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard">has parent hazard</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_Diagnosis"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_Diagnosis">delayed diagnosis</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">
+      <h3>Hazardous situation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation</p>
+      <div class="comment">
+         <span class="markdown">Circumstance in which people, property or the environment is/are exposed to one or more hazards.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent">has event</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent">has event</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation">has hazardous situation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#System_not_available_for_use"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#System_not_available_for_use">system not available for use</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">
+      <h3>Implemtation manifest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest</p>
+      <div class="comment">
+         <span class="markdown">A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest">has implementation manifest</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">
+      <h3>Managed risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>(<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">has device specific hazard</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">has post risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk">Residual risk</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk">has pre risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy">is mitigated by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">has device specific hazard</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">has post risk</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk">has pre risk</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy">is mitigated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk">delayed diagnosis managed risk</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA">
+      <h3>Non final SDA<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk">
+      <h3>Residual risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk</p>
+      <div class="comment">
+         <span class="markdown">The original, mitigated risk with lowered value(s) of probability and/or severity.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">has post risk</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">
+      <h3>Risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk</p>
+      <div class="comment">
+         <span class="markdown">Combination of harm and its associated probability and severity.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>(<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">has harm</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">probability</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/2001/XMLSchema#integer"
+               target="_blank"
+               title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">severity</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/2001/XMLSchema#integer"
+               target="_blank"
+               title="http://www.w3.org/2001/XMLSchema#integer">integer</a>)</dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk">Residual risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext">has context</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">has harm</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">has post risk</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk">has pre risk</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#risk_delayed_patient_treatment"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#risk_delayed_patient_treatment">risk delayed patient treatment</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix">
+      <h3>Risk acceptance matrix<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix</p>
+      <div class="comment">
+         <span class="markdown">Currently without use</span>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">
+      <h3>Risk matrix<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix</p>
+      <div class="comment">
+         <span class="markdown">A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0).</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11">risk matrix field11</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField12"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField12">risk matrix field12</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField13"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField13">risk matrix field13</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField21"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField21">risk matrix field21</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22">risk matrix field22</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField23"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField23">risk matrix field23</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField31"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField31">risk matrix field31</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField32"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField32">risk matrix field32</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33">risk matrix field33</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">
+      <h3>Risk SDA<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA</p>
+      <div class="comment">
+         <span class="markdown">SDA where the purpose is to mitigate a managed risk.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">Risk SDAI</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SOP"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SOP">s o p</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">
+      <h3>Risk SDAI<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI</p>
+      <div class="comment">
+         <span class="markdown">Structured artifact specifying a concrete implementation or realization of a specific Risk SDA.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_login"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_login">emergency login</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_user"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_user">emergency user</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance">
+      <h3>Safety assurance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance</p>
+      <div class="comment">
+         <span class="markdown">A credible reference (or list of such) to the state of the art of achieving safety with respect to a certain class of hazards, e.g. referring to an international norm such as ISO 60601.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">has safety assurance</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">
+      <h3>SDA<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA</p>
+      <div class="comment">
+         <span class="markdown">Reusable artifact embodying or expressing one possible method or approach to risk control.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA">Non final SDA</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest">has implementation manifest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy">is mitigated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">causes</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext">has context</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">has device component</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">has device specific hazard</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent">has event</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction">has function</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">has harm</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard">has hazard</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation">has hazardous situation</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest">has implementation manifest</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard">has parent hazard</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">has post risk</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk">has pre risk</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent">has preceeding event</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">has safety assurance</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy">is mitigated by</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent">is part of device component</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">
+      <h3>causes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">
+      <h3>has acceptance matrix<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext">
+      <h3>has context<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">Device context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">
+      <h3>has device component<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">
+      <h3>has device specific hazard<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent">
+      <h3>has event<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction">
+      <h3>has function<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">Function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">
+      <h3>has harm<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard">
+      <h3>has hazard<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation">
+      <h3>has hazardous situation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard">Device specific hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">Hazardous situation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest">
+      <h3>has implementation manifest<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">Implemtation manifest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard">
+      <h3>has parent hazard<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">Hazard</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">
+      <h3>has post risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk">Residual risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk">
+      <h3>has pre risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent">
+      <h3>has preceeding event<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">
+      <h3>has safety assurance<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance">Safety assurance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">
+      <h3>has sub assurance SDA<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">
+      <h3>has sub assurance SDAI<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">Assurance SDAI</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">
+      <h3>has sub risk SDA<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">
+      <h3>has sub risk SDAI<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">Risk SDAI</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">
+      <h3>has sub SDA<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy">
+      <h3>is mitigated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent">
+      <h3>is part of device component<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">Device component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
+            <span>acceptance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">
+            <span>id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">
+            <span>name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
+            <span>probability</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
+            <span>probability max</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">
+            <span>severity</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
+            <span>severity max</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
+      <h3>acceptance<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">
+      <h3>id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
+      <h3>probability<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
+      <h3>probability max<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">
+      <h3>severity<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
+      <h3>severity max<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="rules">
+   <h3 class="list" id="rule">Rules</h3>
+   <ul class="hlist"/>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
