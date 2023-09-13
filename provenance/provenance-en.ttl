@@ -10,8 +10,8 @@
 	 dc:creator <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en>;
 	 prov:wasAttributedTo <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en>;
 	 dc:creator <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en>;
-	 prov:wasAttributedTo <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke>;
-	 dc:creator <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke>;
+	 prov:wasAttributedTo <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en>;
+	 dc:creator <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en>;
 	 prov:wasAttributedTo <https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en>;
 	 dc:creator <https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
