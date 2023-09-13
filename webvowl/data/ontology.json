@@ -55,7 +55,7 @@
     "id" : "29",
     "type" : "owl:Class"
   }, {
-    "id" : "111",
+    "id" : "110",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -159,28 +159,28 @@
       "undefined" : "Risk matrix"
     },
     "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField12",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField12"
-      }
-    }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField23",
       "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
       "labels" : {
         "IRI-based" : "RiskMatrixField23"
       }
     }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33",
+      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField12",
       "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
       "labels" : {
-        "IRI-based" : "RiskMatrixField33"
+        "IRI-based" : "RiskMatrixField12"
       }
     }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11",
       "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
       "labels" : {
         "IRI-based" : "RiskMatrixField11"
+      }
+    }, {
+      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33",
+      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+      "labels" : {
+        "IRI-based" : "RiskMatrixField33"
       }
     }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22",
@@ -406,9 +406,9 @@
       "undefined" : "Risk acceptance matrix"
     },
     "comment" : {
-      "undefined" : "Currently without use"
+      "undefined" : "Defines acceptable and unacceptable combinations of probability and severity of a given risk matrix."
     },
-    "id" : "111"
+    "id" : "110"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -794,7 +794,7 @@
     "id" : "107",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "110",
+    "id" : "111",
     "type" : "owl:objectProperty"
   }, {
     "id" : "112",
@@ -1445,7 +1445,7 @@
     },
     "domain" : "26",
     "attributes" : [ "object" ],
-    "id" : "110"
+    "id" : "111"
   }, {
     "range" : "11",
     "domain" : "21",
