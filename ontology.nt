@@ -310,7 +310,7 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> <http://www.w3.org/2000/01/rdf-schema#comment> "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual." .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> <http://www.w3.org/2000/01/rdf-schema#label> "Implemtation manifest" .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> <http://www.w3.org/2000/01/rdf-schema#label> "Implementation manifest" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
