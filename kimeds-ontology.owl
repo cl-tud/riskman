@@ -335,7 +335,7 @@
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest
 :ImplementationManifest rdf:type owl:Class ;
                         rdfs:comment "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual." ;
-                        rdfs:label "Implemtation manifest" .
+                        rdfs:label "Implementation manifest" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk
