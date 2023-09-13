@@ -159,28 +159,28 @@
       "undefined" : "Risk matrix"
     },
     "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField23",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField23"
-      }
-    }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField12",
       "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
       "labels" : {
         "IRI-based" : "RiskMatrixField12"
       }
     }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22",
+      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField23",
       "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
       "labels" : {
-        "IRI-based" : "RiskMatrixField22"
+        "IRI-based" : "RiskMatrixField23"
       }
     }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33",
       "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
       "labels" : {
         "IRI-based" : "RiskMatrixField33"
+      }
+    }, {
+      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22",
+      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+      "labels" : {
+        "IRI-based" : "RiskMatrixField22"
       }
     }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11",
