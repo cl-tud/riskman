@@ -55,7 +55,7 @@
     "id" : "29",
     "type" : "owl:Class"
   }, {
-    "id" : "110",
+    "id" : "111",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -171,16 +171,16 @@
         "IRI-based" : "RiskMatrixField12"
       }
     }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField33"
-      }
-    }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22",
       "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
       "labels" : {
         "IRI-based" : "RiskMatrixField22"
+      }
+    }, {
+      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33",
+      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+      "labels" : {
+        "IRI-based" : "RiskMatrixField33"
       }
     }, {
       "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11",
@@ -408,7 +408,7 @@
     "comment" : {
       "undefined" : "Defines acceptable and unacceptable combinations of probability and severity of a given risk matrix."
     },
-    "id" : "110"
+    "id" : "111"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -424,7 +424,7 @@
   }, {
     "instances" : 0,
     "union" : [ "123", "26" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "72"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk",
@@ -794,7 +794,7 @@
     "id" : "107",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "111",
+    "id" : "110",
     "type" : "owl:objectProperty"
   }, {
     "id" : "112",
@@ -948,7 +948,7 @@
     },
     "domain" : "6",
     "subproperty" : [ "13", "14", "15", "16" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "12"
   }, {
     "range" : "18",
@@ -1445,7 +1445,7 @@
     },
     "domain" : "26",
     "attributes" : [ "object" ],
-    "id" : "111"
+    "id" : "110"
   }, {
     "range" : "11",
     "domain" : "21",
