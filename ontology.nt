@@ -21,17 +21,17 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix> <http://www.w3.org/2000/01/rdf-schema#label> "has acceptance matrix" .
 # 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext> <http://www.w3.org/2000/01/rdf-schema#label> "has context" .
-# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has device component" .
+# 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext> <http://www.w3.org/2000/01/rdf-schema#label> "has device context" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -83,13 +83,6 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard> <http://www.w3.org/2000/01/rdf-schema#label> "has parent hazard" .
 # 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has post risk" .
-# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
@@ -102,6 +95,13 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has preceeding event" .
+# 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has residual risk" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -328,13 +328,13 @@ _:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/ket
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
-_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
-_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
@@ -442,8 +442,8 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_due_to_the_system_locked_out> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#residualRisk_delayed_patient_treatment> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#risk_delayed_patient_treatment> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#residualRisk_delayed_patient_treatment> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SOP> .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_due_to_the_system_locked_out

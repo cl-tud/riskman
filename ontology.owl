@@ -47,17 +47,6 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext -->
-
-
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"/>
-        <rdfs:label>has context</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent -->
 
 
@@ -65,6 +54,17 @@
         <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"/>
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
         <rdfs:label>has device component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"/>
+        <rdfs:label>has device context</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -159,18 +159,6 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk -->
-
-
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"/>
-        <rdfs:label>has post risk</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk -->
 
 
@@ -190,6 +178,18 @@
         <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
         <rdfs:label>has preceeding event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"/>
+        <rdfs:label>has residual risk</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -558,12 +558,12 @@
                         <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk"/>
                         <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy"/>
@@ -724,8 +724,8 @@
         <rdf:type rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"/>
         <hasAcceptanceMatrix rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11"/>
         <hasDeviceSpecificHazard rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_due_to_the_system_locked_out"/>
-        <hasPostRisk rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#residualRisk_delayed_patient_treatment"/>
         <hasPreRisk rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#risk_delayed_patient_treatment"/>
+        <hasResidualRisk rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#residualRisk_delayed_patient_treatment"/>
         <isMitigatedBy rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SOP"/>
     </owl:NamedIndividual>
     
