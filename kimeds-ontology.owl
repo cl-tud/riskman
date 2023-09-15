@@ -28,11 +28,11 @@
                      rdfs:label "has acceptance matrix" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasContext
-:hasContext rdf:type owl:ObjectProperty ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext
+:hasDeviceContext rdf:type owl:ObjectProperty ;
             rdfs:domain :Risk ;
             rdfs:range :DeviceContext ;
-            rdfs:label "has context" .
+            rdfs:label "has device context" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
@@ -101,9 +101,9 @@
                  rdfs:range :Hazard .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPostRisk
-:hasPostRisk rdf:type owl:ObjectProperty ;
-                    rdfs:label "has post risk" ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
+:hasResidualRisk rdf:type owl:ObjectProperty ;
+                    rdfs:label "has residual risk" ;
              rdfs:domain :ManagedRisk ;
              rdfs:range :ResidualRisk ,
                         :Risk .
@@ -349,7 +349,7 @@
                                                           owl:someValuesFrom :DeviceSpecificHazard
                                                         ]
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasPostRisk ;
+                                                          owl:onProperty :hasResidualRisk ;
                                                           owl:someValuesFrom :ResidualRisk
                                                         ]
                                                         [ rdf:type owl:Restriction ;
@@ -458,7 +458,7 @@
                                         :ManagedRisk ;
                                :hasAcceptanceMatrix :RiskMatrixField11 ;
                                :hasDeviceSpecificHazard :Delayed_diagnosis_due_to_the_system_locked_out ;
-                               :hasPostRisk :residualRisk_delayed_patient_treatment ;
+                               :hasResidualRisk :residualRisk_delayed_patient_treatment ;
                                :hasPreRisk :risk_delayed_patient_treatment ;
                                :isMitigatedBy :SOP .
 
