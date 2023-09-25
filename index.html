@@ -284,45 +284,31 @@ This ontology has the following classes and properties.</span>
     class="hlist">
    <li>
       <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
-         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
-         <span>acceptance</span>
-      </a>
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">acceptance</a>
    </li>
    <li>
       <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id"
-         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">
-         <span>id</span>
-      </a>
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">id</a>
    </li>
    <li>
       <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name"
-         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">
-         <span>name</span>
-      </a>
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">name</a>
    </li>
    <li>
       <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"
-         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
-         <span>probability</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax"
-         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
-         <span>probability max</span>
-      </a>
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">probability</a>
    </li>
    <li>
       <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"
-         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">
-         <span>severity</span>
-      </a>
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">severity</a>
    </li>
    <li>
       <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax"
-         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
-         <span>severity max</span>
-      </a>
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">severityMax</a>
+   </li>
+   <li>
+      <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax"
+         title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">The maximal value representing the most probable risks.</a>
    </li>
 </ul><h4> Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -456,6 +442,12 @@ This section provides details for each class and property defined by The KIMEDS 
             <a href="http://www.w3.org/2001/XMLSchema#boolean"
                target="_blank"
                title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">acceptance</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
@@ -1333,6 +1325,14 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0).</span>
       </div>
       <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">The maximal value representing the most probable risks.</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">severityMax</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11"
@@ -2277,45 +2277,31 @@ This section provides details for each class and property defined by The KIMEDS 
    <ul class="hlist">
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
-            <span>acceptance</span>
-         </a>
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">acceptance</a>
       </li>
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">
-            <span>id</span>
-         </a>
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">id</a>
       </li>
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">
-            <span>name</span>
-         </a>
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">name</a>
       </li>
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
-            <span>probability</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
-            <span>probability max</span>
-         </a>
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">probability</a>
       </li>
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">
-            <span>severity</span>
-         </a>
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">severity</a>
       </li>
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
-            <span>severity max</span>
-         </a>
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">severityMax</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">The maximal value representing the most probable risks.</a>
       </li>
    </ul>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
@@ -2325,8 +2311,17 @@ This section provides details for each class and property defined by The KIMEDS 
       </h3>
       <p>
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance</p>
+      <div class="comment">
+         <span class="markdown">A boolean value denoting the level acceptance</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#boolean"
@@ -2343,8 +2338,18 @@ This section provides details for each class and property defined by The KIMEDS 
       </h3>
       <p>
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id</p>
+      <div class="comment">
+         <span class="markdown">Unique identifier</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#float"
@@ -2361,8 +2366,18 @@ This section provides details for each class and property defined by The KIMEDS 
       </h3>
       <p>
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name</p>
+      <div class="comment">
+         <span class="markdown">Name of an instance</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#string"
@@ -2379,26 +2394,21 @@ This section provides details for each class and property defined by The KIMEDS 
       </h3>
       <p>
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#integer"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-            </dd>
-         </dl>
+      <div class="comment">
+         <span class="markdown">The likelihood of an event occurring, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most.</span>
       </div>
-   </div>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
-      <h3>probability max<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax</p>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#integer"
@@ -2415,8 +2425,21 @@ This section provides details for each class and property defined by The KIMEDS 
       </h3>
       <p>
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity</p>
+      <div class="comment">
+         <span class="markdown">Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most.</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#integer"
@@ -2427,14 +2450,47 @@ This section provides details for each class and property defined by The KIMEDS 
       </div>
    </div>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
-      <h3>severity max<sup class="type-dp" title="data property">dp</sup>
+      <h3>severityMax<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax</p>
+      <div class="comment">
+         <span class="markdown">The maximal value representing the most severe risks.</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
+      <h3>The maximal value representing the most probable risks.<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#integer"

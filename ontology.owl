@@ -303,7 +303,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A boolean value denoting the level acceptance</rdfs:comment>
+        <rdfs:label>acceptance</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -312,7 +315,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Unique identifier</rdfs:comment>
+        <rdfs:label>id</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -321,7 +327,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of an instance</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -330,7 +339,17 @@
 
 
     <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"/>
+                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The likelihood of an event occurring, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most.</rdfs:comment>
+        <rdfs:label>probability</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -339,7 +358,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>The maximal value representing the most probable risks.</rdfs:label>
+        <rdfs:label>probabilityMax</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -348,7 +370,17 @@
 
 
     <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"/>
+                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most.</rdfs:comment>
+        <rdfs:label>severity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -357,7 +389,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The maximal value representing the most severe risks.</rdfs:comment>
+        <rdfs:label>severityMax</rdfs:label>
     </owl:DatatypeProperty>
     
 
