@@ -191,37 +191,66 @@
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance
 :acceptance rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:boolean .
+            rdfs:domain :AcceptanceMatrix ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "A boolean value denoting the level acceptance" ;
+            rdfs:label "acceptance" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id
 :id rdf:type owl:DatatypeProperty ;
-    rdfs:range xsd:float .
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Unique identifier" ;
+    rdfs:label "id" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name
 :name rdf:type owl:DatatypeProperty ;
-      rdfs:range xsd:string .
+      rdfs:domain owl:Thing ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Name of an instance" ;
+      rdfs:label "name" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability
 :probability rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:integer .
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Risk
+                                         :RiskMatrix
+                                       )
+                         ] ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "The likelihood of an event occurring, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most." ;
+             rdfs:label "probability" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax
 :probabilityMax rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:integer .
+                rdfs:domain :RiskMatrix ;
+                rdfs:range xsd:integer ;
+                rdfs:label "The maximal value representing the most probable risks." ,
+                           "probabilityMax" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
 :severity rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:integer .
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Risk
+                                      :RiskMatrix
+                                    )
+                      ] ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most." ;
+          rdfs:label "severity" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax
 :severityMax rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:integer .
+             rdfs:domain :RiskMatrix ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "The maximal value representing the most severe risks." ;
+             rdfs:label "severityMax" .
 
 
 #################################################################
