@@ -205,7 +205,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#label> "The maximal value representing the most probable risks." .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximal value representing the most probable risks." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#label> "probabilityMax" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
