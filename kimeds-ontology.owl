@@ -229,8 +229,8 @@
 :probabilityMax rdf:type owl:DatatypeProperty ;
                 rdfs:domain :RiskMatrix ;
                 rdfs:range xsd:integer ;
-                rdfs:label "The maximal value representing the most probable risks." ,
-                           "probabilityMax" .
+                rdfs:comment "The maximal value representing the most probable risks." ;
+                rdfs:label "probabilityMax" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
