@@ -1,0 +1,184 @@
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix kimeds: <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
+@prefix iso: <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
+# @prefix iso: <https://www.iso.org/standard/72704.html#> .
+
+### The KIMEDS Classes ###
+
+kimeds:AcceptanceMatrix
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Acceptance Matrix" ;
+  rdfs:comment "A tuple containing the combination of severity, probability and information whether such combination is acceptable or not." ;
+  sh:property
+    [
+      sh:path kimeds:acceptance ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:datatype xsd:boolean ;
+    ] ;
+  sh:message "must specify an acceptance value (true or false)" ;
+.
+
+kimeds:AssuranceSDA
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Assurance SDA" ;
+  rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
+  sh:property
+    kimeds:hasSubAssuranceSDAI;
+.
+
+kimeds:AssuranceSDAI
+rdfs:label "Assurance SDAI" ;
+  rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
+  sh:property
+    kimeds:hasSafetyAssurance,
+    kimeds:hasSubAssuranceSDA,
+    kimeds:hasSubAssuranceSDAI;
+.
+
+kimeds:DeviceComponent
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Device Component" ;
+  rdfs:comment "A (physical or logical) part of a device." ;
+  sh:property
+    kimeds:isPartOfDeviceComponent;
+.
+
+kimeds:DeviceContext
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Device Context" ;
+  rdfs:comment "Information about possible environments the device can be used in that may affect probability or severity of some risk." ;
+.
+
+kimeds:DeviceSpecificHazard
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Device-specific Hazard" ;
+  rdfs:comment "Hazard associated with a specific hazardous situation, function and a specific device component." ;
+  sh:property
+    [
+      sh:path kimeds:hasDeviceComponent ;	
+      sh:message "Device specific hazard must have at least one device component" ;
+      sh:minCount 1 ;
+    ],
+    [
+      sh:path kimeds:hasFunction ;
+      sh:message "Device specific hazard must have at least one function" ;
+      sh:minCount 1 ;
+    ],
+    [
+      sh:path kimeds:hasHazard ;
+      sh:message "Device specific hazard must have at least one hazard" ;
+      sh:minCount 1 ;
+    ],
+    [
+      sh:path kimeds:hasHazardousSituation ;
+      sh:message "Device specific hazard must have at least one hazardous situation" ;
+      sh:minCount 1 ;
+    ];
+.
+
+kimeds:Event
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:comment "An incidence or occurrence leading to another event and/or (eventually) a hazardous situation." ;
+  sh:property
+    kimeds:hasPreceedingEvent;
+.
+
+kimeds:Function
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:comment "A specific functionality of a device related with the device specific hazard." ;
+.
+
+kimeds:ImplementationManifest
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Implementation Manifest" ;
+  rdfs:comment "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual." ;
+.
+
+kimeds:ManagedRisk
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Implementation Manifest" ;
+  sh:property
+    [
+      sh:path kimeds:hasDeviceSpecificHazard ;
+      sh:message "Every managed risk must have exactly one device specific hazard" ;  
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ],
+    [
+      sh:path kimeds:hasPreRisk ;
+      sh:message "Every managed risk must have exactly one pre risk" ;  
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ],
+    [
+      sh:path kimeds:hasResidualRisk ;
+      sh:message "Every managed risk must have exactly one residual risk" ;  
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ],
+    [
+      sh:path kimeds:isMitigatedBy ;
+      sh:message "Every managed risk must be mitigated" ;  
+      sh:minCount 1 ;
+    ],
+    [
+      sh:path kimeds:hasAcceptanceMatrix ;
+      sh:message "Every managed risk must have an acceptance matrix" ;  
+      sh:minCount 1 ;
+    ] ;
+.
+
+# kimeds:Probability
+#   a rdfs:Class, sh:NodeShape ;
+# .
+
+kimeds:RiskMatrix
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Risk Matrix" ;
+  rdfs:comment "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)." ;
+.
+
+kimeds:RiskSDA
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Risk SDA" ;
+  rdfs:comment "SDA where the purpose is to mitigate a managed risk." ;
+  sh:property
+    kimeds:hasSubRiskSDA ,
+    kimeds:hasSubRiskSDAI ;
+.
+
+kimeds:RiskSDAI
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Risk SDAI" ;
+  rdfs:comment "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA." ;
+  sh:property
+    kimeds:hasSubRiskSDAI ;
+.
+
+kimeds:SafetyAssurance
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Safety Assurance" ;
+  rdfs:comment "A credible reference (or list of such) to the state of the art of achieving safety with respect to a certain class of hazards, e.g. referring to an international norm such as ISO 60601." ;
+.
+
+kimeds:SDA
+  a rdfs:Class, sh:NodeShape ;
+  rdfs:label 
+    "Safe Design Argument"@en ;
+  rdfs:comment 
+    "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
+  sh:property
+    kimeds:hasSubSDA,
+    kimeds:hasImplementationManifest,
+    [
+      sh:path ( [ sh:zeroOrMorePath kimeds:hasSubSDA] kimeds:hasImplementationManifest ) ;
+      sh:message "Every SDA needs a final mitigation" ;
+      sh:minCount 1 ;
+
+    ] ;  
+.
