@@ -159,6 +159,17 @@
     
 
 
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
+        <rdfs:label>has parent situation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk -->
 
 

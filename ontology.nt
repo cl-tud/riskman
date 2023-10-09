@@ -83,6 +83,12 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard> <http://www.w3.org/2000/01/rdf-schema#label> "has parent hazard" .
 # 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation> <http://www.w3.org/2000/01/rdf-schema#label> "has parent situation" .
+# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
