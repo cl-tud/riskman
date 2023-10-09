@@ -101,6 +101,13 @@
                  rdfs:range :Hazard .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation
+:hasParentSituation rdf:type owl:ObjectProperty ;
+                    rdfs:domain :HazardousSituation ;
+                    rdfs:range :HazardousSituation ;
+                    rdfs:label "has parent situation" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
 :hasResidualRisk rdf:type owl:ObjectProperty ;
                     rdfs:label "has residual risk" ;
