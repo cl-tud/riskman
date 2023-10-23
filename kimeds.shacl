@@ -63,21 +63,25 @@ kimeds:DeviceSpecificHazard
       sh:path kimeds:hasDeviceComponent ;	
       sh:message "Device specific hazard must have at least one device component" ;
       sh:minCount 1 ;
+      sh:maxCount 1 ; 
     ],
     [
       sh:path kimeds:hasFunction ;
       sh:message "Device specific hazard must have at least one function" ;
       sh:minCount 1 ;
+      sh:maxCount 1 ; 
     ],
     [
       sh:path kimeds:hasHazard ;
       sh:message "Device specific hazard must have at least one hazard" ;
       sh:minCount 1 ;
+      sh:maxCount 1 ; 
     ],
     [
       sh:path kimeds:hasHazardousSituation ;
       sh:message "Device specific hazard must have at least one hazardous situation" ;
       sh:minCount 1 ;
+      sh:maxCount 1 ; 
     ];
 .
 
