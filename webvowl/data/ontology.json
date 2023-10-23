@@ -73,10 +73,10 @@
     "id" : "13",
     "type" : "owl:Thing"
   }, {
-    "id" : "19",
+    "id" : "48",
     "type" : "owl:Class"
   }, {
-    "id" : "48",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "138",
@@ -126,13 +126,6 @@
       "IRI-based" : "Event",
       "undefined" : "Event"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Forgotten_password",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "Forgotten_password"
-      }
-    } ],
     "comment" : {
       "undefined" : "An incidence or occurrence leading to another event and/or (eventually) a hazardous situation."
     },
@@ -145,13 +138,6 @@
       "IRI-based" : "DeviceComponent",
       "undefined" : "Device component"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Software",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "Software"
-      }
-    } ],
     "comment" : {
       "undefined" : "A (physical or logical) part of a device."
     },
@@ -164,61 +150,6 @@
       "IRI-based" : "RiskMatrix",
       "undefined" : "Risk matrix"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField12",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField12"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField23",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField23"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField11",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField11"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField33",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField33"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField22",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField22"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField32",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField32"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField21",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField21"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField31",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField31"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrixField13",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "RiskMatrixField13"
-      }
-    } ],
     "comment" : {
       "undefined" : "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)."
     },
@@ -243,13 +174,6 @@
       "IRI-based" : "Hazard",
       "undefined" : "Hazard"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_Diagnosis",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "Delayed_Diagnosis"
-      }
-    } ],
     "comment" : {
       "undefined" : "Potential source of harm"
     },
@@ -262,13 +186,6 @@
       "IRI-based" : "HazardousSituation",
       "undefined" : "Hazardous situation"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#System_not_available_for_use",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "System_not_available_for_use"
-      }
-    } ],
     "comment" : {
       "undefined" : "Circumstance in which people, property or the environment is/are exposed to one or more hazards."
     },
@@ -344,13 +261,6 @@
       "IRI-based" : "ManagedRisk",
       "undefined" : "Managed risk"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Delayed_diagnosis_ManagedRisk",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "Delayed_diagnosis_ManagedRisk"
-      }
-    } ],
     "id" : "2"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest",
@@ -372,19 +282,6 @@
       "IRI-based" : "RiskSDAI",
       "undefined" : "Risk SDAI"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_login",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "Emergency_login"
-      }
-    }, {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Emergency_user",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "Emergency_user"
-      }
-    } ],
     "comment" : {
       "undefined" : "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA."
     },
@@ -412,7 +309,7 @@
       "undefined" : "Risk acceptance matrix"
     },
     "comment" : {
-      "undefined" : "Defines acceptable and unacceptable combinations of probability and severity of a given risk matrix."
+      "undefined" : "Currently without use"
     },
     "id" : "115"
   }, {
@@ -442,13 +339,6 @@
       "IRI-based" : "Risk",
       "undefined" : "Risk"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#risk_delayed_patient_treatment",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "risk_delayed_patient_treatment"
-      }
-    } ],
     "subClasses" : [ "50" ],
     "comment" : {
       "undefined" : "Combination of harm and its associated probability and severity."
@@ -457,7 +347,7 @@
   }, {
     "instances" : 0,
     "union" : [ "50", "27" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "107"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -467,25 +357,6 @@
       "undefined" : "Thing"
     }
   }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Function",
-      "undefined" : "Function"
-    },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Password_protection",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "Password_protection"
-      }
-    } ],
-    "comment" : {
-      "undefined" : "A specific functionality of a device related with the device specific hazard."
-    },
-    "id" : "19"
-  }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "instances" : 0,
@@ -493,19 +364,24 @@
       "IRI-based" : "RiskSDA",
       "undefined" : "Risk SDA"
     },
-    "individuals" : [ {
-      "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SOP",
-      "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-      "labels" : {
-        "IRI-based" : "SOP"
-      }
-    } ],
     "subClasses" : [ "47" ],
     "comment" : {
       "undefined" : "SDA where the purpose is to mitigate a managed risk."
     },
     "id" : "48",
     "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Function",
+      "undefined" : "Function"
+    },
+    "comment" : {
+      "undefined" : "A specific functionality of a device related with the device specific hazard."
+    },
+    "id" : "19"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -530,7 +406,7 @@
   }, {
     "instances" : 0,
     "union" : [ "27", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "113"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
@@ -549,7 +425,7 @@
   }, {
     "instances" : 0,
     "union" : [ "27", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "141"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
