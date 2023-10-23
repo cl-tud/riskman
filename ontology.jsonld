@@ -294,16 +294,7 @@
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/elements/1.1/rights",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1/source",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/contributor",
@@ -312,16 +303,7 @@
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/creator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/issued",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/modified",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/ontology/bibo/doi",
@@ -352,12 +334,20 @@
     "@language" : "en",
     "@value" : "The KIMEDS Ontology"
   } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@id" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me"
+  }, {
+    "@id" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me"
+  }, {
+    "@id" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me"
+  }, {
+    "@id" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me"
+  }, {
+    "@id" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me"
+  } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2023-05-02"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me"
+    "@value" : "2023-09-12"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -1059,20 +1049,88 @@
   "@id" : "http://xmlns.com/foaf/0.1/primaryTopic",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
+  "@id" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
+    "@value" : "Doerte Arndt"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@value" : "mailto:doerthe.arndt@tu-dresden.de"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Doerthe Arndt"
+  }, {
+    "@language" : "de",
+    "@value" : "Dörthe Arndt"
+  } ]
+}, {
+  "@id" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hannes Strass"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@value" : "mailto:hannes.strass@tu-dresden.de"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "en",
+    "@value" : "Hannes Strass"
+  }, {
+    "@language" : "de",
+    "@value" : "Hannes Straß"
+  } ]
+}, {
+  "@id" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pascal kettmann"
   } ],
   "http://xmlns.com/foaf/0.1/mbox" : [ {
     "@value" : "mailto:pascal.kettmann@tu-dresden.de"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
-    "@language" : "en",
     "@value" : "Pascal Kettmann"
+  } ]
+}, {
+  "@id" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Piotr Gorczyca"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@value" : "mailto:piotr.gorczyca@tu-dresden.de"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Piotr Gorczyca"
+  } ]
+}, {
+  "@id" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Stepahn Mennicke"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@value" : "mailto:Stephan.Mennicke@tu-dresden.de"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Stephan.Mennicke"
   } ]
 } ]

@@ -10,8 +10,12 @@
                                                                      owl:versionIRI <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> ;
                                                                      <http://purl.org/dc/elements/1.1/description> "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en ;
                                                                      <http://purl.org/dc/elements/1.1/title> "The KIMEDS Ontology"@en ;
-                                                                     <http://purl.org/dc/terms/created> "2023-05-02"^^xsd:date ;
-                                                                     <http://purl.org/dc/terms/creator> <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> ;
+                                                                     <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> ,
+                                                                                                            <https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> ,
+                                                                                                            <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> ,
+                                                                                                            <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> ,
+                                                                                                            <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> ;
+                                                                     <http://purl.org/dc/terms/created> "2023-09-12"^^xsd:date ;
                                                                      <http://purl.org/dc/terms/modified> "2023-10-23"^^xsd:date ;
                                                                      rdfs:label "The KIMEDS Ontology"@en ;
                                                                      rdfs:seeAlso <https://cl-tud.github.io/kimeds-ontology/> ;
@@ -25,20 +29,8 @@
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/rights
-<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/source
-<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/contributor
@@ -49,20 +41,8 @@
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/bibo/doi
@@ -601,12 +581,46 @@ xsd:date rdf:type rdfs:Datatype .
 #    Individuals
 #################################################################
 
+###  https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me
+<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> rdf:type owl:NamedIndividual ,
+                                                               <http://xmlns.com/foaf/0.1/Person> ;
+                                                      rdfs:label "Doerte Arndt"@en ;
+                                                      <http://xmlns.com/foaf/0.1/mbox> "mailto:doerthe.arndt@tu-dresden.de" ;
+                                                      <http://xmlns.com/foaf/0.1/name> "Doerthe Arndt"@en ,
+                                                                                       "Dörthe Arndt"@de .
+
+
+###  https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me
+<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> rdf:type owl:NamedIndividual ,
+                                                                <http://xmlns.com/foaf/0.1/Person> ;
+                                                       rdfs:label "Hannes Strass"@en ;
+                                                       <http://xmlns.com/foaf/0.1/mbox> "mailto:hannes.strass@tu-dresden.de" ;
+                                                       <http://xmlns.com/foaf/0.1/name> "Hannes Strass"@en ,
+                                                                                        "Hannes Straß"@de .
+
+
 ###  https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me
 <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> rdf:type owl:NamedIndividual ,
                                                                   <http://xmlns.com/foaf/0.1/Person> ;
-                                                         rdfs:label "Pascal kettmann"@en ;
+                                                         rdfs:label "Pascal kettmann" ;
                                                          <http://xmlns.com/foaf/0.1/mbox> "mailto:pascal.kettmann@tu-dresden.de" ;
-                                                         <http://xmlns.com/foaf/0.1/name> "Pascal Kettmann"@en .
+                                                         <http://xmlns.com/foaf/0.1/name> "Pascal Kettmann" .
+
+
+###  https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me
+<https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> rdf:type owl:NamedIndividual ,
+                                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                                        rdfs:label "Piotr Gorczyca" ;
+                                                        <http://xmlns.com/foaf/0.1/mbox> "mailto:piotr.gorczyca@tu-dresden.de" ;
+                                                        <http://xmlns.com/foaf/0.1/name> "Piotr Gorczyca" .
+
+
+###  https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me
+<https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> rdf:type owl:NamedIndividual ,
+                                                                   <http://xmlns.com/foaf/0.1/Person> ;
+                                                          rdfs:label "Stepahn Mennicke" ;
+                                                          <http://xmlns.com/foaf/0.1/mbox> "mailto:Stephan.Mennicke@tu-dresden.de" ;
+                                                          <http://xmlns.com/foaf/0.1/name> "Stephan.Mennicke" .
 
 
 #################################################################

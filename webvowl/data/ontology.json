@@ -1,14 +1,13 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "en", "undefined" ],
+    "languages" : [ "de", "en", "undefined" ],
     "baseIris" : [ "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
     "title" : {
       "en" : "The KIMEDS Ontology"
     },
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "version" : "1.0.0",
-    "author" : [ "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me" ],
     "description" : {
       "en" : "The KIMEDS Ontology defines various notions related to risk management for medical devices."
     },
@@ -16,16 +15,36 @@
       "en" : "The KIMEDS Ontology"
     },
     "other" : {
-      "creator" : [ {
-        "identifier" : "creator",
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
         "language" : "undefined",
         "value" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
         "type" : "iri"
       } ],
       "created" : [ {
         "identifier" : "created",
         "language" : "undefined",
-        "value" : "2023-05-02",
+        "value" : "2023-09-12",
         "type" : "label"
       } ],
       "modified" : [ {
@@ -226,12 +245,80 @@
       "IRI-based" : "Person"
     },
     "individuals" : [ {
+      "iri" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
+      "baseIri" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "en",
+          "value" : "Hannes Strass",
+          "type" : "label"
+        }, {
+          "identifier" : "name",
+          "language" : "de",
+          "value" : "Hannes Straß",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:hannes.strass@tu-dresden.de",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "me",
+        "en" : "Hannes Strass"
+      }
+    }, {
+      "iri" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
+      "baseIri" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Stephan.Mennicke",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:Stephan.Mennicke@tu-dresden.de",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "me",
+        "undefined" : "Stepahn Mennicke"
+      }
+    }, {
+      "iri" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
+      "baseIri" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Piotr Gorczyca",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:piotr.gorczyca@tu-dresden.de",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "me",
+        "undefined" : "Piotr Gorczyca"
+      }
+    }, {
       "iri" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
       "baseIri" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/",
       "annotations" : {
         "name" : [ {
           "identifier" : "name",
-          "language" : "en",
+          "language" : "undefined",
           "value" : "Pascal Kettmann",
           "type" : "label"
         } ],
@@ -244,7 +331,33 @@
       },
       "labels" : {
         "IRI-based" : "me",
-        "en" : "Pascal kettmann"
+        "undefined" : "Pascal kettmann"
+      }
+    }, {
+      "iri" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
+      "baseIri" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "de",
+          "value" : "Dörthe Arndt",
+          "type" : "label"
+        }, {
+          "identifier" : "name",
+          "language" : "en",
+          "value" : "Doerthe Arndt",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:doerthe.arndt@tu-dresden.de",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "me",
+        "en" : "Doerte Arndt"
       }
     } ],
     "attributes" : [ "external" ],
@@ -430,7 +543,7 @@
   }, {
     "instances" : 0,
     "union" : [ "50", "27" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "108"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -489,7 +602,7 @@
   }, {
     "instances" : 0,
     "union" : [ "27", "32" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "114"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
@@ -508,7 +621,7 @@
   }, {
     "instances" : 0,
     "union" : [ "27", "32" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "142"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -930,7 +1043,7 @@
     },
     "domain" : "13",
     "subproperty" : [ "14", "15", "16", "17" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "12"
   }, {
     "range" : "19",
@@ -1656,7 +1769,7 @@
     },
     "domain" : "80",
     "subproperty" : [ "33", "59", "60", "61" ],
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "144"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent",
@@ -1667,7 +1780,7 @@
       "undefined" : "has event"
     },
     "domain" : "11",
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "145"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard",
@@ -1711,7 +1824,7 @@
       "undefined" : "causes"
     },
     "domain" : "22",
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "149"
   }, {
     "range" : "32",

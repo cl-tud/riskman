@@ -18,8 +18,12 @@
         <owl:versionIRI rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0"/>
         <dc:description xml:lang="en">The KIMEDS Ontology defines various notions related to risk management for medical devices.</dc:description>
         <dc:title xml:lang="en">The KIMEDS Ontology</dc:title>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-02</terms:created>
-        <terms:creator rdf:resource="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me"/>
+        <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me"/>
+        <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me"/>
+        <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me"/>
+        <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me"/>
+        <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-12</terms:created>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-23</terms:modified>
         <rdfs:label xml:lang="en">The KIMEDS Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://cl-tud.github.io/kimeds-ontology/"/>
@@ -47,31 +51,10 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/rights -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/source -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
-    
-
-
     <!-- http://purl.org/dc/elements/1.1/title -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/bibliographicCitation -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
     
 
 
@@ -89,31 +72,10 @@
     
 
 
-    <!-- http://purl.org/dc/terms/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/issued -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
     <!-- http://purl.org/dc/terms/modified -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/publisher -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
     
 
 
@@ -974,14 +936,64 @@
     
 
 
+    <!-- https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me -->
+
+
+    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">Doerte Arndt</rdfs:label>
+        <foaf:mbox>mailto:doerthe.arndt@tu-dresden.de</foaf:mbox>
+        <foaf:name xml:lang="en">Doerthe Arndt</foaf:name>
+        <foaf:name xml:lang="de">Dörthe Arndt</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me -->
+
+
+    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">Hannes Strass</rdfs:label>
+        <foaf:mbox>mailto:hannes.strass@tu-dresden.de</foaf:mbox>
+        <foaf:name xml:lang="en">Hannes Strass</foaf:name>
+        <foaf:name xml:lang="de">Hannes Straß</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me -->
 
 
     <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:label xml:lang="en">Pascal kettmann</rdfs:label>
+        <rdfs:label>Pascal kettmann</rdfs:label>
         <foaf:mbox>mailto:pascal.kettmann@tu-dresden.de</foaf:mbox>
-        <foaf:name xml:lang="en">Pascal Kettmann</foaf:name>
+        <foaf:name>Pascal Kettmann</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me -->
+
+
+    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label>Piotr Gorczyca</rdfs:label>
+        <foaf:mbox>mailto:piotr.gorczyca@tu-dresden.de</foaf:mbox>
+        <foaf:name>Piotr Gorczyca</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me -->
+
+
+    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label>Stepahn Mennicke</rdfs:label>
+        <foaf:mbox>mailto:Stephan.Mennicke@tu-dresden.de</foaf:mbox>
+        <foaf:name>Stephan.Mennicke</foaf:name>
     </owl:NamedIndividual>
     
 

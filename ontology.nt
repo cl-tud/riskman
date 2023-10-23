@@ -2,8 +2,12 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/elements/1.1/description> "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/elements/1.1/title> "The KIMEDS Ontology"@en .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/created> "2023-05-02"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/creator> <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/created> "2023-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/modified> "2023-10-23"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "The KIMEDS Ontology"@en .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://cl-tud.github.io/kimeds-ontology/> .
@@ -20,17 +24,8 @@
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/elements/1.1/rights
-<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/elements/1.1/source
-<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -38,17 +33,8 @@
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/ontology/bibo/doi
 <http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -579,12 +565,42 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # #################################################################
 # 
 # 
+# https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me
+<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> <http://www.w3.org/2000/01/rdf-schema#label> "Doerte Arndt"@en .
+<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> <http://xmlns.com/foaf/0.1/mbox> "mailto:doerthe.arndt@tu-dresden.de" .
+<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> <http://xmlns.com/foaf/0.1/name> "Doerthe Arndt"@en .
+<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> <http://xmlns.com/foaf/0.1/name> "Dörthe Arndt"@de .
+# 
+# https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me
+<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> <http://www.w3.org/2000/01/rdf-schema#label> "Hannes Strass"@en .
+<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> <http://xmlns.com/foaf/0.1/mbox> "mailto:hannes.strass@tu-dresden.de" .
+<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> <http://xmlns.com/foaf/0.1/name> "Hannes Strass"@en .
+<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> <http://xmlns.com/foaf/0.1/name> "Hannes Straß"@de .
+# 
 # https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me
 <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> <http://www.w3.org/2000/01/rdf-schema#label> "Pascal kettmann"@en .
+<https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> <http://www.w3.org/2000/01/rdf-schema#label> "Pascal kettmann" .
 <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> <http://xmlns.com/foaf/0.1/mbox> "mailto:pascal.kettmann@tu-dresden.de" .
-<https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> <http://xmlns.com/foaf/0.1/name> "Pascal Kettmann"@en .
+<https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> <http://xmlns.com/foaf/0.1/name> "Pascal Kettmann" .
+# 
+# https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me
+<https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> <http://www.w3.org/2000/01/rdf-schema#label> "Piotr Gorczyca" .
+<https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> <http://xmlns.com/foaf/0.1/mbox> "mailto:piotr.gorczyca@tu-dresden.de" .
+<https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> <http://xmlns.com/foaf/0.1/name> "Piotr Gorczyca" .
+# 
+# https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me
+<https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> <http://www.w3.org/2000/01/rdf-schema#label> "Stepahn Mennicke" .
+<https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> <http://xmlns.com/foaf/0.1/mbox> "mailto:Stephan.Mennicke@tu-dresden.de" .
+<https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> <http://xmlns.com/foaf/0.1/name> "Stephan.Mennicke" .
 # 
 # 
 # 
