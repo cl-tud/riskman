@@ -12,7 +12,7 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> 
                                       rdf:type owl:Ontology ;
                                       owl:versionIRI <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> ; 
-                                      dc:description "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en ;
+                                      schema:description "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en ;
                                       dcterms:abstract "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." ;
                                       schema:funder "(Add funder info)" ;
                                       schema:funding "(Add funding info)" ;
