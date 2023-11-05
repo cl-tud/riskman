@@ -13,22 +13,91 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="http://schema.org/">
     <owl:Ontology rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology">
         <owl:versionIRI rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0"/>
         <dc:description xml:lang="en">The KIMEDS Ontology defines various notions related to risk management for medical devices.</dc:description>
-        <dc:title xml:lang="en">The KIMEDS Ontology</dc:title>
+        <terms:abstract>The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).</terms:abstract>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me"/>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me"/>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me"/>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me"/>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-12</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-23</terms:modified>
+        <terms:title xml:lang="en">Digital Risk Management Ontology</terms:title>
         <rdfs:label xml:lang="en">The KIMEDS Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://cl-tud.github.io/kimeds-ontology/"/>
         <owl:versionInfo>1.0.0</owl:versionInfo>
+        <schema:contributor rdf:nodeID="genid1"/>
+        <schema:contributor rdf:nodeID="genid3"/>
+        <schema:contributor rdf:nodeID="genid4"/>
+        <schema:creator rdf:nodeID="genid6"/>
+        <schema:creator rdf:nodeID="genid8"/>
+        <schema:creator rdf:nodeID="genid9"/>
+        <schema:creator rdf:nodeID="genid10"/>
+        <schema:creator rdf:nodeID="genid11"/>
+        <schema:dateModified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-23</schema:dateModified>
+        <schema:funder>(Add funder info)</schema:funder>
+        <schema:funding>(Add funding info)</schema:funding>
+        <schema:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
     </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid2"/>
+        <schema:name>Evi Hartig</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid2"/>
+        <schema:name>Sarah Tsurkan</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation>
+            <rdf:Description>
+                <schema:name>Siemens Healthineers</schema:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <schema:name>Georg Heidenreich</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid7"/>
+        <schema:name>Dörthe Arndt</schema:name>
+        <schema:url rdf:resource="https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid7"/>
+        <schema:name>Piotr Gorczyca</schema:name>
+        <schema:url rdf:resource="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid9">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid7"/>
+        <schema:name>Pascal Kettmann</schema:name>
+        <schema:url rdf:resource="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid7"/>
+        <schema:name>Stephan Mennicke</schema:name>
+        <schema:url rdf:resource="https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid11">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid7"/>
+        <schema:name>Hannes Straß</schema:name>
+        <schema:url rdf:resource="https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <schema:name>EKFZ, TU Dresden</schema:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <schema:name>ICCL, TU Dresden</schema:name>
+        <schema:url rdf:resource="https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic"/>
+    </rdf:Description>
     
 
 
@@ -51,10 +120,10 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/title -->
+    <!-- http://purl.org/dc/terms/abstract -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
     
 
 
@@ -72,10 +141,10 @@
     
 
 
-    <!-- http://purl.org/dc/terms/modified -->
+    <!-- http://purl.org/dc/terms/title -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -167,6 +236,69 @@
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/contributor"/>
+    
+
+
+    <!-- https://schema.org/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creator"/>
+    
+
+
+    <!-- https://schema.org/dateModified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/dateModified"/>
+    
+
+
+    <!-- https://schema.org/funder -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funder"/>
+    
+
+
+    <!-- https://schema.org/funding -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funding"/>
+    
+
+
+    <!-- https://schema.org/license -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/license"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://schema.org/url -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/url"/>
     
 
 
@@ -921,6 +1053,13 @@
 
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+
+    <owl:Class rdf:about="https://schema.org/Person"/>
     
 
 

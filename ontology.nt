@@ -1,17 +1,63 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/elements/1.1/description> "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/elements/1.1/title> "The KIMEDS Ontology"@en .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/abstract> "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/created> "2023-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/modified> "2023-10-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/title> "Digital Risk Management Ontology"@en .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "The KIMEDS Ontology"@en .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://cl-tud.github.io/kimeds-ontology/> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/contributor> _:genid1 .
+_:genid1 <https://schema.org/name> "Evi Hartig" .
+_:genid1 <https://schema.org/affiliation> _:genid2 .
+_:genid2 <https://schema.org/name> "EKFZ, TU Dresden" .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/contributor> _:genid3 .
+_:genid3 <https://schema.org/name> "Sarah Tsurkan" .
+_:genid3 <https://schema.org/affiliation> _:genid2 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/contributor> _:genid4 .
+_:genid4 <https://schema.org/name> "Georg Heidenreich" .
+_:genid4 <https://schema.org/affiliation> _:genid5 .
+_:genid5 <https://schema.org/name> "Siemens Healthineers" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/creator> _:genid6 .
+_:genid6 <https://schema.org/url> <https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en> .
+_:genid6 <https://schema.org/name> "Dörthe Arndt" .
+_:genid6 <https://schema.org/affiliation> _:genid7 .
+_:genid7 <https://schema.org/url> <https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic> .
+_:genid7 <https://schema.org/name> "ICCL, TU Dresden" .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/creator> _:genid8 .
+_:genid8 <https://schema.org/url> <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en> .
+_:genid8 <https://schema.org/name> "Piotr Gorczyca" .
+_:genid8 <https://schema.org/affiliation> _:genid7 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/creator> _:genid9 .
+_:genid9 <https://schema.org/url> <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en> .
+_:genid9 <https://schema.org/name> "Pascal Kettmann" .
+_:genid9 <https://schema.org/affiliation> _:genid7 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/creator> _:genid10 .
+_:genid10 <https://schema.org/url> <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en> .
+_:genid10 <https://schema.org/name> "Stephan Mennicke" .
+_:genid10 <https://schema.org/affiliation> _:genid7 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/creator> _:genid11 .
+_:genid11 <https://schema.org/url> <https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en> .
+_:genid11 <https://schema.org/name> "Hannes Straß" .
+_:genid11 <https://schema.org/affiliation> _:genid7 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/dateModified> "2023-10-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/funder> "(Add funder info)" .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/funding> "(Add funding info)" .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/license> <http://creativecommons.org/licenses/by/2.0/> .
 # 
 # 
 # #################################################################
@@ -24,8 +70,8 @@
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -33,8 +79,8 @@
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/ontology/bibo/doi
 <http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -74,6 +120,33 @@
 # 
 # http://xmlns.com/foaf/0.1/primaryTopic
 <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/contributor
+<https://schema.org/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creator
+<https://schema.org/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/dateModified
+<https://schema.org/dateModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funder
+<https://schema.org/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/license
+<https://schema.org/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/name
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/url
+<https://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -281,15 +354,15 @@
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "The likelihood of an event occurring, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability" .
@@ -303,15 +376,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> <http://www.w3.org/2000/01/rdf-schema#label> "severity" .
@@ -334,18 +407,18 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid7 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid18 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> <http://www.w3.org/2000/01/rdf-schema#comment> "A tuple containing the combination of severity, probability and information whether such combination is acceptable or not." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> <http://www.w3.org/2000/01/rdf-schema#label> "Acceptance matrix" .
 # 
@@ -374,33 +447,33 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid11 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
-_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
-_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Hazard associated with a specific hazardous situation, function and a specific device component." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#label> "Device specific hazard" .
 # 
@@ -421,19 +494,19 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
-_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Potential source of harm" .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#label> "Hazard" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid21 .
-_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> <http://www.w3.org/2000/01/rdf-schema#comment> "Circumstance in which people, property or the environment is/are exposed to one or more hazards." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> <http://www.w3.org/2000/01/rdf-schema#label> "Hazardous situation" .
 # 
@@ -444,47 +517,47 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
-_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
-_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
-_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Managed risk" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid33 .
-_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> <http://www.w3.org/2000/01/rdf-schema#label> "Non final SDA" .
 # 
@@ -496,27 +569,27 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid34 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
-_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
-_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
-_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid45 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of harm and its associated probability and severity." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk" .
 # 
@@ -555,6 +628,8 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://xmlns.com/foaf/0.1/Person
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Person
 # 
 # 
 # 
@@ -611,72 +686,72 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # #################################################################
 # 
 # 
-_:genid41 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid41 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-# 
-_:genid45 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid45 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-# 
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid49 <http://www.w3.org/2002/07/owl#members> _:genid62 .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid52 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid54 .
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA> .
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid52 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+_:genid56 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA> .
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid56 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid60 <http://www.w3.org/2002/07/owl#members> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
 _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
