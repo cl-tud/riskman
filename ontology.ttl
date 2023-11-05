@@ -8,7 +8,6 @@
 
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> rdf:type owl:Ontology ;
                                                                      owl:versionIRI <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> ;
-                                                                     <http://purl.org/dc/elements/1.1/description> "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en ;
                                                                      <http://purl.org/dc/terms/abstract> "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." ;
                                                                      <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> ,
                                                                                                             <https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> ,
@@ -29,6 +28,7 @@
                                                                                                   _:genid10 ,
                                                                                                   _:genid11 ;
                                                                      <https://schema.org/dateModified> "2023-10-23"^^xsd:date ;
+                                                                     <https://schema.org/description> "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en ;
                                                                      <https://schema.org/funder> "(Add funder info)" ;
                                                                      <https://schema.org/funding> "(Add funding info)" ;
                                                                      <https://schema.org/license> <http://creativecommons.org/licenses/by/2.0/> .
@@ -79,10 +79,6 @@ _:genid7 <https://schema.org/name> "ICCL, TU Dresden" ;
 #################################################################
 #    Annotation properties
 #################################################################
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
@@ -166,6 +162,10 @@ _:genid7 <https://schema.org/name> "ICCL, TU Dresden" ;
 
 ###  https://schema.org/dateModified
 <https://schema.org/dateModified> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/description
+<https://schema.org/description> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/funder

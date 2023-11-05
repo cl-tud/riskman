@@ -412,9 +412,6 @@
     "@id" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/elements/1.1/description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -447,10 +444,6 @@
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/description" : [ {
-    "@language" : "en",
-    "@value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices."
-  } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)."
   } ],
@@ -507,6 +500,10 @@
   "https://schema.org/dateModified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2023-10-23"
+  } ],
+  "https://schema.org/description" : [ {
+    "@language" : "en",
+    "@value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices."
   } ],
   "https://schema.org/funder" : [ {
     "@value" : "(Add funder info)"
@@ -1298,6 +1295,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/dateModified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/funder",

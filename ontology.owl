@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#"
      xml:base="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -17,7 +16,6 @@
      xmlns:schema1="http://schema.org/">
     <owl:Ontology rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology">
         <owl:versionIRI rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0"/>
-        <dc:description xml:lang="en">The KIMEDS Ontology defines various notions related to risk management for medical devices.</dc:description>
         <terms:abstract>The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).</terms:abstract>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me"/>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me"/>
@@ -38,6 +36,7 @@
         <schema:creator rdf:nodeID="genid10"/>
         <schema:creator rdf:nodeID="genid11"/>
         <schema:dateModified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-23</schema:dateModified>
+        <schema:description xml:lang="en">The KIMEDS Ontology defines various notions related to risk management for medical devices.</schema:description>
         <schema:funder>(Add funder info)</schema:funder>
         <schema:funding>(Add funding info)</schema:funding>
         <schema:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
@@ -110,13 +109,6 @@
      -->
 
 
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -264,6 +256,13 @@
 
 
     <owl:AnnotationProperty rdf:about="https://schema.org/dateModified"/>
+    
+
+
+    <!-- https://schema.org/description -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/description"/>
     
 
 

@@ -1,6 +1,5 @@
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/elements/1.1/description> "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/abstract> "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <http://purl.org/dc/terms/contributor> <https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> .
@@ -55,6 +54,7 @@ _:genid11 <https://schema.org/name> "Hannes Straß" .
 _:genid11 <https://schema.org/affiliation> _:genid7 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/dateModified> "2023-10-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/description> "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/funder> "(Add funder info)" .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/funding> "(Add funding info)" .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> <https://schema.org/license> <http://creativecommons.org/licenses/by/2.0/> .
@@ -66,9 +66,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 # #
 # #################################################################
 # 
-# 
-# http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -132,6 +129,9 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 # 
 # https://schema.org/dateModified
 <https://schema.org/dateModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/description
+<https://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://schema.org/funder
 <https://schema.org/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
