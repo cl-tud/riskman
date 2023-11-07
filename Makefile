@@ -21,6 +21,7 @@ build:
 	sed -i 's|<h2>Release: Creation date</h2>|<h2>Release: 12 Sept. 2023</h2>|g' dist/index.html
 	echo $(TODAY)
 	sed -i "s|<dt>Modified on: Modified date</dt>|<dt>Modified on: $(TODAY)</dt>|g" dist/index.html
+	sed -i 's|<a href="index-en.html">|<a href="index.html">|g' dist/index.html
 
     # sed -i "s|<dt>Modified on: Modified date</dt>|<dt>Modified on: $$current_date</dt>|g" dist/index.html
 
