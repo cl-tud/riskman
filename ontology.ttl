@@ -96,58 +96,6 @@ _:genid7 <https://schema.org/name> "ICCL, TU Dresden" ;
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/ontology/bibo/doi
-<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/ontology/bibo/status
-<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/example
-<http://purl.org/vocab/vann/example> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespaceUri
-<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/license
-<http://schema.org/license> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#note
-<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/depiction
-<http://xmlns.com/foaf/0.1/depiction> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/logo
-<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/mbox
-<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/primaryTopic
-<http://xmlns.com/foaf/0.1/primaryTopic> rdf:type owl:AnnotationProperty .
-
-
 ###  https://schema.org/affiliation
 <https://schema.org/affiliation> rdf:type owl:AnnotationProperty .
 
@@ -664,58 +612,8 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "Safety assurance" .
 
 
-###  http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
-
-
 ###  https://schema.org/Person
 <https://schema.org/Person> rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me
-<https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me> rdf:type owl:NamedIndividual ,
-                                                               <http://xmlns.com/foaf/0.1/Person> ;
-                                                      rdfs:label "Doerte Arndt"@en ;
-                                                      <http://xmlns.com/foaf/0.1/mbox> "mailto:doerthe.arndt@tu-dresden.de" ;
-                                                      <http://xmlns.com/foaf/0.1/name> "Doerthe Arndt"@en ,
-                                                                                       "Dörthe Arndt"@de .
-
-
-###  https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me
-<https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me> rdf:type owl:NamedIndividual ,
-                                                                <http://xmlns.com/foaf/0.1/Person> ;
-                                                       rdfs:label "Hannes Strass"@en ;
-                                                       <http://xmlns.com/foaf/0.1/mbox> "mailto:hannes.strass@tu-dresden.de" ;
-                                                       <http://xmlns.com/foaf/0.1/name> "Hannes Strass"@en ,
-                                                                                        "Hannes Straß"@de .
-
-
-###  https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me
-<https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me> rdf:type owl:NamedIndividual ,
-                                                                  <http://xmlns.com/foaf/0.1/Person> ;
-                                                         rdfs:label "Pascal kettmann" ;
-                                                         <http://xmlns.com/foaf/0.1/mbox> "mailto:pascal.kettmann@tu-dresden.de" ;
-                                                         <http://xmlns.com/foaf/0.1/name> "Pascal Kettmann" .
-
-
-###  https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me
-<https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me> rdf:type owl:NamedIndividual ,
-                                                                 <http://xmlns.com/foaf/0.1/Person> ;
-                                                        rdfs:label "Piotr Gorczyca" ;
-                                                        <http://xmlns.com/foaf/0.1/mbox> "mailto:piotr.gorczyca@tu-dresden.de" ;
-                                                        <http://xmlns.com/foaf/0.1/name> "Piotr Gorczyca" .
-
-
-###  https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me
-<https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me> rdf:type owl:NamedIndividual ,
-                                                                   <http://xmlns.com/foaf/0.1/Person> ;
-                                                          rdfs:label "Stepahn Mennicke" ;
-                                                          <http://xmlns.com/foaf/0.1/mbox> "mailto:Stephan.Mennicke@tu-dresden.de" ;
-                                                          <http://xmlns.com/foaf/0.1/name> "Stephan.Mennicke" .
 
 
 #################################################################

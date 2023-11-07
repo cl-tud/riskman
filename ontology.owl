@@ -1,19 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#"
      xml:base="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:bibo="http://purl.org/ontology/bibo/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="https://schema.org/"
-     xmlns:schema1="http://schema.org/">
+     xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology">
         <owl:versionIRI rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0"/>
         <terms:abstract>The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).</terms:abstract>
@@ -137,97 +131,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/doi -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
-    
-
-
-    <!-- http://purl.org/ontology/bibo/status -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/example -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/example"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
-
-
-    <!-- http://schema.org/license -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/license"/>
-    
-
-
-    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#note -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/depiction -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/logo -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/mbox -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/name -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
     
 
 
@@ -1048,91 +951,10 @@
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Person -->
-
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
-    
-
-
     <!-- https://schema.org/Person -->
 
 
     <owl:Class rdf:about="https://schema.org/Person"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me -->
-
-
-    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:label xml:lang="en">Doerte Arndt</rdfs:label>
-        <foaf:mbox>mailto:doerthe.arndt@tu-dresden.de</foaf:mbox>
-        <foaf:name xml:lang="en">Doerthe Arndt</foaf:name>
-        <foaf:name xml:lang="de">Dörthe Arndt</foaf:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me -->
-
-
-    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:label xml:lang="en">Hannes Strass</rdfs:label>
-        <foaf:mbox>mailto:hannes.strass@tu-dresden.de</foaf:mbox>
-        <foaf:name xml:lang="en">Hannes Strass</foaf:name>
-        <foaf:name xml:lang="de">Hannes Straß</foaf:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me -->
-
-
-    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:label>Pascal kettmann</rdfs:label>
-        <foaf:mbox>mailto:pascal.kettmann@tu-dresden.de</foaf:mbox>
-        <foaf:name>Pascal Kettmann</foaf:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me -->
-
-
-    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:label>Piotr Gorczyca</rdfs:label>
-        <foaf:mbox>mailto:piotr.gorczyca@tu-dresden.de</foaf:mbox>
-        <foaf:name>Piotr Gorczyca</foaf:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me -->
-
-
-    <owl:NamedIndividual rdf:about="https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me">
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:label>Stepahn Mennicke</rdfs:label>
-        <foaf:mbox>mailto:Stephan.Mennicke@tu-dresden.de</foaf:mbox>
-        <foaf:name>Stephan.Mennicke</foaf:name>
-    </owl:NamedIndividual>
     
 
 
