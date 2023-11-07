@@ -15,7 +15,7 @@ kimeds:AcceptanceMatrixShape
       rdfs:label "Acceptance value required" ; # might be redundant if message is written well
       rdfs:comment "Every valid acceptance matrix must specify an acceptance value." ; # -||-
       sh:message "must specify an acceptance value (true or false)" ; # error message
-      sh:severity sh:Info #sh:Warning sh:Violation
+      sh:severity sh:Info ; #sh:Warning sh:Violation
       sh:path kimeds:acceptance ;
       sh:minCount 1 ;
       sh:maxCount 1 ;
@@ -24,7 +24,7 @@ kimeds:AcceptanceMatrixShape
 .
 
 kimeds:AssuranceSDAShape
-  sh:NodeShape ;
+  a sh:NodeShape ;
   sh:targetClass kimeds:AssuranceSDA ;
   sh:property [ # The subject of sh:property should be a PropertyShape, before we just had a property (w3c figure, Part 1, point 2)
       sh:path kimeds:hasSubAssuranceSDAI 
