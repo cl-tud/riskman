@@ -58,6 +58,7 @@ kimeds:DeviceContextShape
 
 kimeds:DeviceSpecificHazardShape
   a sh:NodeShape ;
+  sh:targetClass kimeds:DeviceSpecificHazard ;
   sh:property [
     sh:path kimeds:hasDeviceComponent ;	
     sh:message "Device specific hazard must have at least one device component" ;
@@ -83,21 +84,25 @@ kimeds:DeviceSpecificHazardShape
 
 kimeds:EventShape
   a sh:NodeShape ;
+  sh:targetClass kimeds:Event ;
   sh:property [ 
     sh:path kimeds:hasPreceedingEvent;
   ]
 .
 
 kimeds:FunctionShape
-  a sh:NodeShape
+  a sh:NodeShape ;
+  sh:targetClass kimeds:Function ;
 .
 
 kimeds:ImplementationManifestShape
-  a sh:NodeShape 
+  a sh:NodeShape ;
+  sh:targetClass kimeds:ImplementationManifest ;
 .
 
 kimeds:ManagedRiskShape
   a sh:NodeShape ;
+  sh:targetClass kimeds:ManagedRisk ;
   sh:property [
     sh:path kimeds:hasDeviceSpecificHazard ;
     sh:message "Every managed risk must have exactly one device specific hazard" ;  
@@ -126,11 +131,13 @@ kimeds:ManagedRiskShape
 
 
 kimeds:RiskMatrixShape
-  a sh:NodeShape 
+  a sh:NodeShape ;
+  sh:targetClass kimeds:RiskMatrix ;
 .
 
 kimeds:RiskSDAShape
   a sh:NodeShape ;
+  sh:targetClass kimeds:RiskSDA ;
   sh:property [
     sh:path kimeds:hasSubRiskSDA 
   ], [
@@ -140,17 +147,20 @@ kimeds:RiskSDAShape
 
 kimeds:RiskSDAIShape
   a sh:NodeShape ;
+  sh:targetClass kimeds:RiskSDAI ;
   sh:property [
     sh:path kimeds:hasSubRiskSDAI 
   ]
 .
 
 kimeds:SafetyAssuranceShape
-  a sh:NodeShape
+  a sh:NodeShape ;
+  sh:targetClass kimeds:SafetyAssurance ;
 .
 
 kimeds:SDAShape
   a sh:NodeShape ;
+  sh:targetClass kimeds:SDA ;
   sh:property [
       sh:path ( [ sh:zeroOrMorePath kimeds:hasSubSDA] kimeds:hasImplementationManifest ) ;
       sh:message "Every SDA needs a final mitigation (which has the Implementation Manifest)" ;
