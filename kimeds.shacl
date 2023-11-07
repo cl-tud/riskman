@@ -31,7 +31,7 @@ kimeds:AssuranceSDAShape
   ]
 .
 
-kimeds:AssuranceSDAI
+kimeds:AssuranceSDAIShape
   a sh:NodeShape ;
   sh:targetClass kimeds:AssuranceSDAI ;
   sh:property [
