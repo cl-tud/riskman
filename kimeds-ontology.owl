@@ -76,62 +76,6 @@ _:siemens_healthineers schema:name "Siemens Healthineers" .
 
 _:ekfz schema:name "EKFZ, TU Dresden" .                                    
 
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/ontology/bibo/doi
-<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/ontology/bibo/status
-<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/example
-<http://purl.org/vocab/vann/example> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespaceUri
-<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
-
-
-###  http://schema.org/license
-<http://schema.org/license> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#note
-<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/depiction
-<http://xmlns.com/foaf/0.1/depiction> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/logo
-<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/mbox
-<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/primaryTopic
-<http://xmlns.com/foaf/0.1/primaryTopic> rdf:type owl:AnnotationProperty .
-
 #################################################################
 #    Object Properties
 #################################################################
