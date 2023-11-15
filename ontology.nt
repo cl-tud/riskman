@@ -292,6 +292,20 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 # #################################################################
 # 
 # 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability of a hazardous situation occurring" .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1> <http://www.w3.org/2000/01/rdf-schema#label> "P1" .
+# 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability of a hazardous situation leading to harm" .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2> <http://www.w3.org/2000/01/rdf-schema#label> "P2" .
+# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix> .
@@ -325,7 +339,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "The likelihood of an event occurring, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most." .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax

@@ -896,7 +896,11 @@ This section provides details for each class and property defined by The KIMEDS 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext"
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1">P1</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2">P2</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext">has device context</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">has harm</a>
@@ -1917,6 +1921,14 @@ This section provides details for each class and property defined by The KIMEDS 
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name">name</a>
       </li>
       <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1">P1</a>
+      </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2">P2</a>
+      </li>
+      <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">probability</a>
       </li>
@@ -2016,6 +2028,60 @@ This section provides details for each class and property defined by The KIMEDS 
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1">
+      <h3>P1<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1</p>
+      <div class="comment">
+         <span class="markdown">Probability of a hazardous situation occurring</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2">
+      <h3>P2<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2</p>
+      <div class="comment">
+         <span class="markdown">Probability of a hazardous situation leading to harm</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
       <h3>probability<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -2024,7 +2090,7 @@ This section provides details for each class and property defined by The KIMEDS 
       <p>
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability</p>
       <div class="comment">
-         <span class="markdown">The likelihood of an event occurring, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most.</span>
+         <span class="markdown">Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory.</span>
       </div>
       <div class="description">
          <dl>
