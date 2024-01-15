@@ -100,7 +100,7 @@ kimeds:ImplementationManifestShape
   sh:targetClass kimeds:ImplementationManifest ;
 .
 
-kimeds:ManagedRiskShape
+  kimeds:ManagedRiskShape
   a sh:NodeShape ;
   sh:targetClass kimeds:ManagedRisk ;
   sh:property [
@@ -108,6 +108,25 @@ kimeds:ManagedRiskShape
     sh:message "Every managed risk must have exactly one device specific hazard" ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
+    sh:property [
+      sh:path kimeds:hasHazardousSituation ;
+      sh:property [
+        sh:path kimeds:P1 ;
+        sh:message "Every hazardous situation can only have one P1 for each managed risk. " ;
+        sh:maxCount 1 ;
+      ] ;
+    ] ;
+    sh:property [
+      sh:path kimeds:hasHazard ;
+      sh:property [
+        sh:path kimeds:causes ;
+        sh:property [
+          sh:path kimeds:P2 ;
+          sh:message "Every harm can only have one P2 for each managed risk" ;
+          sh:maxCount 1 ;
+        ] ;
+      ] ;
+    ] ;
   ], [
     sh:path kimeds:hasPreRisk ;
     sh:message "Every managed risk must have exactly one pre risk" ;  
