@@ -264,7 +264,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1
 :P1 rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Risk ;
+    rdfs:domain :HazardousSituation ;
     rdfs:range xsd:integer ;
     rdfs:comment "Probability of a hazardous situation occurring" ;
     rdfs:label "P1" .
@@ -272,7 +272,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2
 :P2 rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Risk ;
+    rdfs:domain :Harm ;
     rdfs:range xsd:integer ;
     rdfs:comment "Probability of a hazardous situation leading to harm" ;
     rdfs:label "P2" .
