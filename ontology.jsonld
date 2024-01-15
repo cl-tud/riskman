@@ -653,7 +653,7 @@
     "@value" : "Probability of a hazardous situation occurring"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "P1"
@@ -668,7 +668,7 @@
     "@value" : "Probability of a hazardous situation leading to harm"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "P2"
