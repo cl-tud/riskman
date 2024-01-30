@@ -380,14 +380,14 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent -->
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent">
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
-        <rdfs:label>has preceeding event</rdfs:label>
+        <rdfs:label>has preceding event</rdfs:label>
     </owl:ObjectProperty>
     
 

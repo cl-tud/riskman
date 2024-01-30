@@ -210,12 +210,12 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has pre risk" .
 # 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has preceeding event" .
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has preceding event" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

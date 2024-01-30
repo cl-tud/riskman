@@ -627,7 +627,7 @@
     "id" : "30",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "14",
+    "id" : "13",
     "type" : "owl:objectProperty"
   }, {
     "id" : "34",
@@ -786,10 +786,13 @@
     "id" : "95",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "96",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "13",
+    "id" : "12",
     "type" : "owl:objectProperty"
   }, {
     "id" : "97",
@@ -897,7 +900,7 @@
     "id" : "136",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "12",
+    "id" : "11",
     "type" : "owl:objectProperty"
   }, {
     "id" : "137",
@@ -913,9 +916,6 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "56",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "11",
     "type" : "owl:objectProperty"
   }, {
     "id" : "144",
@@ -1037,7 +1037,7 @@
     "superproperty" : [ "9" ],
     "domain" : "19",
     "attributes" : [ "object" ],
-    "id" : "14"
+    "id" : "13"
   }, {
     "range" : "8",
     "domain" : "23",
@@ -1385,6 +1385,18 @@
     "attributes" : [ "object" ],
     "id" : "95"
   }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasPrecedingEvent",
+      "undefined" : "has preceding event"
+    },
+    "superproperty" : [ "9" ],
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "range" : "16",
@@ -1406,7 +1418,7 @@
     "superproperty" : [ "9" ],
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "13"
+    "id" : "12"
   }, {
     "range" : "2",
     "domain" : "6",
@@ -1642,7 +1654,7 @@
     "superproperty" : [ "9" ],
     "domain" : "33",
     "attributes" : [ "object" ],
-    "id" : "12"
+    "id" : "11"
   }, {
     "range" : "52",
     "domain" : "31",
@@ -1690,18 +1702,6 @@
     "domain" : "52",
     "attributes" : [ "object" ],
     "id" : "56"
-  }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasPreceedingEvent",
-      "undefined" : "has preceeding event"
-    },
-    "superproperty" : [ "9" ],
-    "domain" : "4",
-    "attributes" : [ "object" ],
-    "id" : "11"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
