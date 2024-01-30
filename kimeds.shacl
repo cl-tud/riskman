@@ -50,8 +50,8 @@ kimeds:DeviceSpecificHazardShape
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
-    sh:path kimeds:hasFunction ;
-    sh:message "Device specific hazard must have exactly one function" ;
+    sh:path kimeds:hasDeviceFunction ;
+    sh:message "Device specific hazard must have exactly one device function" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
@@ -75,9 +75,9 @@ kimeds:EventShape
   ]
 .
 
-kimeds:FunctionShape
+kimeds:DeviceFunctionShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:Function ;
+  sh:targetClass kimeds:DeviceFunction ;
 .
 
 kimeds:ImplementationManifestShape

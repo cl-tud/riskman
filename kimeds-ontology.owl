@@ -117,11 +117,11 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
           rdfs:range :Event .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction
-:hasFunction rdf:type owl:ObjectProperty ;
-                    rdfs:label "has function" ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction
+:hasDeviceFunction rdf:type owl:ObjectProperty ;
+                    rdfs:label "has device function" ;
              rdfs:domain :DeviceSpecificHazard ;
-             rdfs:range :Function .
+             rdfs:range :DeviceFunction .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
@@ -366,8 +366,8 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                                    owl:someValuesFrom :DeviceComponent
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasFunction ;
-                                                                   owl:someValuesFrom :Function
+                                                                   owl:onProperty :hasDeviceFunction ;
+                                                                   owl:someValuesFrom :DeviceFunction
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasHazard ;
@@ -380,7 +380,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                                ) ;
                                             rdf:type owl:Class
                                           ] ;
-                      rdfs:comment "Hazard associated with a specific hazardous situation, function and a specific device component." ;
+                      rdfs:comment "Hazard associated with a specific hazardous situation, device function and a specific device component." ;
                     rdfs:label "Device specific hazard" .
 
 
@@ -390,10 +390,10 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "Event" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function
-:Function rdf:type owl:Class ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction
+:DeviceFunction rdf:type owl:Class ;
           rdfs:comment "A specific functionality of a device related with the device specific hazard." ;
-                    rdfs:label "Function" .
+                    rdfs:label "Device function" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm
@@ -559,7 +559,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                 :DeviceContext
                 :DeviceSpecificHazard
                 :Event
-                :Function
+                :DeviceFunction
                 :Harm
                 :Hazard
                 :HazardousSituation
