@@ -490,18 +490,17 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI
 :SDAI rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf
+                             ( :SDA
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasImplementationManifest ;
+                                 owl:someValuesFrom :ImplementationManifest
+                               ] 
+                             )
+                          ];
       rdfs:comment "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
                     rdfs:label "SDAI" .   
 
-[ owl:intersectionOf ( :SDA
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasImplementationManifest ;
-                        owl:someValuesFrom :ImplementationManifest
-                      ]
-                    ) ;
-  rdf:type owl:Class ;
-  rdfs:subClassOf :SDAI                    
-] .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance
 :SafetyAssurance rdf:type owl:Class ;
