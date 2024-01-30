@@ -543,6 +543,14 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI
 :SDAI rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( :SDA
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasImplementationManifest ;
+                                                   owl:someValuesFrom :ImplementationManifest
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
       rdfs:comment "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
       rdfs:label "SDAI" .
 
@@ -560,17 +568,6 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    General axioms
 #################################################################
-
-[ owl:intersectionOf ( :SDA
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasImplementationManifest ;
-                         owl:someValuesFrom :ImplementationManifest
-                       ]
-                     ) ;
-  rdf:type owl:Class ;
-  rdfs:subClassOf :SDAI
-] .
-
 
 [ owl:intersectionOf ( :SDA
                        [ rdf:type owl:Restriction ;

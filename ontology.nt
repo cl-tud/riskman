@@ -529,6 +529,18 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid51 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI> <http://www.w3.org/2000/01/rdf-schema#comment> "Reusable artifact embodying or expressing one possible method or approach to risk control." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI> <http://www.w3.org/2000/01/rdf-schema#label> "SDAI" .
 # 
@@ -547,19 +559,6 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # #
 # #################################################################
 # 
-# 
-_:genid51 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid54 .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid53 .
-_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid51 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI> .
 # 
 _:genid55 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid58 .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .

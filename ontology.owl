@@ -849,6 +849,17 @@
 
 
     <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:comment>Reusable artifact embodying or expressing one possible method or approach to risk control.</rdfs:comment>
         <rdfs:label>SDAI</rdfs:label>
     </owl:Class>
@@ -881,16 +892,6 @@
      -->
 
 
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"/>
-                <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"/>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI"/>
-    </owl:Class>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>

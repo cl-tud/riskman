@@ -31,12 +31,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483649",
+        "value" : "_:genid2147483651",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483652",
+        "value" : "_:genid2147483649",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -46,12 +46,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483652",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483651",
+        "value" : "_:genid2147483648",
         "type" : "label"
       } ],
       "funding" : [ {
@@ -61,6 +61,11 @@
         "type" : "label"
       } ],
       "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "_:genid2147483654",
+        "type" : "label"
+      }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
@@ -73,12 +78,17 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
         "value" : "_:genid2147483655",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
         "type" : "iri"
       }, {
         "identifier" : "contributor",
@@ -89,16 +99,6 @@
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "_:genid2147483653",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "_:genid2147483654",
         "type" : "label"
       } ],
       "created" : [ {
@@ -506,7 +506,7 @@
   }, {
     "instances" : 0,
     "union" : [ "24", "29" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "103"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
@@ -525,7 +525,7 @@
   }, {
     "instances" : 0,
     "union" : [ "24", "29" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "132"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
