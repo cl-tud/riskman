@@ -54,10 +54,6 @@ This section provides details for each class and property defined by The KIMEDS 
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
       </li>
       <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA">Non final SDA</a>
-      </li>
-      <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">Risk</a>
       </li>
@@ -81,6 +77,10 @@ This section provides details for each class and property defined by The KIMEDS 
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
       </li>
+      <li>
+         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI"
+            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI">SDAI</a>
+      </li>
    </ul>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">
       <h3>Assurance SDA<sup class="type-c" title="class">c</sup>
@@ -99,26 +99,10 @@ This section provides details for each class and property defined by The KIMEDS 
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">Assurance SDAI</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">has safety assurance</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -140,17 +124,21 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">A safe design argument (SDA), where the purpose is to make a safety assurance</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is equivalent to</dt>
          <dd>
             <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI">SDAI</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
+         <dt>has super-classes</dt>
          <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -757,32 +745,6 @@ This section provides details for each class and property defined by The KIMEDS 
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA">
-      <h3>Non final SDA<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA</p>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">
       <h3>Risk<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -926,26 +888,6 @@ This section provides details for each class and property defined by The KIMEDS 
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">Risk SDAI</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
@@ -965,17 +907,15 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">Structured artifact specifying a concrete implementation or realization of a specific Risk SDA.</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is equivalent to</dt>
          <dd>
             <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> 
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI">SDAI</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1013,8 +953,8 @@ This section provides details for each class and property defined by The KIMEDS 
          <dd>
             <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA">Non final SDA</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI"
+               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">Assurance SDAI</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
             <sup class="type-c" title="class">c</sup>
@@ -1064,6 +1004,18 @@ This section provides details for each class and property defined by The KIMEDS 
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
+   </div>
+   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI">
+      <h3>SDAI<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI</p>
+      <div class="comment">
+         <span class="markdown">Reusable artifact embodying or expressing one possible method or approach to risk control.</span>
+      </div>
+      <dl class="description"/>
    </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1133,22 +1085,6 @@ This section provides details for each class and property defined by The KIMEDS 
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">has safety assurance</a>
-      </li>
-      <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
-      </li>
-      <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
-      </li>
-      <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
-      </li>
-      <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
       </li>
       <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
@@ -1565,126 +1501,6 @@ This section provides details for each class and property defined by The KIMEDS 
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">
-      <h3>has sub assurance SDA<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">
-      <h3>has sub assurance SDAI<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">Assurance SDAI</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">
-      <h3>has sub risk SDA<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">
-      <h3>has sub risk SDAI<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">has sub SDA</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">Risk SDA</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">Risk SDAI</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">
       <h3>has sub SDA<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1694,18 +1510,6 @@ This section provides details for each class and property defined by The KIMEDS 
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA</p>
       <div class="description">
          <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA">has sub assurance SDA</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI">has sub assurance SDAI</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA">has sub risk SDA</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI">has sub risk SDAI</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
