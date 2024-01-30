@@ -71,7 +71,7 @@ kimeds:EventShape
   a sh:NodeShape ;
   sh:targetClass kimeds:Event ;
   sh:property [ 
-    sh:path kimeds:hasPreceedingEvent;
+    sh:path kimeds:hasPrecedingEvent;
   ]
 .
 
