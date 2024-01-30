@@ -104,7 +104,7 @@ kimeds:ImplementationManifestShape
     sh:property [
       sh:path kimeds:hasHazard ;
       sh:property [
-        sh:path kimeds:causes ;
+        sh:path kimeds:causesHarm ;
         sh:property [
           sh:path kimeds:P2 ;
           sh:message "Every harm can only have one P2 for each managed risk" ;
