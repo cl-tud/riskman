@@ -8,21 +8,6 @@
 
 ### The KIMEDS Classes ###
 
-kimeds:AcceptanceMatrixShape
-  a sh:NodeShape ;
-  sh:targetClass kimeds:AcceptanceMatrix ;
-  sh:property [
-      rdfs:label "Acceptance value required" ; # might be redundant if message is written well
-      rdfs:comment "Every valid acceptance matrix must specify an acceptance value." ; # -||-
-      sh:message "must specify an acceptance value (true or false)" ; # error message
-      sh:severity sh:Info ; #sh:Warning sh:Violation
-      sh:path kimeds:acceptance ;
-      sh:minCount 1 ;
-      sh:maxCount 1 ;
-      sh:datatype xsd:boolean 
-    ] 
-.
-
 kimeds:AssuranceSDAShape
   a sh:NodeShape ;
   sh:targetClass kimeds:AssuranceSDA ;
@@ -140,10 +125,6 @@ kimeds:ImplementationManifestShape
   ], [
     sh:path kimeds:isMitigatedBy ;
     sh:message "Every managed risk must be mitigated" ;  
-    sh:minCount 1 ;
-  ], [
-    sh:path kimeds:hasAcceptanceMatrix ;
-    sh:message "Every managed risk must have an acceptance matrix" ;  
     sh:minCount 1 ;
   ]
 .
