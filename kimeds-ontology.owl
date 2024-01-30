@@ -490,13 +490,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
       rdfs:label "Risk" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix
-:RiskAcceptanceMatrix rdf:type owl:Class ;
-                      rdfs:comment "Currently without use" ,
-                                   "Defines acceptable and unacceptable combinations of probability and severity of a given risk matrix." ;
-                    rdfs:label "Risk acceptance matrix" .
-
-
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix
 :RiskMatrix rdf:type owl:Class ;
             rdfs:comment "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)." ;
