@@ -210,10 +210,10 @@
     "id" : "134",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "52",
     "type" : "owl:Class"
   }, {
-    "id" : "52",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "140",
@@ -496,18 +496,6 @@
     "attributes" : [ "external" ],
     "id" : "134"
   }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Function",
-      "undefined" : "Function"
-    },
-    "comment" : {
-      "undefined" : "A specific functionality of a device related with the device specific hazard."
-    },
-    "id" : "16"
-  }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "instances" : 0,
@@ -521,6 +509,18 @@
     },
     "id" : "52",
     "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Function",
+      "undefined" : "Function"
+    },
+    "comment" : {
+      "undefined" : "A specific functionality of a device related with the device specific hazard."
+    },
+    "id" : "16"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -912,10 +912,10 @@
     "id" : "142",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "11",
+    "id" : "56",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "56",
+    "id" : "11",
     "type" : "owl:objectProperty"
   }, {
     "id" : "144",
@@ -972,7 +972,7 @@
     },
     "domain" : "10",
     "subproperty" : [ "11", "12", "13", "14" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "9"
   }, {
     "range" : "16",
@@ -1679,18 +1679,6 @@
     "attributes" : [ "datatype" ],
     "id" : "142"
   }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasPreceedingEvent",
-      "undefined" : "has preceeding event"
-    },
-    "superproperty" : [ "9" ],
-    "domain" : "4",
-    "attributes" : [ "object" ],
-    "id" : "11"
-  }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "range" : "51",
@@ -1702,6 +1690,18 @@
     "domain" : "52",
     "attributes" : [ "object" ],
     "id" : "56"
+  }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasPreceedingEvent",
+      "undefined" : "has preceeding event"
+    },
+    "superproperty" : [ "9" ],
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "11"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
