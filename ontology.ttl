@@ -155,13 +155,6 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:label "causes" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix
-:hasAcceptanceMatrix rdf:type owl:ObjectProperty ;
-                     rdfs:domain :ManagedRisk ;
-                     rdfs:range :AcceptanceMatrix ;
-                     rdfs:label "has acceptance matrix" .
-
-
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
 :hasDeviceComponent rdf:type owl:ObjectProperty ;
                     rdfs:domain :DeviceSpecificHazard ;
@@ -345,14 +338,6 @@ xsd:date rdf:type rdfs:Datatype .
     rdfs:label "P2" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance
-:acceptance rdf:type owl:DatatypeProperty ;
-            rdfs:domain :AcceptanceMatrix ;
-            rdfs:range xsd:boolean ;
-            rdfs:comment "A boolean value denoting the level acceptance" ;
-            rdfs:label "acceptance" .
-
-
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id
 :id rdf:type owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
@@ -412,20 +397,6 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Classes
 #################################################################
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix
-:AcceptanceMatrix rdf:type owl:Class ;
-                  owl:equivalentClass [ owl:intersectionOf ( :RiskMatrix
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty :acceptance ;
-                                                               owl:someValuesFrom xsd:boolean
-                                                             ]
-                                                           ) ;
-                                        rdf:type owl:Class
-                                      ] ;
-                  rdfs:comment "A tuple containing the combination of severity, probability and information whether such combination is acceptable or not." ;
-                  rdfs:label "Acceptance matrix" .
-
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA
 :AssuranceSDA rdf:type owl:Class ;
@@ -526,10 +497,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk
 :ManagedRisk rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasAcceptanceMatrix ;
-                                                          owl:someValuesFrom :AcceptanceMatrix
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasDeviceSpecificHazard ;
                                                           owl:someValuesFrom :DeviceSpecificHazard
                                                         ]

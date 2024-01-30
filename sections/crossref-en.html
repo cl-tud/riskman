@@ -6,10 +6,6 @@ This section provides details for each class and property defined by The KIMEDS 
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
-      </li>
-      <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">Assurance SDA</a>
       </li>
@@ -94,43 +90,6 @@ This section provides details for each class and property defined by The KIMEDS 
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">SDA</a>
       </li>
    </ul>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">
-      <h3>Acceptance matrix<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix</p>
-      <div class="comment">
-         <span class="markdown">A tuple containing the combination of severity, probability and information whether such combination is acceptable or not.</span>
-      </div>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">Risk matrix</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">acceptance</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <a href="http://www.w3.org/2001/XMLSchema#boolean"
-               target="_blank"
-               title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">acceptance</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">
       <h3>Assurance SDA<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -739,13 +698,7 @@ This section provides details for each class and property defined by The KIMEDS 
          <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk</p>
       <dl class="description">
          <dt>is equivalent to</dt>
-         <dd>(<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
+         <dd>(<a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">has device specific hazard</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
@@ -772,9 +725,7 @@ This section provides details for each class and property defined by The KIMEDS 
             <sup class="type-c" title="class">c</sup>)</dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
-               title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
+            <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard">has device specific hazard</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk"
                title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk">has pre risk</a>
@@ -1174,10 +1125,6 @@ This section provides details for each class and property defined by The KIMEDS 
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">causes</a>
       </li>
       <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">has acceptance matrix</a>
-      </li>
-      <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">has device component</a>
       </li>
@@ -1285,30 +1232,6 @@ This section provides details for each class and property defined by The KIMEDS 
             <dd>
                <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
                   title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">Harm</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix">
-      <h3>has acceptance matrix<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk">Managed risk</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1913,10 +1836,6 @@ This section provides details for each class and property defined by The KIMEDS 
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance"
-            title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">acceptance</a>
-      </li>
-      <li>
          <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id"
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">id</a>
       </li>
@@ -1949,33 +1868,6 @@ This section provides details for each class and property defined by The KIMEDS 
             title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">severityMax</a>
       </li>
    </ul>
-   <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance">
-      <h3>acceptance<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance</p>
-      <div class="comment">
-         <span class="markdown">A boolean value denoting the level acceptance</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix"
-                  title="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix">Acceptance matrix</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#boolean"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id">
       <h3>id<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>

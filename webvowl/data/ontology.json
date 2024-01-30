@@ -28,16 +28,10 @@
         "value" : "http://creativecommons.org/licenses/by/2.0/",
         "type" : "iri"
       } ],
-      "funding" : [ {
-        "identifier" : "funding",
-        "language" : "undefined",
-        "value" : "(Add funding info)",
-        "type" : "label"
-      } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483651",
+        "value" : "_:genid2147483650",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -52,15 +46,26 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483650",
+        "value" : "_:genid2147483648",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483651",
+        "type" : "label"
+      } ],
+      "funding" : [ {
+        "identifier" : "funding",
+        "language" : "undefined",
+        "value" : "(Add funding info)",
         "type" : "label"
       } ],
       "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
+        "type" : "iri"
+      }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "_:genid2147483654",
@@ -73,7 +78,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
         "type" : "iri"
       }, {
         "identifier" : "contributor",
@@ -83,23 +88,18 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
         "type" : "iri"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
         "type" : "iri"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "_:genid2147483653",
         "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/#me",
-        "type" : "iri"
       } ],
       "created" : [ {
         "identifier" : "created",
@@ -113,16 +113,16 @@
         "value" : "2023-10-23",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "undefined",
-        "value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).",
         "type" : "label"
       } ],
       "title" : [ {
@@ -147,106 +147,100 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
-    "type" : "owl:Class"
-  }, {
-    "id" : "6",
-    "type" : "owl:intersectionOf"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "48",
-    "type" : "owl:Class"
-  }, {
-    "id" : "82",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "56",
-    "type" : "owl:Class"
-  }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "121",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "113",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "119",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "27",
-    "type" : "owl:Class"
-  }, {
-    "id" : "51",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "120",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "137",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
     "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "143",
-    "type" : "owl:unionOf"
+    "id" : "8",
+    "type" : "owl:Class"
   }, {
-    "id" : "84",
-    "type" : "rdfs:Datatype"
+    "id" : "31",
+    "type" : "owl:Class"
   }, {
-    "id" : "145",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "146",
-    "type" : "rdfs:Datatype"
+    "id" : "81",
+    "type" : "owl:Class"
   }, {
     "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "134",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "141",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "115",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "79",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "115",
+    "id" : "111",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "7",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "54",
+    "id" : "44",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -284,7 +278,7 @@
     "comment" : {
       "undefined" : "A (physical or logical) part of a device."
     },
-    "id" : "36"
+    "id" : "33"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -296,7 +290,7 @@
     "comment" : {
       "undefined" : "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)."
     },
-    "id" : "32"
+    "id" : "29"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -308,7 +302,7 @@
     "comment" : {
       "undefined" : "Information about possible environments the device can be used in that may affect probability or severity of some risk."
     },
-    "id" : "26"
+    "id" : "23"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -320,7 +314,7 @@
     "comment" : {
       "undefined" : "Potential source of harm"
     },
-    "id" : "22"
+    "id" : "19"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -332,21 +326,7 @@
     "comment" : {
       "undefined" : "Circumstance in which people, property or the environment is/are exposed to one or more hazards."
     },
-    "id" : "11"
-  }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AcceptanceMatrix",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AcceptanceMatrix",
-      "undefined" : "Acceptance matrix"
-    },
-    "intersection" : [ "32" ],
-    "comment" : {
-      "undefined" : "A tuple containing the combination of severity, probability and information whether such combination is acceptable or not."
-    },
-    "attributes" : [ "intersection" ],
-    "id" : "6"
+    "id" : "8"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -355,12 +335,12 @@
       "IRI-based" : "AssuranceSDA",
       "undefined" : "Assurance SDA"
     },
-    "subClasses" : [ "82" ],
+    "subClasses" : [ "77" ],
     "comment" : {
       "undefined" : "A safe design argument (SDA), where the purpose is to make a safety assurance"
     },
-    "id" : "34",
-    "superClasses" : [ "30" ]
+    "id" : "31",
+    "superClasses" : [ "27" ]
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -369,8 +349,8 @@
       "IRI-based" : "NonFinalSDA",
       "undefined" : "Non final SDA"
     },
-    "id" : "48",
-    "superClasses" : [ "30" ]
+    "id" : "81",
+    "superClasses" : [ "27" ]
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -382,8 +362,8 @@
     "comment" : {
       "undefined" : "A safe design argument (SDA), where the purpose is to make a safety assurance"
     },
-    "id" : "82",
-    "superClasses" : [ "34" ]
+    "id" : "77",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -395,7 +375,7 @@
     "comment" : {
       "undefined" : "Injury or damage to the health of people, or damage to property or the environment."
     },
-    "id" : "24"
+    "id" : "21"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -416,7 +396,7 @@
     "comment" : {
       "undefined" : "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual."
     },
-    "id" : "9"
+    "id" : "6"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -428,8 +408,8 @@
     "comment" : {
       "undefined" : "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA."
     },
-    "id" : "56",
-    "superClasses" : [ "57" ]
+    "id" : "51",
+    "superClasses" : [ "52" ]
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -438,11 +418,11 @@
       "IRI-based" : "SDA",
       "undefined" : "SDA"
     },
-    "subClasses" : [ "57", "48", "34" ],
+    "subClasses" : [ "52", "81", "31" ],
     "comment" : {
       "undefined" : "Reusable artifact embodying or expressing one possible method or approach to risk control."
     },
-    "id" : "30"
+    "id" : "27"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -454,7 +434,7 @@
     "comment" : {
       "undefined" : "Defines acceptable and unacceptable combinations of probability and severity of a given risk matrix."
     },
-    "id" : "121"
+    "id" : "117"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -469,21 +449,16 @@
     "id" : "1"
   }, {
     "instances" : 0,
-    "union" : [ "54", "27" ],
+    "union" : [ "44", "24" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "113"
+    "id" : "109"
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "13",
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "116",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "integer"
     }
-  }, {
-    "instances" : 0,
-    "union" : [ "27", "32" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "119"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -492,22 +467,22 @@
       "IRI-based" : "Risk",
       "undefined" : "Risk"
     },
-    "subClasses" : [ "54" ],
+    "subClasses" : [ "44" ],
     "comment" : {
       "undefined" : "Combination of harm and its associated probability and severity."
     },
-    "id" : "27"
+    "id" : "24"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "51",
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "10",
     "label" : {
-      "IRI-based" : "integer"
+      "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "120",
+    "id" : "48",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -519,21 +494,7 @@
       "IRI-based" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "137"
-  }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "RiskSDA",
-      "undefined" : "Risk SDA"
-    },
-    "subClasses" : [ "56" ],
-    "comment" : {
-      "undefined" : "SDA where the purpose is to mitigate a managed risk."
-    },
-    "id" : "57",
-    "superClasses" : [ "30" ]
+    "id" : "134"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -545,60 +506,72 @@
     "comment" : {
       "undefined" : "A specific functionality of a device related with the device specific hazard."
     },
-    "id" : "19"
+    "id" : "16"
+  }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskSDA",
+      "undefined" : "Risk SDA"
+    },
+    "subClasses" : [ "51" ],
+    "comment" : {
+      "undefined" : "SDA where the purpose is to mitigate a managed risk."
+    },
+    "id" : "52",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "140",
+    "label" : {
+      "IRI-based" : "integer"
+    }
   }, {
     "instances" : 0,
-    "union" : [ "27", "32" ],
+    "union" : [ "24", "29" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "143"
+    "id" : "141"
+  }, {
+    "instances" : 0,
+    "union" : [ "24", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "143",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "integer"
+    }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "84",
+    "id" : "79",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "145",
-    "label" : {
-      "IRI-based" : "integer"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "146",
-    "label" : {
-      "IRI-based" : "integer"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "77",
-    "label" : {
-      "IRI-based" : "integer"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "79",
-    "label" : {
-      "IRI-based" : "integer"
-    }
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "115",
+    "id" : "111",
     "label" : {
       "IRI-based" : "float"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "7",
-    "label" : {
-      "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk",
@@ -611,24 +584,27 @@
     "comment" : {
       "undefined" : "The original, mitigated risk with lowered value(s) of probability and/or severity."
     },
-    "id" : "54",
-    "superClasses" : [ "27" ]
+    "id" : "44",
+    "superClasses" : [ "24" ]
   } ],
   "property" : [ {
     "id" : "0",
     "type" : "owl:disjointWith"
   }, {
     "id" : "5",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "8",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "10",
+    "id" : "7",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "12",
+    "id" : "9",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "17",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "18",
     "type" : "owl:disjointWith"
@@ -636,35 +612,38 @@
     "id" : "20",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "21",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "23",
+    "id" : "22",
     "type" : "owl:disjointWith"
   }, {
     "id" : "25",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "26",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "28",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "29",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "31",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "33",
+    "id" : "30",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "17",
+    "id" : "14",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "35",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "37",
     "type" : "owl:disjointWith"
   }, {
     "id" : "38",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "39",
     "type" : "owl:disjointWith"
@@ -673,70 +652,73 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "41",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "42",
     "type" : "owl:disjointWith"
   }, {
     "id" : "43",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "44",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "45",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "46",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "47",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "49",
     "type" : "owl:disjointWith"
   }, {
     "id" : "50",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "52",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "53",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "55",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "58",
     "type" : "owl:disjointWith"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "59",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "60",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "35",
-    "type" : "owl:objectProperty"
+    "id" : "61",
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "64",
+    "id" : "62",
     "type" : "owl:objectProperty"
   }, {
     "id" : "63",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "64",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "65",
     "type" : "owl:disjointWith"
   }, {
     "id" : "66",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "67",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "68",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "69",
     "type" : "owl:disjointWith"
@@ -745,22 +727,16 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "71",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "72",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "73",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "74",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "75",
     "type" : "owl:disjointWith"
   }, {
     "id" : "76",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "78",
     "type" : "owl:datatypeProperty"
@@ -768,11 +744,14 @@
     "id" : "80",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "81",
+    "id" : "82",
     "type" : "owl:disjointWith"
   }, {
     "id" : "83",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "84",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "85",
     "type" : "owl:disjointWith"
@@ -805,10 +784,13 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "95",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "96",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "97",
     "type" : "owl:disjointWith"
@@ -817,13 +799,10 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "99",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "100",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "16",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "101",
     "type" : "owl:disjointWith"
@@ -832,7 +811,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "103",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "104",
     "type" : "owl:disjointWith"
@@ -844,34 +823,34 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "107",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "108",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "109",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "110",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "111",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
     "type" : "owl:objectProperty"
   }, {
     "id" : "114",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "116",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "117",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "118",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "121",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "122",
     "type" : "owl:disjointWith"
@@ -883,25 +862,25 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "125",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "126",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "127",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "128",
     "type" : "owl:disjointWith"
   }, {
     "id" : "129",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "130",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "62",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "131",
     "type" : "owl:disjointWith"
@@ -912,199 +891,173 @@
     "id" : "133",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "134",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "135",
     "type" : "owl:disjointWith"
   }, {
     "id" : "136",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "138",
     "type" : "owl:disjointWith"
   }, {
     "id" : "139",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "15",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "140",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "141",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "142",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
     "type" : "owl:objectProperty"
   }, {
     "id" : "144",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "61",
-    "type" : "owl:objectProperty"
+    "id" : "145",
+    "type" : "owl:someValuesFrom"
   }, {
-    "id" : "14",
-    "type" : "owl:objectProperty"
+    "id" : "146",
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "147",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "148",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "149",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "150",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "151",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "152",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "153",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "154",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "155",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "156",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "157",
     "type" : "owl:disjointWith"
   } ],
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#acceptance",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "7",
-    "label" : {
-      "IRI-based" : "acceptance",
-      "undefined" : "acceptance"
-    },
-    "domain" : "6",
-    "comment" : {
-      "undefined" : "A boolean value denoting the level acceptance"
-    },
-    "attributes" : [ "datatype" ],
+    "range" : "6",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "5"
   }, {
-    "range" : "9",
+    "range" : "8",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "8"
-  }, {
-    "range" : "11",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "10"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "13",
+    "range" : "10",
     "label" : {
       "IRI-based" : "topObjectProperty"
     },
-    "domain" : "13",
-    "subproperty" : [ "14", "15", "16", "17" ],
+    "domain" : "10",
+    "subproperty" : [ "11", "12", "13", "14" ],
     "attributes" : [ "object", "external" ],
-    "id" : "12"
+    "id" : "9"
   }, {
-    "range" : "19",
+    "range" : "16",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "18"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
   }, {
     "range" : "4",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "19",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "21",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "20"
   }, {
-    "range" : "22",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "21"
-  }, {
     "range" : "24",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "23"
-  }, {
-    "range" : "27",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "25"
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
   }, {
     "range" : "2",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "27",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "29",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "28"
-  }, {
-    "range" : "30",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "29"
-  }, {
-    "range" : "32",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "31"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "34",
+    "range" : "31",
     "label" : {
       "IRI-based" : "hasSubAssuranceSDA",
       "undefined" : "has sub assurance SDA"
     },
-    "superproperty" : [ "35" ],
-    "domain" : "34",
+    "superproperty" : [ "32" ],
+    "domain" : "31",
     "attributes" : [ "object" ],
-    "id" : "33"
+    "id" : "30"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "22",
+    "range" : "19",
     "label" : {
       "IRI-based" : "hasParentHazard",
       "undefined" : "has parent hazard"
     },
-    "superproperty" : [ "12" ],
-    "domain" : "22",
+    "superproperty" : [ "9" ],
+    "domain" : "19",
     "attributes" : [ "object" ],
-    "id" : "17"
+    "id" : "14"
   }, {
-    "range" : "11",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "37"
+    "range" : "8",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
   }, {
-    "range" : "22",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "38"
+    "range" : "19",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
   }, {
-    "range" : "9",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "39"
+    "range" : "6",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
   }, {
     "range" : "4",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "40"
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1113,340 +1066,335 @@
       "IRI-based" : "hasSafetyAssurance",
       "undefined" : "has safety assurance"
     },
-    "domain" : "34",
+    "domain" : "31",
     "attributes" : [ "object" ],
-    "id" : "41"
+    "id" : "38"
   }, {
     "range" : "1",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "21",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "range" : "16",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "24",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "42"
   }, {
     "range" : "24",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   }, {
-    "range" : "19",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "44"
-  }, {
     "range" : "27",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "45"
   }, {
-    "range" : "30",
-    "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "27",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "46"
-  }, {
-    "range" : "30",
-    "domain" : "48",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "47"
-  }, {
-    "range" : "30",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "49"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "51",
+    "range" : "48",
     "label" : {
       "IRI-based" : "severityMax",
       "undefined" : "severityMax"
     },
-    "domain" : "32",
+    "domain" : "29",
     "comment" : {
       "undefined" : "The maximal value representing the most severe risks."
     },
     "attributes" : [ "datatype" ],
+    "id" : "47"
+  }, {
+    "range" : "29",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "52",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "50"
   }, {
-    "range" : "32",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "52"
-  }, {
     "range" : "27",
-    "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "53"
   }, {
-    "range" : "57",
-    "domain" : "56",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "8",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "19",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "55"
-  }, {
-    "range" : "30",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "58"
-  }, {
-    "range" : "11",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "59"
-  }, {
-    "range" : "22",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "60"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "30",
+    "range" : "27",
     "label" : {
       "IRI-based" : "hasSubSDA",
       "undefined" : "has sub SDA"
     },
-    "domain" : "30",
-    "subproperty" : [ "33", "61", "62", "63" ],
+    "domain" : "27",
+    "subproperty" : [ "30", "56", "57", "58" ],
     "attributes" : [ "object" ],
-    "id" : "35"
+    "id" : "32"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "9",
+    "range" : "6",
     "label" : {
       "IRI-based" : "hasImplementationManifest",
       "undefined" : "has implementation manifest"
     },
-    "domain" : "30",
+    "domain" : "27",
     "attributes" : [ "object" ],
-    "id" : "64"
+    "id" : "59"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "57",
+    "range" : "52",
     "label" : {
       "IRI-based" : "hasSubRiskSDA",
       "undefined" : "has sub risk SDA"
     },
-    "superproperty" : [ "35" ],
-    "domain" : "57",
+    "superproperty" : [ "32" ],
+    "domain" : "52",
     "attributes" : [ "object" ],
-    "id" : "63"
+    "id" : "58"
   }, {
     "range" : "2",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "65"
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
   }, {
-    "range" : "9",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "66"
+    "range" : "6",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "26",
+    "range" : "23",
     "label" : {
       "IRI-based" : "hasDeviceContext",
       "undefined" : "has device context"
     },
-    "domain" : "27",
+    "domain" : "24",
     "attributes" : [ "object" ],
-    "id" : "67"
+    "id" : "62"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "24",
+    "range" : "21",
     "label" : {
       "IRI-based" : "causes",
       "undefined" : "causes"
     },
-    "domain" : "22",
+    "domain" : "19",
     "attributes" : [ "object" ],
-    "id" : "68"
+    "id" : "63"
   }, {
-    "range" : "32",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "69"
+    "range" : "29",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
   }, {
-    "range" : "27",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "70"
+    "range" : "24",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "36",
+    "range" : "33",
     "label" : {
       "IRI-based" : "hasDeviceComponent",
       "undefined" : "has device component"
     },
     "domain" : "1",
     "attributes" : [ "object" ],
-    "id" : "71"
+    "id" : "66"
   }, {
-    "range" : "24",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "72"
+    "range" : "21",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
   }, {
-    "range" : "30",
+    "range" : "27",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "73"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
   }, {
-    "range" : "11",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "74"
+    "range" : "8",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
   }, {
-    "range" : "22",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "75"
+    "range" : "19",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "77",
+    "range" : "72",
     "label" : {
       "IRI-based" : "P2",
       "undefined" : "P2"
     },
-    "domain" : "24",
+    "domain" : "21",
     "comment" : {
       "undefined" : "Probability of a hazardous situation leading to harm"
     },
     "attributes" : [ "datatype" ],
-    "id" : "76"
+    "id" : "71"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "79",
+    "range" : "74",
     "label" : {
       "IRI-based" : "P1",
       "undefined" : "P1"
     },
-    "domain" : "11",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Probability of a hazardous situation occurring"
     },
     "attributes" : [ "datatype" ],
-    "id" : "78"
+    "id" : "73"
   }, {
-    "range" : "32",
+    "range" : "29",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "80"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
   }, {
-    "range" : "27",
+    "range" : "24",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "81"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "84",
+    "range" : "79",
     "label" : {
       "IRI-based" : "name",
       "undefined" : "name"
     },
-    "domain" : "13",
+    "domain" : "10",
     "comment" : {
       "undefined" : "Name of an instance"
     },
     "attributes" : [ "datatype" ],
-    "id" : "83"
+    "id" : "78"
   }, {
     "range" : "2",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "85"
-  }, {
-    "range" : "22",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "86"
-  }, {
-    "range" : "24",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "87"
-  }, {
-    "range" : "9",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "88"
-  }, {
-    "range" : "11",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "89"
-  }, {
-    "range" : "32",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "90"
-  }, {
-    "range" : "27",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "91"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
   }, {
     "range" : "19",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "21",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "6",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "8",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "range" : "29",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "24",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "16",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "27",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "27",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "29",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "29",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "92"
   }, {
-    "range" : "30",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "24",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "93"
   }, {
-    "range" : "30",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "24",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "94"
-  }, {
-    "range" : "32",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "95"
-  }, {
-    "range" : "32",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "96"
-  }, {
-    "range" : "27",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "97"
-  }, {
-    "range" : "27",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "98"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "27",
+    "range" : "24",
     "label" : {
       "IRI-based" : "hasPreRisk",
       "undefined" : "has pre risk"
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "99"
+    "id" : "95"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "19",
+    "range" : "16",
     "label" : {
       "IRI-based" : "hasFunction",
       "undefined" : "has function"
     },
     "domain" : "1",
     "attributes" : [ "object" ],
-    "id" : "100"
+    "id" : "96"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1455,96 +1403,96 @@
       "IRI-based" : "hasDeviceSpecificHazard",
       "undefined" : "has device specific hazard"
     },
-    "superproperty" : [ "12" ],
+    "superproperty" : [ "9" ],
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "16"
+    "id" : "13"
   }, {
     "range" : "2",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "101"
-  }, {
-    "range" : "30",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "102"
-  }, {
-    "range" : "2",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "103"
-  }, {
-    "range" : "9",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "104"
-  }, {
-    "range" : "32",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "105"
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
   }, {
     "range" : "27",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "106"
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "range" : "6",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "29",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
+  }, {
+    "range" : "24",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "11",
+    "range" : "8",
     "label" : {
       "IRI-based" : "hasHazardousSituation",
       "undefined" : "has hazardous situation"
     },
     "domain" : "1",
     "attributes" : [ "object" ],
-    "id" : "107"
+    "id" : "103"
   }, {
-    "range" : "27",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "108"
+    "range" : "24",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
   }, {
     "range" : "2",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "109"
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
   }, {
-    "range" : "30",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "110"
+    "range" : "27",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "106"
   }, {
-    "range" : "32",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "111"
+    "range" : "29",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "107"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "113",
+    "range" : "109",
     "label" : {
       "IRI-based" : "hasResidualRisk",
       "undefined" : "has residual risk"
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "112"
+    "id" : "108"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "115",
+    "range" : "111",
     "label" : {
       "IRI-based" : "id",
       "undefined" : "id"
     },
-    "domain" : "13",
+    "domain" : "10",
     "comment" : {
       "undefined" : "Unique identifier"
     },
     "attributes" : [ "datatype" ],
-    "id" : "114"
+    "id" : "110"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1553,190 +1501,183 @@
       "IRI-based" : "hasEvent",
       "undefined" : "has event"
     },
-    "domain" : "11",
+    "domain" : "8",
     "attributes" : [ "object" ],
-    "id" : "116"
+    "id" : "112"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "30",
+    "range" : "27",
     "label" : {
       "IRI-based" : "isMitigatedBy",
       "undefined" : "is mitigated by"
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "117"
+    "id" : "113"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "120",
+    "range" : "116",
     "label" : {
       "IRI-based" : "severity",
       "undefined" : "severity"
     },
-    "domain" : "119",
+    "domain" : "115",
     "comment" : {
       "undefined" : "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most."
     },
     "attributes" : [ "datatype" ],
+    "id" : "114"
+  }, {
+    "range" : "8",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
-    "range" : "11",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "122"
+    "range" : "27",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
   }, {
-    "range" : "30",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "123"
-  }, {
-    "range" : "9",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "124"
+    "range" : "6",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
   }, {
     "range" : "2",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "6",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "29",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "24",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "range" : "31",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "125"
   }, {
-    "range" : "9",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "27",
+    "domain" : "81",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "126"
   }, {
-    "range" : "32",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "127"
-  }, {
     "range" : "27",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "128"
-  }, {
-    "range" : "30",
-    "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "129"
-  }, {
-    "range" : "34",
-    "domain" : "82",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "130"
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "127"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "82",
+    "range" : "77",
     "label" : {
       "IRI-based" : "hasSubAssuranceSDAI",
       "undefined" : "has sub assurance SDAI"
     },
-    "superproperty" : [ "35" ],
-    "domain" : "34",
+    "superproperty" : [ "32" ],
+    "domain" : "31",
     "attributes" : [ "object" ],
-    "id" : "62"
+    "id" : "57"
   }, {
     "range" : "1",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "131"
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "128"
   }, {
     "range" : "4",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "132"
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "range" : "16",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "range" : "21",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
   }, {
     "range" : "19",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "8",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "133"
   }, {
-    "range" : "24",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "134"
-  }, {
-    "range" : "22",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "6",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "135"
   }, {
-    "range" : "11",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "136"
-  }, {
-    "range" : "9",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "138"
-  }, {
     "range" : "2",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "139"
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "36",
+    "range" : "33",
     "label" : {
       "IRI-based" : "isPartOfDeviceComponent",
       "undefined" : "is part of device component"
     },
-    "superproperty" : [ "12" ],
-    "domain" : "36",
+    "superproperty" : [ "9" ],
+    "domain" : "33",
     "attributes" : [ "object" ],
-    "id" : "15"
+    "id" : "12"
   }, {
-    "range" : "57",
-    "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "140"
+    "range" : "52",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
   }, {
-    "range" : "26",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "141"
+    "range" : "23",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "24",
+    "range" : "21",
     "label" : {
       "IRI-based" : "hasHarm",
       "undefined" : "has harm"
     },
-    "domain" : "27",
+    "domain" : "24",
     "attributes" : [ "object" ],
-    "id" : "142"
+    "id" : "139"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "145",
+    "range" : "143",
     "label" : {
       "IRI-based" : "probabilityMax",
       "undefined" : "probabilityMax"
     },
-    "domain" : "32",
+    "domain" : "29",
     "comment" : {
       "undefined" : "The maximal value representing the most probable risks."
     },
     "attributes" : [ "datatype" ],
-    "id" : "144"
-  }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "56",
-    "label" : {
-      "IRI-based" : "hasSubRiskSDAI",
-      "undefined" : "has sub risk SDAI"
-    },
-    "superproperty" : [ "35" ],
-    "domain" : "57",
-    "attributes" : [ "object" ],
-    "id" : "61"
+    "id" : "142"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreceedingEvent",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1745,36 +1686,48 @@
       "IRI-based" : "hasPreceedingEvent",
       "undefined" : "has preceeding event"
     },
-    "superproperty" : [ "12" ],
+    "superproperty" : [ "9" ],
     "domain" : "4",
     "attributes" : [ "object" ],
-    "id" : "14"
+    "id" : "11"
+  }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasSubRiskSDAI",
+      "undefined" : "has sub risk SDAI"
+    },
+    "superproperty" : [ "32" ],
+    "domain" : "52",
+    "attributes" : [ "object" ],
+    "id" : "56"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "146",
+    "range" : "140",
     "label" : {
       "IRI-based" : "probability",
       "undefined" : "probability"
     },
-    "domain" : "143",
+    "domain" : "141",
     "comment" : {
       "undefined" : "Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory."
     },
     "attributes" : [ "datatype" ],
-    "id" : "147"
+    "id" : "144"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "30",
+    "range" : "27",
     "label" : {
       "IRI-based" : "hasSubSDA",
       "undefined" : "has sub SDA"
     },
-    "domain" : "48",
-    "subproperty" : [ "33", "61", "62", "63" ],
-    "attributes" : [ "object", "someValues" ],
-    "id" : "148"
+    "domain" : "81",
+    "subproperty" : [ "30", "56", "57", "58" ],
+    "attributes" : [ "someValues", "object" ],
+    "id" : "145"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1783,72 +1736,61 @@
       "IRI-based" : "hasEvent",
       "undefined" : "has event"
     },
-    "domain" : "11",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "149"
+    "domain" : "8",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "146"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "22",
+    "range" : "19",
     "label" : {
       "IRI-based" : "hasHazard",
       "undefined" : "has hazard"
     },
     "domain" : "1",
     "attributes" : [ "object" ],
-    "id" : "150"
+    "id" : "147"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "11",
+    "range" : "8",
     "label" : {
       "IRI-based" : "hasParentSituation",
       "undefined" : "has parent situation"
     },
-    "domain" : "11",
+    "domain" : "8",
     "attributes" : [ "object" ],
-    "id" : "151"
-  }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAcceptanceMatrix",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "hasAcceptanceMatrix",
-      "undefined" : "has acceptance matrix"
-    },
-    "domain" : "2",
-    "attributes" : [ "object" ],
-    "id" : "152"
+    "id" : "148"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "24",
+    "range" : "21",
     "label" : {
       "IRI-based" : "causes",
       "undefined" : "causes"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "153"
+    "domain" : "19",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "149"
   }, {
-    "range" : "32",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "154"
+    "range" : "29",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "150"
   }, {
-    "range" : "30",
+    "range" : "27",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "155"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
   }, {
-    "range" : "30",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "156"
+    "range" : "27",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
   }, {
-    "range" : "30",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "157"
+    "range" : "27",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
   } ]
 }
