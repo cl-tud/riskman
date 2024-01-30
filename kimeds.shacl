@@ -12,20 +12,16 @@ kimeds:AssuranceSDAShape
   a sh:NodeShape ;
   sh:targetClass kimeds:AssuranceSDA ;
   sh:property [ # The subject of sh:property should be a PropertyShape, before we just had a property (w3c figure, Part 1, point 2)
-      sh:path kimeds:hasSubAssuranceSDAI 
+      sh:path kimeds:hasSafetyAssurance 
   ]
 .
 
 kimeds:AssuranceSDAIShape
   a sh:NodeShape ;
   sh:targetClass kimeds:AssuranceSDAI ;
-  sh:property [
-    sh:path kimeds:hasSafetyAssurance 
-  ], [ 
-    sh:path kimeds:hasSubAssuranceSDA
-  ], [ 
-    sh:path kimeds:hasSubAssuranceSDAI
-  ] 
+  sh:property [ 
+    sh:path kimeds:hasSubSDA
+  ]
 .
 
 kimeds:DeviceComponentShape
@@ -139,9 +135,7 @@ kimeds:RiskSDAShape
   a sh:NodeShape ;
   sh:targetClass kimeds:RiskSDA ;
   sh:property [
-    sh:path kimeds:hasSubRiskSDA 
-  ], [
-    sh:path kimeds:hasSubRiskSDAI 
+    sh:path kimeds:hasSubSDA 
   ]
 .
 
@@ -149,7 +143,7 @@ kimeds:RiskSDAIShape
   a sh:NodeShape ;
   sh:targetClass kimeds:RiskSDAI ;
   sh:property [
-    sh:path kimeds:hasSubRiskSDAI 
+    sh:path kimeds:hasSubSDA 
   ]
 .
 
