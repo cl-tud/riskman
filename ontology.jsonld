@@ -171,7 +171,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
   } ]
 }, {
   "@id" : "_:genid35",
@@ -635,18 +635,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The original, mitigated risk with lowered value(s) of probability and/or severity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Residual risk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
-  } ]
-}, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -896,8 +884,6 @@
     "@value" : "has residual risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk"
-  }, {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk"
   } ]
 }, {

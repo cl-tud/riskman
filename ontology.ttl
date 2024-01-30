@@ -252,8 +252,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
 :hasResidualRisk rdf:type owl:ObjectProperty ;
                  rdfs:domain :ManagedRisk ;
-                 rdfs:range :ResidualRisk ,
-                            :Risk ;
+                 rdfs:range :Risk ;
                  rdfs:label "has residual risk" .
 
 
@@ -506,7 +505,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasResidualRisk ;
-                                                          owl:someValuesFrom :ResidualRisk
+                                                          owl:someValuesFrom :Risk
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :isMitigatedBy ;
@@ -526,13 +525,6 @@ xsd:date rdf:type rdfs:Datatype .
                                  ] ;
              rdfs:subClassOf :SDA ;
              rdfs:label "Non final SDA" .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk
-:ResidualRisk rdf:type owl:Class ;
-              rdfs:subClassOf :Risk ;
-              rdfs:comment "The original, mitigated risk with lowered value(s) of probability and/or severity." ;
-              rdfs:label "Residual risk" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk

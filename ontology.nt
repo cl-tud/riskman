@@ -220,7 +220,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has residual risk" .
 # 
@@ -475,7 +474,7 @@ _:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/ket
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
 _:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -499,12 +498,6 @@ _:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/ket
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA> <http://www.w3.org/2000/01/rdf-schema#label> "Non final SDA" .
-# 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "The original, mitigated risk with lowered value(s) of probability and/or severity." .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ResidualRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Residual risk" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
