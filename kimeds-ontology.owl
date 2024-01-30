@@ -196,38 +196,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:range :SafetyAssurance .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDA
-:hasSubAssuranceSDA rdf:type owl:ObjectProperty ;
-                    rdfs:label "has sub assurance SDA" ;
-                    rdfs:subPropertyOf :hasSubSDA ;
-                    rdfs:domain :AssuranceSDA ;
-                    rdfs:range :AssuranceSDA .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubAssuranceSDAI
-:hasSubAssuranceSDAI rdf:type owl:ObjectProperty ;
-                    rdfs:label "has sub assurance SDAI" ;
-                     rdfs:subPropertyOf :hasSubSDA ;
-                     rdfs:domain :AssuranceSDA ;
-                     rdfs:range :AssuranceSDAI .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA
-:hasSubRiskSDA rdf:type owl:ObjectProperty ;
-                    rdfs:label "has sub risk SDA" ;
-               rdfs:subPropertyOf :hasSubSDA ;
-               rdfs:domain :RiskSDA ;
-               rdfs:range :RiskSDA .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDAI
-:hasSubRiskSDAI rdf:type owl:ObjectProperty ;
-                    rdfs:label "has sub risk SDAI" ;
-                rdfs:subPropertyOf :hasSubSDA ;
-                rdfs:domain :RiskSDA ;
-                rdfs:range :RiskSDAI .
-
-
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA
 :hasSubSDA rdf:type owl:ObjectProperty ;
                     rdfs:label "has sub SDA" ;
@@ -338,12 +306,29 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
               rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
                     rdfs:label "Assurance SDA" .
 
+[ owl:intersectionOf ( :SDA
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasSafetyAssurance ;
+                        owl:someValuesFrom :SafetyAssurance
+                      ]
+                    ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :AssuranceSDA                    
+] .
+
+
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI
 :AssuranceSDAI rdf:type owl:Class ;
-               rdfs:subClassOf :AssuranceSDA ;
+               rdfs:subClassOf :SDA ;
+               owl:equivalentClass [ owl:intersectionOf 
+                                      (
+                                        :AssuranceSDA
+                                        :SDAI
+                                      )
+                                    ];
                rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
-                    rdfs:label "Assurance SDAI" .
+               rdfs:label "Assurance SDAI" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent
@@ -451,16 +436,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "Managed risk" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#NonFinalSDA
-:NonFinalSDA rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasSubSDA ;
-                                   owl:someValuesFrom :SDA
-                                 ] ;
-             rdfs:subClassOf :SDA ;
-                    rdfs:label "Non final SDA" .
-
-
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
 :Risk rdf:type owl:Class ;
       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -497,7 +472,12 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI
 :RiskSDAI rdf:type owl:Class ;
-          rdfs:subClassOf :RiskSDA ;
+          owl:equivalentClass [ owl:intersectionOf 
+                                (
+                                  :RiskSDA
+                                  :SDAI
+                                )
+                              ];
           rdfs:comment "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA." ;
                     rdfs:label "Risk SDAI" .
 
@@ -508,6 +488,21 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "SDA" .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI
+:SDAI rdf:type owl:Class ;
+      rdfs:comment "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
+                    rdfs:label "SDAI" .   
+
+[ owl:intersectionOf ( :SDA
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasImplementationManifest ;
+                        owl:someValuesFrom :ImplementationManifest
+                      ]
+                    ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SDAI                    
+] .
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance
 :SafetyAssurance rdf:type owl:Class ;
                  rdfs:comment "A credible reference (or list of such) to the state of the art of achieving safety with respect to a certain class of hazards, e.g. referring to an international norm such as ISO 60601." ;
@@ -516,28 +511,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #################################################################
 #    General axioms
 #################################################################
-
-[ owl:intersectionOf ( :AssuranceSDA
-                       :NonFinalSDA
-                     ) ;
-  rdf:type owl:Class ;
-  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                    owl:onProperty :hasSubAssuranceSDA ;
-                    owl:someValuesFrom :AssuranceSDA
-                  ]
-] .
-
-
-[ owl:intersectionOf ( :NonFinalSDA
-                       :RiskSDA
-                     ) ;
-  rdf:type owl:Class ;
-  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                    owl:onProperty :hasSubSDA ;
-                    owl:someValuesFrom :SDA
-                  ]
-] .
-
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :DeviceComponent
