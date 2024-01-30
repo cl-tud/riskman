@@ -864,17 +864,6 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix -->
-
-
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskAcceptanceMatrix">
-        <rdfs:comment>Currently without use</rdfs:comment>
-        <rdfs:comment>Defines acceptable and unacceptable combinations of probability and severity of a given risk matrix.</rdfs:comment>
-        <rdfs:label>Risk acceptance matrix</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix -->
 
 
