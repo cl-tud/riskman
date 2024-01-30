@@ -98,10 +98,10 @@
   "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction"
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"
   } ]
 }, {
   "@id" : "_:genid26",
@@ -308,11 +308,11 @@
     }, {
       "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
     }, {
+      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"
+    }, {
       "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
     }, {
       "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
-    }, {
-      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
     }, {
       "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
     }, {
@@ -512,10 +512,19 @@
     "@value" : "Device context"
   } ]
 }, {
+  "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A specific functionality of a device related with the device specific hazard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Device function"
+  } ]
+}, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Hazard associated with a specific hazardous situation, function and a specific device component."
+    "@value" : "Hazard associated with a specific hazardous situation, device function and a specific device component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Device specific hazard"
@@ -531,15 +540,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Event"
-  } ]
-}, {
-  "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific functionality of a device related with the device specific hazard."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Function"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm",
@@ -757,6 +757,18 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
   } ]
 }, {
+  "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has device function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"
+  } ]
+}, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -782,18 +794,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
-  } ]
-}, {
-  "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has function"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm",

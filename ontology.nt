@@ -148,6 +148,12 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext> <http://www.w3.org/2000/01/rdf-schema#label> "has device context" .
 # 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has device function" .
+# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
@@ -160,12 +166,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has event" .
-# 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has function" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -390,6 +390,11 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about possible environments the device can be used in that may affect probability or severity of some risk." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> <http://www.w3.org/2000/01/rdf-schema#label> "Device context" .
 # 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific functionality of a device related with the device specific hazard." .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Device function" .
+# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
@@ -410,8 +415,8 @@ _:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/ket
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction> .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
@@ -419,18 +424,13 @@ _:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org
 _:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Hazard associated with a specific hazardous situation, function and a specific device component." .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Hazard associated with a specific hazardous situation, device function and a specific device component." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#label> "Device specific hazard" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An incidence or occurrence leading to another event and/or (eventually) a hazardous situation." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
-# 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific functionality of a device related with the device specific hazard." .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -633,11 +633,11 @@ _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
 _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
 _:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
 _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction> .
 _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext> .
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .

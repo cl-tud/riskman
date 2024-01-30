@@ -169,6 +169,13 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:label "has device context" .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction
+:hasDeviceFunction rdf:type owl:ObjectProperty ;
+                   rdfs:domain :DeviceSpecificHazard ;
+                   rdfs:range :DeviceFunction ;
+                   rdfs:label "has device function" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard
 :hasDeviceSpecificHazard rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
@@ -182,13 +189,6 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:domain :HazardousSituation ;
           rdfs:range :Event ;
           rdfs:label "has event" .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction
-:hasFunction rdf:type owl:ObjectProperty ;
-             rdfs:domain :DeviceSpecificHazard ;
-             rdfs:range :Function ;
-             rdfs:label "has function" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
@@ -425,6 +425,12 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "Device context" .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction
+:DeviceFunction rdf:type owl:Class ;
+                rdfs:comment "A specific functionality of a device related with the device specific hazard." ;
+                rdfs:label "Device function" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard
 :DeviceSpecificHazard rdf:type owl:Class ;
                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -432,8 +438,8 @@ xsd:date rdf:type rdfs:Datatype .
                                                                    owl:someValuesFrom :DeviceComponent
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasFunction ;
-                                                                   owl:someValuesFrom :Function
+                                                                   owl:onProperty :hasDeviceFunction ;
+                                                                   owl:someValuesFrom :DeviceFunction
                                                                  ]
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasHazard ;
@@ -446,7 +452,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                ) ;
                                             rdf:type owl:Class
                                           ] ;
-                      rdfs:comment "Hazard associated with a specific hazardous situation, function and a specific device component." ;
+                      rdfs:comment "Hazard associated with a specific hazardous situation, device function and a specific device component." ;
                       rdfs:label "Device specific hazard" .
 
 
@@ -454,12 +460,6 @@ xsd:date rdf:type rdfs:Datatype .
 :Event rdf:type owl:Class ;
        rdfs:comment "An incidence or occurrence leading to another event and/or (eventually) a hazardous situation." ;
        rdfs:label "Event" .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function
-:Function rdf:type owl:Class ;
-          rdfs:comment "A specific functionality of a device related with the device specific hazard." ;
-          rdfs:label "Function" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm
@@ -628,9 +628,9 @@ xsd:date rdf:type rdfs:Datatype .
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :DeviceComponent
                 :DeviceContext
+                :DeviceFunction
                 :DeviceSpecificHazard
                 :Event
-                :Function
                 :Harm
                 :Hazard
                 :HazardousSituation

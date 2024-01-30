@@ -268,6 +268,17 @@
     
 
 
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"/>
+        <rdfs:label>has device function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard -->
 
 
@@ -287,17 +298,6 @@
         <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
         <rdfs:label>has event</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction -->
-
-
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"/>
-        <rdfs:label>has function</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -674,6 +674,16 @@
     
 
 
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction -->
+
+
+    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction">
+        <rdfs:comment>A specific functionality of a device related with the device specific hazard.</rdfs:comment>
+        <rdfs:label>Device function</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard -->
 
 
@@ -686,8 +696,8 @@
                         <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasFunction"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"/>
+                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"/>
@@ -700,7 +710,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment>Hazard associated with a specific hazardous situation, function and a specific device component.</rdfs:comment>
+        <rdfs:comment>Hazard associated with a specific hazardous situation, device function and a specific device component.</rdfs:comment>
         <rdfs:label>Device specific hazard</rdfs:label>
     </owl:Class>
     
@@ -712,16 +722,6 @@
     <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">
         <rdfs:comment>An incidence or occurrence leading to another event and/or (eventually) a hazardous situation.</rdfs:comment>
         <rdfs:label>Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function -->
-
-
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function">
-        <rdfs:comment>A specific functionality of a device related with the device specific hazard.</rdfs:comment>
-        <rdfs:label>Function</rdfs:label>
     </owl:Class>
     
 
@@ -972,9 +972,9 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"/>
+            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"/>
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard"/>
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Function"/>
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
