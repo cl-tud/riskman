@@ -235,13 +235,13 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes -->
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes">
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm">
         <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
-        <rdfs:label>causes</rdfs:label>
+        <rdfs:label>causesHarm</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -742,7 +742,7 @@
     <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes"/>
+                <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm"/>
                 <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
             </owl:Restriction>
         </owl:equivalentClass>

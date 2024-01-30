@@ -148,11 +148,11 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes
-:causes rdf:type owl:ObjectProperty ;
-        rdfs:domain :Hazard ;
-        rdfs:range :Harm ;
-        rdfs:label "causes" .
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm
+:causesHarm rdf:type owl:ObjectProperty ;
+            rdfs:domain :Hazard ;
+            rdfs:range :Harm ;
+            rdfs:label "causesHarm" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
@@ -471,7 +471,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard
 :Hazard rdf:type owl:Class ;
         owl:equivalentClass [ rdf:type owl:Restriction ;
-                              owl:onProperty :causes ;
+                              owl:onProperty :causesHarm ;
                               owl:someValuesFrom :Harm
                             ] ;
         rdfs:comment "Potential source of harm" ;

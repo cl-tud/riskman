@@ -676,7 +676,7 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "53",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "54",
     "type" : "owl:disjointWith"
@@ -684,23 +684,23 @@
     "id" : "55",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "56",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
     "type" : "owl:objectProperty"
   }, {
     "id" : "59",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "58",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "60",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "61",
     "type" : "owl:disjointWith"
   }, {
     "id" : "62",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "63",
     "type" : "owl:objectProperty"
@@ -873,7 +873,7 @@
     "id" : "127",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "57",
+    "id" : "58",
     "type" : "owl:objectProperty"
   }, {
     "id" : "128",
@@ -915,7 +915,7 @@
     "id" : "142",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "56",
+    "id" : "57",
     "type" : "owl:objectProperty"
   }, {
     "id" : "144",
@@ -1129,20 +1129,31 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "50"
   }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "causesHarm",
+      "undefined" : "causesHarm"
+    },
+    "domain" : "19",
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
     "range" : "27",
     "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "53"
+    "id" : "54"
   }, {
     "range" : "8",
     "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "54"
+    "id" : "55"
   }, {
     "range" : "19",
     "domain" : "21",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "55"
+    "id" : "56"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1152,7 +1163,7 @@
       "undefined" : "has sub SDA"
     },
     "domain" : "27",
-    "subproperty" : [ "30", "56", "57", "58" ],
+    "subproperty" : [ "30", "57", "58", "59" ],
     "attributes" : [ "object" ],
     "id" : "32"
   }, {
@@ -1165,7 +1176,7 @@
     },
     "domain" : "27",
     "attributes" : [ "object" ],
-    "id" : "59"
+    "id" : "60"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubRiskSDA",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1177,17 +1188,17 @@
     "superproperty" : [ "32" ],
     "domain" : "52",
     "attributes" : [ "object" ],
-    "id" : "58"
+    "id" : "59"
   }, {
     "range" : "2",
     "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "60"
+    "id" : "61"
   }, {
     "range" : "6",
     "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "61"
+    "id" : "62"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1197,17 +1208,6 @@
       "undefined" : "has device context"
     },
     "domain" : "24",
-    "attributes" : [ "object" ],
-    "id" : "62"
-  }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "causes",
-      "undefined" : "causes"
-    },
-    "domain" : "19",
     "attributes" : [ "object" ],
     "id" : "63"
   }, {
@@ -1602,7 +1602,7 @@
     "superproperty" : [ "32" ],
     "domain" : "31",
     "attributes" : [ "object" ],
-    "id" : "57"
+    "id" : "58"
   }, {
     "range" : "1",
     "domain" : "33",
@@ -1701,7 +1701,7 @@
     "superproperty" : [ "32" ],
     "domain" : "52",
     "attributes" : [ "object" ],
-    "id" : "56"
+    "id" : "57"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -1725,7 +1725,7 @@
       "undefined" : "has sub SDA"
     },
     "domain" : "81",
-    "subproperty" : [ "30", "56", "57", "58" ],
+    "subproperty" : [ "30", "57", "58", "59" ],
     "attributes" : [ "someValues", "object" ],
     "id" : "145"
   }, {
@@ -1762,12 +1762,12 @@
     "attributes" : [ "object" ],
     "id" : "148"
   }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes",
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "range" : "21",
     "label" : {
-      "IRI-based" : "causes",
-      "undefined" : "causes"
+      "IRI-based" : "causesHarm",
+      "undefined" : "causesHarm"
     },
     "domain" : "19",
     "attributes" : [ "someValues", "object" ],

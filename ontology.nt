@@ -130,11 +130,11 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 # #################################################################
 # 
 # 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes> <http://www.w3.org/2000/01/rdf-schema#label> "causes" .
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#label> "causesHarm" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -441,7 +441,7 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid27 .
 _:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causes> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Potential source of harm" .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#label> "Hazard" .
