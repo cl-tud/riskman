@@ -37,27 +37,27 @@ kimeds:DeviceContextShape
   sh:targetClass kimeds:DeviceContext
 .
 
-kimeds:DeviceSpecificHazardShape
+kimeds:DomainSpecificHazardShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:DeviceSpecificHazard ;
+  sh:targetClass kimeds:DomainSpecificHazard ;
   sh:property [
-    sh:path kimeds:hasDeviceComponent ;	
-    sh:message "Device specific hazard must have exactly one device component" ;
+    sh:path kimeds:hasDomainComponent ;	
+    sh:message "Domain specific hazard must have exactly one device component" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
     sh:path kimeds:hasDeviceFunction ;
-    sh:message "Device specific hazard must have exactly one device function" ;
+    sh:message "Domain specific hazard must have exactly one device function" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
     sh:path kimeds:hasHazard ;
-    sh:message "Device specific hazard must have exactly one hazard" ;
+    sh:message "Domain specific hazard must have exactly one hazard" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
     sh:path kimeds:hasHazardousSituation ;
-    sh:message "Device specific hazard must have exactly one hazardous situation" ;
+    sh:message "Domain specific hazard must have exactly one hazardous situation" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ]
@@ -85,8 +85,8 @@ kimeds:ImplementationManifestShape
   a sh:NodeShape ;
   sh:targetClass kimeds:ManagedRisk ;
   sh:property [
-    sh:path kimeds:hasDeviceSpecificHazard ;
-    sh:message "Every managed risk must have exactly one device specific hazard" ;  
+    sh:path kimeds:hasDomainSpecificHazard ;
+    sh:message "Every managed risk must have exactly one domain specific hazard" ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:property [
