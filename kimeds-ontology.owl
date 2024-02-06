@@ -211,8 +211,8 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
            rdfs:range :SDA .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy
-:isMitigatedBy rdf:type owl:ObjectProperty ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA
+:hasSDA rdf:type owl:ObjectProperty ;
                     rdfs:label "is mitigated by" ;
                rdfs:domain :ControlledRisk ;
                rdfs:range :SDA .
@@ -436,7 +436,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :ControlledRisk rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( 
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :isMitigatedBy ;
+                                                          owl:onProperty :hasSDA ;
                                                           owl:someValuesFrom :RiskSDA
                                                         ] 
                                                         [ rdf:type owl:Restriction ;

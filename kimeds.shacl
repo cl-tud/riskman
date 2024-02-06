@@ -117,8 +117,8 @@ kimeds:ControlledRiskShape
   a sh:NodeShape ;
   sh:targetClass kimeds:ControlledRisk ;
   sh:property [
-    sh:path kimeds:isMitigatedBy ;
-    sh:message "Every controlled risk must be mitigated" ;  
+    sh:path kimeds:hasSDA ;
+    sh:message "Every controlled risk must be mitigated by an SDA." ;  
     sh:minCount 1 ;
     sh:maxCount 1
   ], [
