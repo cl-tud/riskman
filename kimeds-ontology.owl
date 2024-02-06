@@ -84,7 +84,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :causesHarm rdf:type owl:ObjectProperty ;
         rdfs:domain :Hazard ;
         rdfs:range :Harm ;
-        rdfs:label "causesHarm" .
+        rdfs:label "causes harm" .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk
 :hasAnalyzedRisk rdf:type owl:ObjectProperty ;
