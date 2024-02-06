@@ -132,6 +132,11 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :hasHarm rdf:type owl:ObjectProperty ;
                     rdfs:label "has harm" ;
          rdfs:domain :AnalyzedRisk ;
+         owl:propertyChainAxiom 
+                    ( 
+                      :hasAnalyzedRisk
+                      :hasHarm
+                    ) ;
          rdfs:range :Harm .
 
 
@@ -188,6 +193,15 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "has pre risk level" ;
             rdfs:domain :AnalyzedRisk ;
             rdfs:range :RiskLevel .
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel
+:hasRiskLevel rdf:type owl:ObjectProperty ;
+              rdfs:label "has risk level" ;
+              rdfs:range :RiskLevel ;
+              owl:propertyChainAxiom ( :hasPreRiskLevel
+                                      ) ,
+                                      ( :hasResidualRiskLevel
+                                      ) .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent
@@ -452,6 +466,22 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                    rdf:type owl:Class
                                  ] ;
                     rdfs:label "Controlled risk" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:label "Risk" ;
+      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasHarm ;
+                                                    owl:someValuesFrom :Harm
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasRiskLevel ;
+                                                    owl:someValuesFrom :RiskLevel
+                                                  ]
+                                                ) ;
+                            rdf:type owl:Class
+                          ] .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel
