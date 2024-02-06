@@ -267,6 +267,13 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "has risk matrix" .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA
+:hasSDA rdf:type owl:ObjectProperty ;
+        rdfs:domain :ControlledRisk ;
+        rdfs:range :SDA ;
+        rdfs:label "is mitigated by" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance
 :hasSafetyAssurance rdf:type owl:ObjectProperty ;
                     rdfs:domain :AssuranceSDA ;
@@ -279,13 +286,6 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:domain :SDA ;
            rdfs:range :SDA ;
            rdfs:label "has sub SDA" .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy
-:isMitigatedBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :ControlledRisk ;
-               rdfs:range :SDA ;
-               rdfs:label "is mitigated by" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent
@@ -422,7 +422,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                              owl:someValuesFrom :RiskLevel
                                                            ]
                                                            [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :isMitigatedBy ;
+                                                             owl:onProperty :hasSDA ;
                                                              owl:someValuesFrom :RiskSDA
                                                            ]
                                                          ) ;

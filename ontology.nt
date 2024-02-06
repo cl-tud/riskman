@@ -232,6 +232,12 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix> <http://www.w3.org/2000/01/rdf-schema#label> "has risk matrix" .
 # 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA> <http://www.w3.org/2000/01/rdf-schema#label> "is mitigated by" .
+# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA> .
@@ -243,12 +249,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA> <http://www.w3.org/2000/01/rdf-schema#label> "has sub SDA" .
-# 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is mitigated by" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -403,7 +403,7 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
 _:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
