@@ -227,7 +227,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard
 :hasParentHazard rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Hazard ;
                  rdfs:range :Hazard ;
                  rdfs:label "has parent hazard" .
