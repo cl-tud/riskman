@@ -113,48 +113,25 @@ kimeds:ImplementationManifestShape
   sh:targetClass kimeds:ImplementationManifest ;
 .
 
-kimeds:ManagedRiskShape
+kimeds:ControlledRiskShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:ManagedRisk ;
+  sh:targetClass kimeds:ControlledRisk ;
   sh:property [
-    sh:path kimeds:hasDomainSpecificHazard ;
-    sh:message "Every managed risk must have exactly one domain specific hazard" ;  
+    sh:path kimeds:isMitigatedBy ;
+    sh:message "Every controlled risk must be mitigated" ;  
     sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:property [
-      sh:path kimeds:hasHazardousSituation ;
-      sh:property [
-        sh:path kimeds:P1 ;
-        sh:message "Every hazardous situation can only have one P1 for each managed risk. " ;
-        sh:maxCount 1 ;
-      ] ;
-    ] ;
-    sh:property [
-      sh:path kimeds:hasHazard ;
-      sh:property [
-        sh:path kimeds:causesHarm ;
-        sh:property [
-          sh:path kimeds:P2 ;
-          sh:message "Every harm can only have one P2 for each managed risk" ;
-          sh:maxCount 1 ;
-        ] ;
-      ] ;
-    ] ;
+    sh:maxCount 1
   ], [
-    sh:path kimeds:hasPreRiskLevel ;
-    sh:message "Every managed risk must have exactly one pre risk level" ;  
+    sh:path kimeds:hasAnalyzedRisk ;
+    sh:message "Every controlled risk must have exactly one analyzed risk." ;  
     sh:minCount 1 ;
-    sh:maxCount 1 ;
+    sh:maxCount 1 
   ], [
     sh:path kimeds:hasResidualRiskLevel ;
-    sh:message "Every managed risk must have exactly one residual risk level" ;  
+    sh:message "Every controlled risk must have exactly one residual risk level" ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
-  ], [
-    sh:path kimeds:isMitigatedBy ;
-    sh:message "Every managed risk must be mitigated" ;  
-    sh:minCount 1 ;
-  ]
+  ], 
 .
 
 kimeds:RiskLevelShape
