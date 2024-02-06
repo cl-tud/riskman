@@ -104,19 +104,35 @@ kimeds:ImplementationManifestShape
       ] ;
     ] ;
   ], [
-    sh:path kimeds:hasPreRisk ;
-    sh:message "Every managed risk must have exactly one pre risk" ;  
+    sh:path kimeds:hasPreRiskLevel ;
+    sh:message "Every managed risk must have exactly one pre risk level" ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path kimeds:hasResidualRisk ;
-    sh:message "Every managed risk must have exactly one residual risk" ;  
+    sh:path kimeds:hasResidualRiskLevel ;
+    sh:message "Every managed risk must have exactly one residual risk level" ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
     sh:path kimeds:isMitigatedBy ;
     sh:message "Every managed risk must be mitigated" ;  
     sh:minCount 1 ;
+  ]
+.
+
+kimeds:RiskLevelShape
+  a sh:NodeShape ;
+  sh:targetClass kimeds:RiskLevel ;
+  sh:property [
+    sh:path kimeds:probability ;	
+    sh:message "Risk level must have exactly one probability value." ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ; 
+  ], [
+    sh:path kimeds:severity ;
+    sh:message "Risk level must have exactly one severity value." ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ; 
   ]
 .
 

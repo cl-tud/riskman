@@ -88,10 +88,10 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext
-:hasDeviceContext rdf:type owl:ObjectProperty ;
-            rdfs:domain :Risk ;
-            rdfs:range :DeviceContext ;
-            rdfs:label "has device context" .
+#:hasDeviceContext rdf:type owl:ObjectProperty ;
+#            rdfs:domain :Risk ;
+#            rdfs:range :DeviceContext ;
+#            rdfs:label "has device context" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
@@ -125,10 +125,10 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
-:hasHarm rdf:type owl:ObjectProperty ;
-                    rdfs:label "has harm" ;
-         rdfs:domain :Risk ;
-         rdfs:range :Harm .
+#:hasHarm rdf:type owl:ObjectProperty ;
+#                    rdfs:label "has harm" ;
+#         rdfs:domain :Risk ;
+#         rdfs:range :Harm .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard
@@ -167,18 +167,18 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "has parent situation" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
-:hasResidualRisk rdf:type owl:ObjectProperty ;
-                    rdfs:label "has residual risk" ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel
+:hasResidualRiskLevel rdf:type owl:ObjectProperty ;
+                    rdfs:label "has residual risk level" ;
              rdfs:domain :ManagedRisk ;
-             rdfs:range :Risk .
+             rdfs:range :RiskLevel .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk
-:hasPreRisk rdf:type owl:ObjectProperty ;
-                    rdfs:label "has pre risk" ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel
+:hasPreRiskLevel rdf:type owl:ObjectProperty ;
+                    rdfs:label "has pre risk level" ;
             rdfs:domain :ManagedRisk ;
-            rdfs:range :Risk .
+            rdfs:range :RiskLevel .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent
@@ -256,11 +256,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability
 :probability rdf:type owl:DatatypeProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :Risk
-                                         :RiskMatrix
-                                       )
-                         ] ;
+             rdfs:domain :RiskLevel ;
              rdfs:range xsd:integer ;
              rdfs:comment "Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory." ;
              rdfs:label "probability" .
@@ -276,11 +272,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
 :severity rdf:type owl:DatatypeProperty ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :Risk
-                                      :RiskMatrix
-                                    )
-                      ] ;
+          rdfs:domain :RiskLevel ;
           rdfs:range xsd:integer ;
           rdfs:comment "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most." ;
           rdfs:label "severity" .
@@ -416,11 +408,11 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasResidualRisk ;
-                                                          owl:someValuesFrom :Risk
+                                                          owl:someValuesFrom :RiskLevel
                                                         ]
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasPreRisk ;
-                                                          owl:someValuesFrom :Risk
+                                                          owl:onProperty :hasPreRiskLevel ;
+                                                          owl:someValuesFrom :RiskLevel
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :isMitigatedBy ;
@@ -432,13 +424,9 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "Managed risk" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
-:Risk rdf:type owl:Class ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel
+:RiskLevel rdf:type owl:Class ;
       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :hasHarm ;
-                                                   owl:someValuesFrom :Harm
-                                                 ]
-                                                 [ rdf:type owl:Restriction ;
                                                    owl:onProperty :probability ;
                                                    owl:someValuesFrom xsd:integer
                                                  ]
@@ -449,8 +437,8 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                ) ;
                             rdf:type owl:Class
                           ] ;
-      rdfs:comment "Combination of harm and its associated probability and severity." ;
-      rdfs:label "Risk" .
+      rdfs:comment "Combination of probability and severity." ;
+      rdfs:label "Risk level" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix
@@ -519,7 +507,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                 :HazardousSituation
                 :ImplementationManifest
                 :ManagedRisk
-                :Risk
+                :RiskLevel
                 :RiskMatrix
                 :SDA
               )
