@@ -8,10 +8,47 @@
 
 ### The KIMEDS Classes ###
 
+
+kimeds:AnalyzedRiskShape
+  a sh:NodeShape ;
+  sh:targetClass kimeds:Analyzed ;
+  sh:property [
+    sh:path kimeds:hasDomainSpecificHazard ;
+    sh:message "Every analyzed risk must have exactly one domain specific hazard." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasHarm ;
+    sh:message "Every analyzed risk must have exactly one harm." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasRiskMatrix ;
+    sh:message "Every analyzed risk must have exactly one risk matrix." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasDeviceContext ;
+    sh:message "Every analyzed risk must have exactly one device context." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasHazardousSituation ;
+    sh:message "Every analyzed risk must have exactly one hazardous situation." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasPreRiskLevel ;
+    sh:message "Every analyzed risk must have exactly one pre-risk level." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ]
+.  
+
 kimeds:AssuranceSDAShape
   a sh:NodeShape ;
   sh:targetClass kimeds:AssuranceSDA ;
-  sh:property [ # The subject of sh:property should be a PropertyShape, before we just had a property (w3c figure, Part 1, point 2)
+  sh:property [ 
       sh:path kimeds:hasSafetyAssurance 
   ]
 .
@@ -76,7 +113,7 @@ kimeds:ImplementationManifestShape
   sh:targetClass kimeds:ImplementationManifest ;
 .
 
-  kimeds:ManagedRiskShape
+kimeds:ManagedRiskShape
   a sh:NodeShape ;
   sh:targetClass kimeds:ManagedRisk ;
   sh:property [
