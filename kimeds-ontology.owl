@@ -445,7 +445,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                           owl:someValuesFrom :AnalyzedRisk
                                                         ]
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasResidualRisk ;
+                                                          owl:onProperty :hasResidualRiskLevel ;
                                                           owl:someValuesFrom :RiskLevel
                                                         ]
 
