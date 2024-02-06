@@ -357,10 +357,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                                    owl:onProperty :hasHazard ;
                                                                    owl:someValuesFrom :Hazard
                                                                  ]
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasHazardousSituation ;
-                                                                   owl:someValuesFrom :HazardousSituation
-                                                                 ]
                                                                ) ;
                                             rdf:type owl:Class
                                           ] ;

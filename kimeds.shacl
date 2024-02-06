@@ -55,11 +55,6 @@ kimeds:DomainSpecificHazardShape
     sh:message "Domain specific hazard must have exactly one hazard" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
-  ], [
-    sh:path kimeds:hasHazardousSituation ;
-    sh:message "Domain specific hazard must have exactly one hazardous situation" ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ; 
   ]
 .
 
