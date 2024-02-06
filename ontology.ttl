@@ -155,33 +155,39 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "causesHarm" .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk
+:hasAnalyzedRisk rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ControlledRisk ;
+                 rdfs:range :AnalyzedRisk ;
+                 rdfs:label "has analyzed risk" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
 :hasDeviceComponent rdf:type owl:ObjectProperty ;
-                    rdfs:domain :DeviceSpecificHazard ;
+                    rdfs:domain :DomainSpecificHazard ;
                     rdfs:range :DeviceComponent ;
                     rdfs:label "has device component" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext
 :hasDeviceContext rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Risk ;
+                  rdfs:domain :AnalyzedRisk ;
                   rdfs:range :DeviceContext ;
                   rdfs:label "has device context" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction
 :hasDeviceFunction rdf:type owl:ObjectProperty ;
-                   rdfs:domain :DeviceSpecificHazard ;
+                   rdfs:domain :DomainSpecificHazard ;
                    rdfs:range :DeviceFunction ;
                    rdfs:label "has device function" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceSpecificHazard
-:hasDeviceSpecificHazard rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
-                         rdfs:domain :ManagedRisk ;
-                         rdfs:range :DeviceSpecificHazard ;
-                         rdfs:label "has device specific hazard" .
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDomainSpecificHazard
+:hasDomainSpecificHazard rdf:type owl:ObjectProperty ;
+                         rdfs:domain :AnalyzedRisk ;
+                         rdfs:range :DomainSpecificHazard ;
+                         rdfs:label "has domain specific hazard" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent
@@ -193,21 +199,21 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
 :hasHarm rdf:type owl:ObjectProperty ;
-         rdfs:domain :Risk ;
+         rdfs:domain :AnalyzedRisk ;
          rdfs:range :Harm ;
          rdfs:label "has harm" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard
 :hasHazard rdf:type owl:ObjectProperty ;
-           rdfs:domain :DeviceSpecificHazard ;
+           rdfs:domain :DomainSpecificHazard ;
            rdfs:range :Hazard ;
            rdfs:label "has hazard" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation
 :hasHazardousSituation rdf:type owl:ObjectProperty ;
-                       rdfs:domain :DeviceSpecificHazard ;
+                       rdfs:domain :AnalyzedRisk ;
                        rdfs:range :HazardousSituation ;
                        rdfs:label "has hazardous situation" .
 
@@ -234,26 +240,36 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "has parent situation" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRisk
-:hasPreRisk rdf:type owl:ObjectProperty ;
-            rdfs:domain :ManagedRisk ;
-            rdfs:range :Risk ;
-            rdfs:label "has pre risk" .
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel
+:hasPreRiskLevel rdf:type owl:ObjectProperty ;
+                 rdfs:domain :AnalyzedRisk ;
+                 rdfs:range :RiskLevel ;
+                 rdfs:label "has pre risk level" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent
 :hasPrecedingEvent rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain :Event ;
                    rdfs:range :Event ;
                    rdfs:label "has preceding event" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
-:hasResidualRisk rdf:type owl:ObjectProperty ;
-                 rdfs:domain :ManagedRisk ;
-                 rdfs:range :Risk ;
-                 rdfs:label "has residual risk" .
+:hasResidualRisk rdf:type owl:ObjectProperty .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel
+:hasResidualRiskLevel rdf:type owl:ObjectProperty ;
+                      rdfs:domain :ControlledRisk ;
+                      rdfs:range :RiskLevel ;
+                      rdfs:label "has residual risk level" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix
+:hasRiskMatrix rdf:type owl:ObjectProperty ;
+               rdfs:domain :AnalyzedRisk ;
+               rdfs:range :RiskMatrix ;
+               rdfs:label "has risk matrix" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance
@@ -272,14 +288,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isMitigatedBy
 :isMitigatedBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :ManagedRisk ;
+               rdfs:domain :ControlledRisk ;
                rdfs:range :SDA ;
                rdfs:label "is mitigated by" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent
 :isPartOfDeviceComponent rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :DeviceComponent ;
                          rdfs:range :DeviceComponent ;
                          rdfs:label "is part of device component" .
@@ -291,7 +306,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1
 :P1 rdf:type owl:DatatypeProperty ;
-    rdfs:domain :HazardousSituation ;
+    rdfs:domain :AnalyzedRisk ;
     rdfs:range xsd:integer ;
     rdfs:comment "Probability of a hazardous situation occurring" ;
     rdfs:label "P1" .
@@ -299,35 +314,15 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2
 :P2 rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Harm ;
+    rdfs:domain :AnalyzedRisk ;
     rdfs:range xsd:integer ;
     rdfs:comment "Probability of a hazardous situation leading to harm" ;
     rdfs:label "P2" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#id
-:id rdf:type owl:DatatypeProperty ;
-    rdfs:domain owl:Thing ;
-    rdfs:range xsd:float ;
-    rdfs:comment "Unique identifier" ;
-    rdfs:label "id" .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#name
-:name rdf:type owl:DatatypeProperty ;
-      rdfs:domain owl:Thing ;
-      rdfs:range xsd:string ;
-      rdfs:comment "Name of an instance" ;
-      rdfs:label "name" .
-
-
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability
 :probability rdf:type owl:DatatypeProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :Risk
-                                         :RiskMatrix
-                                       )
-                         ] ;
+             rdfs:domain :RiskLevel ;
              rdfs:range xsd:integer ;
              rdfs:comment "Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory." ;
              rdfs:label "probability" .
@@ -338,16 +333,12 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:domain :RiskMatrix ;
                 rdfs:range xsd:integer ;
                 rdfs:comment "The maximal value representing the most probable risks." ;
-                rdfs:label "probabilityMax" .
+                rdfs:label "probability max" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
 :severity rdf:type owl:DatatypeProperty ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :Risk
-                                      :RiskMatrix
-                                    )
-                      ] ;
+          rdfs:domain :RiskLevel ;
           rdfs:range xsd:integer ;
           rdfs:comment "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most." ;
           rdfs:label "severity" .
@@ -358,15 +349,55 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:domain :RiskMatrix ;
              rdfs:range xsd:integer ;
              rdfs:comment "The maximal value representing the most severe risks." ;
-             rdfs:label "severityMax" .
+             rdfs:label "severity max" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk
+:AnalyzedRisk rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasDeviceContext ;
+                                                           owl:someValuesFrom :DeviceContext
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasDomainSpecificHazard ;
+                                                           owl:someValuesFrom :DomainSpecificHazard
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasHarm ;
+                                                           owl:someValuesFrom :Harm
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasHazardousSituation ;
+                                                           owl:someValuesFrom :HazardousSituation
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasPreRiskLevel ;
+                                                           owl:someValuesFrom :RiskLevel
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasRiskMatrix ;
+                                                           owl:someValuesFrom :RiskMatrix
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:label "Analyzed risk" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA
 :AssuranceSDA rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :SDA
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasSafetyAssurance ;
+                                                           owl:someValuesFrom :SafetyAssurance
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
               rdfs:subClassOf :SDA ;
               owl:disjointWith :RiskSDA ;
               rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
@@ -385,6 +416,26 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "Assurance SDAI" .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk
+:ControlledRisk rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasAnalyzedRisk ;
+                                                             owl:someValuesFrom :AnalyzedRisk
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasResidualRisk ;
+                                                             owl:someValuesFrom :RiskLevel
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :isMitigatedBy ;
+                                                             owl:someValuesFrom :RiskSDA
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:label "Controlled risk" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent
 :DeviceComponent rdf:type owl:Class ;
                  rdfs:comment "A (physical or logical) part of a device." ;
@@ -399,12 +450,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction
 :DeviceFunction rdf:type owl:Class ;
-                rdfs:comment "A specific functionality of a device related with the device specific hazard." ;
+                rdfs:comment "A specific functionality of a device related with the domain specific hazard." ;
                 rdfs:label "Device function" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceSpecificHazard
-:DeviceSpecificHazard rdf:type owl:Class ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard
+:DomainSpecificHazard rdf:type owl:Class ;
                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasDeviceComponent ;
                                                                    owl:someValuesFrom :DeviceComponent
@@ -417,15 +468,11 @@ xsd:date rdf:type rdfs:Datatype .
                                                                    owl:onProperty :hasHazard ;
                                                                    owl:someValuesFrom :Hazard
                                                                  ]
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasHazardousSituation ;
-                                                                   owl:someValuesFrom :HazardousSituation
-                                                                 ]
                                                                ) ;
                                             rdf:type owl:Class
                                           ] ;
                       rdfs:comment "Hazard associated with a specific hazardous situation, device function and a specific device component." ;
-                      rdfs:label "Device specific hazard" .
+                      rdfs:label "Domain specific hazard" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event
@@ -466,49 +513,21 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:label "Implementation manifest" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ManagedRisk
-:ManagedRisk rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasDeviceSpecificHazard ;
-                                                          owl:someValuesFrom :DeviceSpecificHazard
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasPreRisk ;
-                                                          owl:someValuesFrom :Risk
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasResidualRisk ;
-                                                          owl:someValuesFrom :Risk
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :isMitigatedBy ;
-                                                          owl:someValuesFrom :RiskSDA
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:label "Managed risk" .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
-:Risk rdf:type owl:Class ;
-      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :hasHarm ;
-                                                   owl:someValuesFrom :Harm
-                                                 ]
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :probability ;
-                                                   owl:someValuesFrom xsd:integer
-                                                 ]
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :severity ;
-                                                   owl:someValuesFrom xsd:integer
-                                                 ]
-                                               ) ;
-                            rdf:type owl:Class
-                          ] ;
-      rdfs:comment "Combination of harm and its associated probability and severity." ;
-      rdfs:label "Risk" .
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel
+:RiskLevel rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :probability ;
+                                                        owl:someValuesFrom xsd:integer
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :severity ;
+                                                        owl:someValuesFrom xsd:integer
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:comment "Combination of probability and severity." ;
+           rdfs:label "Risk level" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix
@@ -520,7 +539,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA
 :RiskSDA rdf:type owl:Class ;
          rdfs:subClassOf :SDA ;
-         rdfs:comment "SDA where the purpose is to mitigate a managed risk." ;
+         rdfs:comment "SDA where the purpose is to mitigate an analyzed risk." ;
          rdfs:label "Risk SDA" .
 
 
@@ -569,29 +588,19 @@ xsd:date rdf:type rdfs:Datatype .
 #    General axioms
 #################################################################
 
-[ owl:intersectionOf ( :SDA
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasSafetyAssurance ;
-                         owl:someValuesFrom :SafetyAssurance
-                       ]
-                     ) ;
-  rdf:type owl:Class ;
-  rdfs:subClassOf :AssuranceSDA
-] .
-
-
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :DeviceComponent
+  owl:members ( :AnalyzedRisk
+                :ControlledRisk
+                :DeviceComponent
                 :DeviceContext
                 :DeviceFunction
-                :DeviceSpecificHazard
+                :DomainSpecificHazard
                 :Event
                 :Harm
                 :Hazard
                 :HazardousSituation
                 :ImplementationManifest
-                :ManagedRisk
-                :Risk
+                :RiskLevel
                 :RiskMatrix
                 :SDA
               )
