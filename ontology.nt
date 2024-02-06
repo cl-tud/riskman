@@ -221,9 +221,6 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has preceding event" .
 # 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk> .
@@ -412,7 +409,7 @@ _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
 _:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .

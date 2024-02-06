@@ -401,13 +401,6 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk -->
-
-
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk"/>
-    
-
-
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel -->
 
 
@@ -663,7 +656,7 @@
                         <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk"/>
+                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel"/>
                         <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
                     </owl:Restriction>
                     <owl:Restriction>

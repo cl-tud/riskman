@@ -254,10 +254,6 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:label "has preceding event" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRisk
-:hasResidualRisk rdf:type owl:ObjectProperty .
-
-
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel
 :hasResidualRiskLevel rdf:type owl:ObjectProperty ;
                       rdfs:domain :ControlledRisk ;
@@ -423,7 +419,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                              owl:someValuesFrom :AnalyzedRisk
                                                            ]
                                                            [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :hasResidualRisk ;
+                                                             owl:onProperty :hasResidualRiskLevel ;
                                                              owl:someValuesFrom :RiskLevel
                                                            ]
                                                            [ rdf:type owl:Restriction ;
