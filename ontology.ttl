@@ -201,6 +201,9 @@ xsd:date rdf:type rdfs:Datatype .
 :hasHarm rdf:type owl:ObjectProperty ;
          rdfs:domain :AnalyzedRisk ;
          rdfs:range :Harm ;
+         owl:propertyChainAxiom ( :hasAnalyzedRisk
+                                  :hasHarm
+                                ) ;
          rdfs:label "has harm" .
 
 
@@ -258,6 +261,16 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:domain :ControlledRisk ;
                       rdfs:range :RiskLevel ;
                       rdfs:label "has residual risk level" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel
+:hasRiskLevel rdf:type owl:ObjectProperty ;
+              rdfs:range :RiskLevel ;
+              owl:propertyChainAxiom ( :hasPreRiskLevel
+                                     ) ,
+                                     ( :hasResidualRiskLevel
+                                     ) ;
+              rdfs:label "has risk level" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix
@@ -506,6 +519,22 @@ xsd:date rdf:type rdfs:Datatype .
 :ImplementationManifest rdf:type owl:Class ;
                         rdfs:comment "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual." ;
                         rdfs:label "Implementation manifest" .
+
+
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
+:Risk rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasHarm ;
+                                                   owl:someValuesFrom :Harm
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasRiskLevel ;
+                                                   owl:someValuesFrom :RiskLevel
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:label "Risk" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel
