@@ -134,7 +134,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#label> "causesHarm" .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#label> "causes harm" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

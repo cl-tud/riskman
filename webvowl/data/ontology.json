@@ -944,7 +944,7 @@
     },
     "domain" : "13",
     "subproperty" : [ "14" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "12"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDomainSpecificHazard",
@@ -1105,7 +1105,7 @@
     "range" : "10",
     "label" : {
       "IRI-based" : "causesHarm",
-      "undefined" : "causesHarm"
+      "undefined" : "causes harm"
     },
     "domain" : "2",
     "attributes" : [ "object" ],
@@ -1514,7 +1514,7 @@
     "range" : "10",
     "label" : {
       "IRI-based" : "causesHarm",
-      "undefined" : "causesHarm"
+      "undefined" : "causes harm"
     },
     "domain" : "2",
     "attributes" : [ "object", "someValues" ],

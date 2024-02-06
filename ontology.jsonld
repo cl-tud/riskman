@@ -745,7 +745,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "causesHarm"
+    "@value" : "causes harm"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
