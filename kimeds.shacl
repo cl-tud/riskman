@@ -8,10 +8,47 @@
 
 ### The KIMEDS Classes ###
 
+
+kimeds:AnalyzedRiskShape
+  a sh:NodeShape ;
+  sh:targetClass kimeds:Analyzed ;
+  sh:property [
+    sh:path kimeds:hasDomainSpecificHazard ;
+    sh:message "Every analyzed risk must have exactly one domain specific hazard." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasHarm ;
+    sh:message "Every analyzed risk must have exactly one harm." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasRiskMatrix ;
+    sh:message "Every analyzed risk must have exactly one risk matrix." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasDeviceContext ;
+    sh:message "Every analyzed risk must have exactly one device context." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasHazardousSituation ;
+    sh:message "Every analyzed risk must have exactly one hazardous situation." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path kimeds:hasPreRiskLevel ;
+    sh:message "Every analyzed risk must have exactly one pre-risk level." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ]
+.  
+
 kimeds:AssuranceSDAShape
   a sh:NodeShape ;
   sh:targetClass kimeds:AssuranceSDA ;
-  sh:property [ # The subject of sh:property should be a PropertyShape, before we just had a property (w3c figure, Part 1, point 2)
+  sh:property [ 
       sh:path kimeds:hasSafetyAssurance 
   ]
 .
@@ -37,27 +74,22 @@ kimeds:DeviceContextShape
   sh:targetClass kimeds:DeviceContext
 .
 
-kimeds:DeviceSpecificHazardShape
+kimeds:DomainSpecificHazardShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:DeviceSpecificHazard ;
+  sh:targetClass kimeds:DomainSpecificHazard ;
   sh:property [
-    sh:path kimeds:hasDeviceComponent ;	
-    sh:message "Device specific hazard must have exactly one device component" ;
+    sh:path kimeds:hasDomainComponent ;	
+    sh:message "Domain specific hazard must have exactly one device component" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
     sh:path kimeds:hasDeviceFunction ;
-    sh:message "Device specific hazard must have exactly one device function" ;
+    sh:message "Domain specific hazard must have exactly one device function" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
     sh:path kimeds:hasHazard ;
-    sh:message "Device specific hazard must have exactly one hazard" ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ; 
-  ], [
-    sh:path kimeds:hasHazardousSituation ;
-    sh:message "Device specific hazard must have exactly one hazardous situation" ;
+    sh:message "Domain specific hazard must have exactly one hazard" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ]
@@ -81,47 +113,40 @@ kimeds:ImplementationManifestShape
   sh:targetClass kimeds:ImplementationManifest ;
 .
 
-  kimeds:ManagedRiskShape
+kimeds:ControlledRiskShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:ManagedRisk ;
+  sh:targetClass kimeds:ControlledRisk ;
   sh:property [
-    sh:path kimeds:hasDeviceSpecificHazard ;
-    sh:message "Every managed risk must have exactly one device specific hazard" ;  
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:property [
-      sh:path kimeds:hasHazardousSituation ;
-      sh:property [
-        sh:path kimeds:P1 ;
-        sh:message "Every hazardous situation can only have one P1 for each managed risk. " ;
-        sh:maxCount 1 ;
-      ] ;
-    ] ;
-    sh:property [
-      sh:path kimeds:hasHazard ;
-      sh:property [
-        sh:path kimeds:causesHarm ;
-        sh:property [
-          sh:path kimeds:P2 ;
-          sh:message "Every harm can only have one P2 for each managed risk" ;
-          sh:maxCount 1 ;
-        ] ;
-      ] ;
-    ] ;
-  ], [
-    sh:path kimeds:hasPreRisk ;
-    sh:message "Every managed risk must have exactly one pre risk" ;  
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-  ], [
-    sh:path kimeds:hasResidualRisk ;
-    sh:message "Every managed risk must have exactly one residual risk" ;  
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-  ], [
     sh:path kimeds:isMitigatedBy ;
-    sh:message "Every managed risk must be mitigated" ;  
+    sh:message "Every controlled risk must be mitigated" ;  
     sh:minCount 1 ;
+    sh:maxCount 1
+  ], [
+    sh:path kimeds:hasAnalyzedRisk ;
+    sh:message "Every controlled risk must have exactly one analyzed risk." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 
+  ], [
+    sh:path kimeds:hasResidualRiskLevel ;
+    sh:message "Every controlled risk must have exactly one residual risk level" ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], 
+.
+
+kimeds:RiskLevelShape
+  a sh:NodeShape ;
+  sh:targetClass kimeds:RiskLevel ;
+  sh:property [
+    sh:path kimeds:probability ;	
+    sh:message "Risk level must have exactly one probability value." ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ; 
+  ], [
+    sh:path kimeds:severity ;
+    sh:message "Risk level must have exactly one severity value." ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ; 
   ]
 .
 
