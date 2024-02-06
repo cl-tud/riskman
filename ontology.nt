@@ -377,6 +377,7 @@ _:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm\n                    with reference to a device context and a specification of an initial risk level." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Analyzed risk" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA
@@ -436,6 +437,7 @@ _:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org
 _:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting\n                    residual risk." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Controlled risk" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent
@@ -476,7 +478,7 @@ _:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org
 _:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent> .
 _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Hazard associated with a specific hazardous situation, device function and a specific device component." .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#label> "Domain specific hazard" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event
@@ -529,6 +531,7 @@ _:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org
 _:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm> .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of the probability of occurrence of harm and the severity of that harm." .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel

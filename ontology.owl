@@ -616,6 +616,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm
+                    with reference to a device context and a specification of an initial risk level.</rdfs:comment>
         <rdfs:label>Analyzed risk</rdfs:label>
     </owl:Class>
     
@@ -685,6 +687,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting
+                    residual risk.</rdfs:comment>
         <rdfs:label>Controlled risk</rdfs:label>
     </owl:Class>
     
@@ -742,7 +746,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment>Hazard associated with a specific hazardous situation, device function and a specific device component.</rdfs:comment>
+        <rdfs:comment>Structured artifact that centers around one hazard having the potential to cause one or more
+                      harm(s) in the context of a domain-specific function and component.</rdfs:comment>
         <rdfs:label>Domain specific hazard</rdfs:label>
     </owl:Class>
     
@@ -828,6 +833,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>Combination of the probability of occurrence of harm and the severity of that harm.</rdfs:comment>
         <rdfs:label>Risk</rdfs:label>
     </owl:Class>
     

@@ -523,6 +523,9 @@
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm\n                    with reference to a device context and a specification of an initial risk level."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Analyzed risk"
   } ],
@@ -565,6 +568,9 @@
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting\n                    residual risk."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Controlled risk"
   } ],
@@ -602,7 +608,7 @@
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Hazard associated with a specific hazardous situation, device function and a specific device component."
+    "@value" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Domain specific hazard"
@@ -694,6 +700,9 @@
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Combination of the probability of occurrence of harm and the severity of that harm."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Risk"
   } ],

@@ -8,7 +8,7 @@
     },
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "version" : "1.0.0",
-    "author" : [ "_:genid2147483649", "_:genid2147483648", "_:genid2147483652", "_:genid2147483651", "_:genid2147483650" ],
+    "author" : [ "_:genid2147483679", "_:genid2147483677", "_:genid2147483681", "_:genid2147483675", "_:genid2147483673" ],
     "description" : {
       "en" : "The KIMEDS Ontology defines various notions related to risk management for medical devices."
     },
@@ -31,27 +31,27 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483649",
+        "value" : "_:genid2147483675",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483650",
+        "value" : "_:genid2147483681",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483651",
+        "value" : "_:genid2147483677",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483652",
+        "value" : "_:genid2147483679",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483673",
         "type" : "label"
       } ],
       "funding" : [ {
@@ -68,7 +68,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483655",
+        "value" : "_:genid2147483687",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -78,7 +78,12 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483653",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "_:genid2147483685",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -93,13 +98,8 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483654",
+        "value" : "_:genid2147483683",
         "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
-        "type" : "iri"
       } ],
       "created" : [ {
         "identifier" : "created",
@@ -237,7 +237,7 @@
       "undefined" : "Domain specific hazard"
     },
     "comment" : {
-      "undefined" : "Hazard associated with a specific hazardous situation, device function and a specific device component."
+      "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component."
     },
     "id" : "3"
   }, {
@@ -360,6 +360,9 @@
       "IRI-based" : "ControlledRisk",
       "undefined" : "Controlled risk"
     },
+    "comment" : {
+      "undefined" : "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting\n                    residual risk."
+    },
     "id" : "16"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk",
@@ -368,6 +371,9 @@
     "label" : {
       "IRI-based" : "AnalyzedRisk",
       "undefined" : "Analyzed risk"
+    },
+    "comment" : {
+      "undefined" : "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm\n                    with reference to a device context and a specification of an initial risk level."
     },
     "id" : "7"
   }, {
@@ -505,6 +511,9 @@
     "label" : {
       "IRI-based" : "Risk",
       "undefined" : "Risk"
+    },
+    "comment" : {
+      "undefined" : "Combination of the probability of occurrence of harm and the severity of that harm."
     },
     "id" : "116"
   }, {
