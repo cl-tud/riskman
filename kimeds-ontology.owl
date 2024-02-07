@@ -194,8 +194,8 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
              rdfs:range :RiskLevel .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel
-:hasPreRiskLevel rdf:type owl:ObjectProperty ;
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel
+:hasInitialRiskLevel rdf:type owl:ObjectProperty ;
                     rdfs:label "has pre risk level" ;
             rdfs:domain :AnalyzedRisk ;
             rdfs:range :RiskLevel .
@@ -204,7 +204,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :hasRiskLevel rdf:type owl:ObjectProperty ;
               rdfs:label "has risk level" ;
               rdfs:range :RiskLevel ;
-              owl:propertyChainAxiom ( :hasPreRiskLevel
+              owl:propertyChainAxiom ( :hasInitialRiskLevel
                                       ) ,
                                       ( :hasResidualRiskLevel
                                       ) .
@@ -325,7 +325,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                           owl:someValuesFrom :HazardousSituation
                                                         ]                                                        
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasPreRiskLevel ;
+                                                          owl:onProperty :hasInitialRiskLevel ;
                                                           owl:someValuesFrom :RiskLevel
                                                         ]
                                                       ) ;
