@@ -132,6 +132,12 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :hasHarm rdf:type owl:ObjectProperty ;
                     rdfs:label "has harm" ;
 #         rdfs:domain :AnalyzedRisk ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf 
+                          ( :ControlledRisk
+                            :AnalyzedRisk
+                          )
+                      ] ;
          owl:propertyChainAxiom 
                     ( 
                       :hasAnalyzedRisk
