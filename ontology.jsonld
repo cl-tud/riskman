@@ -73,7 +73,7 @@
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel"
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"
@@ -921,6 +921,18 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
   } ]
 }, {
+  "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has pre risk level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"
+  } ]
+}, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -943,18 +955,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
-  } ]
-}, {
-  "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has pre risk level"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent",
@@ -991,7 +991,7 @@
   } ],
   "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
     "@list" : [ {
-      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel"
+      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel"
     } ]
   }, {
     "@list" : [ {

@@ -227,6 +227,13 @@ xsd:date rdf:type rdfs:Datatype .
                            rdfs:label "has implementation manifest" .
 
 
+###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel
+:hasInitialRiskLevel rdf:type owl:ObjectProperty ;
+                     rdfs:domain :AnalyzedRisk ;
+                     rdfs:range :RiskLevel ;
+                     rdfs:label "has pre risk level" .
+
+
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard
 :hasParentHazard rdf:type owl:ObjectProperty ;
                  rdfs:domain :Hazard ;
@@ -239,13 +246,6 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:domain :HazardousSituation ;
                     rdfs:range :HazardousSituation ;
                     rdfs:label "has parent situation" .
-
-
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel
-:hasPreRiskLevel rdf:type owl:ObjectProperty ;
-                 rdfs:domain :AnalyzedRisk ;
-                 rdfs:range :RiskLevel ;
-                 rdfs:label "has pre risk level" .
 
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent
@@ -265,7 +265,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel
 :hasRiskLevel rdf:type owl:ObjectProperty ;
               rdfs:range :RiskLevel ;
-              owl:propertyChainAxiom ( :hasPreRiskLevel
+              owl:propertyChainAxiom ( :hasInitialRiskLevel
                                      ) ,
                                      ( :hasResidualRiskLevel
                                      ) ;
@@ -382,7 +382,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                            owl:someValuesFrom :HazardousSituation
                                                          ]
                                                          [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :hasPreRiskLevel ;
+                                                           owl:onProperty :hasInitialRiskLevel ;
                                                            owl:someValuesFrom :RiskLevel
                                                          ]
                                                          [ rdf:type owl:Restriction ;

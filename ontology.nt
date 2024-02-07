@@ -202,6 +202,12 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest> <http://www.w3.org/2000/01/rdf-schema#label> "has implementation manifest" .
 # 
+# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel> .
+<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has pre risk level" .
+# 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard> .
@@ -213,12 +219,6 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation> <http://www.w3.org/2000/01/rdf-schema#label> "has parent situation" .
-# 
-# http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel> .
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has pre risk level" .
 # 
 # http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -237,7 +237,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -353,7 +353,7 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
 _:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .

@@ -359,6 +359,17 @@
     
 
 
+    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel -->
+
+
+    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel">
+        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
+        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+        <rdfs:label>has pre risk level</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard -->
 
 
@@ -377,17 +388,6 @@
         <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
         <rdfs:label>has parent situation</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel -->
-
-
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
-        <rdfs:label>has pre risk level</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -420,7 +420,7 @@
     <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel">
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel"/>
+            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel"/>
@@ -605,7 +605,7 @@
                         <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel"/>
+                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel"/>
                         <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
                     </owl:Restriction>
                     <owl:Restriction>
