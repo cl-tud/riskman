@@ -199,6 +199,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
 :hasHarm rdf:type owl:ObjectProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :AnalyzedRisk
+                                     :ControlledRisk
+                                   )
+                     ] ;
          rdfs:range :Harm ;
          owl:propertyChainAxiom ( :hasAnalyzedRisk
                                   :hasHarm

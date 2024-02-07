@@ -38,25 +38,40 @@
     "@id" : "https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en"
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid28"
+      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"
     }, {
-      "@id" : "_:genid26"
-    }, {
-      "@id" : "_:genid24"
-    }, {
-      "@id" : "_:genid22"
-    }, {
-      "@id" : "_:genid20"
-    }, {
-      "@id" : "_:genid18"
+      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk"
     } ]
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid31"
+    }, {
+      "@id" : "_:genid29"
+    }, {
+      "@id" : "_:genid27"
+    }, {
+      "@id" : "_:genid25"
+    }, {
+      "@id" : "_:genid23"
+    }, {
+      "@id" : "_:genid21"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "https://schema.org/name" : [ {
+    "@value" : "EKFZ, TU Dresden"
+  } ]
+}, {
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix"
@@ -65,12 +80,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"
   } ]
 }, {
-  "@id" : "_:genid2",
-  "https://schema.org/name" : [ {
-    "@value" : "EKFZ, TU Dresden"
-  } ]
-}, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPreRiskLevel"
@@ -79,7 +89,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation"
@@ -88,7 +98,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
@@ -97,32 +107,13 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDomainSpecificHazard"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
-  } ]
-}, {
-  "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
-    }, {
-      "@id" : "_:genid31"
-    } ]
   } ]
 }, {
   "@id" : "_:genid3",
@@ -139,13 +130,32 @@
   "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
+    }, {
+      "@id" : "_:genid34"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
@@ -155,25 +165,16 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid42"
+      "@id" : "_:genid45"
     }, {
-      "@id" : "_:genid40"
+      "@id" : "_:genid43"
     }, {
-      "@id" : "_:genid38"
+      "@id" : "_:genid41"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -187,7 +188,16 @@
     "@value" : "Georg Heidenreich"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
+  } ]
+}, {
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel"
@@ -196,7 +206,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk"
@@ -205,43 +215,25 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid49"
+      "@id" : "_:genid52"
     }, {
-      "@id" : "_:genid47"
+      "@id" : "_:genid50"
     }, {
-      "@id" : "_:genid45"
+      "@id" : "_:genid48"
     } ]
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -252,13 +244,31 @@
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent"
@@ -267,17 +277,17 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid56"
+      "@id" : "_:genid59"
     }, {
-      "@id" : "_:genid54"
+      "@id" : "_:genid57"
     } ]
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel"
@@ -286,32 +296,13 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"
-  } ]
-}, {
-  "@id" : "_:genid57",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid61"
-    }, {
-      "@id" : "_:genid59"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid59",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -328,7 +319,26 @@
     "@id" : "https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid64"
+    }, {
+      "@id" : "_:genid62"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"
@@ -337,7 +347,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
@@ -347,17 +357,25 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
     }, {
-      "@id" : "_:genid67"
+      "@id" : "_:genid70"
     } ]
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid7",
+  "https://schema.org/name" : [ {
+    "@value" : "ICCL, TU Dresden"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic"
+  } ]
+}, {
+  "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"
@@ -366,7 +384,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"
   } ]
 }, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -398,14 +416,6 @@
     }, {
       "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "https://schema.org/name" : [ {
-    "@value" : "ICCL, TU Dresden"
-  } ],
-  "https://schema.org/url" : [ {
-    "@id" : "https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -530,7 +540,7 @@
     "@value" : "Analyzed risk"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid16"
+    "@id" : "_:genid19"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA",
@@ -548,7 +558,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid29"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI",
@@ -563,7 +573,7 @@
     "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid33"
+    "@id" : "_:genid36"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk",
@@ -575,7 +585,7 @@
     "@value" : "Controlled risk"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent",
@@ -614,7 +624,7 @@
     "@value" : "Domain specific hazard"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid43"
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event",
@@ -644,7 +654,7 @@
     "@value" : "Hazard"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid50"
+    "@id" : "_:genid53"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation",
@@ -656,7 +666,7 @@
     "@value" : "Hazardous situation"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid51"
+    "@id" : "_:genid54"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest",
@@ -707,7 +717,7 @@
     "@value" : "Risk"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel",
@@ -719,7 +729,7 @@
     "@value" : "Risk level"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid57"
+    "@id" : "_:genid60"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix",
@@ -752,7 +762,7 @@
     "@value" : "Risk SDAI"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid62"
+    "@id" : "_:genid65"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA",
@@ -773,7 +783,7 @@
     "@value" : "SDAI"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid68"
   } ]
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance",
@@ -871,6 +881,9 @@
 }, {
   "@id" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid12"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has harm"
   } ],
