@@ -38,8 +38,8 @@ kimeds:AnalyzedRiskShape
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path kimeds:hasPreRiskLevel ;
-    sh:message "Every analyzed risk must have exactly one pre-risk level." ;  
+    sh:path kimeds:hasInitialRiskLevel ;
+    sh:message "Every analyzed risk must have exactly one initial risk level." ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ]
