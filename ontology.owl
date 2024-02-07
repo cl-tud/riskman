@@ -316,14 +316,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk"/>

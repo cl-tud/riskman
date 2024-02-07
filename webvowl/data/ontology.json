@@ -31,22 +31,22 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483673",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483681",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
         "value" : "_:genid2147483679",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "_:genid2147483675",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483673",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483681",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -63,22 +63,27 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
         "type" : "iri"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483683",
-        "type" : "label"
+        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
+        "type" : "iri"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483685",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "_:genid2147483683",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -93,13 +98,8 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
-        "type" : "iri"
+        "value" : "_:genid2147483685",
+        "type" : "label"
       } ],
       "created" : [ {
         "identifier" : "created",
@@ -113,16 +113,16 @@
         "value" : "2023-10-23",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "undefined",
-        "value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).",
         "type" : "label"
       } ],
       "title" : [ {
@@ -168,11 +168,11 @@
     "id" : "46",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "51",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "49",
     "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "owl:Thing"
   }, {
     "id" : "2",
     "type" : "owl:Class"
@@ -198,10 +198,10 @@
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "105",
@@ -210,13 +210,13 @@
     "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "113",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "69",
+    "id" : "71",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "71",
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "117",
@@ -327,16 +327,16 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "51",
+    "id" : "49",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "49",
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "51",
     "label" : {
-      "IRI-based" : "integer"
+      "undefined" : "Thing"
     }
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard",
@@ -443,18 +443,6 @@
     },
     "id" : "10"
   }, {
-    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest",
-    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ImplementationManifest",
-      "undefined" : "Implementation manifest"
-    },
-    "comment" : {
-      "undefined" : "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual."
-    },
-    "id" : "22"
-  }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
     "instances" : 0,
@@ -466,6 +454,18 @@
       "undefined" : "Combination of probability and severity."
     },
     "id" : "27"
+  }, {
+    "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest",
+    "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplementationManifest",
+      "undefined" : "Implementation manifest"
+    },
+    "comment" : {
+      "undefined" : "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual."
+    },
+    "id" : "22"
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
@@ -494,21 +494,23 @@
     },
     "id" : "17"
   }, {
-    "instances" : 0,
-    "union" : [ "7", "16" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "113"
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "69",
+    "id" : "71",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "71",
+    "id" : "114",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -818,7 +820,7 @@
     "id" : "112",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "114",
+    "id" : "113",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "115",
@@ -1350,7 +1352,7 @@
       "IRI-based" : "hasRiskLevel",
       "undefined" : "has risk level"
     },
-    "domain" : "28",
+    "domain" : "51",
     "attributes" : [ "object" ],
     "id" : "90"
   }, {
@@ -1439,7 +1441,7 @@
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "51",
+    "range" : "45",
     "label" : {
       "IRI-based" : "severity",
       "undefined" : "severity"
@@ -1494,8 +1496,8 @@
       "undefined" : "has event"
     },
     "domain" : "24",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "114"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "113"
   }, {
     "range" : "17",
     "domain" : "8",
@@ -1521,7 +1523,7 @@
       "undefined" : "causes harm"
     },
     "domain" : "2",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "118"
   }, {
     "range" : "30",
@@ -1619,7 +1621,7 @@
       "IRI-based" : "hasHarm",
       "undefined" : "has harm"
     },
-    "domain" : "113",
+    "domain" : "28",
     "attributes" : [ "object" ],
     "id" : "134"
   }, {
@@ -1635,7 +1637,7 @@
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "45",
+    "range" : "46",
     "label" : {
       "IRI-based" : "probabilityMax",
       "undefined" : "probability max"
@@ -1674,7 +1676,7 @@
   }, {
     "iri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability",
     "baseIri" : "http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology",
-    "range" : "46",
+    "range" : "114",
     "label" : {
       "IRI-based" : "probability",
       "undefined" : "probability"
