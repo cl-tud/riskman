@@ -1,4 +1,4 @@
-@prefix : <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
+@prefix : <https://w3id.org/riskman/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,11 +7,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@base <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
+@base <https://w3id.org/riskman/ontology#> .
 
-<http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology> 
+<https://w3id.org/riskman/ontology> 
                                       rdf:type owl:Ontology ;
-                                      owl:versionIRI <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0> ; 
+                                      owl:versionIRI <https://w3id.org/riskman/ontology1.0.0> ; 
                                       schema:description "The KIMEDS Ontology defines various notions related to risk management for medical devices."@en ;
                                       dcterms:abstract "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." ;
                                       schema:funder "(Add funder info)" ;
@@ -80,55 +80,55 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #    Object Properties
 #################################################################
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm
+###  https://w3id.org/riskman/ontology#causesHarm
 :causesHarm rdf:type owl:ObjectProperty ;
         rdfs:domain :Hazard ;
         rdfs:range :Harm ;
         rdfs:label "causes harm" .
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk
+###  https://w3id.org/riskman/ontology#hasAnalyzedRisk
 :hasAnalyzedRisk rdf:type owl:ObjectProperty ;
             rdfs:domain :ControlledRisk ;
             rdfs:range :AnalyzedRisk ;
             rdfs:label "has analyzed risk" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext
+###  https://w3id.org/riskman/ontology#hasDeviceContext
 :hasDeviceContext rdf:type owl:ObjectProperty ;
             rdfs:domain :AnalyzedRisk ;
             rdfs:range :DeviceContext ;
             rdfs:label "has device context" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent
+###  https://w3id.org/riskman/ontology#hasDeviceComponent
 :hasDeviceComponent rdf:type owl:ObjectProperty ;
                     rdfs:domain :DomainSpecificHazard ;
                     rdfs:range :DeviceComponent ;
                     rdfs:label "has device component" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDomainSpecificHazard
+###  https://w3id.org/riskman/ontology#hasDomainSpecificHazard
 :hasDomainSpecificHazard rdf:type owl:ObjectProperty ;
                          rdfs:label "has domain specific hazard" ;
                          rdfs:domain :AnalyzedRisk ;
                          rdfs:range :DomainSpecificHazard .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent
+###  https://w3id.org/riskman/ontology#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
                     rdfs:label "has event" ;
           rdfs:domain :HazardousSituation ;
           rdfs:range :Event .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction
+###  https://w3id.org/riskman/ontology#hasDeviceFunction
 :hasDeviceFunction rdf:type owl:ObjectProperty ;
                     rdfs:label "has device function" ;
              rdfs:domain :DomainSpecificHazard ;
              rdfs:range :DeviceFunction .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm
+###  https://w3id.org/riskman/ontology#hasHarm
 :hasHarm rdf:type owl:ObjectProperty ;
                     rdfs:label "has harm" ;
 #         rdfs:domain :AnalyzedRisk ;
@@ -146,61 +146,61 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
          rdfs:range :Harm .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard
+###  https://w3id.org/riskman/ontology#hasHazard
 :hasHazard rdf:type owl:ObjectProperty ;
                     rdfs:label "has hazard" ;
            rdfs:domain :DomainSpecificHazard ;
            rdfs:range :Hazard .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation
+###  https://w3id.org/riskman/ontology#hasHazardousSituation
 :hasHazardousSituation rdf:type owl:ObjectProperty ;
                     rdfs:label "has hazardous situation" ;
                        rdfs:domain :AnalyzedRisk ;
                        rdfs:range :HazardousSituation .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest
+###  https://w3id.org/riskman/ontology#hasImplementationManifest
 :hasImplementationManifest rdf:type owl:ObjectProperty ;
                     rdfs:label "has implementation manifest" ;
                            rdfs:domain :SDA ;
                            rdfs:range :ImplementationManifest .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard
+###  https://w3id.org/riskman/ontology#hasParentHazard
 :hasParentHazard rdf:type owl:ObjectProperty ;
                     rdfs:label "has parent hazard" ;
                  rdfs:domain :Hazard ;
                  rdfs:range :Hazard .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation
+###  https://w3id.org/riskman/ontology#hasParentSituation
 :hasParentSituation rdf:type owl:ObjectProperty ;
                     rdfs:domain :HazardousSituation ;
                     rdfs:range :HazardousSituation ;
                     rdfs:label "has parent situation" .
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix
+###  https://w3id.org/riskman/ontology#hasRiskMatrix
 :hasRiskMatrix rdf:type owl:ObjectProperty ;
                     rdfs:label "has risk matrix" ;
               rdfs:domain :AnalyzedRisk ;
               rdfs:range :RiskMatrix .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel
+###  https://w3id.org/riskman/ontology#hasResidualRiskLevel
 :hasResidualRiskLevel rdf:type owl:ObjectProperty ;
                     rdfs:label "has residual risk level" ;
              rdfs:domain :ControlledRisk ;
              rdfs:range :RiskLevel .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel
+###  https://w3id.org/riskman/ontology#hasinitialrisklevel
 :hasInitialRiskLevel rdf:type owl:ObjectProperty ;
                     rdfs:label "has pre risk level" ;
             rdfs:domain :AnalyzedRisk ;
             rdfs:range :RiskLevel .
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel
+###  https://w3id.org/riskman/ontology#hasRiskLevel
 :hasRiskLevel rdf:type owl:ObjectProperty ;
               rdfs:label "has risk level" ;
               rdfs:range :RiskLevel ;
@@ -210,35 +210,35 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                       ) .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent
+###  https://w3id.org/riskman/ontology#hasPrecedingEvent
 :hasPrecedingEvent rdf:type owl:ObjectProperty ;
                     rdfs:label "has preceding event" ;
                     rdfs:domain :Event ;
                     rdfs:range :Event .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance
+###  https://w3id.org/riskman/ontology#hasSafetyAssurance
 :hasSafetyAssurance rdf:type owl:ObjectProperty ;
                     rdfs:label "has safety assurance" ;
                     rdfs:domain :AssuranceSDA ;
                     rdfs:range :SafetyAssurance .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA
+###  https://w3id.org/riskman/ontology#hasSubSDA
 :hasSubSDA rdf:type owl:ObjectProperty ;
                     rdfs:label "has sub SDA" ;
            rdfs:domain :SDA ;
            rdfs:range :SDA .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA
+###  https://w3id.org/riskman/ontology#hasSDA
 :hasSDA rdf:type owl:ObjectProperty ;
                     rdfs:label "is mitigated by" ;
                rdfs:domain :ControlledRisk ;
                rdfs:range :SDA .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent
+###  https://w3id.org/riskman/ontology#isPartOfDeviceComponent
 :isPartOfDeviceComponent rdf:type owl:ObjectProperty ;
                     rdfs:label "is part of device component" ;
                          rdfs:domain :DeviceComponent ;
@@ -249,7 +249,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #    Data properties
 #################################################################
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1
+###  https://w3id.org/riskman/ontology#P1
 :P1 rdf:type owl:DatatypeProperty ;
     rdfs:domain :AnalyzedRisk ;
     rdfs:range xsd:integer ;
@@ -257,7 +257,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
     rdfs:label "P1" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2
+###  https://w3id.org/riskman/ontology#P2
 :P2 rdf:type owl:DatatypeProperty ;
     rdfs:domain :AnalyzedRisk ;
     rdfs:range xsd:integer ;
@@ -265,7 +265,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
     rdfs:label "P2" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability
+###  https://w3id.org/riskman/ontology#probability
 :probability rdf:type owl:DatatypeProperty ;
              rdfs:domain :RiskLevel ;
              rdfs:range xsd:integer ;
@@ -273,7 +273,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
              rdfs:label "probability" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax
+###  https://w3id.org/riskman/ontology#probabilityMax
 :probabilityMax rdf:type owl:DatatypeProperty ;
                 rdfs:domain :RiskMatrix ;
                 rdfs:range xsd:integer ;
@@ -281,7 +281,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                 rdfs:label "probability max" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity
+###  https://w3id.org/riskman/ontology#severity
 :severity rdf:type owl:DatatypeProperty ;
           rdfs:domain :RiskLevel ;
           rdfs:range xsd:integer ;
@@ -289,7 +289,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
           rdfs:label "severity" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax
+###  https://w3id.org/riskman/ontology#severityMax
 :severityMax rdf:type owl:DatatypeProperty ;
              rdfs:domain :RiskMatrix ;
              rdfs:range xsd:integer ;
@@ -302,7 +302,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #################################################################
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk
+###  https://w3id.org/riskman/ontology#AnalyzedRisk
 :AnalyzedRisk rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasDomainSpecificHazard ;
@@ -336,7 +336,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     with reference to a device context and a specification of an initial risk level." .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA
+###  https://w3id.org/riskman/ontology#AssuranceSDA
 :AssuranceSDA rdf:type owl:Class ;
               rdfs:subClassOf :SDA ;
               owl:disjointWith :RiskSDA ;
@@ -364,7 +364,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI
+###  https://w3id.org/riskman/ontology#AssuranceSDAI
 :AssuranceSDAI rdf:type owl:Class ;
                rdfs:subClassOf :SDA ;
                owl:equivalentClass [ owl:intersectionOf 
@@ -377,19 +377,19 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                rdfs:label "Assurance SDAI" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent
+###  https://w3id.org/riskman/ontology#DeviceComponent
 :DeviceComponent rdf:type owl:Class ;
                  rdfs:comment "A (physical or logical) part of a device." ;
                     rdfs:label "Device component" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext
+###  https://w3id.org/riskman/ontology#DeviceContext
 :DeviceContext rdf:type owl:Class ;
                rdfs:comment "Information about possible environments the device can be used in that may affect probability or severity of some risk." ;
                     rdfs:label "Device context" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard
+###  https://w3id.org/riskman/ontology#DomainSpecificHazard
 :DomainSpecificHazard rdf:type owl:Class ;
                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasDeviceComponent ;
@@ -411,25 +411,25 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                       rdfs:label "Domain specific hazard" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event
+###  https://w3id.org/riskman/ontology#Event
 :Event rdf:type owl:Class ;
        rdfs:comment "An incidence or occurrence leading to another event and/or (eventually) a hazardous situation." ;
                     rdfs:label "Event" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction
+###  https://w3id.org/riskman/ontology#DeviceFunction
 :DeviceFunction rdf:type owl:Class ;
           rdfs:comment "A specific functionality of a device related with the domain specific hazard." ;
                     rdfs:label "Device function" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm
+###  https://w3id.org/riskman/ontology#Harm
 :Harm rdf:type owl:Class ;
       rdfs:comment "Injury or damage to the health of people, or damage to property or the environment." ;
                     rdfs:label "Harm" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard
+###  https://w3id.org/riskman/ontology#Hazard
 :Hazard rdf:type owl:Class ;
         owl:equivalentClass [ rdf:type owl:Restriction ;
                               owl:onProperty :causesHarm ;
@@ -439,7 +439,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "Hazard" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation
+###  https://w3id.org/riskman/ontology#HazardousSituation
 :HazardousSituation rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasEvent ;
@@ -449,13 +449,13 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "Hazardous situation" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest
+###  https://w3id.org/riskman/ontology#ImplementationManifest
 :ImplementationManifest rdf:type owl:Class ;
                         rdfs:comment "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual." ;
                         rdfs:label "Implementation manifest" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk
+###  https://w3id.org/riskman/ontology#ControlledRisk
 :ControlledRisk rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( 
                                                         [ rdf:type owl:Restriction ;
@@ -480,7 +480,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk
+###  https://w3id.org/riskman/ontology#Risk
 :Risk rdf:type owl:Class ;
       rdfs:label "Risk" ;
       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -497,7 +497,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
       rdfs:comment "Combination of the probability of occurrence of harm and the severity of that harm." .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel
+###  https://w3id.org/riskman/ontology#RiskLevel
 :RiskLevel rdf:type owl:Class ;
       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                    owl:onProperty :probability ;
@@ -514,20 +514,20 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
       rdfs:label "Risk level" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix
+###  https://w3id.org/riskman/ontology#RiskMatrix
 :RiskMatrix rdf:type owl:Class ;
             rdfs:comment "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)." ;
                     rdfs:label "Risk matrix" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA
+###  https://w3id.org/riskman/ontology#RiskSDA
 :RiskSDA rdf:type owl:Class ;
          rdfs:subClassOf :SDA ;
          rdfs:comment "SDA where the purpose is to mitigate an analyzed risk." ;
                     rdfs:label "Risk SDA" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI
+###  https://w3id.org/riskman/ontology#RiskSDAI
 :RiskSDAI rdf:type owl:Class ;
           owl:equivalentClass [ owl:intersectionOf 
                                 (
@@ -539,13 +539,13 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "Risk SDAI" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA
+###  https://w3id.org/riskman/ontology#SDA
 :SDA rdf:type owl:Class ;
      rdfs:comment "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
                     rdfs:label "SDA" .
 
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI
+###  https://w3id.org/riskman/ontology#SDAI
 :SDAI rdf:type owl:Class ;
       rdfs:comment "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
       owl:equivalentClass [ owl:intersectionOf 
@@ -568,7 +568,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #  rdfs:subClassOf :SDAI                    
 #] .
 
-###  http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance
+###  https://w3id.org/riskman/ontology#SafetyAssurance
 :SafetyAssurance rdf:type owl:Class ;
                  rdfs:comment "A credible reference (or list of such) to the state of the art of achieving safety with respect to a certain class of hazards, e.g. referring to an international norm such as ISO 60601." ;
                     rdfs:label "Safety assurance" .

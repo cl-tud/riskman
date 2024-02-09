@@ -2,148 +2,146 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <http://schema.org/> .
-@prefix kimeds: <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
-@prefix iso: <http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#> .
-# @prefix iso: <https://www.iso.org/standard/72704.html#> .
-
-### The KIMEDS Classes ###
+@prefix riskman: <https://w3id.org/riskman/ontology#> .
+@prefix : <https://w3id.org/riskman/shapes#> .
 
 
-kimeds:AnalyzedRiskShape
+
+:AnalyzedRiskShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:Analyzed ;
+  sh:targetClass riskman:Analyzed ;
   sh:property [
-    sh:path kimeds:hasDomainSpecificHazard ;
+    sh:path riskman:hasDomainSpecificHazard ;
     sh:message "Every analyzed risk must have exactly one domain specific hazard." ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path kimeds:hasHarm ;
+    sh:path riskman:hasHarm ;
     sh:message "Every analyzed risk must have exactly one harm." ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path kimeds:hasRiskMatrix ;
+    sh:path riskman:hasRiskMatrix ;
     sh:message "Every analyzed risk must have exactly one risk matrix." ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path kimeds:hasDeviceContext ;
+    sh:path riskman:hasDeviceContext ;
     sh:message "Every analyzed risk must have exactly one device context." ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path kimeds:hasHazardousSituation ;
+    sh:path riskman:hasHazardousSituation ;
     sh:message "Every analyzed risk must have exactly one hazardous situation." ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path kimeds:hasInitialRiskLevel ;
-    sh:message "Every analyzed risk must have exactly one initial risk level." ;  
+    sh:path riskman:hasInitialRiskLevel ;
+    sh:message "Every analyzed risk must have exactly one pre-risk level." ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ]
 .  
 
-kimeds:AssuranceSDAShape
+:AssuranceSDAShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:AssuranceSDA ;
+  sh:targetClass riskman:AssuranceSDA ;
   sh:property [ 
-      sh:path kimeds:hasSafetyAssurance 
+      sh:path riskman:hasSafetyAssurance 
   ]
 .
 
-kimeds:AssuranceSDAIShape
+:AssuranceSDAIShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:AssuranceSDAI ;
+  sh:targetClass riskman:AssuranceSDAI ;
   sh:property [ 
-    sh:path kimeds:hasSubSDA
+    sh:path riskman:hasSubSDA
   ]
 .
 
-kimeds:DeviceComponentShape
+:DeviceComponentShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:DeviceComponent ;
+  sh:targetClass riskman:DeviceComponent ;
   sh:property [
-    sh:path kimeds:isPartOfDeviceComponent
+    sh:path riskman:isPartOfDeviceComponent
   ]
 .
 
-kimeds:DeviceContextShape
+:DeviceContextShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:DeviceContext
+  sh:targetClass riskman:DeviceContext
 .
 
-kimeds:DomainSpecificHazardShape
+:DomainSpecificHazardShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:DomainSpecificHazard ;
+  sh:targetClass riskman:DomainSpecificHazard ;
   sh:property [
-    sh:path kimeds:hasDomainComponent ;	
+    sh:path riskman:hasDomainComponent ;	
     sh:message "Domain specific hazard must have exactly one device component" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
-    sh:path kimeds:hasDeviceFunction ;
+    sh:path riskman:hasDeviceFunction ;
     sh:message "Domain specific hazard must have exactly one device function" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
-    sh:path kimeds:hasHazard ;
+    sh:path riskman:hasHazard ;
     sh:message "Domain specific hazard must have exactly one hazard" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ]
 .
 
-kimeds:EventShape
+:EventShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:Event ;
+  sh:targetClass riskman:Event ;
   sh:property [ 
-    sh:path kimeds:hasPrecedingEvent;
+    sh:path riskman:hasPrecedingEvent;
   ]
 .
 
-kimeds:DeviceFunctionShape
+:DeviceFunctionShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:DeviceFunction ;
+  sh:targetClass riskman:DeviceFunction ;
 .
 
-kimeds:ImplementationManifestShape
+:ImplementationManifestShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:ImplementationManifest ;
+  sh:targetClass riskman:ImplementationManifest ;
 .
 
-kimeds:ControlledRiskShape
+:ControlledRiskShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:ControlledRisk ;
+  sh:targetClass riskman:ControlledRisk ;
   sh:property [
-    sh:path kimeds:hasSDA ;
+    sh:path riskman:hasSDA ;
     sh:message "Every controlled risk must be mitigated by an SDA." ;  
     sh:minCount 1 ;
     sh:maxCount 1
   ], [
-    sh:path kimeds:hasAnalyzedRisk ;
+    sh:path riskman:hasAnalyzedRisk ;
     sh:message "Every controlled risk must have exactly one analyzed risk." ;  
     sh:minCount 1 ;
     sh:maxCount 1 
   ], [
-    sh:path kimeds:hasResidualRiskLevel ;
+    sh:path riskman:hasResidualRiskLevel ;
     sh:message "Every controlled risk must have exactly one residual risk level" ;  
     sh:minCount 1 ;
     sh:maxCount 1 ;
-  ], 
+  ] 
 .
 
-kimeds:RiskLevelShape
+:RiskLevelShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:RiskLevel ;
+  sh:targetClass riskman:RiskLevel ;
   sh:property [
-    sh:path kimeds:probability ;	
+    sh:path riskman:probability ;	
     sh:message "Risk level must have exactly one probability value." ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
-    sh:path kimeds:severity ;
+    sh:path riskman:severity ;
     sh:message "Risk level must have exactly one severity value." ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
@@ -151,37 +149,37 @@ kimeds:RiskLevelShape
 .
 
 
-kimeds:RiskMatrixShape
+:RiskMatrixShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:RiskMatrix ;
+  sh:targetClass riskman:RiskMatrix ;
 .
 
-kimeds:RiskSDAShape
+:RiskSDAShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:RiskSDA ;
+  sh:targetClass riskman:RiskSDA ;
   sh:property [
-    sh:path kimeds:hasSubSDA 
+    sh:path riskman:hasSubSDA 
   ]
 .
 
-kimeds:RiskSDAIShape
+:RiskSDAIShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:RiskSDAI ;
+  sh:targetClass riskman:RiskSDAI ;
   sh:property [
-    sh:path kimeds:hasSubSDA 
+    sh:path riskman:hasSubSDA 
   ]
 .
 
-kimeds:SafetyAssuranceShape
+:SafetyAssuranceShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:SafetyAssurance ;
+  sh:targetClass riskman:SafetyAssurance ;
 .
 
-kimeds:SDAShape
+:SDAShape
   a sh:NodeShape ;
-  sh:targetClass kimeds:SDA ;
+  sh:targetClass riskman:SDA ;
   sh:property [
-      sh:path ( [ sh:zeroOrMorePath kimeds:hasSubSDA] kimeds:hasImplementationManifest ) ;
+      sh:path ( [ sh:zeroOrMorePath riskman:hasSubSDA] riskman:hasImplementationManifest ) ;
       sh:message "Every SDA needs a final mitigation (which has the Implementation Manifest)" ;
       sh:minCount 1 ;
     ]
