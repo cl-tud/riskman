@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#"
-     xml:base="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology"
+<rdf:RDF xmlns="https://w3id.org/riskman/ontology#"
+     xml:base="https://w3id.org/riskman/ontology"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,8 +8,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
-    <owl:Ontology rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology">
-        <owl:versionIRI rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology1.0.0"/>
+    <owl:Ontology rdf:about="https://w3id.org/riskman/ontology">
+        <owl:versionIRI rdf:resource="https://w3id.org/riskman/ontology1.0.0"/>
         <terms:abstract>The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).</terms:abstract>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me"/>
         <terms:contributor rdf:resource="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me"/>
@@ -235,251 +235,251 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm -->
+    <!-- https://w3id.org/riskman/ontology#causesHarm -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#causesHarm">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#Hazard"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
         <rdfs:label>causes harm</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk -->
+    <!-- https://w3id.org/riskman/ontology#hasAnalyzedRisk -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasAnalyzedRisk">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#ControlledRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
         <rdfs:label>has analyzed risk</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent -->
+    <!-- https://w3id.org/riskman/ontology#hasDeviceComponent -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasDeviceComponent">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#DomainSpecificHazard"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#DeviceComponent"/>
         <rdfs:label>has device component</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext -->
+    <!-- https://w3id.org/riskman/ontology#hasDeviceContext -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasDeviceContext">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#DeviceContext"/>
         <rdfs:label>has device context</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction -->
+    <!-- https://w3id.org/riskman/ontology#hasDeviceFunction -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasDeviceFunction">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#DomainSpecificHazard"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#DeviceFunction"/>
         <rdfs:label>has device function</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDomainSpecificHazard -->
+    <!-- https://w3id.org/riskman/ontology#hasDomainSpecificHazard -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDomainSpecificHazard">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasDomainSpecificHazard">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#DomainSpecificHazard"/>
         <rdfs:label>has domain specific hazard</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent -->
+    <!-- https://w3id.org/riskman/ontology#hasEvent -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#HazardousSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#Event"/>
         <rdfs:label>has event</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm -->
+    <!-- https://w3id.org/riskman/ontology#hasHarm -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm">
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasHarm">
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#hasAnalyzedRisk"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#hasHarm"/>
         </owl:propertyChainAxiom>
         <rdfs:label>has harm</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard -->
+    <!-- https://w3id.org/riskman/ontology#hasHazard -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasHazard">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#DomainSpecificHazard"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#Hazard"/>
         <rdfs:label>has hazard</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation -->
+    <!-- https://w3id.org/riskman/ontology#hasHazardousSituation -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasHazardousSituation">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#HazardousSituation"/>
         <rdfs:label>has hazardous situation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest -->
+    <!-- https://w3id.org/riskman/ontology#hasImplementationManifest -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasImplementationManifest">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#ImplementationManifest"/>
         <rdfs:label>has implementation manifest</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel -->
+    <!-- https://w3id.org/riskman/ontology#hasInitialRiskLevel -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasInitialRiskLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:label>has pre risk level</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard -->
+    <!-- https://w3id.org/riskman/ontology#hasParentHazard -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentHazard">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasParentHazard">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#Hazard"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#Hazard"/>
         <rdfs:label>has parent hazard</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation -->
+    <!-- https://w3id.org/riskman/ontology#hasParentSituation -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasParentSituation">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasParentSituation">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#HazardousSituation"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#HazardousSituation"/>
         <rdfs:label>has parent situation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent -->
+    <!-- https://w3id.org/riskman/ontology#hasPrecedingEvent -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasPrecedingEvent">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasPrecedingEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#Event"/>
         <rdfs:label>has preceding event</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel -->
+    <!-- https://w3id.org/riskman/ontology#hasResidualRiskLevel -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasResidualRiskLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#ControlledRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:label>has residual risk level</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel -->
+    <!-- https://w3id.org/riskman/ontology#hasRiskLevel -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel">
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasRiskLevel">
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#hasInitialRiskLevel"/>
         </owl:propertyChainAxiom>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#hasResidualRiskLevel"/>
         </owl:propertyChainAxiom>
         <rdfs:label>has risk level</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix -->
+    <!-- https://w3id.org/riskman/ontology#hasRiskMatrix -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasRiskMatrix">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#RiskMatrix"/>
         <rdfs:label>has risk matrix</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA -->
+    <!-- https://w3id.org/riskman/ontology#hasSDA -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasSDA">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#ControlledRisk"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
         <rdfs:label>is mitigated by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance -->
+    <!-- https://w3id.org/riskman/ontology#hasSafetyAssurance -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasSafetyAssurance">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AssuranceSDA"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#SafetyAssurance"/>
         <rdfs:label>has safety assurance</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA -->
+    <!-- https://w3id.org/riskman/ontology#hasSubSDA -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSubSDA">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasSubSDA">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
         <rdfs:label>has sub SDA</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent -->
+    <!-- https://w3id.org/riskman/ontology#isPartOfDeviceComponent -->
 
 
-    <owl:ObjectProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#isPartOfDeviceComponent">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
-        <rdfs:range rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#isPartOfDeviceComponent">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#DeviceComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#DeviceComponent"/>
         <rdfs:label>is part of device component</rdfs:label>
     </owl:ObjectProperty>
     
@@ -497,11 +497,11 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1 -->
+    <!-- https://w3id.org/riskman/ontology#P1 -->
 
 
-    <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P1">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/riskman/ontology#P1">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Probability of a hazardous situation occurring</rdfs:comment>
         <rdfs:label>P1</rdfs:label>
@@ -509,11 +509,11 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2 -->
+    <!-- https://w3id.org/riskman/ontology#P2 -->
 
 
-    <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#P2">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/riskman/ontology#P2">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Probability of a hazardous situation leading to harm</rdfs:comment>
         <rdfs:label>P2</rdfs:label>
@@ -521,11 +521,11 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability -->
+    <!-- https://w3id.org/riskman/ontology#probability -->
 
 
-    <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/riskman/ontology#probability">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory.</rdfs:comment>
         <rdfs:label>probability</rdfs:label>
@@ -533,11 +533,11 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax -->
+    <!-- https://w3id.org/riskman/ontology#probabilityMax -->
 
 
-    <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probabilityMax">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/riskman/ontology#probabilityMax">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskMatrix"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>The maximal value representing the most probable risks.</rdfs:comment>
         <rdfs:label>probability max</rdfs:label>
@@ -545,11 +545,11 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity -->
+    <!-- https://w3id.org/riskman/ontology#severity -->
 
 
-    <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/riskman/ontology#severity">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most.</rdfs:comment>
         <rdfs:label>severity</rdfs:label>
@@ -557,11 +557,11 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax -->
+    <!-- https://w3id.org/riskman/ontology#severityMax -->
 
 
-    <owl:DatatypeProperty rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severityMax">
-        <rdfs:domain rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/riskman/ontology#severityMax">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskMatrix"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>The maximal value representing the most severe risks.</rdfs:comment>
         <rdfs:label>severity max</rdfs:label>
@@ -581,36 +581,43 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk -->
+    <!-- https://schema.org/Person -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk">
+    <owl:Class rdf:about="https://schema.org/Person"/>
+    
+
+
+    <!-- https://w3id.org/riskman/ontology#AnalyzedRisk -->
+
+
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#AnalyzedRisk">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceContext"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasDeviceContext"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#DeviceContext"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDomainSpecificHazard"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasDomainSpecificHazard"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#DomainSpecificHazard"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasHarm"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazardousSituation"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasHazardousSituation"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#HazardousSituation"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasInitialRiskLevel"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasInitialRiskLevel"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskMatrix"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasRiskMatrix"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#RiskMatrix"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -622,66 +629,66 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA -->
+    <!-- https://w3id.org/riskman/ontology#AssuranceSDA -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#AssuranceSDA">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+                    <rdf:Description rdf:about="https://w3id.org/riskman/ontology#SDA"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSafetyAssurance"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasSafetyAssurance"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#SafetyAssurance"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
-        <owl:disjointWith rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/riskman/ontology#RiskSDA"/>
         <rdfs:comment>A safe design argument (SDA), where the purpose is to make a safety assurance</rdfs:comment>
         <rdfs:label>Assurance SDA</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI -->
+    <!-- https://w3id.org/riskman/ontology#AssuranceSDAI -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDAI">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#AssuranceSDAI">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AssuranceSDA"/>
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI"/>
+                    <rdf:Description rdf:about="https://w3id.org/riskman/ontology#AssuranceSDA"/>
+                    <rdf:Description rdf:about="https://w3id.org/riskman/ontology#SDAI"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
         <rdfs:comment>A safe design argument (SDA), where the purpose is to make a safety assurance</rdfs:comment>
         <rdfs:label>Assurance SDAI</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk -->
+    <!-- https://w3id.org/riskman/ontology#ControlledRisk -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#ControlledRisk">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasAnalyzedRisk"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasAnalyzedRisk"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasResidualRiskLevel"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasResidualRiskLevel"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasSDA"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasSDA"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#RiskSDA"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -693,54 +700,54 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent -->
+    <!-- https://w3id.org/riskman/ontology#DeviceComponent -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#DeviceComponent">
         <rdfs:comment>A (physical or logical) part of a device.</rdfs:comment>
         <rdfs:label>Device component</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext -->
+    <!-- https://w3id.org/riskman/ontology#DeviceContext -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#DeviceContext">
         <rdfs:comment>Information about possible environments the device can be used in that may affect probability or severity of some risk.</rdfs:comment>
         <rdfs:label>Device context</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction -->
+    <!-- https://w3id.org/riskman/ontology#DeviceFunction -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#DeviceFunction">
         <rdfs:comment>A specific functionality of a device related with the domain specific hazard.</rdfs:comment>
         <rdfs:label>Device function</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard -->
+    <!-- https://w3id.org/riskman/ontology#DomainSpecificHazard -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#DomainSpecificHazard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceComponent"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasDeviceComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#DeviceComponent"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasDeviceFunction"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasDeviceFunction"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#DeviceFunction"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHazard"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasHazard"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Hazard"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -752,34 +759,34 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event -->
+    <!-- https://w3id.org/riskman/ontology#Event -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#Event">
         <rdfs:comment>An incidence or occurrence leading to another event and/or (eventually) a hazardous situation.</rdfs:comment>
         <rdfs:label>Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm -->
+    <!-- https://w3id.org/riskman/ontology#Harm -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#Harm">
         <rdfs:comment>Injury or damage to the health of people, or damage to property or the environment.</rdfs:comment>
         <rdfs:label>Harm</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard -->
+    <!-- https://w3id.org/riskman/ontology#Hazard -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#Hazard">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#causesHarm"/>
-                <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
+                <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#causesHarm"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:comment>Potential source of harm</rdfs:comment>
@@ -788,14 +795,14 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation -->
+    <!-- https://w3id.org/riskman/ontology#HazardousSituation -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#HazardousSituation">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasEvent"/>
-                <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
+                <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasEvent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Event"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:comment>Circumstance in which people, property or the environment is/are exposed to one or more hazards.</rdfs:comment>
@@ -804,30 +811,30 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest -->
+    <!-- https://w3id.org/riskman/ontology#ImplementationManifest -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#ImplementationManifest">
         <rdfs:comment>A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual.</rdfs:comment>
         <rdfs:label>Implementation manifest</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk -->
+    <!-- https://w3id.org/riskman/ontology#Risk -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Risk">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#Risk">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasHarm"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasHarm"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasRiskLevel"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasRiskLevel"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -838,19 +845,19 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel -->
+    <!-- https://w3id.org/riskman/ontology#RiskLevel -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#RiskLevel">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#probability"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#probability"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#severity"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#severity"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -862,36 +869,36 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix -->
+    <!-- https://w3id.org/riskman/ontology#RiskMatrix -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#RiskMatrix">
         <rdfs:comment>A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0).</rdfs:comment>
         <rdfs:label>Risk matrix</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA -->
+    <!-- https://w3id.org/riskman/ontology#RiskSDA -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA">
-        <rdfs:subClassOf rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#RiskSDA">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
         <rdfs:comment>SDA where the purpose is to mitigate an analyzed risk.</rdfs:comment>
         <rdfs:label>Risk SDA</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI -->
+    <!-- https://w3id.org/riskman/ontology#RiskSDAI -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDAI">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#RiskSDAI">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskSDA"/>
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI"/>
+                    <rdf:Description rdf:about="https://w3id.org/riskman/ontology#RiskSDA"/>
+                    <rdf:Description rdf:about="https://w3id.org/riskman/ontology#SDAI"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -901,27 +908,27 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA -->
+    <!-- https://w3id.org/riskman/ontology#SDA -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#SDA">
         <rdfs:comment>Reusable artifact embodying or expressing one possible method or approach to risk control.</rdfs:comment>
         <rdfs:label>SDA</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI -->
+    <!-- https://w3id.org/riskman/ontology#SDAI -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDAI">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#SDAI">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+                    <rdf:Description rdf:about="https://w3id.org/riskman/ontology#SDA"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#hasImplementationManifest"/>
-                        <owl:someValuesFrom rdf:resource="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#hasImplementationManifest"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#ImplementationManifest"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -932,20 +939,13 @@
     
 
 
-    <!-- http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance -->
+    <!-- https://w3id.org/riskman/ontology#SafetyAssurance -->
 
 
-    <owl:Class rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SafetyAssurance">
+    <owl:Class rdf:about="https://w3id.org/riskman/ontology#SafetyAssurance">
         <rdfs:comment>A credible reference (or list of such) to the state of the art of achieving safety with respect to a certain class of hazards, e.g. referring to an international norm such as ISO 60601.</rdfs:comment>
         <rdfs:label>Safety assurance</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- https://schema.org/Person -->
-
-
-    <owl:Class rdf:about="https://schema.org/Person"/>
     
 
 
@@ -961,20 +961,20 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#AnalyzedRisk"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ControlledRisk"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceComponent"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceContext"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DeviceFunction"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#DomainSpecificHazard"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Event"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Harm"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#Hazard"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#HazardousSituation"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#ImplementationManifest"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskLevel"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#RiskMatrix"/>
-            <rdf:Description rdf:about="http://semanticweb.org/kettmann/ontologies/2023/5/kimeds-ontology#SDA"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#ControlledRisk"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#DeviceComponent"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#DeviceContext"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#DeviceFunction"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#DomainSpecificHazard"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#Event"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#Harm"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#Hazard"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#HazardousSituation"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#ImplementationManifest"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#RiskLevel"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#RiskMatrix"/>
+            <rdf:Description rdf:about="https://w3id.org/riskman/ontology#SDA"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
