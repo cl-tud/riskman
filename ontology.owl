@@ -239,7 +239,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#causesHarm">
-        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#Hazard"/>
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#DomainSpecificHazard"/>
         <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
         <rdfs:label>causes harm</rdfs:label>
     </owl:ObjectProperty>
@@ -752,6 +752,12 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#causesHarm"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:comment>Structured artifact that centers around one hazard having the potential to cause one or more
                       harm(s) in the context of a domain-specific function and component.</rdfs:comment>
         <rdfs:label>Domain specific hazard</rdfs:label>
@@ -783,12 +789,6 @@
 
 
     <owl:Class rdf:about="https://w3id.org/riskman/ontology#Hazard">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/riskman/ontology#causesHarm"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:comment>Potential source of harm</rdfs:comment>
         <rdfs:label>Hazard</rdfs:label>
     </owl:Class>

@@ -132,7 +132,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/
 # 
 # https://w3id.org/riskman/ontology#causesHarm
 <https://w3id.org/riskman/ontology#causesHarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/riskman/ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#Hazard> .
+<https://w3id.org/riskman/ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#DomainSpecificHazard> .
 <https://w3id.org/riskman/ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/riskman/ontology#Harm> .
 <https://w3id.org/riskman/ontology#causesHarm> <http://www.w3.org/2000/01/rdf-schema#label> "causes harm" .
 # 
@@ -479,6 +479,10 @@ _:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskm
 _:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceComponent> .
 _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#causesHarm> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component." .
 <https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#label> "Domain specific hazard" .
 # 
@@ -494,10 +498,6 @@ _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/riskman/ontology#Hazard
 <https://w3id.org/riskman/ontology#Hazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#Hazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#causesHarm> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/riskman/ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Potential source of harm" .
 <https://w3id.org/riskman/ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#label> "Hazard" .
 # 

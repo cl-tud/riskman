@@ -651,6 +651,8 @@
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid43"
+  }, {
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#Event",
@@ -678,9 +680,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Hazard"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#HazardousSituation",
@@ -824,7 +823,7 @@
   "@id" : "https://w3id.org/riskman/ontology#causesHarm",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#Hazard"
+    "@id" : "https://w3id.org/riskman/ontology#DomainSpecificHazard"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "causes harm"

@@ -444,9 +444,17 @@ This section provides details for each class and property defined by The KIMEDS 
             <span class="logic">some</span> 
             <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
             <sup class="type-c" title="class">c</sup>)</dd>
+         <dd>
+            <a href="#https://w3id.org/riskman/ontology#causesHarm" title="https://w3id.org/riskman/ontology#causesHarm">causes harm</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/riskman/ontology#hasDeviceComponent"
+            <a href="#https://w3id.org/riskman/ontology#causesHarm" title="https://w3id.org/riskman/ontology#causesHarm">causes harm</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasDeviceComponent"
                title="https://w3id.org/riskman/ontology#hasDeviceComponent">has device component</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasDeviceFunction"
                title="https://w3id.org/riskman/ontology#hasDeviceFunction">has device function</a>
@@ -579,18 +587,9 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">Potential source of harm</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#causesHarm" title="https://w3id.org/riskman/ontology#causesHarm">causes harm</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/riskman/ontology#causesHarm" title="https://w3id.org/riskman/ontology#causesHarm">causes harm</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasParentHazard"
+            <a href="#https://w3id.org/riskman/ontology#hasParentHazard"
                title="https://w3id.org/riskman/ontology#hasParentHazard">has parent hazard</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -1086,7 +1085,8 @@ This section provides details for each class and property defined by The KIMEDS 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
+               <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
+                  title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

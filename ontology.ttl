@@ -150,7 +150,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/riskman/ontology#causesHarm
 :causesHarm rdf:type owl:ObjectProperty ;
-            rdfs:domain :Hazard ;
+            rdfs:domain :DomainSpecificHazard ;
             rdfs:range :Harm ;
             rdfs:label "causes harm" .
 
@@ -485,6 +485,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                  ]
                                                                ) ;
                                             rdf:type owl:Class
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :causesHarm ;
+                                            owl:someValuesFrom :Harm
                                           ] ;
                       rdfs:comment """Structured artifact that centers around one hazard having the potential to cause one or more
                       harm(s) in the context of a domain-specific function and component.""" ;
@@ -505,10 +509,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/riskman/ontology#Hazard
 :Hazard rdf:type owl:Class ;
-        owl:equivalentClass [ rdf:type owl:Restriction ;
-                              owl:onProperty :causesHarm ;
-                              owl:someValuesFrom :Harm
-                            ] ;
         rdfs:comment "Potential source of harm" ;
         rdfs:label "Hazard" .
 
