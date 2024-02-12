@@ -82,7 +82,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#causesHarm
 :causesHarm rdf:type owl:ObjectProperty ;
-        rdfs:domain :Hazard ;
+        rdfs:domain :DomainSpecificHazard ;
         rdfs:range :Harm ;
         rdfs:label "causes harm" .
 
@@ -391,6 +391,10 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#DomainSpecificHazard
 :DomainSpecificHazard rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :causesHarm ;
+                                            owl:someValuesFrom :Harm
+                                          ] ;
                       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasDeviceComponent ;
                                                                    owl:someValuesFrom :DeviceComponent
@@ -431,10 +435,10 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#Hazard
 :Hazard rdf:type owl:Class ;
-        owl:equivalentClass [ rdf:type owl:Restriction ;
-                              owl:onProperty :causesHarm ;
-                              owl:someValuesFrom :Harm
-                            ] ;
+#        owl:equivalentClass [ rdf:type owl:Restriction ;
+#                              owl:onProperty :causesHarm ;
+#                              owl:someValuesFrom :Harm
+#                            ] ;
         rdfs:comment "Potential source of harm" ;
                     rdfs:label "Hazard" .
 
