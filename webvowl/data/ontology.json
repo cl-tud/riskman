@@ -366,7 +366,7 @@
       "undefined" : "Domain specific hazard"
     },
     "comment" : {
-      "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination that contains a Hazard."
+      "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard."
     },
     "id" : "23"
   }, {

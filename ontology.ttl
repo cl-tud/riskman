@@ -491,7 +491,7 @@ xsd:date rdf:type rdfs:Datatype .
                                             owl:someValuesFrom :Harm
                                           ] ;
                       rdfs:comment """Structured artifact that centers around one hazard having the potential to cause one or more
-                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination that contains a Hazard.""" ;
+                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard.""" ;
                       rdfs:label "Domain specific hazard" .
 
 

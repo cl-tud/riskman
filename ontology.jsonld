@@ -644,7 +644,7 @@
   "@id" : "https://w3id.org/riskman/ontology#DomainSpecificHazard",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination that contains a Hazard."
+    "@value" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Domain specific hazard"
