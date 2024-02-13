@@ -366,7 +366,7 @@
       "undefined" : "Domain specific hazard"
     },
     "comment" : {
-      "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component."
+      "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination that contains a Hazard."
     },
     "id" : "23"
   }, {
@@ -1436,17 +1436,6 @@
     "attributes" : [ "datatype" ],
     "id" : "103"
   }, {
-    "iri" : "https://w3id.org/riskman/ontology#causesHarm",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "causesHarm",
-      "undefined" : "causes harm"
-    },
-    "domain" : "23",
-    "attributes" : [ "object" ],
-    "id" : "104"
-  }, {
     "iri" : "https://w3id.org/riskman/ontology#hasImplementationManifest",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "range" : "3",
@@ -1455,6 +1444,17 @@
       "undefined" : "has implementation manifest"
     },
     "domain" : "10",
+    "attributes" : [ "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#causesHarm",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "causesHarm",
+      "undefined" : "causes harm"
+    },
+    "domain" : "23",
     "attributes" : [ "object" ],
     "id" : "105"
   }, {
