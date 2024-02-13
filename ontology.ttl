@@ -231,7 +231,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasInitialRiskLevel rdf:type owl:ObjectProperty ;
                      rdfs:domain :AnalyzedRisk ;
                      rdfs:range :RiskLevel ;
-                     rdfs:label "has pre risk level" .
+                     rdfs:label "has initial risk level" .
 
 
 ###  https://w3id.org/riskman/ontology#hasParentHazard

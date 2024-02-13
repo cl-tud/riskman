@@ -365,7 +365,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasInitialRiskLevel">
         <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#AnalyzedRisk"/>
         <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
-        <rdfs:label>has pre risk level</rdfs:label>
+        <rdfs:label>has initial risk level</rdfs:label>
     </owl:ObjectProperty>
     
 

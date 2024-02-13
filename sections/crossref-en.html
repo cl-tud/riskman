@@ -109,7 +109,7 @@ This section provides details for each class and property defined by The KIMEDS 
             <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
                title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
             <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-               title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has pre risk level</a>
+               title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
@@ -129,7 +129,7 @@ This section provides details for each class and property defined by The KIMEDS 
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasHazardousSituation"
                title="https://w3id.org/riskman/ontology#hasHazardousSituation">has hazardous situation</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-               title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has pre risk level</a>
+               title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasRiskMatrix" title="https://w3id.org/riskman/ontology#hasRiskMatrix">has risk matrix</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -773,7 +773,7 @@ This section provides details for each class and property defined by The KIMEDS 
          <dt>is in range of</dt>
          <dd>
             <a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-               title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has pre risk level</a>
+               title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasResidualRiskLevel"
                title="https://w3id.org/riskman/ontology#hasResidualRiskLevel">has residual risk level</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasRiskLevel" title="https://w3id.org/riskman/ontology#hasRiskLevel">has risk level</a>
@@ -1034,16 +1034,16 @@ This section provides details for each class and property defined by The KIMEDS 
             title="https://w3id.org/riskman/ontology#hasImplementationManifest">has implementation manifest</a>
       </li>
       <li>
+         <a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
+            title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/riskman/ontology#hasParentHazard"
             title="https://w3id.org/riskman/ontology#hasParentHazard">has parent hazard</a>
       </li>
       <li>
          <a href="#https://w3id.org/riskman/ontology#hasParentSituation"
             title="https://w3id.org/riskman/ontology#hasParentSituation">has parent situation</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-            title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has pre risk level</a>
       </li>
       <li>
          <a href="#https://w3id.org/riskman/ontology#hasPrecedingEvent"
@@ -1329,6 +1329,28 @@ This section provides details for each class and property defined by The KIMEDS 
          </dl>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/riskman/ontology#hasInitialRiskLevel">
+      <h3>has initial risk level<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasInitialRiskLevel</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#hasParentHazard">
       <h3>has parent hazard<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1370,28 +1392,6 @@ This section provides details for each class and property defined by The KIMEDS 
             <dd>
                <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
                   title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/riskman/ontology#hasInitialRiskLevel">
-      <h3>has pre risk level<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasInitialRiskLevel</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1458,7 +1458,7 @@ This section provides details for each class and property defined by The KIMEDS 
             <dt>has sub-property chains</dt>
             <dd>
                <a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-                  title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has pre risk level</a>
+                  title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dd>

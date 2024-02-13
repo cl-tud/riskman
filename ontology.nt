@@ -206,7 +206,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/riskman/ontology#hasInitialRiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/riskman/ontology#hasInitialRiskLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#AnalyzedRisk> .
 <https://w3id.org/riskman/ontology#hasInitialRiskLevel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/riskman/ontology#RiskLevel> .
-<https://w3id.org/riskman/ontology#hasInitialRiskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has pre risk level" .
+<https://w3id.org/riskman/ontology#hasInitialRiskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has initial risk level" .
 # 
 # https://w3id.org/riskman/ontology#hasParentHazard
 <https://w3id.org/riskman/ontology#hasParentHazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

@@ -962,7 +962,7 @@
     "@id" : "https://w3id.org/riskman/ontology#AnalyzedRisk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has pre risk level"
+    "@value" : "has initial risk level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
