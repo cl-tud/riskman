@@ -396,8 +396,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                        ) ;
                                     rdf:type owl:Class
                                   ] ;
-              rdfs:comment """Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm
-                    with reference to a device context and a specification of an initial risk level.""" ;
+              rdfs:comment "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level." ;
               rdfs:label "Analyzed risk" .
 
 
@@ -446,8 +445,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:comment """Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting
-                    residual risk.""" ;
+                rdfs:comment "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk." ;
                 rdfs:label "Controlled risk" .
 
 
@@ -490,8 +488,7 @@ xsd:date rdf:type rdfs:Datatype .
                                             owl:onProperty :causesHarm ;
                                             owl:someValuesFrom :Harm
                                           ] ;
-                      rdfs:comment """Structured artifact that centers around one hazard having the potential to cause one or more
-                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard.""" ;
+                      rdfs:comment "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard." ;
                       rdfs:label "Domain specific hazard" .
 
 

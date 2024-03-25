@@ -378,7 +378,7 @@ _:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskm
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceContext> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://w3id.org/riskman/ontology#AnalyzedRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm\n                    with reference to a device context and a specification of an initial risk level." .
+<https://w3id.org/riskman/ontology#AnalyzedRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level." .
 <https://w3id.org/riskman/ontology#AnalyzedRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Analyzed risk" .
 # 
 # https://w3id.org/riskman/ontology#AssuranceSDA
@@ -438,7 +438,7 @@ _:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskm
 _:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasAnalyzedRisk> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting\n                    residual risk." .
+<https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk." .
 <https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Controlled risk" .
 # 
 # https://w3id.org/riskman/ontology#DeviceComponent
@@ -483,7 +483,7 @@ _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
 _:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#causesHarm> .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard." .
+<https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard." .
 <https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#label> "Domain specific hazard" .
 # 
 # https://w3id.org/riskman/ontology#Event

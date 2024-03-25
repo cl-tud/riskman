@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/riskman/ontology",
     "version" : "1.0.0",
-    "author" : [ "_:genid2147483679", "_:genid2147483677", "_:genid2147483681", "_:genid2147483675", "_:genid2147483673" ],
+    "author" : [ "_:genid2147483649", "_:genid2147483648", "_:genid2147483652", "_:genid2147483651", "_:genid2147483650" ],
     "description" : {
       "en" : "The KIMEDS Ontology defines various notions related to risk management for medical devices."
     },
@@ -28,54 +28,39 @@
         "value" : "http://creativecommons.org/licenses/by/2.0/",
         "type" : "iri"
       } ],
-      "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483679",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483675",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483673",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483681",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483677",
-        "type" : "label"
-      } ],
       "funding" : [ {
         "identifier" : "funding",
         "language" : "undefined",
         "value" : "(Add funding info)",
         "type" : "label"
       } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483648",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483649",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483651",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483652",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483650",
+        "type" : "label"
+      } ],
       "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
-        "type" : "iri"
-      }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/#me",
@@ -83,7 +68,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483683",
+        "value" : "_:genid2147483653",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -93,13 +78,28 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483687",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Dörthe_Arndt/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/#me",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "_:genid2147483654",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483685",
+        "value" : "_:genid2147483655",
         "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://iccl.inf.tu-dresden.de/web/Hannes_Strass/#me",
+        "type" : "iri"
       } ],
       "created" : [ {
         "identifier" : "created",
@@ -113,16 +113,16 @@
         "value" : "2023-10-23",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.0.0",
-        "type" : "label"
-      } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "undefined",
         "value" : "The KIMEDS Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
         "type" : "label"
       } ],
       "title" : [ {
@@ -366,7 +366,7 @@
       "undefined" : "Domain specific hazard"
     },
     "comment" : {
-      "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more\n                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard."
+      "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard."
     },
     "id" : "23"
   }, {
@@ -530,7 +530,7 @@
       "undefined" : "Analyzed risk"
     },
     "comment" : {
-      "undefined" : "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm\n                    with reference to a device context and a specification of an initial risk level."
+      "undefined" : "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level."
     },
     "id" : "42"
   }, {
@@ -557,7 +557,7 @@
       "undefined" : "Controlled risk"
     },
     "comment" : {
-      "undefined" : "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting\n                    residual risk."
+      "undefined" : "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk."
     },
     "id" : "20"
   } ],

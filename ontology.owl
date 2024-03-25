@@ -622,8 +622,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment>Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm
-                    with reference to a device context and a specification of an initial risk level.</rdfs:comment>
+        <rdfs:comment>Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level.</rdfs:comment>
         <rdfs:label>Analyzed risk</rdfs:label>
     </owl:Class>
     
@@ -693,8 +692,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment>Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting
-                    residual risk.</rdfs:comment>
+        <rdfs:comment>Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk.</rdfs:comment>
         <rdfs:label>Controlled risk</rdfs:label>
     </owl:Class>
     
@@ -758,8 +756,7 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/riskman/ontology#Harm"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:comment>Structured artifact that centers around one hazard having the potential to cause one or more
-                      harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard.</rdfs:comment>
+        <rdfs:comment>Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard.</rdfs:comment>
         <rdfs:label>Domain specific hazard</rdfs:label>
     </owl:Class>
     
