@@ -21,11 +21,6 @@
     sh:minCount 1 ;
     sh:maxCount 1 ;
   ], [
-    sh:path riskman:hasRiskMatrix ;
-    sh:message "Every analyzed risk must have exactly one risk matrix." ;  
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-  ], [
     sh:path riskman:hasDeviceContext ;
     sh:message "Every analyzed risk must have exactly one device context." ;  
     sh:minCount 1 ;
@@ -148,11 +143,6 @@
   ]
 .
 
-
-:RiskMatrixShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:RiskMatrix ;
-.
 
 :RiskSDAShape
   a sh:NodeShape ;

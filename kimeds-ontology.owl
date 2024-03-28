@@ -180,12 +180,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:range :HazardousSituation ;
                     rdfs:label "has parent situation" .
 
-###  https://w3id.org/riskman/ontology#hasRiskMatrix
-:hasRiskMatrix rdf:type owl:ObjectProperty ;
-                    rdfs:label "has risk matrix" ;
-              rdfs:domain :AnalyzedRisk ;
-              rdfs:range :RiskMatrix .
-
 
 ###  https://w3id.org/riskman/ontology#hasResidualRiskLevel
 :hasResidualRiskLevel rdf:type owl:ObjectProperty ;
@@ -273,28 +267,12 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
              rdfs:label "probability" .
 
 
-###  https://w3id.org/riskman/ontology#probabilityMax
-:probabilityMax rdf:type owl:DatatypeProperty ;
-                rdfs:domain :RiskMatrix ;
-                rdfs:range xsd:integer ;
-                rdfs:comment "The maximal value representing the most probable risks." ;
-                rdfs:label "probability max" .
-
-
 ###  https://w3id.org/riskman/ontology#severity
 :severity rdf:type owl:DatatypeProperty ;
           rdfs:domain :RiskLevel ;
           rdfs:range xsd:integer ;
           rdfs:comment "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most." ;
           rdfs:label "severity" .
-
-
-###  https://w3id.org/riskman/ontology#severityMax
-:severityMax rdf:type owl:DatatypeProperty ;
-             rdfs:domain :RiskMatrix ;
-             rdfs:range xsd:integer ;
-             rdfs:comment "The maximal value representing the most severe risks." ;
-             rdfs:label "severity max" .
 
 
 #################################################################
@@ -312,10 +290,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                                                           owl:onProperty :hasHarm ;
                                                           owl:someValuesFrom :Harm
                                                         ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasRiskMatrix ;
-                                                          owl:someValuesFrom :RiskMatrix
-                                                        ] 
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasDeviceContext ;
                                                           owl:someValuesFrom :DeviceContext
@@ -515,12 +489,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
       rdfs:label "Risk level" .
 
 
-###  https://w3id.org/riskman/ontology#RiskMatrix
-:RiskMatrix rdf:type owl:Class ;
-            rdfs:comment "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)." ;
-                    rdfs:label "Risk matrix" .
-
-
 ###  https://w3id.org/riskman/ontology#RiskSDA
 :RiskSDA rdf:type owl:Class ;
          rdfs:subClassOf :SDA ;
@@ -591,7 +559,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                 :ImplementationManifest
                 :ControlledRisk
                 :RiskLevel
-                :RiskMatrix
                 :SDA
               )
 ] .
