@@ -42,8 +42,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid28"
-    }, {
       "@id" : "_:genid26"
     }, {
       "@id" : "_:genid24"
@@ -59,10 +57,10 @@
   "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#hasRiskMatrix"
+    "@id" : "https://w3id.org/riskman/ontology#hasInitialRiskLevel"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#RiskMatrix"
+    "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -73,22 +71,13 @@
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
-  } ]
-}, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasHazardousSituation"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/riskman/ontology#HazardousSituation"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasHarm"
@@ -97,7 +86,7 @@
     "@id" : "https://w3id.org/riskman/ontology#Harm"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasDomainSpecificHazard"
@@ -106,7 +95,7 @@
     "@id" : "https://w3id.org/riskman/ontology#DomainSpecificHazard"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasDeviceContext"
@@ -115,14 +104,23 @@
     "@id" : "https://w3id.org/riskman/ontology#DeviceContext"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/riskman/ontology#SDA"
     }, {
-      "@id" : "_:genid31"
+      "@id" : "_:genid29"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#hasSafetyAssurance"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#SafetyAssurance"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -137,15 +135,6 @@
   } ]
 }, {
   "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#hasSafetyAssurance"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#SafetyAssurance"
-  } ]
-}, {
-  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
@@ -155,25 +144,34 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid42"
-    }, {
       "@id" : "_:genid40"
     }, {
       "@id" : "_:genid38"
+    }, {
+      "@id" : "_:genid36"
     } ]
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasSDA"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/riskman/ontology#RiskSDA"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#hasResidualRiskLevel"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -190,34 +188,25 @@
   "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#hasResidualRiskLevel"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
-  } ]
-}, {
-  "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasAnalyzedRisk"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/riskman/ontology#AnalyzedRisk"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid49"
-    }, {
       "@id" : "_:genid47"
     }, {
       "@id" : "_:genid45"
+    }, {
+      "@id" : "_:genid43"
     } ]
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasHazard"
@@ -226,7 +215,7 @@
     "@id" : "https://w3id.org/riskman/ontology#Hazard"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasDeviceFunction"
@@ -235,7 +224,7 @@
     "@id" : "https://w3id.org/riskman/ontology#DeviceFunction"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasDeviceComponent"
@@ -244,12 +233,7 @@
     "@id" : "https://w3id.org/riskman/ontology#DeviceComponent"
   } ]
 }, {
-  "@id" : "_:genid5",
-  "https://schema.org/name" : [ {
-    "@value" : "Siemens Healthineers"
-  } ]
-}, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#causesHarm"
@@ -258,7 +242,7 @@
     "@id" : "https://w3id.org/riskman/ontology#Harm"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasEvent"
@@ -267,17 +251,22 @@
     "@id" : "https://w3id.org/riskman/ontology#Event"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid5",
+  "https://schema.org/name" : [ {
+    "@value" : "Siemens Healthineers"
+  } ]
+}, {
+  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid56"
-    }, {
       "@id" : "_:genid54"
+    }, {
+      "@id" : "_:genid52"
     } ]
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasRiskLevel"
@@ -286,7 +275,7 @@
     "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasHarm"
@@ -295,20 +284,29 @@
     "@id" : "https://w3id.org/riskman/ontology#Harm"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid61"
-    }, {
       "@id" : "_:genid59"
+    }, {
+      "@id" : "_:genid57"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#severity"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#severity"
+    "@id" : "https://w3id.org/riskman/ontology#probability"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
@@ -328,16 +326,7 @@
     "@id" : "https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en"
   } ]
 }, {
-  "@id" : "_:genid61",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#probability"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
@@ -347,17 +336,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/riskman/ontology#SDA"
     }, {
-      "@id" : "_:genid67"
+      "@id" : "_:genid65"
     } ]
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/riskman/ontology#hasImplementationManifest"
@@ -366,7 +355,7 @@
     "@id" : "https://w3id.org/riskman/ontology#ImplementationManifest"
   } ]
 }, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -393,8 +382,6 @@
       "@id" : "https://w3id.org/riskman/ontology#ImplementationManifest"
     }, {
       "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
-    }, {
-      "@id" : "https://w3id.org/riskman/ontology#RiskMatrix"
     }, {
       "@id" : "https://w3id.org/riskman/ontology#SDA"
     } ]
@@ -584,7 +571,7 @@
     "@id" : "https://w3id.org/riskman/ontology#RiskSDA"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid29"
+    "@id" : "_:genid27"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#AssuranceSDAI",
@@ -599,7 +586,7 @@
     "@id" : "https://w3id.org/riskman/ontology#SDA"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid33"
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#ControlledRisk",
@@ -611,7 +598,7 @@
     "@value" : "Controlled risk"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid34"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#DeviceComponent",
@@ -650,9 +637,9 @@
     "@value" : "Domain specific hazard"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid43"
+    "@id" : "_:genid41"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid48"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#Event",
@@ -691,7 +678,7 @@
     "@value" : "Hazardous situation"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid51"
+    "@id" : "_:genid49"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#ImplementationManifest",
@@ -742,7 +729,7 @@
     "@value" : "Risk"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#RiskLevel",
@@ -754,16 +741,7 @@
     "@value" : "Risk level"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid57"
-  } ]
-}, {
-  "@id" : "https://w3id.org/riskman/ontology#RiskMatrix",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Risk matrix"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#RiskSDA",
@@ -787,7 +765,7 @@
     "@value" : "Risk SDAI"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid62"
+    "@id" : "_:genid60"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#SDA",
@@ -808,7 +786,7 @@
     "@value" : "SDAI"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid63"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#SafetyAssurance",
@@ -1034,18 +1012,6 @@
     } ]
   } ]
 }, {
-  "@id" : "https://w3id.org/riskman/ontology#hasRiskMatrix",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#AnalyzedRisk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has risk matrix"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#RiskMatrix"
-  } ]
-}, {
   "@id" : "https://w3id.org/riskman/ontology#hasSDA",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1109,21 +1075,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "https://w3id.org/riskman/ontology#probabilityMax",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The maximal value representing the most probable risks."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#RiskMatrix"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "probability max"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
   "@id" : "https://w3id.org/riskman/ontology#severity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1134,21 +1085,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "severity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/riskman/ontology#severityMax",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The maximal value representing the most severe risks."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/riskman/ontology#RiskMatrix"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "severity max"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"

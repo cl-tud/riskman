@@ -245,12 +245,6 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/r
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#hasRiskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has risk level" .
 # 
-# https://w3id.org/riskman/ontology#hasRiskMatrix
-<https://w3id.org/riskman/ontology#hasRiskMatrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/riskman/ontology#hasRiskMatrix> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#AnalyzedRisk> .
-<https://w3id.org/riskman/ontology#hasRiskMatrix> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/riskman/ontology#RiskMatrix> .
-<https://w3id.org/riskman/ontology#hasRiskMatrix> <http://www.w3.org/2000/01/rdf-schema#label> "has risk matrix" .
-# 
 # https://w3id.org/riskman/ontology#hasSDA
 <https://w3id.org/riskman/ontology#hasSDA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/riskman/ontology#hasSDA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#ControlledRisk> .
@@ -305,26 +299,12 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/riskman/ontology#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory." .
 <https://w3id.org/riskman/ontology#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability" .
 # 
-# https://w3id.org/riskman/ontology#probabilityMax
-<https://w3id.org/riskman/ontology#probabilityMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/riskman/ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#RiskMatrix> .
-<https://w3id.org/riskman/ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/riskman/ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximal value representing the most probable risks." .
-<https://w3id.org/riskman/ontology#probabilityMax> <http://www.w3.org/2000/01/rdf-schema#label> "probability max" .
-# 
 # https://w3id.org/riskman/ontology#severity
 <https://w3id.org/riskman/ontology#severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/riskman/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#RiskLevel> .
 <https://w3id.org/riskman/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://w3id.org/riskman/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most." .
 <https://w3id.org/riskman/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#label> "severity" .
-# 
-# https://w3id.org/riskman/ontology#severityMax
-<https://w3id.org/riskman/ontology#severityMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/riskman/ontology#severityMax> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#RiskMatrix> .
-<https://w3id.org/riskman/ontology#severityMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/riskman/ontology#severityMax> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximal value representing the most severe risks." .
-<https://w3id.org/riskman/ontology#severityMax> <http://www.w3.org/2000/01/rdf-schema#label> "severity max" .
 # 
 # 
 # 
@@ -341,60 +321,54 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/riskman/ontology#AnalyzedRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/riskman/ontology#AnalyzedRisk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid16 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid16 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
-_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskMatrix> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasRiskMatrix> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskLevel> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasInitialRiskLevel> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
-_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskLevel> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasInitialRiskLevel> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#HazardousSituation> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHazardousSituation> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
-_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#HazardousSituation> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHazardousSituation> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHarm> .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHarm> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DomainSpecificHazard> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDomainSpecificHazard> .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DomainSpecificHazard> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDomainSpecificHazard> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DeviceContext> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceContext> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
-_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DeviceContext> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceContext> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#AnalyzedRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level." .
 <https://w3id.org/riskman/ontology#AnalyzedRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Analyzed risk" .
 # 
 # https://w3id.org/riskman/ontology#AssuranceSDA
 <https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
-_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#SafetyAssurance> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasSafetyAssurance> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#SafetyAssurance> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasSafetyAssurance> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDA> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDA> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/riskman/ontology#SDA> .
 <https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/riskman/ontology#RiskSDA> .
 <https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2000/01/rdf-schema#comment> "A safe design argument (SDA), where the purpose is to make a safety assurance" .
@@ -402,42 +376,42 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/riskman/ontology#AssuranceSDAI
 <https://w3id.org/riskman/ontology#AssuranceSDAI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#AssuranceSDAI> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid33 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDAI> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#AssuranceSDA> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/riskman/ontology#AssuranceSDAI> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDAI> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#AssuranceSDA> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#AssuranceSDAI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/riskman/ontology#SDA> .
 <https://w3id.org/riskman/ontology#AssuranceSDAI> <http://www.w3.org/2000/01/rdf-schema#comment> "A safe design argument (SDA), where the purpose is to make a safety assurance" .
 <https://w3id.org/riskman/ontology#AssuranceSDAI> <http://www.w3.org/2000/01/rdf-schema#label> "Assurance SDAI" .
 # 
 # https://w3id.org/riskman/ontology#ControlledRisk
 <https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid36 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+<https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid34 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid39 .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskSDA> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasSDA> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
-_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskSDA> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasSDA> .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskLevel> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasResidualRiskLevel> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
-_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskLevel> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasResidualRiskLevel> .
+_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#AnalyzedRisk> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasAnalyzedRisk> .
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
-_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#AnalyzedRisk> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasAnalyzedRisk> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk." .
 <https://w3id.org/riskman/ontology#ControlledRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Controlled risk" .
 # 
@@ -458,31 +432,31 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/riskman/ontology#DomainSpecificHazard
 <https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid43 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+<https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid41 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Hazard> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHazard> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
-_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Hazard> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHazard> .
+_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DeviceFunction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceFunction> .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DeviceFunction> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceFunction> .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DeviceComponent> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceComponent> .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
-_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#DeviceComponent> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasDeviceComponent> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#causesHarm> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#causesHarm> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard." .
 <https://w3id.org/riskman/ontology#DomainSpecificHazard> <http://www.w3.org/2000/01/rdf-schema#label> "Domain specific hazard" .
 # 
@@ -503,10 +477,10 @@ _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/riskman/ontology#HazardousSituation
 <https://w3id.org/riskman/ontology#HazardousSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#HazardousSituation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid51 .
-_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Event> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasEvent> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/riskman/ontology#HazardousSituation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Event> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasEvent> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/riskman/ontology#HazardousSituation> <http://www.w3.org/2000/01/rdf-schema#comment> "Circumstance in which people, property or the environment is/are exposed to one or more hazards." .
 <https://w3id.org/riskman/ontology#HazardousSituation> <http://www.w3.org/2000/01/rdf-schema#label> "Hazardous situation" .
 # 
@@ -517,48 +491,43 @@ _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/riskman/ontology#Risk
 <https://w3id.org/riskman/ontology#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#Risk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid52 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid55 .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/riskman/ontology#Risk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid50 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskLevel> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasRiskLevel> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid54 .
-_:genid54 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#RiskLevel> .
-_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasRiskLevel> .
+_:genid54 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHarm> .
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid56 .
-_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#Harm> .
-_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasHarm> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of the probability of occurrence of harm and the severity of that harm." .
 <https://w3id.org/riskman/ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk" .
 # 
 # https://w3id.org/riskman/ontology#RiskLevel
 <https://w3id.org/riskman/ontology#RiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#RiskLevel> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid57 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid60 .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/riskman/ontology#RiskLevel> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid55 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#severity> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid59 .
 _:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#severity> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#probability> .
 _:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid61 .
-_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#probability> .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#RiskLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Combination of probability and severity." .
 <https://w3id.org/riskman/ontology#RiskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Risk level" .
-# 
-# https://w3id.org/riskman/ontology#RiskMatrix
-<https://w3id.org/riskman/ontology#RiskMatrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#RiskMatrix> <http://www.w3.org/2000/01/rdf-schema#comment> "A matrix with axes representing severity and probability without defining which combinations of those are acceptable. Contains upper bounds of the axes (with the lower bounds being equal to 0)." .
-<https://w3id.org/riskman/ontology#RiskMatrix> <http://www.w3.org/2000/01/rdf-schema#label> "Risk matrix" .
 # 
 # https://w3id.org/riskman/ontology#RiskSDA
 <https://w3id.org/riskman/ontology#RiskSDA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -568,15 +537,15 @@ _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/riskman/ontology#RiskSDAI
 <https://w3id.org/riskman/ontology#RiskSDAI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#RiskSDAI> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid62 .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid62 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid64 .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDAI> .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#RiskSDA> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/riskman/ontology#RiskSDAI> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid60 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDAI> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#RiskSDA> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#RiskSDAI> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA." .
 <https://w3id.org/riskman/ontology#RiskSDAI> <http://www.w3.org/2000/01/rdf-schema#label> "Risk SDAI" .
 # 
@@ -587,18 +556,18 @@ _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/riskman/ontology#SDAI
 <https://w3id.org/riskman/ontology#SDAI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/riskman/ontology#SDAI> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid65 .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid65 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid68 .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid67 .
-_:genid67 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#ImplementationManifest> .
-_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasImplementationManifest> .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/riskman/ontology#SDAI> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid63 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid65 .
+_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/riskman/ontology#ImplementationManifest> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/riskman/ontology#hasImplementationManifest> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDA> .
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDA> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/riskman/ontology#SDAI> <http://www.w3.org/2000/01/rdf-schema#comment> "Reusable artifact embodying or expressing one possible method or approach to risk control." .
 <https://w3id.org/riskman/ontology#SDAI> <http://www.w3.org/2000/01/rdf-schema#label> "SDAI" .
 # 
@@ -616,11 +585,8 @@ _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # #################################################################
 # 
 # 
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid69 <http://www.w3.org/2002/07/owl#members> _:genid83 .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid67 <http://www.w3.org/2002/07/owl#members> _:genid80 .
 _:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
 _:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
 _:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
@@ -631,34 +597,34 @@ _:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
 _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
 _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDA> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#SDA> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#RiskLevel> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#ImplementationManifest> .
 _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#RiskMatrix> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#HazardousSituation> .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#RiskLevel> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#Hazard> .
 _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#ImplementationManifest> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#Harm> .
 _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#HazardousSituation> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#Event> .
 _:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#Hazard> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DomainSpecificHazard> .
 _:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#Harm> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DeviceFunction> .
 _:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#Event> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DeviceContext> .
 _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DomainSpecificHazard> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DeviceComponent> .
 _:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DeviceFunction> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#ControlledRisk> .
 _:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DeviceContext> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#AnalyzedRisk> .
 _:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#DeviceComponent> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#ControlledRisk> .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/riskman/ontology#AnalyzedRisk> .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
