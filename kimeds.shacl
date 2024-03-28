@@ -9,7 +9,7 @@
 
 :AnalyzedRiskShape
   a sh:NodeShape ;
-  sh:targetClass riskman:Analyzed ;
+  sh:targetClass riskman:AnalyzedRisk ;
   sh:property [
     sh:path riskman:hasDomainSpecificHazard ;
     sh:message "Every analyzed risk must have exactly one domain specific hazard." ;  
