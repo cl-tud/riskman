@@ -213,11 +213,11 @@
     "id" : "110",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "10",
-    "type" : "owl:intersectionOf"
-  }, {
     "id" : "37",
     "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:intersectionOf"
   }, {
     "id" : "25",
     "type" : "owl:Class"
@@ -487,6 +487,18 @@
       "IRI-based" : "integer"
     }
   }, {
+    "iri" : "https://w3id.org/riskman/ontology#AnalyzedRisk",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AnalyzedRisk",
+      "undefined" : "Analyzed risk"
+    },
+    "comment" : {
+      "undefined" : "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level."
+    },
+    "id" : "37"
+  }, {
     "iri" : "https://w3id.org/riskman/ontology#AssuranceSDA",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "instances" : 0,
@@ -501,18 +513,6 @@
     "attributes" : [ "intersection" ],
     "id" : "10",
     "superClasses" : [ "9" ]
-  }, {
-    "iri" : "https://w3id.org/riskman/ontology#AnalyzedRisk",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AnalyzedRisk",
-      "undefined" : "Analyzed risk"
-    },
-    "comment" : {
-      "undefined" : "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level."
-    },
-    "id" : "37"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#ControlledRisk",
     "baseIri" : "https://w3id.org/riskman/ontology",
