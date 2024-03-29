@@ -71,7 +71,7 @@
   a sh:NodeShape ;
   sh:targetClass riskman:DomainSpecificHazard ;
   sh:property [
-    sh:path riskman:hasDomainComponent ;	
+    sh:path riskman:hasDeviceComponent ;	
     sh:message "Domain specific hazard must have exactly one device component" ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
@@ -169,8 +169,9 @@
   a sh:NodeShape ;
   sh:targetClass riskman:SDA ;
   sh:property [
-      sh:path ( [ sh:zeroOrMorePath riskman:hasSubSDA] riskman:hasImplementationManifest ) ;
+      sh:path [ sh:zeroOrMorePath riskman:hasSubSDA] ;
       sh:message "Every SDA needs a final mitigation (which has the Implementation Manifest)" ;
+      sh:class riskman:SDAI ;
       sh:minCount 1 ;
     ]
 .
