@@ -229,41 +229,31 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                          rdfs:domain :DeviceComponent ;
                          rdfs:range :DeviceComponent .
 
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  https://w3id.org/riskman/ontology#P1
-:P1 rdf:type owl:DatatypeProperty ;
-    rdfs:domain :AnalyzedRisk ;
-    rdfs:range xsd:integer ;
-    rdfs:comment "Probability of a hazardous situation occurring" ;
+###  https://w3id.org/riskman/ontology#hasProbability
+:hasProbability rdf:type owl:ObjectProperty ;
+    rdfs:domain :RiskLevel ;
+    rdfs:comment "Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory." ;
     rdfs:label "P1" .
 
-
-###  https://w3id.org/riskman/ontology#P2
-:P2 rdf:type owl:DatatypeProperty ;
-    rdfs:domain :AnalyzedRisk ;
-    rdfs:range xsd:integer ;
-    rdfs:comment "Probability of a hazardous situation leading to harm" ;
-    rdfs:label "P2" .
+###  https://w3id.org/riskman/ontology#hasProbability1
+:hasProbability1 rdf:type owl:ObjectProperty ;
+    rdfs:domain :RiskLevel ;
+    rdfs:comment "Probability of a hazardous situation occurring." ;
+    rdfs:label "hasProbability1" .
 
 
-###  https://w3id.org/riskman/ontology#probability
-:probability rdf:type owl:DatatypeProperty ;
-             rdfs:domain :RiskLevel ;
-             rdfs:range xsd:integer ;
-             rdfs:comment "Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory." ;
-             rdfs:label "probability" .
+###  https://w3id.org/riskman/ontology#hasProbability2
+:hasProbability2 rdf:type owl:ObjectProperty ;
+    rdfs:domain :RiskLevel ;
+    rdfs:comment "Probability of a hazardous situation leading to harm." ;
+    rdfs:label "hasProbability2" .
 
 
-###  https://w3id.org/riskman/ontology#severity
-:severity rdf:type owl:DatatypeProperty ;
+###  https://w3id.org/riskman/ontology#hasSeverity
+:hasSeverity rdf:type owl:ObjectProperty ;
           rdfs:domain :RiskLevel ;
-          rdfs:range xsd:integer ;
-          rdfs:comment "Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most." ;
-          rdfs:label "severity" .
+          rdfs:comment "Measure of the possible consequences of a hazard." ;
+          rdfs:label "hasSeverity" .
 
 
 #################################################################
@@ -445,6 +435,11 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:comment "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk." .
 
 
+###  https://w3id.org/riskman/ontology#Probability
+:Probability rdf:type owl:Class ;
+    rdfs:label "Probability" ;
+    rdfs:comment "Probability of occurence of a harm." .
+
 
 ###  https://w3id.org/riskman/ontology#Risk
 :Risk rdf:type owl:Class ;
@@ -527,6 +522,13 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #  rdf:type owl:Class ;
 #  rdfs:subClassOf :SDAI                    
 #] .
+
+
+###  https://w3id.org/riskman/ontology#Severity
+:Severity rdf:type owl:Class ;
+    rdfs:label "Severity" ;
+    rdfs:comment "Measure of the possible consequences of a harm." .
+
 
 ###  https://w3id.org/riskman/ontology#SafetyAssurance
 :SafetyAssurance rdf:type owl:Class ;
