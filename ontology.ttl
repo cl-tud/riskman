@@ -130,14 +130,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#hasHarm
 :hasHarm rdf:type owl:ObjectProperty ;
-                    rdfs:label "has harm" ;
-#         rdfs:domain :AnalyzedRisk ;
-#         rdfs:domain [ rdf:type owl:Class ;  # union 
-#                        owl:unionOf 
-#                          ( :ControlledRisk
-#                            :AnalyzedRisk
-#                          )
-#                      ] ;
+         rdfs:label "has harm" ;
          owl:propertyChainAxiom 
                     ( 
                       :hasAnalyzedRisk
@@ -185,23 +178,21 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :hasResidualRiskLevel rdf:type owl:ObjectProperty ;
                     rdfs:label "has residual risk level" ;
              rdfs:domain :ControlledRisk ;
-             rdfs:range :RiskLevel .
+             rdfs:range :RiskLevel ;
+             rdfs:subPropertyOf :hasRiskLevel .
 
 
 ###  https://w3id.org/riskman/ontology#hasInitialRiskLevel
 :hasInitialRiskLevel rdf:type owl:ObjectProperty ;
                     rdfs:label "has initial risk level" ;
             rdfs:domain :AnalyzedRisk ;
-            rdfs:range :RiskLevel .
+            rdfs:range :RiskLevel ;
+            rdfs:subPropertyOf :hasRiskLevel .
 
 ###  https://w3id.org/riskman/ontology#hasRiskLevel
 :hasRiskLevel rdf:type owl:ObjectProperty ;
               rdfs:label "has risk level" ;
-              rdfs:range :RiskLevel ;
-              owl:propertyChainAxiom ( :hasInitialRiskLevel
-                                      ) ,
-                                      ( :hasResidualRiskLevel
-                                      ) .
+              rdfs:range :RiskLevel .
 
 
 ###  https://w3id.org/riskman/ontology#hasPrecedingEvent
@@ -225,8 +216,8 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
            rdfs:range :SDA .
 
 
-###  https://w3id.org/riskman/ontology#hasSDA
-:hasSDA rdf:type owl:ObjectProperty ;
+###  https://w3id.org/riskman/ontology#isMitigatedBy
+:isMitigatedBy rdf:type owl:ObjectProperty ;
                     rdfs:label "is mitigated by" ;
                rdfs:domain :ControlledRisk ;
                rdfs:range :SDA .
