@@ -20,7 +20,7 @@
                                       dcterms:title "Digital Risk Management Ontology"@en ; 
                                       dcterms:created "2023-09-12"^^xsd:date ;
                                       owl:versionInfo "1.0.0" ;
-                                      rdfs:label "The KIMEDS Ontology"@en ;
+                                      rdfs:label "The RISKMAN Ontology"@en ;
                                       rdfs:seeAlso <https://cl-tud.github.io/kimeds-ontology/> ;
                                       schema:dateModified "2024-04-13"^^xsd:date ;
                                       schema:creator [
