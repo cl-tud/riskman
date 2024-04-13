@@ -964,7 +964,7 @@
     "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "P1"
+    "@value" : "has Probability"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasProbability1",
@@ -976,7 +976,7 @@
     "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasProbability1"
+    "@value" : "has Probability1"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasProbability2",
@@ -988,7 +988,7 @@
     "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasProbability2"
+    "@value" : "has Probability2"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasResidualRiskLevel",
@@ -1039,7 +1039,7 @@
     "@id" : "https://w3id.org/riskman/ontology#RiskLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasSeverity"
+    "@value" : "has Severity"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasSubSDA",

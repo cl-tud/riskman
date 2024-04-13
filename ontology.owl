@@ -412,7 +412,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasProbability">
         <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:comment>Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory.</rdfs:comment>
-        <rdfs:label>P1</rdfs:label>
+        <rdfs:label>has Probability</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -423,7 +423,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasProbability1">
         <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:comment>Probability of a hazardous situation occurring.</rdfs:comment>
-        <rdfs:label>hasProbability1</rdfs:label>
+        <rdfs:label>has Probability1</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -434,7 +434,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasProbability2">
         <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:comment>Probability of a hazardous situation leading to harm.</rdfs:comment>
-        <rdfs:label>hasProbability2</rdfs:label>
+        <rdfs:label>has Probability2</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -485,7 +485,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasSeverity">
         <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:comment>Measure of the possible consequences of a hazard.</rdfs:comment>
-        <rdfs:label>hasSeverity</rdfs:label>
+        <rdfs:label>has Severity</rdfs:label>
     </owl:ObjectProperty>
     
 
