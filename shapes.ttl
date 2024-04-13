@@ -181,3 +181,40 @@
       sh:qualifiedMinCount 1 ;
     ]
 .
+
+
+:NonIncreasingProbabilityShape a sh:NodeShape;
+    sh:targetClass riskman:ControlledRisk;
+    sh:property [ 
+        sh:path ( riskman:hasAnalyzedRisk riskman:hasInitialRiskLevel riskman:hasProbability [ sh:inversePath rlevel:gt ] [sh:inversePath riskman:hasProbability ]); 
+        sh:disjoint  riskman:hasResidualRiskLevel ; 
+        sh:message "Residual probability should not be higher than initial probability."
+    ]
+. 
+
+:NonIncreasingProbability1Shape a sh:NodeShape;
+    sh:targetClass riskman:ControlledRisk;
+    sh:property [ 
+        sh:path ( riskman:hasAnalyzedRisk riskman:hasInitialRiskLevel riskman:hasProbability1 [ sh:inversePath rlevel:gt ] [sh:inversePath riskman:hasProbability1 ]); 
+        sh:disjoint  riskman:hasResidualRiskLevel ; 
+        sh:message "Residual probability 1 should not be higher than initial probability."
+    ]
+. 
+
+:NonIncreasingProbability2Shape a sh:NodeShape;
+    sh:targetClass riskman:ControlledRisk;
+    sh:property [ 
+        sh:path ( riskman:hasAnalyzedRisk riskman:hasInitialRiskLevel riskman:hasProbability2 [ sh:inversePath rlevel:gt ] [sh:inversePath riskman:hasProbability2 ]); 
+        sh:disjoint  riskman:hasResidualRiskLevel ; 
+        sh:message "Residual probability 2 should not be higher than initial probability."
+    ]
+. 
+
+:NonIncreasingSeverityShape a sh:NodeShape;
+    sh:targetClass riskman:ControlledRisk;
+    sh:property [ 
+        sh:path ( riskman:hasAnalyzedRisk riskman:hasInitialRiskLevel riskman:hasSeverity [ sh:inversePath rlevel:gt ] [sh:inversePath riskman:hasSeverity ]); 
+        sh:disjoint  riskman:hasResidualRiskLevel ; 
+        sh:message "Residual severity should not be higher than initial probability."
+    ]
+. 
