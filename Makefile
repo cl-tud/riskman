@@ -1,5 +1,5 @@
 WIDOCO_PATH=bin/widoco-1.4.20-jar-with-dependencies_JDK-17.jar
-ONTOLOGY_PATH=kimeds-ontology.owl # also possible to load from URI
+ONTOLOGY_PATH=ontology.ttl # also possible to load from URI
  
 OUT_FOLDER=dist
 CONF_FILE=config.properties
