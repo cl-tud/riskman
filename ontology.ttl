@@ -192,7 +192,8 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 ###  https://w3id.org/riskman/ontology#hasRiskLevel
 :hasRiskLevel rdf:type owl:ObjectProperty ;
               rdfs:label "has risk level" ;
-              rdfs:range :RiskLevel .
+              rdfs:range :RiskLevel ;
+              rdfs:domain :Risk .
 
 
 ###  https://w3id.org/riskman/ontology#hasPrecedingEvent
