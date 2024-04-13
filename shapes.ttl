@@ -3,6 +3,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <http://schema.org/> .
 @prefix riskman: <https://w3id.org/riskman/ontology#> .
+@prefix rlevel: <https://w3id.org/riskman/ontology#> .
 @prefix : <https://w3id.org/riskman/shapes#> .
 
 
