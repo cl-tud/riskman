@@ -116,14 +116,14 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
-                    rdfs:label "has event" ;
+          rdfs:label "has event" ;
           rdfs:domain :HazardousSituation ;
           rdfs:range :Event .
 
 
 ###  https://w3id.org/riskman/ontology#hasDeviceFunction
 :hasDeviceFunction rdf:type owl:ObjectProperty ;
-                    rdfs:label "has device function" ;
+             rdfs:label "has device function" ;
              rdfs:domain :DomainSpecificHazard ;
              rdfs:range :DeviceFunction .
 
@@ -141,7 +141,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#hasHazard
 :hasHazard rdf:type owl:ObjectProperty ;
-                    rdfs:label "has hazard" ;
+           rdfs:label "has hazard" ;
            rdfs:domain :DomainSpecificHazard ;
            rdfs:range :Hazard .
 
@@ -149,20 +149,20 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 ###  https://w3id.org/riskman/ontology#hasHazardousSituation
 :hasHazardousSituation rdf:type owl:ObjectProperty ;
                     rdfs:label "has hazardous situation" ;
-                       rdfs:domain :AnalyzedRisk ;
-                       rdfs:range :HazardousSituation .
+                    rdfs:domain :AnalyzedRisk ;
+                    rdfs:range :HazardousSituation .
 
 
 ###  https://w3id.org/riskman/ontology#hasImplementationManifest
 :hasImplementationManifest rdf:type owl:ObjectProperty ;
                     rdfs:label "has implementation manifest" ;
-                           rdfs:domain :SDA ;
-                           rdfs:range :ImplementationManifest .
+                    rdfs:domain :SDA ;
+                    rdfs:range :ImplementationManifest .
 
 
 ###  https://w3id.org/riskman/ontology#hasParentHazard
 :hasParentHazard rdf:type owl:ObjectProperty ;
-                    rdfs:label "has parent hazard" ;
+                 rdfs:label "has parent hazard" ;
                  rdfs:domain :Hazard ;
                  rdfs:range :Hazard .
 
@@ -176,7 +176,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#hasResidualRiskLevel
 :hasResidualRiskLevel rdf:type owl:ObjectProperty ;
-                    rdfs:label "has residual risk level" ;
+             rdfs:label "has residual risk level" ;
              rdfs:domain :ControlledRisk ;
              rdfs:range :RiskLevel ;
              rdfs:subPropertyOf :hasRiskLevel .
@@ -184,7 +184,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#hasInitialRiskLevel
 :hasInitialRiskLevel rdf:type owl:ObjectProperty ;
-                    rdfs:label "has initial risk level" ;
+            rdfs:label "has initial risk level" ;
             rdfs:domain :AnalyzedRisk ;
             rdfs:range :RiskLevel ;
             rdfs:subPropertyOf :hasRiskLevel .
@@ -211,14 +211,14 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#hasSubSDA
 :hasSubSDA rdf:type owl:ObjectProperty ;
-                    rdfs:label "has sub SDA" ;
+           rdfs:label "has sub SDA" ;
            rdfs:domain :SDA ;
            rdfs:range :SDA .
 
 
 ###  https://w3id.org/riskman/ontology#isMitigatedBy
 :isMitigatedBy rdf:type owl:ObjectProperty ;
-                    rdfs:label "is mitigated by" ;
+               rdfs:label "is mitigated by" ;
                rdfs:domain :ControlledRisk ;
                rdfs:range :SDA .
 
@@ -226,8 +226,8 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 ###  https://w3id.org/riskman/ontology#isPartOfDeviceComponent
 :isPartOfDeviceComponent rdf:type owl:ObjectProperty ;
                     rdfs:label "is part of device component" ;
-                         rdfs:domain :DeviceComponent ;
-                         rdfs:range :DeviceComponent .
+                    rdfs:domain :DeviceComponent ;
+                    rdfs:range :DeviceComponent .
 
 ###  https://w3id.org/riskman/ontology#hasProbability
 :hasProbability rdf:type owl:ObjectProperty ;
@@ -316,13 +316,13 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 ###  https://w3id.org/riskman/ontology#DeviceComponent
 :DeviceComponent rdf:type owl:Class ;
                  rdfs:comment "A (physical or logical) part of a device." ;
-                    rdfs:label "Device component" .
+                 rdfs:label "Device component" .
 
 
 ###  https://w3id.org/riskman/ontology#DeviceContext
 :DeviceContext rdf:type owl:Class ;
                rdfs:comment "Information about possible environments the device can be used in that may affect probability or severity of some risk." ;
-                    rdfs:label "Device context" .
+               rdfs:label "Device context" .
 
 ###  https://w3id.org/riskman/ontology#DomainSpecificHazard
 :DomainSpecificHazard rdf:type owl:Class ;
@@ -357,19 +357,19 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 ###  https://w3id.org/riskman/ontology#Event
 :Event rdf:type owl:Class ;
        rdfs:comment "An incidence or occurrence leading to another event and/or (eventually) a hazardous situation." ;
-                    rdfs:label "Event" .
+       rdfs:label "Event" .
 
 
 ###  https://w3id.org/riskman/ontology#DeviceFunction
 :DeviceFunction rdf:type owl:Class ;
           rdfs:comment "A specific functionality of a device related with the domain specific hazard." ;
-                    rdfs:label "Device function" .
+          rdfs:label "Device function" .
 
 
 ###  https://w3id.org/riskman/ontology#Harm
 :Harm rdf:type owl:Class ;
       rdfs:comment "Injury or damage to the health of people, or damage to property or the environment." ;
-                    rdfs:label "Harm" .
+      rdfs:label "Harm" .
 
 
 ###  https://w3id.org/riskman/ontology#Hazard
@@ -459,8 +459,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
          rdfs:subClassOf :SDA ;
          rdfs:comment "SDA where the purpose is to mitigate an analyzed risk." ;
                     rdfs:label "Risk SDA" .
-
-
 
 ###  https://w3id.org/riskman/ontology#RiskSDAI
 :RiskSDAI rdf:type owl:Class ;
