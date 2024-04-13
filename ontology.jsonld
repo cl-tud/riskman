@@ -572,6 +572,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A safe design argument (SDA), where the purpose is to make a safety assurance"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Analyzed risk"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/riskman/ontology#SDA"
   } ],

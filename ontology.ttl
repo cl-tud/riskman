@@ -357,7 +357,8 @@ xsd:date rdf:type rdfs:Datatype .
 :AssuranceSDA rdf:type owl:Class ;
               rdfs:subClassOf :SDA ;
               owl:disjointWith :RiskSDA ;
-              rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" .
+              rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
+              rdfs:label "Analyzed risk" .
 
 
 ###  https://w3id.org/riskman/ontology#AssuranceSDAI
