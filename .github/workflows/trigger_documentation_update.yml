@@ -1,4 +1,4 @@
-name: Trigger Marketplace Action
+name: Trigger Documentation Update
 
 on:
   push:
