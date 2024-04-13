@@ -230,18 +230,21 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://w3id.org/riskman/ontology#hasProbability
 <https://w3id.org/riskman/ontology#hasProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/riskman/ontology#hasProbability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#RiskLevel> .
+<https://w3id.org/riskman/ontology#hasProbability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/riskman/ontology#Probability> .
 <https://w3id.org/riskman/ontology#hasProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory." .
 <https://w3id.org/riskman/ontology#hasProbability> <http://www.w3.org/2000/01/rdf-schema#label> "has Probability" .
 # 
 # https://w3id.org/riskman/ontology#hasProbability1
 <https://w3id.org/riskman/ontology#hasProbability1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/riskman/ontology#hasProbability1> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#RiskLevel> .
+<https://w3id.org/riskman/ontology#hasProbability1> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/riskman/ontology#Probability> .
 <https://w3id.org/riskman/ontology#hasProbability1> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability of a hazardous situation occurring." .
 <https://w3id.org/riskman/ontology#hasProbability1> <http://www.w3.org/2000/01/rdf-schema#label> "has Probability1" .
 # 
 # https://w3id.org/riskman/ontology#hasProbability2
 <https://w3id.org/riskman/ontology#hasProbability2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/riskman/ontology#hasProbability2> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#RiskLevel> .
+<https://w3id.org/riskman/ontology#hasProbability2> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/riskman/ontology#Probability> .
 <https://w3id.org/riskman/ontology#hasProbability2> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability of a hazardous situation leading to harm." .
 <https://w3id.org/riskman/ontology#hasProbability2> <http://www.w3.org/2000/01/rdf-schema#label> "has Probability2" .
 # 
@@ -269,6 +272,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://w3id.org/riskman/ontology#hasSeverity
 <https://w3id.org/riskman/ontology#hasSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/riskman/ontology#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/riskman/ontology#RiskLevel> .
+<https://w3id.org/riskman/ontology#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/riskman/ontology#Severity> .
 <https://w3id.org/riskman/ontology#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure of the possible consequences of a hazard." .
 <https://w3id.org/riskman/ontology#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "has Severity" .
 # 

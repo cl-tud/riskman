@@ -260,6 +260,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/riskman/ontology#hasProbability
 :hasProbability rdf:type owl:ObjectProperty ;
                 rdfs:domain :RiskLevel ;
+                rdfs:range :Probability ;
                 rdfs:comment "Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory." ;
                 rdfs:label "has Probability" .
 
@@ -267,6 +268,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/riskman/ontology#hasProbability1
 :hasProbability1 rdf:type owl:ObjectProperty ;
                  rdfs:domain :RiskLevel ;
+                 rdfs:range :Probability ;
                  rdfs:comment "Probability of a hazardous situation occurring." ;
                  rdfs:label "has Probability1" .
 
@@ -274,6 +276,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/riskman/ontology#hasProbability2
 :hasProbability2 rdf:type owl:ObjectProperty ;
                  rdfs:domain :RiskLevel ;
+                 rdfs:range :Probability ;
                  rdfs:comment "Probability of a hazardous situation leading to harm." ;
                  rdfs:label "has Probability2" .
 
@@ -306,6 +309,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/riskman/ontology#hasSeverity
 :hasSeverity rdf:type owl:ObjectProperty ;
              rdfs:domain :RiskLevel ;
+             rdfs:range :Severity ;
              rdfs:comment "Measure of the possible consequences of a hazard." ;
              rdfs:label "has Severity" .
 

@@ -965,6 +965,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has Probability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#Probability"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasProbability1",
@@ -977,6 +980,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has Probability1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#Probability"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasProbability2",
@@ -989,6 +995,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has Probability2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#Probability"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasResidualRiskLevel",
@@ -1040,6 +1049,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has Severity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/riskman/ontology#Severity"
   } ]
 }, {
   "@id" : "https://w3id.org/riskman/ontology#hasSubSDA",
