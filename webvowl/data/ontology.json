@@ -139,10 +139,10 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "20",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "27",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
     "id" : "28",
@@ -163,7 +163,7 @@
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "27",
     "type" : "owl:Thing"
   }, {
     "id" : "8",
@@ -178,7 +178,7 @@
     "id" : "51",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
     "id" : "12",
@@ -190,7 +190,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "21",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "30",
@@ -277,12 +277,12 @@
       "IRI-based" : "AssuranceSDAI",
       "undefined" : "Assurance SDAI"
     },
-    "intersection" : [ "15", "20" ],
+    "intersection" : [ "15", "21" ],
     "comment" : {
       "undefined" : "A safe design argument (SDA), where the purpose is to make a safety assurance"
     },
     "attributes" : [ "intersection" ],
-    "id" : "19"
+    "id" : "20"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#DeviceFunction",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -294,7 +294,7 @@
     "comment" : {
       "undefined" : "A specific functionality of a device related with the domain specific hazard."
     },
-    "id" : "27"
+    "id" : "23"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#SafetyAssurance",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -371,7 +371,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "24",
+    "id" : "27",
     "label" : {
       "undefined" : "Thing"
     }
@@ -411,7 +411,7 @@
       "IRI-based" : "RiskSDAI",
       "undefined" : "Risk SDAI"
     },
-    "intersection" : [ "16", "20" ],
+    "intersection" : [ "16", "21" ],
     "comment" : {
       "undefined" : "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA."
     },
@@ -428,7 +428,7 @@
     "comment" : {
       "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard."
     },
-    "id" : "34"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#Event",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -481,7 +481,7 @@
       "undefined" : "Reusable artifact embodying or expressing one possible method or approach to risk control."
     },
     "attributes" : [ "intersection" ],
-    "id" : "20"
+    "id" : "21"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#ControlledRisk",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -508,13 +508,13 @@
     "id" : "17",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "21",
+    "id" : "19",
     "type" : "owl:objectProperty"
   }, {
     "id" : "22",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "23",
+    "id" : "24",
     "type" : "owl:objectProperty"
   }, {
     "id" : "25",
@@ -535,7 +535,7 @@
     "id" : "33",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "35",
+    "id" : "34",
     "type" : "owl:objectProperty"
   }, {
     "id" : "37",
@@ -650,7 +650,7 @@
       "undefined" : "Probability of a hazardous situation leading to harm."
     },
     "attributes" : [ "object" ],
-    "id" : "21"
+    "id" : "19"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasParentSituation",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -662,16 +662,6 @@
     "domain" : "11",
     "attributes" : [ "object" ],
     "id" : "22"
-  }, {
-    "iri" : "https://w3id.org/riskman/ontology#probability",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "24",
-    "label" : {
-      "IRI-based" : "probability"
-    },
-    "domain" : "24",
-    "attributes" : [ "object" ],
-    "id" : "23"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasProbability",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -685,7 +675,7 @@
       "undefined" : "Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory."
     },
     "attributes" : [ "object" ],
-    "id" : "25"
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasProbability1",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -698,6 +688,16 @@
     "comment" : {
       "undefined" : "Probability of a hazardous situation occurring."
     },
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#probability",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "probability"
+    },
+    "domain" : "27",
     "attributes" : [ "object" ],
     "id" : "26"
   }, {
@@ -726,24 +726,13 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasSDA",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "24",
+    "range" : "27",
     "label" : {
       "IRI-based" : "hasSDA"
     },
-    "domain" : "24",
+    "domain" : "27",
     "attributes" : [ "object" ],
     "id" : "32"
-  }, {
-    "iri" : "https://w3id.org/riskman/ontology#causesHarm",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "causesHarm",
-      "undefined" : "causes harm"
-    },
-    "domain" : "34",
-    "attributes" : [ "object" ],
-    "id" : "33"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasImplementationManifest",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -754,7 +743,18 @@
     },
     "domain" : "14",
     "attributes" : [ "object" ],
-    "id" : "35"
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#causesHarm",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "causesHarm",
+      "undefined" : "causes harm"
+    },
+    "domain" : "35",
+    "attributes" : [ "object" ],
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#isPartOfDeviceComponent",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -794,22 +794,22 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#severity",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "24",
+    "range" : "27",
     "label" : {
       "IRI-based" : "severity"
     },
-    "domain" : "24",
+    "domain" : "27",
     "attributes" : [ "object" ],
     "id" : "41"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDeviceFunction",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "27",
+    "range" : "23",
     "label" : {
       "IRI-based" : "hasDeviceFunction",
       "undefined" : "has device function"
     },
-    "domain" : "34",
+    "domain" : "35",
     "attributes" : [ "object" ],
     "id" : "43"
   }, {
@@ -836,11 +836,11 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDeviceProblem",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "24",
+    "range" : "27",
     "label" : {
       "IRI-based" : "hasDeviceProblem"
     },
-    "domain" : "24",
+    "domain" : "27",
     "attributes" : [ "object" ],
     "id" : "48"
   }, {
@@ -867,7 +867,7 @@
       "IRI-based" : "hasHazard",
       "undefined" : "has hazard"
     },
-    "domain" : "34",
+    "domain" : "35",
     "attributes" : [ "object" ],
     "id" : "53"
   }, {
@@ -882,17 +882,6 @@
     "attributes" : [ "object" ],
     "id" : "54"
   }, {
-    "iri" : "https://w3id.org/riskman/ontology#hasAnalyzedRisk",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "hasAnalyzedRisk",
-      "undefined" : "has analyzed risk"
-    },
-    "domain" : "30",
-    "attributes" : [ "object" ],
-    "id" : "55"
-  }, {
     "iri" : "https://w3id.org/riskman/ontology#hasSubSDA",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "range" : "14",
@@ -901,6 +890,17 @@
       "undefined" : "has sub SDA"
     },
     "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#hasAnalyzedRisk",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasAnalyzedRisk",
+      "undefined" : "has analyzed risk"
+    },
+    "domain" : "30",
     "attributes" : [ "object" ],
     "id" : "56"
   }, {
@@ -918,7 +918,7 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDomainSpecificHazard",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "34",
+    "range" : "35",
     "label" : {
       "IRI-based" : "hasDomainSpecificHazard",
       "undefined" : "has domain specific hazard"
@@ -934,7 +934,7 @@
       "IRI-based" : "hasDeviceComponent",
       "undefined" : "has device component"
     },
-    "domain" : "34",
+    "domain" : "35",
     "attributes" : [ "object" ],
     "id" : "58"
   } ]
