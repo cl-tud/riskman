@@ -138,7 +138,7 @@
   sh:targetClass riskman:RiskLevel ;
   sh:property [
     sh:path riskman:probability ;	
-    sh:message "Risk level must have exactly one probability value." ;
+    sh:message "Risk level must have exactly one probability value. In case of specifying all 3 probabilities (P, P1 and P2) check if P=P1xP2." ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
@@ -175,9 +175,9 @@
   a sh:NodeShape ;
   sh:targetClass riskman:SDA ;
   sh:property [
-      sh:path [ sh:zeroOrMorePath riskman:hasSubSDA] ;
+      sh:path [ sh:zeroOrMorePath riskman:hasSubSDA ]  ;
       sh:message "Every SDA needs a final mitigation (which has the Implementation Manifest)" ;
-      sh:class riskman:SDAI ;
-      sh:minCount 1 ;
+      sh:qualifiedValueShape [ sh:class riskman:SDAI ];     
+      sh:qualifiedMinCount 1 ;
     ]
 .
