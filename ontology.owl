@@ -578,7 +578,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/riskman/ontology#SDA"/>
         <owl:disjointWith rdf:resource="https://w3id.org/riskman/ontology#RiskSDA"/>
         <rdfs:comment>A safe design argument (SDA), where the purpose is to make a safety assurance</rdfs:comment>
-        <rdfs:label>Analyzed risk</rdfs:label>
+        <rdfs:label>Assurance SDA</rdfs:label>
     </owl:Class>
     
 

@@ -322,7 +322,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/riskman/ontology#SDA> .
 <https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/riskman/ontology#RiskSDA> .
 <https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2000/01/rdf-schema#comment> "A safe design argument (SDA), where the purpose is to make a safety assurance" .
-<https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2000/01/rdf-schema#label> "Analyzed risk" .
+<https://w3id.org/riskman/ontology#AssuranceSDA> <http://www.w3.org/2000/01/rdf-schema#label> "Assurance SDA" .
 # 
 # https://w3id.org/riskman/ontology#AssuranceSDAI
 <https://w3id.org/riskman/ontology#AssuranceSDAI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

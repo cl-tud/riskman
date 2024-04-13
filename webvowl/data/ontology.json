@@ -31,7 +31,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483651",
+        "value" : "_:genid2147483653",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483652",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -46,12 +51,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483652",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "_:genid2147483653",
+        "value" : "_:genid2147483651",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -68,17 +68,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
+        "value" : "_:genid2147483654",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
         "value" : "_:genid2147483656",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "_:genid2147483655",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "_:genid2147483654",
         "type" : "label"
       } ],
       "created" : [ {
@@ -93,16 +93,16 @@
         "value" : "2024-04-13",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "undefined",
-        "value" : "The RISKMAN Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The RISKMAN Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions).",
         "type" : "label"
       } ],
       "title" : [ {
@@ -142,7 +142,7 @@
     "id" : "20",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "23",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
     "id" : "28",
@@ -178,17 +178,17 @@
     "id" : "51",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
-    "type" : "owl:intersectionOf"
-  }, {
     "id" : "1",
     "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:intersectionOf"
   }, {
     "id" : "21",
     "type" : "owl:intersectionOf"
@@ -294,7 +294,7 @@
     "comment" : {
       "undefined" : "A specific functionality of a device related with the domain specific hazard."
     },
-    "id" : "23"
+    "id" : "25"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#SafetyAssurance",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -428,7 +428,7 @@
     "comment" : {
       "undefined" : "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard."
     },
-    "id" : "34"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#Event",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -442,21 +442,6 @@
     },
     "id" : "12"
   }, {
-    "iri" : "https://w3id.org/riskman/ontology#AssuranceSDA",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AssuranceSDA",
-      "undefined" : "Analyzed risk"
-    },
-    "intersection" : [ "14" ],
-    "comment" : {
-      "undefined" : "A safe design argument (SDA), where the purpose is to make a safety assurance"
-    },
-    "attributes" : [ "intersection" ],
-    "id" : "15",
-    "superClasses" : [ "14" ]
-  }, {
     "iri" : "https://w3id.org/riskman/ontology#AnalyzedRisk",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "instances" : 0,
@@ -468,6 +453,21 @@
       "undefined" : "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level."
     },
     "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#AssuranceSDA",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssuranceSDA",
+      "undefined" : "Assurance SDA"
+    },
+    "intersection" : [ "14" ],
+    "comment" : {
+      "undefined" : "A safe design argument (SDA), where the purpose is to make a safety assurance"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "15",
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/riskman/ontology#SDAI",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -514,10 +514,10 @@
     "id" : "22",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "24",
+    "id" : "23",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "25",
+    "id" : "24",
     "type" : "owl:objectProperty"
   }, {
     "id" : "26",
@@ -535,7 +535,7 @@
     "id" : "33",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "35",
+    "id" : "34",
     "type" : "owl:objectProperty"
   }, {
     "id" : "37",
@@ -663,6 +663,20 @@
     "attributes" : [ "object" ],
     "id" : "22"
   }, {
+    "iri" : "https://w3id.org/riskman/ontology#hasProbability",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasProbability",
+      "undefined" : "has Probability"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
     "iri" : "https://w3id.org/riskman/ontology#hasProbability1",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "range" : "6",
@@ -676,20 +690,6 @@
     },
     "attributes" : [ "object" ],
     "id" : "24"
-  }, {
-    "iri" : "https://w3id.org/riskman/ontology#hasProbability",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "hasProbability",
-      "undefined" : "has Probability"
-    },
-    "domain" : "2",
-    "comment" : {
-      "undefined" : "Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory."
-    },
-    "attributes" : [ "object" ],
-    "id" : "25"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#probability",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -734,17 +734,6 @@
     "attributes" : [ "object" ],
     "id" : "32"
   }, {
-    "iri" : "https://w3id.org/riskman/ontology#causesHarm",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "causesHarm",
-      "undefined" : "causes harm"
-    },
-    "domain" : "34",
-    "attributes" : [ "object" ],
-    "id" : "33"
-  }, {
     "iri" : "https://w3id.org/riskman/ontology#hasImplementationManifest",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "range" : "5",
@@ -754,7 +743,18 @@
     },
     "domain" : "14",
     "attributes" : [ "object" ],
-    "id" : "35"
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#causesHarm",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "causesHarm",
+      "undefined" : "causes harm"
+    },
+    "domain" : "35",
+    "attributes" : [ "object" ],
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#isPartOfDeviceComponent",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -804,18 +804,18 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDeviceFunction",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "23",
+    "range" : "25",
     "label" : {
       "IRI-based" : "hasDeviceFunction",
       "undefined" : "has device function"
     },
-    "domain" : "34",
+    "domain" : "35",
     "attributes" : [ "object" ],
     "id" : "43"
   }, {
     "range" : "14",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasHazardousSituation",
@@ -831,7 +831,7 @@
   }, {
     "range" : "14",
     "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDeviceProblem",
@@ -857,7 +857,7 @@
   }, {
     "range" : "16",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "50"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasHazard",
@@ -867,7 +867,7 @@
       "IRI-based" : "hasHazard",
       "undefined" : "has hazard"
     },
-    "domain" : "34",
+    "domain" : "35",
     "attributes" : [ "object" ],
     "id" : "53"
   }, {
@@ -918,7 +918,7 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDomainSpecificHazard",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "34",
+    "range" : "35",
     "label" : {
       "IRI-based" : "hasDomainSpecificHazard",
       "undefined" : "has domain specific hazard"
@@ -934,7 +934,7 @@
       "IRI-based" : "hasDeviceComponent",
       "undefined" : "has device component"
     },
-    "domain" : "34",
+    "domain" : "35",
     "attributes" : [ "object" ],
     "id" : "58"
   } ]
