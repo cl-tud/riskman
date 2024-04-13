@@ -42,7 +42,13 @@
   a sh:NodeShape ;
   sh:targetClass riskman:AssuranceSDA ;
   sh:property [ 
-      sh:path riskman:hasSafetyAssurance 
+      sh:path riskman:hasSafetyAssurance ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+  ], [
+      sh:path riskman:hasSubSDA  ;
+      sh:message "SubSDAs of an AssuranceSDA must again be AssuranceSDAs." ;
+      sh:class riskman:AssuranceSDA ;
   ]
 .
 
