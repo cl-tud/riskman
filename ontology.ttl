@@ -291,6 +291,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/riskman/ontology#hasRiskLevel
 :hasRiskLevel rdf:type owl:ObjectProperty ;
+              rdfs:domain :Risk ;
               rdfs:range :RiskLevel ;
               rdfs:label "has risk level" .
 

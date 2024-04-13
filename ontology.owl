@@ -458,6 +458,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/riskman/ontology#hasRiskLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/riskman/ontology#Risk"/>
         <rdfs:range rdf:resource="https://w3id.org/riskman/ontology#RiskLevel"/>
         <rdfs:label>has risk level</rdfs:label>
     </owl:ObjectProperty>
