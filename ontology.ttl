@@ -291,6 +291,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :AssuranceSDA rdf:type owl:Class ;
               rdfs:subClassOf :SDA ;
               owl:disjointWith :RiskSDA ;
+              rdfs:label "Analyzed risk" ;
               rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" .
 
 [ owl:intersectionOf ( :SDA
