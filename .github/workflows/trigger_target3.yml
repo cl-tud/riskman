@@ -1,4 +1,4 @@
-name: Trigger Target Workflow Attempt 3
+name: Trigger Marketplace Action
 
 on:
   push:
@@ -6,10 +6,13 @@ on:
       - main
 
 jobs:
-  trigger:
+  build:
+    name: Trigger documentation refresh
     runs-on: ubuntu-latest
-
     steps:
-      - name: Trigger Workflow in riskman-documentation repository
-        run: | 
-          curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/cl-tud/riskman-documentation/actions/workflows/target-workflow.yml/dispatches --data '{"ref": "master"}'
+      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+          owner: cl-tud
+          repo: riskman-documentation
+          github_token: ${{ secrets.G_ACCESS_TOKEN }}
+          workflow_file_name: deploy.yml
