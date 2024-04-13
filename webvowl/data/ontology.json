@@ -142,7 +142,7 @@
     "id" : "20",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "24",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
     "id" : "28",
@@ -163,7 +163,7 @@
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "26",
     "type" : "owl:Thing"
   }, {
     "id" : "8",
@@ -294,7 +294,7 @@
     "comment" : {
       "undefined" : "A specific functionality of a device related with the domain specific hazard."
     },
-    "id" : "24"
+    "id" : "27"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#SafetyAssurance",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -371,7 +371,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "27",
+    "id" : "26",
     "label" : {
       "undefined" : "Thing"
     }
@@ -517,10 +517,10 @@
     "id" : "23",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "25",
+    "id" : "24",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "26",
+    "id" : "25",
     "type" : "owl:objectProperty"
   }, {
     "id" : "29",
@@ -663,20 +663,6 @@
     "attributes" : [ "object" ],
     "id" : "22"
   }, {
-    "iri" : "https://w3id.org/riskman/ontology#hasProbability1",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "hasProbability1",
-      "undefined" : "has Probability1"
-    },
-    "domain" : "2",
-    "comment" : {
-      "undefined" : "Probability of a hazardous situation occurring."
-    },
-    "attributes" : [ "object" ],
-    "id" : "23"
-  }, {
     "iri" : "https://w3id.org/riskman/ontology#hasProbability",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "range" : "6",
@@ -689,17 +675,31 @@
       "undefined" : "Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory."
     },
     "attributes" : [ "object" ],
-    "id" : "25"
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#hasProbability1",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasProbability1",
+      "undefined" : "has Probability1"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Probability of a hazardous situation occurring."
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#probability",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "27",
+    "range" : "26",
     "label" : {
       "IRI-based" : "probability"
     },
-    "domain" : "27",
+    "domain" : "26",
     "attributes" : [ "object" ],
-    "id" : "26"
+    "id" : "25"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasResidualRiskLevel",
     "baseIri" : "https://w3id.org/riskman/ontology",
@@ -726,11 +726,11 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasSDA",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "27",
+    "range" : "26",
     "label" : {
       "IRI-based" : "hasSDA"
     },
-    "domain" : "27",
+    "domain" : "26",
     "attributes" : [ "object" ],
     "id" : "32"
   }, {
@@ -794,17 +794,17 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#severity",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "27",
+    "range" : "26",
     "label" : {
       "IRI-based" : "severity"
     },
-    "domain" : "27",
+    "domain" : "26",
     "attributes" : [ "object" ],
     "id" : "41"
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDeviceFunction",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "24",
+    "range" : "27",
     "label" : {
       "IRI-based" : "hasDeviceFunction",
       "undefined" : "has device function"
@@ -836,11 +836,11 @@
   }, {
     "iri" : "https://w3id.org/riskman/ontology#hasDeviceProblem",
     "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "27",
+    "range" : "26",
     "label" : {
       "IRI-based" : "hasDeviceProblem"
     },
-    "domain" : "27",
+    "domain" : "26",
     "attributes" : [ "object" ],
     "id" : "48"
   }, {
@@ -882,17 +882,6 @@
     "attributes" : [ "object" ],
     "id" : "54"
   }, {
-    "iri" : "https://w3id.org/riskman/ontology#hasSubSDA",
-    "baseIri" : "https://w3id.org/riskman/ontology",
-    "range" : "14",
-    "label" : {
-      "IRI-based" : "hasSubSDA",
-      "undefined" : "has sub SDA"
-    },
-    "domain" : "14",
-    "attributes" : [ "object" ],
-    "id" : "55"
-  }, {
     "iri" : "https://w3id.org/riskman/ontology#hasAnalyzedRisk",
     "baseIri" : "https://w3id.org/riskman/ontology",
     "range" : "1",
@@ -901,6 +890,17 @@
       "undefined" : "has analyzed risk"
     },
     "domain" : "30",
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/riskman/ontology#hasSubSDA",
+    "baseIri" : "https://w3id.org/riskman/ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasSubSDA",
+      "undefined" : "has sub SDA"
+    },
+    "domain" : "14",
     "attributes" : [ "object" ],
     "id" : "56"
   }, {
