@@ -9,7 +9,9 @@ This section provides details for each class and property defined by The KIMEDS 
          <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
       </li>
       <li>
-         <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">Assurance SDA</a>
+         <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">
+            <span>assurance s d a</span>
+         </a>
       </li>
       <li>
          <a href="#https://w3id.org/riskman/ontology#AssuranceSDAI" title="https://w3id.org/riskman/ontology#AssuranceSDAI">Assurance SDAI</a>
@@ -49,6 +51,9 @@ This section provides details for each class and property defined by The KIMEDS 
             title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
       </li>
       <li>
+         <a href="#https://w3id.org/riskman/ontology#Probability" title="https://w3id.org/riskman/ontology#Probability">Probability</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/riskman/ontology#Risk" title="https://w3id.org/riskman/ontology#Risk">Risk</a>
       </li>
       <li>
@@ -70,6 +75,9 @@ This section provides details for each class and property defined by The KIMEDS 
       <li>
          <a href="#https://w3id.org/riskman/ontology#SDAI" title="https://w3id.org/riskman/ontology#SDAI">SDAI</a>
       </li>
+      <li>
+         <a href="#https://w3id.org/riskman/ontology#Severity" title="https://w3id.org/riskman/ontology#Severity">Severity</a>
+      </li>
    </ul>
    <div class="entity" id="https://w3id.org/riskman/ontology#AnalyzedRisk">
       <h3>Analyzed risk<sup class="type-c" title="class">c</sup>
@@ -82,39 +90,9 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>(<a href="#https://w3id.org/riskman/ontology#hasDeviceContext"
-               title="https://w3id.org/riskman/ontology#hasDeviceContext">has device context</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasDomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#hasDomainSpecificHazard">has domain specific hazard</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasHarm" title="https://w3id.org/riskman/ontology#hasHarm">has harm</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasHazardousSituation"
-               title="https://w3id.org/riskman/ontology#hasHazardousSituation">has hazardous situation</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-               title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/riskman/ontology#P1" title="https://w3id.org/riskman/ontology#P1">P1</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/riskman/ontology#P2" title="https://w3id.org/riskman/ontology#P2">P2</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/riskman/ontology#hasDeviceContext"
+            <a href="#https://w3id.org/riskman/ontology#hasDeviceContext"
                title="https://w3id.org/riskman/ontology#hasDeviceContext">has device context</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasDomainSpecificHazard"
                title="https://w3id.org/riskman/ontology#hasDomainSpecificHazard">has domain specific hazard</a>
@@ -130,30 +108,10 @@ This section provides details for each class and property defined by The KIMEDS 
                title="https://w3id.org/riskman/ontology#hasAnalyzedRisk">has analyzed risk</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#AssuranceSDA">
-      <h3>Assurance SDA<sup class="type-c" title="class">c</sup>
+      <h3>assurance s d a<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -163,17 +121,6 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">A safe design argument (SDA), where the purpose is to make a safety assurance</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasSafetyAssurance"
-               title="https://w3id.org/riskman/ontology#hasSafetyAssurance">has safety assurance</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#SafetyAssurance"
-               title="https://w3id.org/riskman/ontology#SafetyAssurance">Safety assurance</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
@@ -202,21 +149,7 @@ This section provides details for each class and property defined by The KIMEDS 
       <div class="comment">
          <span class="markdown">A safe design argument (SDA), where the purpose is to make a safety assurance</span>
       </div>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">Assurance SDA</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> 
-            <a href="#https://w3id.org/riskman/ontology#SDAI" title="https://w3id.org/riskman/ontology#SDAI">SDAI</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
+      <dl class="description"/>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#ControlledRisk">
       <h3>Controlled risk<sup class="type-c" title="class">c</sup>
@@ -229,50 +162,14 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>(<a href="#https://w3id.org/riskman/ontology#hasAnalyzedRisk"
-               title="https://w3id.org/riskman/ontology#hasAnalyzedRisk">has analyzed risk</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasResidualRiskLevel"
-               title="https://w3id.org/riskman/ontology#hasResidualRiskLevel">has residual risk level</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasSDA" title="https://w3id.org/riskman/ontology#hasSDA">is mitigated by</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#RiskSDA" title="https://w3id.org/riskman/ontology#RiskSDA">Risk SDA</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/riskman/ontology#hasAnalyzedRisk"
                title="https://w3id.org/riskman/ontology#hasAnalyzedRisk">has analyzed risk</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasResidualRiskLevel"
                title="https://w3id.org/riskman/ontology#hasResidualRiskLevel">has residual risk level</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasSDA" title="https://w3id.org/riskman/ontology#hasSDA">is mitigated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#isMitigatedBy" title="https://w3id.org/riskman/ontology#isMitigatedBy">is mitigated by</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -301,25 +198,6 @@ This section provides details for each class and property defined by The KIMEDS 
                title="https://w3id.org/riskman/ontology#isPartOfDeviceComponent">is part of device component</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#DeviceContext">
@@ -338,26 +216,6 @@ This section provides details for each class and property defined by The KIMEDS 
             <a href="#https://w3id.org/riskman/ontology#hasDeviceContext"
                title="https://w3id.org/riskman/ontology#hasDeviceContext">has device context</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -378,26 +236,6 @@ This section provides details for each class and property defined by The KIMEDS 
                title="https://w3id.org/riskman/ontology#hasDeviceFunction">has device function</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#DomainSpecificHazard">
@@ -411,30 +249,6 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>(<a href="#https://w3id.org/riskman/ontology#hasDeviceComponent"
-               title="https://w3id.org/riskman/ontology#hasDeviceComponent">has device component</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasDeviceFunction"
-               title="https://w3id.org/riskman/ontology#hasDeviceFunction">has device function</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasHazard" title="https://w3id.org/riskman/ontology#hasHazard">has hazard</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#causesHarm" title="https://w3id.org/riskman/ontology#causesHarm">causes harm</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/riskman/ontology#causesHarm" title="https://w3id.org/riskman/ontology#causesHarm">causes harm</a>
@@ -450,25 +264,6 @@ This section provides details for each class and property defined by The KIMEDS 
             <a href="#https://w3id.org/riskman/ontology#hasDomainSpecificHazard"
                title="https://w3id.org/riskman/ontology#hasDomainSpecificHazard">has domain specific hazard</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -496,26 +291,6 @@ This section provides details for each class and property defined by The KIMEDS 
                title="https://w3id.org/riskman/ontology#hasPrecedingEvent">has preceding event</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#Harm">
@@ -534,26 +309,6 @@ This section provides details for each class and property defined by The KIMEDS 
             <a href="#https://w3id.org/riskman/ontology#causesHarm" title="https://w3id.org/riskman/ontology#causesHarm">causes harm</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasHarm" title="https://w3id.org/riskman/ontology#hasHarm">has harm</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -581,26 +336,6 @@ This section provides details for each class and property defined by The KIMEDS 
                title="https://w3id.org/riskman/ontology#hasParentHazard">has parent hazard</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#HazardousSituation">
@@ -614,14 +349,6 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">Circumstance in which people, property or the environment is/are exposed to one or more hazards.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#hasEvent" title="https://w3id.org/riskman/ontology#hasEvent">has event</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/riskman/ontology#hasEvent" title="https://w3id.org/riskman/ontology#hasEvent">has event</a>
@@ -636,25 +363,6 @@ This section provides details for each class and property defined by The KIMEDS 
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasParentSituation"
                title="https://w3id.org/riskman/ontology#hasParentSituation">has parent situation</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -675,26 +383,18 @@ This section provides details for each class and property defined by The KIMEDS 
                title="https://w3id.org/riskman/ontology#hasImplementationManifest">has implementation manifest</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/riskman/ontology#Probability">
+      <h3>Probability<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#Probability</p>
+      <div class="comment">
+         <span class="markdown">Probability of occurence of a harm.</span>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#Risk">
       <h3>Risk<sup class="type-c" title="class">c</sup>
@@ -706,18 +406,7 @@ This section provides details for each class and property defined by The KIMEDS 
       <div class="comment">
          <span class="markdown">Combination of the probability of occurrence of harm and the severity of that harm.</span>
       </div>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>(<a href="#https://w3id.org/riskman/ontology#hasHarm" title="https://w3id.org/riskman/ontology#hasHarm">has harm</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasRiskLevel" title="https://w3id.org/riskman/ontology#hasRiskLevel">has risk level</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
-      </dl>
+      <dl class="description"/>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#RiskLevel">
       <h3>Risk level<sup class="type-c" title="class">c</sup>
@@ -730,23 +419,15 @@ This section provides details for each class and property defined by The KIMEDS 
          <span class="markdown">Combination of probability and severity.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>(<a href="#https://w3id.org/riskman/ontology#probability" title="https://w3id.org/riskman/ontology#probability">probability</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <a href="http://www.w3.org/2001/XMLSchema#integer"
-               target="_blank"
-               title="http://www.w3.org/2001/XMLSchema#integer">integer</a>) <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#severity" title="https://w3id.org/riskman/ontology#severity">severity</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <a href="http://www.w3.org/2001/XMLSchema#integer"
-               target="_blank"
-               title="http://www.w3.org/2001/XMLSchema#integer">integer</a>)</dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/riskman/ontology#probability" title="https://w3id.org/riskman/ontology#probability">probability</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/riskman/ontology#severity" title="https://w3id.org/riskman/ontology#severity">severity</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <a href="#https://w3id.org/riskman/ontology#hasProbability" title="https://w3id.org/riskman/ontology#hasProbability">P1</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasProbability1"
+               title="https://w3id.org/riskman/ontology#hasProbability1">hasProbability1</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasProbability2"
+               title="https://w3id.org/riskman/ontology#hasProbability2">hasProbability2</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasSeverity" title="https://w3id.org/riskman/ontology#hasSeverity">hasSeverity</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -756,26 +437,6 @@ This section provides details for each class and property defined by The KIMEDS 
                title="https://w3id.org/riskman/ontology#hasResidualRiskLevel">has residual risk level</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasRiskLevel" title="https://w3id.org/riskman/ontology#hasRiskLevel">has risk level</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -797,7 +458,7 @@ This section provides details for each class and property defined by The KIMEDS 
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">Assurance SDA</a>
+            <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">assurance s d a</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -812,16 +473,7 @@ This section provides details for each class and property defined by The KIMEDS 
       <div class="comment">
          <span class="markdown">Structured artifact specifying a concrete implementation or realization of a specific Risk SDA.</span>
       </div>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#RiskSDA" title="https://w3id.org/riskman/ontology#RiskSDA">Risk SDA</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> 
-            <a href="#https://w3id.org/riskman/ontology#SDAI" title="https://w3id.org/riskman/ontology#SDAI">SDAI</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
+      <dl class="description"/>
    </div>
    <div class="entity" id="https://w3id.org/riskman/ontology#SafetyAssurance">
       <h3>Safety assurance<sup class="type-c" title="class">c</sup>
@@ -855,9 +507,8 @@ This section provides details for each class and property defined by The KIMEDS 
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">Assurance SDA</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#AssuranceSDAI" title="https://w3id.org/riskman/ontology#AssuranceSDAI">Assurance SDAI</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskSDA" title="https://w3id.org/riskman/ontology#RiskSDA">Risk SDA</a>
+            <a href="#https://w3id.org/riskman/ontology#RiskSDA" title="https://w3id.org/riskman/ontology#RiskSDA">Risk SDA</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">assurance s d a</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -870,28 +521,8 @@ This section provides details for each class and property defined by The KIMEDS 
          <dt>is in range of</dt>
          <dd>
             <a href="#https://w3id.org/riskman/ontology#hasSubSDA" title="https://w3id.org/riskman/ontology#hasSubSDA">has sub SDA</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasSDA" title="https://w3id.org/riskman/ontology#hasSDA">is mitigated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#isMitigatedBy" title="https://w3id.org/riskman/ontology#isMitigatedBy">is mitigated by</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceComponent"
-               title="https://w3id.org/riskman/ontology#DeviceComponent">Device component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceContext" title="https://w3id.org/riskman/ontology#DeviceContext">Device context</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DeviceFunction" title="https://w3id.org/riskman/ontology#DeviceFunction">Device function</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#DomainSpecificHazard"
-               title="https://w3id.org/riskman/ontology#DomainSpecificHazard">Domain specific hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Event" title="https://w3id.org/riskman/ontology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Harm" title="https://w3id.org/riskman/ontology#Harm">Harm</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#Hazard" title="https://w3id.org/riskman/ontology#Hazard">Hazard</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#HazardousSituation"
-               title="https://w3id.org/riskman/ontology#HazardousSituation">Hazardous situation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -905,19 +536,18 @@ This section provides details for each class and property defined by The KIMEDS 
       <div class="comment">
          <span class="markdown">Reusable artifact embodying or expressing one possible method or approach to risk control.</span>
       </div>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#https://w3id.org/riskman/ontology#SDA" title="https://w3id.org/riskman/ontology#SDA">SDA</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> (<a href="#https://w3id.org/riskman/ontology#hasImplementationManifest"
-               title="https://w3id.org/riskman/ontology#hasImplementationManifest">has implementation manifest</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#https://w3id.org/riskman/ontology#ImplementationManifest"
-               title="https://w3id.org/riskman/ontology#ImplementationManifest">Implementation manifest</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
-      </dl>
+      <dl class="description"/>
+   </div>
+   <div class="entity" id="https://w3id.org/riskman/ontology#Severity">
+      <h3>Severity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#Severity</p>
+      <div class="comment">
+         <span class="markdown">Measure of the possible consequences of a harm.</span>
+      </div>
    </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -995,11 +625,25 @@ This section provides details for each class and property defined by The KIMEDS 
          <a href="#https://w3id.org/riskman/ontology#hasSubSDA" title="https://w3id.org/riskman/ontology#hasSubSDA">has sub SDA</a>
       </li>
       <li>
-         <a href="#https://w3id.org/riskman/ontology#hasSDA" title="https://w3id.org/riskman/ontology#hasSDA">is mitigated by</a>
+         <a href="#https://w3id.org/riskman/ontology#hasProbability1"
+            title="https://w3id.org/riskman/ontology#hasProbability1">hasProbability1</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/riskman/ontology#hasProbability2"
+            title="https://w3id.org/riskman/ontology#hasProbability2">hasProbability2</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/riskman/ontology#hasSeverity" title="https://w3id.org/riskman/ontology#hasSeverity">hasSeverity</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/riskman/ontology#isMitigatedBy" title="https://w3id.org/riskman/ontology#isMitigatedBy">is mitigated by</a>
       </li>
       <li>
          <a href="#https://w3id.org/riskman/ontology#isPartOfDeviceComponent"
             title="https://w3id.org/riskman/ontology#isPartOfDeviceComponent">is part of device component</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/riskman/ontology#hasProbability" title="https://w3id.org/riskman/ontology#hasProbability">P1</a>
       </li>
    </ul>
    <div class="entity" id="https://w3id.org/riskman/ontology#causesHarm">
@@ -1266,6 +910,11 @@ This section provides details for each class and property defined by The KIMEDS 
          <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasInitialRiskLevel</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#hasRiskLevel" title="https://w3id.org/riskman/ontology#hasRiskLevel">has risk level</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
@@ -1356,6 +1005,11 @@ This section provides details for each class and property defined by The KIMEDS 
          <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasResidualRiskLevel</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#hasRiskLevel" title="https://w3id.org/riskman/ontology#hasRiskLevel">has risk level</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#https://w3id.org/riskman/ontology#ControlledRisk" title="https://w3id.org/riskman/ontology#ControlledRisk">Controlled risk</a>
@@ -1378,21 +1032,18 @@ This section provides details for each class and property defined by The KIMEDS 
          <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasRiskLevel</p>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
+                  title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/riskman/ontology#hasResidualRiskLevel"
+                  title="https://w3id.org/riskman/ontology#hasResidualRiskLevel">has residual risk level</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has sub-property chains</dt>
-            <dd>
-               <a href="#https://w3id.org/riskman/ontology#hasInitialRiskLevel"
-                  title="https://w3id.org/riskman/ontology#hasInitialRiskLevel">has initial risk level</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dd>
-               <a href="#https://w3id.org/riskman/ontology#hasResidualRiskLevel"
-                  title="https://w3id.org/riskman/ontology#hasResidualRiskLevel">has residual risk level</a>
-               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -1408,7 +1059,7 @@ This section provides details for each class and property defined by The KIMEDS 
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">Assurance SDA</a>
+               <a href="#https://w3id.org/riskman/ontology#AssuranceSDA" title="https://w3id.org/riskman/ontology#AssuranceSDA">assurance s d a</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1442,13 +1093,73 @@ This section provides details for each class and property defined by The KIMEDS 
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/riskman/ontology#hasSDA">
+   <div class="entity" id="https://w3id.org/riskman/ontology#hasProbability1">
+      <h3>hasProbability1<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasProbability1</p>
+      <div class="comment">
+         <span class="markdown">Probability of a hazardous situation occurring.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/riskman/ontology#hasProbability2">
+      <h3>hasProbability2<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasProbability2</p>
+      <div class="comment">
+         <span class="markdown">Probability of a hazardous situation leading to harm.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/riskman/ontology#hasSeverity">
+      <h3>hasSeverity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasSeverity</p>
+      <div class="comment">
+         <span class="markdown">Measure of the possible consequences of a hazard.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/riskman/ontology#isMitigatedBy">
       <h3>is mitigated by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasSDA</p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#isMitigatedBy</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1488,85 +1199,15 @@ This section provides details for each class and property defined by The KIMEDS 
          </dl>
       </div>
    </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="dataproperties">
-   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#https://w3id.org/riskman/ontology#P1" title="https://w3id.org/riskman/ontology#P1">P1</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/riskman/ontology#P2" title="https://w3id.org/riskman/ontology#P2">P2</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/riskman/ontology#probability" title="https://w3id.org/riskman/ontology#probability">probability</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/riskman/ontology#severity" title="https://w3id.org/riskman/ontology#severity">severity</a>
-      </li>
-   </ul>
-   <div class="entity" id="https://w3id.org/riskman/ontology#P1">
-      <h3>P1<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+   <div class="entity" id="https://w3id.org/riskman/ontology#hasProbability">
+      <h3>P1<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/riskman/ontology#P1</p>
+         <strong>IRI:</strong> https://w3id.org/riskman/ontology#hasProbability</p>
       <div class="comment">
-         <span class="markdown">Probability of a hazardous situation occurring</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#integer"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/riskman/ontology#P2">
-      <h3>P2<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/riskman/ontology#P2</p>
-      <div class="comment">
-         <span class="markdown">Probability of a hazardous situation leading to harm</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/riskman/ontology#AnalyzedRisk" title="https://w3id.org/riskman/ontology#AnalyzedRisk">Analyzed risk</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#integer"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/riskman/ontology#probability">
-      <h3>probability<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/riskman/ontology#probability</p>
-      <div class="comment">
-         <span class="markdown">Probability of occurrence of harm, expressed as an integer from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least probable and MAX as the most. The probability of occurrence of harm (P) can additionally be expressed as a combination of separate probabilities (P = P1*P2). A decomposition into P1 and P2 is not mandatory.</span>
+         <span class="markdown">Probability of occurrence of harm, can additionally be expressed as a combination of separate probabilities via respective object properties hasProbability1 and hasProbability2. A decomposition into P1 and P2 is not mandatory.</span>
       </div>
       <div class="description">
          <dl>
@@ -1574,38 +1215,6 @@ This section provides details for each class and property defined by The KIMEDS 
             <dd>
                <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#integer"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/riskman/ontology#severity">
-      <h3>severity<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/riskman/ontology#severity</p>
-      <div class="comment">
-         <span class="markdown">Measure of the possible consequences of a hazard. An integer representing severity in a scale from 1 to MAX (MAX being defined by one of the RiskTable dimensions), with 1 as the least severe and MAX as the most.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/riskman/ontology#RiskLevel" title="https://w3id.org/riskman/ontology#RiskLevel">Risk level</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#integer"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
          </dl>
       </div>
@@ -1615,6 +1224,5 @@ This section provides details for each class and property defined by The KIMEDS 
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
-<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
 </div>
 </div>
