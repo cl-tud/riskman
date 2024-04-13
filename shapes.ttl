@@ -60,19 +60,6 @@
   ]
 .
 
-:DeviceComponentShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:DeviceComponent ;
-  sh:property [
-    sh:path riskman:isPartOfDeviceComponent
-  ]
-.
-
-:DeviceContextShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:DeviceContext
-.
-
 :DomainSpecificHazardShape
   a sh:NodeShape ;
   sh:targetClass riskman:DomainSpecificHazard ;
@@ -92,24 +79,6 @@
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ]
-.
-
-:EventShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:Event ;
-  sh:property [ 
-    sh:path riskman:hasPrecedingEvent;
-  ]
-.
-
-:DeviceFunctionShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:DeviceFunction ;
-.
-
-:ImplementationManifestShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:ImplementationManifest ;
 .
 
 :ControlledRiskShape
@@ -149,28 +118,6 @@
   ]
 .
 
-
-:RiskSDAShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:RiskSDA ;
-  sh:property [
-    sh:path riskman:hasSubSDA 
-  ]
-.
-
-:RiskSDAIShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:RiskSDAI ;
-  sh:property [
-    sh:path riskman:hasSubSDA 
-  ]
-.
-
-:SafetyAssuranceShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:SafetyAssurance ;
-.
-
 :SDAShape
   a sh:NodeShape ;
   sh:targetClass riskman:SDA ;
@@ -181,7 +128,6 @@
       sh:qualifiedMinCount 1 ;
     ]
 .
-
 
 :NonIncreasingProbabilityShape a sh:NodeShape;
     sh:targetClass riskman:ControlledRisk;
