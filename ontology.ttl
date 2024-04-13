@@ -260,75 +260,57 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #    Classes
 #################################################################
 
-
 ###  https://w3id.org/riskman/ontology#AnalyzedRisk
 :AnalyzedRisk rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasDomainSpecificHazard ;
-                                                          owl:someValuesFrom :DomainSpecificHazard
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHarm ;
-                                                          owl:someValuesFrom :Harm
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasDeviceContext ;
-                                                          owl:someValuesFrom :DeviceContext
-                                                        ]                                                                                                                                    
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasHazardousSituation ;
-                                                          owl:someValuesFrom :HazardousSituation
-                                                        ]                                                        
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasInitialRiskLevel ;
-                                                          owl:someValuesFrom :RiskLevel
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-                    rdfs:label "Analyzed risk" ;
-                    rdfs:comment "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level." .
+    rdfs:label "Analyzed risk" ;
+    rdfs:comment "Combination of one or more domain-specific hazard(s) with one hazardous situation and one harm with reference to a device context and a specification of an initial risk level." .
 
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDomainSpecificHazard ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasHarm ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDeviceContext ;
+                            owl:someValuesFrom owl:Thing
+                        ]                                                                                                                                    
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasHazardousSituation ;
+                            owl:someValuesFrom owl:Thing
+                        ]                                                        
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasInitialRiskLevel ;
+                            owl:someValuesFrom owl:Thing
+                        ] ) ;
+] rdfs:subClassOf :AnalyzedRisk.
 
 ###  https://w3id.org/riskman/ontology#AssuranceSDA
 :AssuranceSDA rdf:type owl:Class ;
               rdfs:subClassOf :SDA ;
               owl:disjointWith :RiskSDA ;
-              rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
-              owl:equivalentClass [ owl:intersectionOf 
-                                    ( :SDA
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :hasSafetyAssurance ;
-                                        owl:someValuesFrom :SafetyAssurance
-                                      ]
-                                    ) 
-                                  ];
-              rdfs:label "Assurance SDA" .
+              rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" .
 
-# for the future - instead of equivalences
-#[ owl:intersectionOf ( :SDA
-#                      [ rdf:type owl:Restriction ;
-#                        owl:onProperty :hasSafetyAssurance ;
-#                        owl:someValuesFrom :SafetyAssurance
-#                      ]
-#                    ) ;
-#  rdf:type owl:Class ;
-#  rdfs:subClassOf :AssuranceSDA                    
-#] .
-
-
+[ owl:intersectionOf ( :SDA
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSafetyAssurance ;
+                            owl:someValuesFrom owl:Thing
+                        ] );                     
+] rdfs:subClassOf :AssuranceSDA .
+             
 
 ###  https://w3id.org/riskman/ontology#AssuranceSDAI
 :AssuranceSDAI rdf:type owl:Class ;
-               rdfs:subClassOf :SDA ;
-               owl:equivalentClass [ owl:intersectionOf 
-                                      (
-                                        :AssuranceSDA
-                                        :SDAI
-                                      )
-                                    ];
-               rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
-               rdfs:label "Assurance SDAI" .
+    rdfs:comment "A safe design argument (SDA), where the purpose is to make a safety assurance" ;
+    rdfs:label "Assurance SDAI" .
+
+[ owl:intersectionOf (  :AssuranceSDA
+                        :SDAI
+                     ) ;
+] rdfs:subClassOf :AssuranceSDAI .
+
 
 
 ###  https://w3id.org/riskman/ontology#DeviceComponent
@@ -342,30 +324,34 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                rdfs:comment "Information about possible environments the device can be used in that may affect probability or severity of some risk." ;
                     rdfs:label "Device context" .
 
-
 ###  https://w3id.org/riskman/ontology#DomainSpecificHazard
 :DomainSpecificHazard rdf:type owl:Class ;
-                      owl:equivalentClass [ rdf:type owl:Restriction ;
-                                            owl:onProperty :causesHarm ;
-                                            owl:someValuesFrom :Harm
-                                          ] ;
-                      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasDeviceComponent ;
-                                                                   owl:someValuesFrom :DeviceComponent
-                                                                 ]
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasDeviceFunction ;
-                                                                   owl:someValuesFrom :DeviceFunction
-                                                                 ]
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasHazard ;
-                                                                   owl:someValuesFrom :Hazard
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:comment "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard." ;
-                      rdfs:label "Domain specific hazard" .
+    rdfs:comment "Structured artifact that centers around one hazard having the potential to cause one or more harm(s) in the context of a domain-specific function and component. Caution: strictly speaking a Domain Specific Hazard is not actually a Hazard, but a combination containing a Hazard." ;
+    rdfs:label "Domain specific hazard" .
+
+[ rdf:type owl:Restriction ;
+                        owl:onProperty :causesHarm ;
+                        owl:someValuesFrom owl:Thing
+] rdfs:subClassOf :DomainSpecificHazard .
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDeviceComponent ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDeviceFunction ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasHazard ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasDeviceProblem ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                    ) ;
+] rdfs:subClassOf :DomainSpecificHazard .
 
 
 ###  https://w3id.org/riskman/ontology#Event
@@ -388,22 +374,19 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 
 ###  https://w3id.org/riskman/ontology#Hazard
 :Hazard rdf:type owl:Class ;
-#        owl:equivalentClass [ rdf:type owl:Restriction ;
-#                              owl:onProperty :causesHarm ;
-#                              owl:someValuesFrom :Harm
-#                            ] ;
         rdfs:comment "Potential source of harm" ;
-                    rdfs:label "Hazard" .
+        rdfs:label "Hazard" .
 
 
 ###  https://w3id.org/riskman/ontology#HazardousSituation
 :HazardousSituation rdf:type owl:Class ;
-                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                          owl:onProperty :hasEvent ;
-                                          owl:someValuesFrom :Event
-                                        ] ;
-                    rdfs:comment "Circumstance in which people, property or the environment is/are exposed to one or more hazards." ;
-                    rdfs:label "Hazardous situation" .
+    rdfs:comment "Circumstance in which people, property or the environment is/are exposed to one or more hazards." ;
+    rdfs:label "Hazardous situation" .
+
+[ rdf:type owl:Restriction ;
+    owl:onProperty :hasEvent ;
+    owl:someValuesFrom owl:Thing
+] rdfs:subClassOf :HazardousSituation .
 
 
 ###  https://w3id.org/riskman/ontology#ImplementationManifest
@@ -411,28 +394,25 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                         rdfs:comment "A concrete piece of objective evidence (or a reference to such) that an SDA has been implemented, e.g. reference to a line of code or a particular section in the device manual." ;
                         rdfs:label "Implementation manifest" .
 
-
 ###  https://w3id.org/riskman/ontology#ControlledRisk
 :ControlledRisk rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( 
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasSDA ;
-                                                          owl:someValuesFrom :RiskSDA
-                                                        ] 
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasAnalyzedRisk ;
-                                                          owl:someValuesFrom :AnalyzedRisk
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasResidualRiskLevel ;
-                                                          owl:someValuesFrom :RiskLevel
-                                                        ]
+    rdfs:label "Controlled risk" ;
+    rdfs:comment "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk." .
 
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-                    rdfs:label "Controlled risk" ;
-                    rdfs:comment "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk." .
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSDA ;
+                            owl:someValuesFrom owl:Thing
+                        ] 
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAnalyzedRisk ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasResidualRiskLevel ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                    ) ;
+] rdfs:subClassOf :ControlledRisk .
 
 
 ###  https://w3id.org/riskman/ontology#Probability
@@ -440,39 +420,38 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
     rdfs:label "Probability" ;
     rdfs:comment "Probability of occurence of a harm." .
 
-
 ###  https://w3id.org/riskman/ontology#Risk
 :Risk rdf:type owl:Class ;
-      rdfs:label "Risk" ;
-      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :hasHarm ;
-                                                    owl:someValuesFrom :Harm
-                                                  ]
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :hasRiskLevel ;
-                                                    owl:someValuesFrom :RiskLevel
-                                                  ]
-                                                ) ;
-                            rdf:type owl:Class
-                          ] ;
-      rdfs:comment "Combination of the probability of occurrence of harm and the severity of that harm." .
+    rdfs:label "Risk" ;
+    rdfs:comment "Combination of the probability of occurrence of harm and the severity of that harm." .
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasHarm ;
+                         owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRiskLevel ;
+                          owl:someValuesFrom owl:Thing
+                        ]
+                    ) ;
+] rdfs:subClassOf :Risk .
 
 
 ###  https://w3id.org/riskman/ontology#RiskLevel
 :RiskLevel rdf:type owl:Class ;
-      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :probability ;
-                                                   owl:someValuesFrom xsd:integer
-                                                 ]
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :severity ;
-                                                   owl:someValuesFrom xsd:integer
-                                                 ]
-                                               ) ;
-                            rdf:type owl:Class
-                          ] ;
-      rdfs:comment "Combination of probability and severity." ;
-      rdfs:label "Risk level" .
+    rdfs:comment "Combination of probability and severity." ;
+    rdfs:label "Risk level" .
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty :probability ;
+                         owl:someValuesFrom owl:Thing
+                        ]
+                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :severity ;
+                         owl:someValuesFrom owl:Thing
+                        ]
+                    ) ;
+] rdfs:subClassOf :RiskLevel .
 
 
 ###  https://w3id.org/riskman/ontology#RiskSDA
@@ -482,16 +461,16 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "Risk SDA" .
 
 
+
 ###  https://w3id.org/riskman/ontology#RiskSDAI
 :RiskSDAI rdf:type owl:Class ;
-          owl:equivalentClass [ owl:intersectionOf 
-                                (
-                                  :RiskSDA
-                                  :SDAI
-                                )
-                              ];
-          rdfs:comment "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA." ;
-                    rdfs:label "Risk SDAI" .
+    rdfs:comment "Structured artifact specifying a concrete implementation or realization of a specific Risk SDA." ;
+    rdfs:label "Risk SDAI" .
+
+[ owl:intersectionOf ( :RiskSDA
+                       :SDAI
+                     )
+] rdfs:subClassOf :RiskSDAI .
 
 
 ###  https://w3id.org/riskman/ontology#SDA
@@ -503,25 +482,15 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 ###  https://w3id.org/riskman/ontology#SDAI
 :SDAI rdf:type owl:Class ;
       rdfs:comment "Reusable artifact embodying or expressing one possible method or approach to risk control." ;
-      owl:equivalentClass [ owl:intersectionOf 
-                            ( :SDA
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasImplementationManifest ;
-                                owl:someValuesFrom :ImplementationManifest
-                              ]
-                            )         
-                          ] ;
       rdfs:label "SDAI" .   
 
-#[ owl:intersectionOf ( :SDA
-#                      [ rdf:type owl:Restriction ;
-#                        owl:onProperty :hasImplementationManifest ;
-#                        owl:someValuesFrom :ImplementationManifest
-#                      ]
-#                    ) ;
-#  rdf:type owl:Class ;
-#  rdfs:subClassOf :SDAI                    
-#] .
+[ owl:intersectionOf ( :SDA
+                        [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasImplementationManifest ;
+                            owl:someValuesFrom owl:Thing
+                        ]
+                    )         
+] rdfs:subClassOf :SDAI .
 
 
 ###  https://w3id.org/riskman/ontology#Severity
@@ -539,21 +508,21 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #    General axioms
 #################################################################
 
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AnalyzedRisk
-                :DeviceComponent
-                :DeviceContext
-                :DomainSpecificHazard
-                :Event
-                :DeviceFunction
-                :Harm
-                :Hazard
-                :HazardousSituation
-                :ImplementationManifest
-                :ControlledRisk
-                :RiskLevel
-                :SDA
-              )
-] .
+# [ rdf:type owl:AllDisjointClasses ;
+#   owl:members ( :AnalyzedRisk
+#                 :DeviceComponent
+#                 :DeviceContext
+#                 :DomainSpecificHazard
+#                 :Event
+#                 :DeviceFunction
+#                 :Harm
+#                 :Hazard
+#                 :HazardousSituation
+#                 :ImplementationManifest
+#                 :ControlledRisk
+#                 :RiskLevel
+#                 :SDA
+#               )
+# ] .
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
