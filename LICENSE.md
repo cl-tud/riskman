@@ -1,4 +1,4 @@
-The Riskman Ontology and Shapes are licensed under CC-BY-SA 4.0. Legal code of the license below.
+The Riskman Ontology and Shapes are licensed under **CC-BY-SA 4.0**. Legal code of the license below.
 
 =======================================================================
 
