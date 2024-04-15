@@ -53,14 +53,6 @@
   ]
 .
 
-:AssuranceSDAIShape
-  a sh:NodeShape ;
-  sh:targetClass riskman:AssuranceSDAI ;
-  sh:property [ 
-    sh:path riskman:hasSubSDA
-  ]
-.
-
 :DomainSpecificHazardShape
   a sh:NodeShape ;
   sh:targetClass riskman:DomainSpecificHazard ;
@@ -86,7 +78,7 @@
   a sh:NodeShape ;
   sh:targetClass riskman:ControlledRisk ;
   sh:property [
-    sh:path riskman:hasSDA ;
+    sh:path riskman:isMitigatedBy ;
     sh:message "Every controlled risk must be mitigated by an SDA." ;  
     sh:minCount 1 ;
     sh:maxCount 1
@@ -144,7 +136,7 @@
     sh:property [ 
         sh:path ( riskman:hasAnalyzedRisk riskman:hasInitialRiskLevel riskman:hasProbability1 [ sh:inversePath rlevel:gt ] [sh:inversePath riskman:hasProbability1 ]); 
         sh:disjoint  riskman:hasResidualRiskLevel ; 
-        sh:message "Residual probability 1 should not be higher than initial probability."
+        sh:message "Residual probability 1 should not be higher than initial probability 1."
     ]
 . 
 
@@ -153,7 +145,7 @@
     sh:property [ 
         sh:path ( riskman:hasAnalyzedRisk riskman:hasInitialRiskLevel riskman:hasProbability2 [ sh:inversePath rlevel:gt ] [sh:inversePath riskman:hasProbability2 ]); 
         sh:disjoint  riskman:hasResidualRiskLevel ; 
-        sh:message "Residual probability 2 should not be higher than initial probability."
+        sh:message "Residual probability 2 should not be higher than initial probability 2."
     ]
 . 
 
@@ -162,6 +154,6 @@
     sh:property [ 
         sh:path ( riskman:hasAnalyzedRisk riskman:hasInitialRiskLevel riskman:hasSeverity [ sh:inversePath rlevel:gt ] [sh:inversePath riskman:hasSeverity ]); 
         sh:disjoint  riskman:hasResidualRiskLevel ; 
-        sh:message "Residual severity should not be higher than initial probability."
+        sh:message "Residual severity should not be higher than initial severity."
     ]
 . 
