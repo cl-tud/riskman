@@ -106,6 +106,12 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:range :DeviceComponent ;
                     rdfs:label "has device component" .
 
+###  https://w3id.org/riskman/ontology#hasDeviceProblem
+:hasDeviceProblem rdf:type owl:ObjectProperty ;
+                    rdfs:domain :DomainSpecificHazard ;
+                    rdfs:range :DeviceProblem ;
+                    rdfs:label "has device problem" .
+
 
 ###  https://w3id.org/riskman/ontology#hasDomainSpecificHazard
 :hasDomainSpecificHazard rdf:type owl:ObjectProperty ;
@@ -371,6 +377,10 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
           rdfs:comment "A specific functionality of a device related with the domain specific hazard." ;
           rdfs:label "Device function" .
 
+###  https://w3id.org/riskman/ontology#DeviceProblem
+:DeviceProblem rdf:type owl:Class ;
+          rdfs:comment "Information allowing to link the Domain Specific Hazard to risk reports' notion of a device problem, e.g. an IMDRF term. " ;
+          rdfs:label "Device problem" .
 
 ###  https://w3id.org/riskman/ontology#Harm
 :Harm rdf:type owl:Class ;
@@ -406,7 +416,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
     rdfs:comment "Structured artifact that relates one analyzed risk with one or more SDA(s) and specifies a resulting residual risk." .
 
 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasSDA ;
+                            owl:onProperty :isMitigatedBy ;
                             owl:someValuesFrom owl:Thing
                         ] 
                         [ rdf:type owl:Restriction ;
@@ -449,11 +459,11 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
     rdfs:label "Risk level" .
 
 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                         owl:onProperty :probability ;
+                         owl:onProperty :hasProbability ;
                          owl:someValuesFrom owl:Thing
                         ]
                         [ rdf:type owl:Restriction ;
-                         owl:onProperty :severity ;
+                         owl:onProperty :hasSeverity ;
                          owl:someValuesFrom owl:Thing
                         ]
                     ) ;
