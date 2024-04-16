@@ -7,6 +7,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> . 
 @base <https://w3id.org/riskman/ontology#> .
 
 <https://w3id.org/riskman/ontology> 
