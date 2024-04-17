@@ -17,7 +17,7 @@
                                       dcterms:abstract "The Riskman Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the Riskman ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." ;
                                       schema:funder "(Add funder info)" ;
                                       schema:funding "(Add funding info)" ;
-                                      dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
+                                      dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                       dcterms:title "Digital Risk Management Ontology"@en ; 
                                       dcterms:created "2023-09-12"^^xsd:date ;
                                       owl:versionInfo "1.0.0" ;
