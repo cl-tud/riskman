@@ -7,63 +7,57 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> . 
 @base <https://w3id.org/riskman/ontology#> .
 
 <https://w3id.org/riskman/ontology> 
                                       rdf:type owl:Ontology ;
                                       owl:versionIRI <https://w3id.org/riskman/ontology1.0.0> ; 
-                                      schema:description "The Riskman Ontology defines various notions related to risk management for medical devices."@en ;
-                                      dcterms:abstract "The Riskman Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the KIMEDS ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." ;
+                                      dcterms:description "The Riskman Ontology defines various notions related to risk management for medical devices."@en ;
+                                      dcterms:abstract "The Riskman Ontology defines various notions related to risk management for medical devices. It builds on terms from ISO 14971. The central notion of the Riskman ontology is that of a Safe Design Argument (SDA), a reusable artifact that aims to demonstrate how a specific hazard occurring with a device has been mitigated (possibly using further context information and assumptions)." ;
                                       schema:funder "(Add funder info)" ;
                                       schema:funding "(Add funding info)" ;
-                                      schema:license <http://creativecommons.org/licenses/by/2.0/> ;
+                                      dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
                                       dcterms:title "Digital Risk Management Ontology"@en ; 
                                       dcterms:created "2023-09-12"^^xsd:date ;
                                       owl:versionInfo "1.0.0" ;
                                       rdfs:label "The Riskman Ontology"@en ;
                                       rdfs:seeAlso <https://cl-tud.github.io/kimeds-ontology/> ;
                                       schema:dateModified "2024-04-13"^^xsd:date ;
-                                      schema:creator [
-                                      a schema:Person ;
+                                      vann:preferredNamespacePrefix "riskman"  ;
+                                      vann:preferredNamespaceURI "https://w3id.org/riskman/ontology#" ;
+                                      dcterms:creator [
                                       schema:name "Dörthe Arndt" ;
                                       schema:url <https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en> ;
                                       schema:affiliation _:iccl_tud 
                                     ] ,[
-                                      a schema:Person ;
                                       schema:name "Martin Diller" ;
                                       schema:url <https://iccl.inf.tu-dresden.de/web/Martin_Diller/en> ;
                                       schema:affiliation _:iccl_tud 
                                     ] ,[  
-                                      a schema:Person;
                                       schema:name "Piotr Gorczyca" ;
                                       schema:url <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en> ;
                                       schema:affiliation _:iccl_tud
                                     ] ,[
-                                      a schema:Person;
                                       schema:name "Pascal Kettmann" ;
                                       schema:url <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en> ;
                                       schema:affiliation _:iccl_tud
                                     ] ,[
-                                      a schema:Person;
                                       schema:name "Stephan Mennicke" ;
                                       schema:url <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en> ;
                                       schema:affiliation _:iccl_tud
                                     ] ,[
-                                      a schema:Person;
                                       schema:name "Hannes Straß" ;
                                       schema:url <https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en> ;
                                       schema:affiliation _:iccl_tud
                                     ] ;
-                                    schema:contributor [
-                                      a schema:Person;
+                                    dcterms:contributor [
                                       schema:name "Evi Hartig" ;
                                       schema:affiliation _:ekfz
                                     ] , [                                                               
-                                      a schema:Person ;
                                       schema:name "Sarah Tsurkan" ;
                                       schema:affiliation _:ekfz
                                     ] , [ 
-                                      a schema:Person ;
                                       schema:name "Georg Heidenreich" ;
                                       schema:affiliation _:siemens_healthineers
                                     ] .
