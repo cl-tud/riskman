@@ -1,0 +1,52 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Riskman Ontology and Shapes
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Dörthe
+    family-names: Arndt
+    email: doerthe.arndt@tu-dresden.de
+    affiliation: >-
+      Computational Logic Group, Institute of Artificial
+      Intelligence, TU Dresden, Germany
+    orcid: 'https://orcid.org/0000-0002-7401-8487'
+  - given-names: Martin
+    family-names: Diller
+    email: martin.diller@tu-dresden.de
+    affiliation: >-
+      Logic Programming and Argumentation Group, Institute
+      of Artificial Intelligence
+    orcid: 'https://orcid.org/0000-0001-6342-0756'
+  - given-names: Piotr
+    family-names: Gorczyca
+    email: piotr.gorczyca@tu-dresden.de
+    affiliation: >-
+      Computational Logic Group, Institute of Artificial
+      Intelligence, TU Dresden, Germany
+    orcid: 'https://orcid.org/0000-0002-6613-6061'
+  - given-names: Pascal
+    family-names: Kettmann
+    orcid: 'https://orcid.org/0009-0009-9461-7952'
+    email: pascal.kettmann@tu-dresden.de
+    affiliation: >-
+      Computational Logic Group, Institute of Artificial
+      Intelligence, TU Dresden, Germany
+  - given-names: Stephan
+    family-names: Mennicke
+    email: stephan.mennicke@tu-dresden.de
+    affiliation: >-
+      Knowledge-Based Systems Group, Institute for
+      Theoretical Computer Science, TU Dresden, Germany
+    orcid: 'https://orcid.org/0000-0002-3293-2940'
+  - given-names: Hannes
+    family-names: Strass
+    email: hannes.strass@tu-dresden.de
+    affiliation: >-
+      Computational Logic Group, Institute of Artificial
+      Intelligence, TU Dresden, Germany
+    orcid: 'https://orcid.org/0000-0001-6180-6452'
