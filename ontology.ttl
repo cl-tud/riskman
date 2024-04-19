@@ -22,7 +22,7 @@
                                       dcterms:created "2023-09-12"^^xsd:date ;
                                       owl:versionInfo "1.0.0" ;
                                       rdfs:label "The Riskman Ontology"@en ;
-                                      rdfs:seeAlso <https://cl-tud.github.io/kimeds-ontology/> ;
+                                      rdfs:seeAlso <https://w3id.org/riskman/> ;
                                       schema:dateModified "2024-04-13"^^xsd:date ;
                                       vann:preferredNamespacePrefix "riskman"  ;
                                       vann:preferredNamespaceURI "https://w3id.org/riskman/ontology#" ;
