@@ -99,12 +99,12 @@
   a sh:NodeShape ;
   sh:targetClass riskman:RiskLevel ;
   sh:property [
-    sh:path riskman:probability ;	
+    sh:path riskman:hasProbability ;	
     sh:message "Risk level must have exactly one probability value. In case of specifying all 3 probabilities (P, P1 and P2) check if P=P1xP2." ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
   ], [
-    sh:path riskman:severity ;
+    sh:path riskman:hasSeverity ;
     sh:message "Risk level must have exactly one severity value." ;
     sh:minCount 1 ;
     sh:maxCount 1 ; 
