@@ -176,13 +176,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                     rdfs:label "has parent situation" .
 
 
-###  https://w3id.org/riskman/ontology#hasPatientProblem
-:hasPatientProblem rdf:type owl:ObjectProperty ;
-                   rdfs:domain :AnalyzedRisk ;
-                   rdfs:range :PatientProblem ;
-                   rdfs:label "has patient problem" .                    
-
-
 ###  https://w3id.org/riskman/ontology#hasResidualRiskLevel
 :hasResidualRiskLevel rdf:type owl:ObjectProperty ;
              rdfs:label "has residual risk level" ;
@@ -432,12 +425,6 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
                         ]
                     ) ;
 ] rdfs:subClassOf :ControlledRisk .
-
-
-###  https://w3id.org/riskman/ontology#PatientProblem
-:PatientProblem rdf:type owl:Class ;
-          rdfs:comment "Information allowing to link the Analyzed Risk to risk reports' notion of a patient problem, e.g. an Annex E & F IMDRF term. " ;
-          rdfs:label "Patient problem" .
 
 
 ###  https://w3id.org/riskman/ontology#Probability
