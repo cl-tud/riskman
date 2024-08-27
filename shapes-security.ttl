@@ -1,0 +1,9 @@
+#Under construction
+
+#There should be shapes expressing the following here:
+
+#A security event must have exactly one vulnerability and exactly one threat.  
+
+#Every controlled security risk must have (exactly one) an analyzed security risk.
+
+#Every analyzed security risk must have a (exactly one) domain specific hazard with a security hazard and a (exactly one) hazardous situation with a security event.  

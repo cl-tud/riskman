@@ -1,0 +1,150 @@
+#################################################################
+#    Object Properties
+#################################################################
+
+
+###  https://w3id.org/riskman/ontology#hasThreat
+:hasThreat rdf:type owl:ObjectProperty ;
+           rdfs:domain :SecurityEvent ;
+           rdfs:range :Threat ;
+           rdfs:label "has threat" .
+
+
+###  https://w3id.org/riskman/ontology#hasVulnerability
+:hasVulnerability rdf:type owl:ObjectProperty ;
+                  rdfs:domain :SecurityEvent ;
+                  rdfs:range :Vulnerability ;
+                  rdfs:label "has vulnerability" .
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+
+###  https://w3id.org/riskman/ontology#AnalyzedSecurityRisk
+:AnalyzedSecurityRisk rdf:type owl:Class ;
+                      rdfs:subClassOf :AnalyzedRisk ;
+                      rdfs:comment "A security-related analyzed risk" ;
+                      rdfs:label "Analyzed security risk" .
+
+
+
+###  https://w3id.org/riskman/ontology#ControlledSecurityRisk
+:ControlledSecurityRisk rdf:type owl:Class ;
+                        rdfs:subClassOf :ControlledRisk ;
+                        rdfs:comment "A controlled risk that thas an analyzed security risk." ,
+                                     "A security-related controlled risk" ;
+                        rdfs:label "Controlled security risk" .
+
+
+###  https://w3id.org/riskman/ontology#SecurityEvent
+:SecurityEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               rdfs:comment "An event that has a vulnerability and a threat." ,
+                            "Security-related event" ;
+               rdfs:label "Security Event" .
+
+
+###  https://w3id.org/riskman/ontology#SecurityHazard
+:SecurityHazard rdf:type owl:Class ;
+                rdfs:subClassOf :Hazard ;
+                rdfs:comment "Security-related hazard" ;
+                rdfs:label "Security Hazard" .
+
+
+###  https://w3id.org/riskman/ontology#Threat
+:Threat rdf:type owl:Class .
+
+
+###  https://w3id.org/riskman/ontology#Vulnerability
+:Vulnerability rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/riskman/ontology#Degradation_of_availability
+:Degradation_of_availability rdf:type owl:NamedIndividual ,
+                                      :SecurityHazard .
+
+
+###  https://w3id.org/riskman/ontology#Degradation_of_confidentiality
+:Degradation_of_confidentiality rdf:type owl:NamedIndividual ,
+                                         :SecurityHazard .
+
+
+###  https://w3id.org/riskman/ontology#Degradation_of_integrity
+:Degradation_of_integrity rdf:type owl:NamedIndividual ,
+                                   :SecurityHazard .
+
+
+###  https://w3id.org/riskman/ontology#Loss_of_availability
+:Loss_of_availability rdf:type owl:NamedIndividual ,
+                               :SecurityHazard .
+
+
+###  https://w3id.org/riskman/ontology#Loss_of_confidentiality
+:Loss_of_confidentiality rdf:type owl:NamedIndividual ,
+                                  :SecurityHazard .
+
+
+###  https://w3id.org/riskman/ontology#Loss_of_integrity
+:Loss_of_integrity rdf:type owl:NamedIndividual ,
+                            :SecurityHazard .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( :AnalyzedRisk
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDomainSpecificHazard ;
+                         owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasHazard ;
+                                              owl:someValuesFrom :SecurityHazard
+                                            ]
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasHazardousSituation ;
+                         owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasEvent ;
+                                              owl:someValuesFrom :SecurityEvent
+                                            ]
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :AnalyzedSecurityRisk
+] .
+
+
+
+[ owl:intersectionOf ( :ControlledRisk
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAnalyzedRisk ;
+                         owl:someValuesFrom :AnalyzedSecurityRisk
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :ControlledSecurityRisk
+] .
+
+
+[ owl:intersectionOf ( :Event
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasThreat ;
+                         owl:someValuesFrom owl:Thing
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasVulnerability ;
+                         owl:someValuesFrom owl:Thing
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SecurityEvent
+] .
+
