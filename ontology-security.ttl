@@ -11,8 +11,20 @@
 @prefix riskman: <https://w3id.org/riskman/ontology#> .
 @prefix rlevel: <https://w3id.org/riskman/ontology#> .
 @prefix rsecurity: <https://w3id.org/riskman/ontology/security#> .
+@prefix ontogs: <https://www.npmjs.com/package/ontoglimpse#> .
 @base <https://w3id.org/riskman/ontology/security#> .
 
+<https://w3id.org/riskman/ontology> 
+                                      rdf:type owl:Ontology ;
+                                      dcterms:description "[Description placeholder]" ;
+                                      dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                                      dcterms:title "[title placeholder]" ; 
+                                      dcterms:created "2023-09-12"^^xsd:date ;
+                                      rdfs:label "[label placeholder]" ;
+                                      schema:dateModified "2024-04-13"^^xsd:date ;
+                                      vann:preferredNamespacePrefix "rsecurity"  ;
+                                      vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" .
+                                      
 
 #################################################################
 #    Object Properties
