@@ -98,32 +98,39 @@
 
 ###  https://w3id.org/riskman/ontology#Degradation_of_availability
 :Degradation_of_availability rdf:type owl:NamedIndividual ,
-                                      :SecurityHazard .
+                                      :SecurityHazard ;
+                             rdfs:label "Degradation of availability" .
+
 
 
 ###  https://w3id.org/riskman/ontology#Degradation_of_confidentiality
 :Degradation_of_confidentiality rdf:type owl:NamedIndividual ,
-                                         :SecurityHazard .
+                                         :SecurityHazard ;
+                             rdfs:label "Degradation of confidentiality" .
 
 
 ###  https://w3id.org/riskman/ontology#Degradation_of_integrity
 :Degradation_of_integrity rdf:type owl:NamedIndividual ,
-                                   :SecurityHazard .
+                                   :SecurityHazard ;
+                          rdfs:label "Degradation of integrity" .
 
 
 ###  https://w3id.org/riskman/ontology#Loss_of_availability
 :Loss_of_availability rdf:type owl:NamedIndividual ,
-                               :SecurityHazard .
+                               :SecurityHazard ;
+                      rdfs:label "Loss of availability" .
 
 
 ###  https://w3id.org/riskman/ontology#Loss_of_confidentiality
 :Loss_of_confidentiality rdf:type owl:NamedIndividual ,
-                                  :SecurityHazard .
+                                  :SecurityHazard ;
+                         rdfs:label "Loss of confidentiality" .
 
 
 ###  https://w3id.org/riskman/ontology#Loss_of_integrity
 :Loss_of_integrity rdf:type owl:NamedIndividual ,
-                            :SecurityHazard .
+                            :SecurityHazard ;
+                   rdfs:label "Loss of integrity" .
 
 
 #################################################################
