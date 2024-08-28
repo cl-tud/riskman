@@ -23,7 +23,8 @@
                                       rdfs:label "[label placeholder]" ;
                                       schema:dateModified "2024-04-13"^^xsd:date ;
                                       vann:preferredNamespacePrefix "rsecurity"  ;
-                                      vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" .
+                                      vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" ;
+                                      ontogs:customSwitch1 true .
 
 
 #################################################################
