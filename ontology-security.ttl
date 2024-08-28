@@ -24,7 +24,7 @@
                                       schema:dateModified "2024-04-13"^^xsd:date ;
                                       vann:preferredNamespacePrefix "rsecurity"  ;
                                       vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" .
-                                      
+
 
 #################################################################
 #    Object Properties
@@ -54,7 +54,7 @@
 
 ###  https://w3id.org/riskman/ontology#AnalyzedSecurityRisk
 :AnalyzedSecurityRisk rdf:type owl:Class ;
-                      rdfs:subClassOf :AnalyzedRisk ;
+                      rdfs:subClassOf riskman:AnalyzedRisk ;
                       rdfs:comment "A security-related analyzed risk" ;
                       rdfs:label "Analyzed security risk" .
 
@@ -62,7 +62,7 @@
 
 ###  https://w3id.org/riskman/ontology#ControlledSecurityRisk
 :ControlledSecurityRisk rdf:type owl:Class ;
-                        rdfs:subClassOf :ControlledRisk ;
+                        rdfs:subClassOf riskman:ControlledRisk ;
                         rdfs:comment "A controlled risk that thas an analyzed security risk." ,
                                      "A security-related controlled risk" ;
                         rdfs:label "Controlled security risk" .
@@ -70,7 +70,7 @@
 
 ###  https://w3id.org/riskman/ontology#SecurityEvent
 :SecurityEvent rdf:type owl:Class ;
-               rdfs:subClassOf :Event ;
+               rdfs:subClassOf riskman:Event ;
                rdfs:comment "An event that has a vulnerability and a threat." ,
                             "Security-related event" ;
                rdfs:label "Security Event" .
@@ -78,7 +78,7 @@
 
 ###  https://w3id.org/riskman/ontology#SecurityHazard
 :SecurityHazard rdf:type owl:Class ;
-                rdfs:subClassOf :Hazard ;
+                rdfs:subClassOf riskman:Hazard ;
                 rdfs:comment "Security-related hazard" ;
                 rdfs:label "Security Hazard" .
 
@@ -129,18 +129,18 @@
 #    General axioms
 #################################################################
 
-[ owl:intersectionOf ( :AnalyzedRisk
+[ owl:intersectionOf ( riskman:AnalyzedRisk
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasDomainSpecificHazard ;
+                         owl:onProperty riskman:hasDomainSpecificHazard ;
                          owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasHazard ;
+                                              owl:onProperty riskman:hasHazard ;
                                               owl:someValuesFrom :SecurityHazard
                                             ]
                        ]
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasHazardousSituation ;
+                         owl:onProperty riskman:hasHazardousSituation ;
                          owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasEvent ;
+                                              owl:onProperty riskman:hasEvent ;
                                               owl:someValuesFrom :SecurityEvent
                                             ]
                        ]
@@ -151,9 +151,9 @@
 
 
 
-[ owl:intersectionOf ( :ControlledRisk
+[ owl:intersectionOf ( riskman:ControlledRisk
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasAnalyzedRisk ;
+                         owl:onProperty riskman:hasAnalyzedRisk ;
                          owl:someValuesFrom :AnalyzedSecurityRisk
                        ]
                      ) ;
