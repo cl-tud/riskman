@@ -1,3 +1,13 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix riskman: <https://w3id.org/riskman/ontology#> .
+@prefix rlevel: <https://w3id.org/riskman/ontology#> .
+@prefix rsecurity: <https://w3id.org/riskman/ontology/security#> .
+@prefix : <https://w3id.org/riskman/shapes/security#> .
+
+
 #Under construction
 
 #There should be shapes expressing the following here:
