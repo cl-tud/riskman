@@ -24,7 +24,7 @@
                                       schema:dateModified "2024-08-28"^^xsd:date ;
                                       vann:preferredNamespacePrefix "rsecurity"  ;
                                       vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" ;
-                                      ontogs:customSwitch1 "false"^^xsd:boolean .
+                                      ontogs:customSwitch1 "true"^^xsd:boolean .
 
 
 #################################################################
