@@ -8,12 +8,55 @@
 @prefix : <https://w3id.org/riskman/shapes/security#> .
 
 
-#Under construction
-
-#There should be shapes expressing the following here:
-
 #A security event must have exactly one vulnerability and exactly one threat.  
+
+:SecurityEventShape
+  a sh:NodeShape ;
+  sh:targetClass rsecurity:SecurityEvent ;
+  sh:property [
+    sh:path rsecurity:hasVulnerability ;
+    sh:message "A security event must have exactly one vulnerability." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path rsecurity:hasThreat ;
+    sh:message "A security event must have exactly one threat." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ]
+.
 
 #Every controlled security risk must have (exactly one) an analyzed security risk.
 
+:ControlledSecurityRiskShape
+  a sh:NodeShape ;
+  sh:targetClass rsecurity:ControlledSecurityRisk ;
+  sh:property [
+    sh:path riskman:hasAnalyzedRisk ;
+    sh:class rsecurity:AnalyzedSecurityRisk ;
+    sh:message "Every controlled security risk must have (exactly one) an analyzed security risk." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ]
+.
+
+
 #Every analyzed security risk must have a (exactly one) domain specific hazard with a security hazard and a (exactly one) hazardous situation with a security event.  
+
+:AnalyzedSecurityRiskShape
+  a sh:NodeShape ;
+  sh:targetClass rsecurity:AnalyzedSecurityRisk ;
+  sh:property [
+    sh:path ( riskman:hasDomainSpecificHazard riskman:hasHazard ) ;
+    sh:class rsecurity:SecurityHazard ;
+    sh:message "Every analyzed security risk must have a (exactly one) domain specific hazard with a security hazard." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ], [
+    sh:path ( riskman:hasHazardousSituation riskman:hasEvent ) ;
+    sh:class rsecurity:SecurityEvent ;
+    sh:message "Every analyzed security risk must have a (exactly one) hazardous situation with a security event." ;  
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ]
+.
