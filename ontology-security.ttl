@@ -16,11 +16,11 @@
 
 <https://w3id.org/riskman/ontology> 
                                       rdf:type owl:Ontology ;
-                                      dcterms:description "[Description placeholder]" ;
+                                      dcterms:description "A simple extension of the Riskman ontology for security aspects of medical devices following ISO 24971." ;
                                       dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-                                      dcterms:title "[title placeholder]" ; 
+                                      dcterms:title "This part of the ontology is still experimental." ; 
                                       dcterms:created "2024-08-20"^^xsd:date ;
-                                      rdfs:label "[label placeholder]" ;
+                                      rdfs:label "Extension of Riskman for Security" ;
                                       schema:dateModified "2024-08-28"^^xsd:date ;
                                       vann:preferredNamespacePrefix "rsecurity"  ;
                                       vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" ;
