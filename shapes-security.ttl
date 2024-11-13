@@ -8,23 +8,7 @@
 @prefix : <https://w3id.org/riskman/shapes/security#> .
 
 
-#A security event must have exactly one vulnerability and exactly one threat.  
 
-:SecurityEventShape
-  a sh:NodeShape ;
-  sh:targetClass rsecurity:SecurityEvent ;
-  sh:property [
-    sh:path rsecurity:hasVulnerability ;
-    sh:message "A security event must have exactly one vulnerability." ;  
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-  ], [
-    sh:path rsecurity:hasThreat ;
-    sh:message "A security event must have exactly one threat." ;  
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-  ]
-.
 
 #Every controlled security risk must have (exactly one) an analyzed security risk.
 

@@ -16,7 +16,7 @@
 
 <https://w3id.org/riskman/ontology> 
                                       rdf:type owl:Ontology ;
-                                      dcterms:description "An extension of the Riskman ontology for security aspects of medical devices following ISO 24971." ;
+                                      dcterms:description "An extension of the Riskman ontology that also takes in account security aspects of medical devices." ;
                                       dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                       dcterms:title "Experimental section" ; 
                                       dcterms:created "2024-08-20"^^xsd:date ;
@@ -32,18 +32,12 @@
 #################################################################
 
 
-###  https://w3id.org/riskman/ontology#hasThreat
-:hasThreat rdf:type owl:ObjectProperty ;
-           rdfs:domain :SecurityEvent ;
-           rdfs:range :Threat ;
-           rdfs:label "has threat" .
+###  https://w3id.org/riskman/ontology/security#hasJustification
+:hasJustification rdf:type owl:ObjectProperty ;
+           rdfs:domain riskman:Risk ;
+           rdfs:range :Justification ;
+           rdfs:label "has justification" .
 
-
-###  https://w3id.org/riskman/ontology#hasVulnerability
-:hasVulnerability rdf:type owl:ObjectProperty ;
-                  rdfs:domain :SecurityEvent ;
-                  rdfs:range :Vulnerability ;
-                  rdfs:label "has vulnerability" .
 
 
 
@@ -52,90 +46,21 @@
 #################################################################
 
 
-
-###  https://w3id.org/riskman/ontology#AnalyzedSecurityRisk
-:AnalyzedSecurityRisk rdf:type owl:Class ;
-                      rdfs:subClassOf riskman:AnalyzedRisk ;
-                      rdfs:comment "A security-related analyzed risk" ;
-                      rdfs:label "Analyzed security risk" .
-
-
-
-###  https://w3id.org/riskman/ontology#ControlledSecurityRisk
-:ControlledSecurityRisk rdf:type owl:Class ;
-                        rdfs:subClassOf riskman:ControlledRisk ;
-                        rdfs:comment "A controlled risk that thas an analyzed security risk." ,
-                                     "A security-related controlled risk" ;
-                        rdfs:label "Controlled security risk" .
-
-
-###  https://w3id.org/riskman/ontology#SecurityEvent
-:SecurityEvent rdf:type owl:Class ;
-               rdfs:subClassOf riskman:Event ;
-               rdfs:comment "An event that has a vulnerability and a threat." ,
-                            "Security-related event" ;
-               rdfs:label "Security Event" .
-
-
-###  https://w3id.org/riskman/ontology#SecurityHazard
+###  https://w3id.org/riskman/ontology/security#SecurityHazard
 :SecurityHazard rdf:type owl:Class ;
                 rdfs:subClassOf riskman:Hazard ;
-                rdfs:comment "Security-related hazard" ;
-                rdfs:label "Security Hazard" .
-
-
-###  https://w3id.org/riskman/ontology#Threat
-:Threat rdf:type owl:Class .
-
-
-###  https://w3id.org/riskman/ontology#Vulnerability
-:Vulnerability rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://w3id.org/riskman/ontology#Degradation_of_availability
-:Degradation_of_availability rdf:type owl:NamedIndividual ,
-                                      :SecurityHazard ;
-                             rdfs:label "Degradation of availability" .
+                rdfs:comment "A security-related hazard: one of availability, confidentiality, or integrity" ;
+                rdfs:label "Security hazard" .
 
 
 
-###  https://w3id.org/riskman/ontology#Degradation_of_confidentiality
-:Degradation_of_confidentiality rdf:type owl:NamedIndividual ,
-                                         :SecurityHazard ;
-                             rdfs:label "Degradation of confidentiality" .
 
+###  https://w3id.org/riskman/ontology/security#AnalyzedSecurityRisk
+:AnalyzedSecurityRisk rdf:type owl:Class ;
+                      rdfs:subClassOf riskman:AnalyzedRisk ;
+                      rdfs:comment "A security-related analyzed risk: an analyzed risk having a domain-specific hazard with a security hazard" ;
+                      rdfs:label "Analyzed security risk" .
 
-###  https://w3id.org/riskman/ontology#Degradation_of_integrity
-:Degradation_of_integrity rdf:type owl:NamedIndividual ,
-                                   :SecurityHazard ;
-                          rdfs:label "Degradation of integrity" .
-
-
-###  https://w3id.org/riskman/ontology#Loss_of_availability
-:Loss_of_availability rdf:type owl:NamedIndividual ,
-                               :SecurityHazard ;
-                      rdfs:label "Loss of availability" .
-
-
-###  https://w3id.org/riskman/ontology#Loss_of_confidentiality
-:Loss_of_confidentiality rdf:type owl:NamedIndividual ,
-                                  :SecurityHazard ;
-                         rdfs:label "Loss of confidentiality" .
-
-
-###  https://w3id.org/riskman/ontology#Loss_of_integrity
-:Loss_of_integrity rdf:type owl:NamedIndividual ,
-                            :SecurityHazard ;
-                   rdfs:label "Loss of integrity" .
-
-
-#################################################################
-#    General axioms
-#################################################################
 
 [ owl:intersectionOf ( riskman:AnalyzedRisk
                        [ rdf:type owl:Restriction ;
@@ -144,19 +69,20 @@
                                               owl:onProperty riskman:hasHazard ;
                                               owl:someValuesFrom :SecurityHazard
                                             ]
-                       ]
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty riskman:hasHazardousSituation ;
-                         owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                              owl:onProperty riskman:hasEvent ;
-                                              owl:someValuesFrom :SecurityEvent
-                                            ]
-                       ]
+                       ]                      
                      ) ;
   rdf:type owl:Class ;
   rdfs:subClassOf :AnalyzedSecurityRisk
 ] .
 
+
+
+
+###  https://w3id.org/riskman/ontology/security#ControlledSecurityRisk
+:ControlledSecurityRisk rdf:type owl:Class ;
+                        rdfs:subClassOf riskman:ControlledRisk ;
+                        rdfs:comment "A security-related controlled risk: a controlled risk having an analyzed security risk" ;
+                        rdfs:label "Controlled security risk" .
 
 
 [ owl:intersectionOf ( riskman:ControlledRisk
@@ -170,17 +96,46 @@
 ] .
 
 
-[ owl:intersectionOf ( :Event
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasThreat ;
-                         owl:someValuesFrom owl:Thing
-                       ]
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasVulnerability ;
-                         owl:someValuesFrom owl:Thing
-                       ]
-                     ) ;
-  rdf:type owl:Class ;
-  rdfs:subClassOf :SecurityEvent
-] .
+
+
+###  https://w3id.org/riskman/ontology/security#Justification
+:Justification rdf:type owl:Class;
+               rdfs:comment "Further justification associated to a risk (mainly intended to justify risk levels)";
+               rdfs:label "Justification" .
+
+
+
+
+###  https://w3id.org/riskman/ontology/security#RiskLevelNeedingJustification
+:RiskLevelNeedingJustification rdf:type owl:Class ;
+                rdfs:subClassOf riskman:RiskLevel ;
+                rdfs:comment "A risk level that needs further justification" ;
+                rdfs:label "Risk level needing justification" .
+
+
+
+
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/riskman/ontology/security#Availability
+:Availability rdf:type owl:NamedIndividual , :SecurityHazard ;
+                             rdfs:label "Availability" .
+
+
+
+###  https://w3id.org/riskman/ontology/security#Confidentiality
+:Confidentiality rdf:type owl:NamedIndividual , :SecurityHazard ;
+                             rdfs:label "Confidentiality" .
+
+
+###  https://w3id.org/riskman/ontology/security#Integrity
+:Integrity rdf:type owl:NamedIndividual , :SecurityHazard ;
+                          rdfs:label "Integrity" .
+
+
+
 
