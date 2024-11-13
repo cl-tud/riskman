@@ -21,7 +21,7 @@
                                       dcterms:title "Experimental section" ; 
                                       dcterms:created "2024-08-20"^^xsd:date ;
                                       rdfs:label "Extension of the Riskman Ontology for Security" ;
-                                      schema:dateModified "2024-08-28"^^xsd:date ;
+                                      schema:dateModified "2024-11-13"^^xsd:date ;
                                       vann:preferredNamespacePrefix "rsecurity"  ;
                                       vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" ;
                                       ontogs:customSwitch1 "true" .
