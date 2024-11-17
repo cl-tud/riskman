@@ -21,7 +21,7 @@
                                       dcterms:title "Experimental section" ; 
                                       dcterms:created "2024-08-20"^^xsd:date ;
                                       rdfs:label "Extension of the Riskman Ontology for Security" ;
-                                      schema:dateModified "2024-11-13"^^xsd:date ;
+                                      schema:dateModified "2024-11-17"^^xsd:date ;
                                       vann:preferredNamespacePrefix "rsecurity"  ;
                                       vann:preferredNamespaceURI "https://w3id.org/riskman/ontology/security#" ;
                                       ontogs:customSwitch1 "true" .
@@ -32,11 +32,18 @@
 #################################################################
 
 
-###  https://w3id.org/riskman/ontology/security#hasJustification
-:hasJustification rdf:type owl:ObjectProperty ;
-           rdfs:domain riskman:Risk ;
+###  https://w3id.org/riskman/ontology/security#hasInitialRiskLevelJustification
+:hasInitialRiskLevelJustification rdf:type owl:ObjectProperty ;
+           rdfs:domain riskman:AnalyzedRisk ;
            rdfs:range :Justification ;
-           rdfs:label "has justification" .
+           rdfs:label "has initial risk level justification" .
+
+###  https://w3id.org/riskman/ontology/security#hasResidualRiskLevelJustification
+:hasResidualRiskLevelJustification rdf:type owl:ObjectProperty ;
+           rdfs:domain riskman:ControlledRisk ;
+           rdfs:range :Justification ;
+           rdfs:label "has residual risk level justification" .
+
 
 
 
@@ -100,7 +107,7 @@
 
 ###  https://w3id.org/riskman/ontology/security#Justification
 :Justification rdf:type owl:Class;
-               rdfs:comment "Further justification associated to a risk (mainly intended to justify risk levels)";
+               rdfs:comment "Further justification associated to a risk level";
                rdfs:label "Justification" .
 
 
