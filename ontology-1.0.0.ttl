@@ -25,7 +25,7 @@
                                       rdfs:seeAlso <https://w3id.org/riskman/> ;
                                       schema:dateModified "2024-04-13"^^xsd:date ;
                                       vann:preferredNamespacePrefix "riskman"  ;
-                                      vann:preferredNamespaceURI "https://w3id.org/riskman/ontology#" ;
+                                      vann:preferredNamespaceURI <https://w3id.org/riskman/ontology#> ;
                                       dcterms:creator _:person_arndt, _:person_diller, _:person_gorczyca, _:person_kettmann, _:person_mennicke, _:person_strass ;
                                       dcterms:author _:person_arndt, _:person_diller, _:person_gorczyca, _:person_kettmann, _:person_mennicke, _:person_strass ;
                                       dcterms:contributor _:person_hartig, _:person_tsurkan, _:person_heidenreich . 
