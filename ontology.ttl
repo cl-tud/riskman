@@ -78,12 +78,14 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :causesHarm rdf:type owl:ObjectProperty ;
         rdfs:domain :DomainSpecificHazard ;
         rdfs:range :Harm ;
+        rdfs:comment "Links a domain specific hazard to the harm it may cause." ;
         rdfs:label "causes harm" .
 
 ###  https://w3id.org/riskman/ontology#hasAnalyzedRisk
 :hasAnalyzedRisk rdf:type owl:ObjectProperty ;
             rdfs:domain :ControlledRisk ;
             rdfs:range :AnalyzedRisk ;
+            rdfs:comment "Links a controlled risk to its underlying analyzed risk." ;
             rdfs:label "has analyzed risk" .
 
 
@@ -91,6 +93,7 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :hasDeviceContext rdf:type owl:ObjectProperty ;
             rdfs:domain :AnalyzedRisk ;
             rdfs:range :DeviceContext ;
+            rdfs:comment "Links an analyzed risk with its relevant device context." ;
             rdfs:label "has device context" .
 
 
@@ -98,144 +101,150 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 :hasDeviceComponent rdf:type owl:ObjectProperty ;
                     rdfs:domain :DomainSpecificHazard ;
                     rdfs:range :DeviceComponent ;
+                    rdfs:comment "Links a domain specific hazard with the device component involved." ;
                     rdfs:label "has device component" .
 
 ###  https://w3id.org/riskman/ontology#hasDeviceProblem
 :hasDeviceProblem rdf:type owl:ObjectProperty ;
-                    rdfs:domain :DomainSpecificHazard ;
-                    rdfs:range :DeviceProblem ;
-                    rdfs:label "has device problem" .
-
+                  rdfs:domain :DomainSpecificHazard ;
+                  rdfs:range :DeviceProblem ;
+                  rdfs:comment "Links a domain specific hazard to the corresponding device problem, usually represented by an IMDRF code, in risk reports." ;
+                  rdfs:label "has device problem" .
 
 ###  https://w3id.org/riskman/ontology#hasDomainSpecificHazard
 :hasDomainSpecificHazard rdf:type owl:ObjectProperty ;
-                         rdfs:label "has domain specific hazard" ;
                          rdfs:domain :AnalyzedRisk ;
-                         rdfs:range :DomainSpecificHazard .
-
+                         rdfs:range :DomainSpecificHazard ;
+                         rdfs:comment "Links an analyzed risk to a domain-specific hazard." ;
+                         rdfs:label "has domain specific hazard" .
 
 ###  https://w3id.org/riskman/ontology#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
-          rdfs:label "has event" ;
           rdfs:domain :HazardousSituation ;
-          rdfs:range :Event .
-
+          rdfs:range :Event ;
+          rdfs:comment "Links a hazardous situation to an event that may cause it." ;
+          rdfs:label "has event" .
 
 ###  https://w3id.org/riskman/ontology#hasDeviceFunction
 :hasDeviceFunction rdf:type owl:ObjectProperty ;
-             rdfs:label "has device function" ;
              rdfs:domain :DomainSpecificHazard ;
-             rdfs:range :DeviceFunction .
-
+             rdfs:range :DeviceFunction ;
+             rdfs:comment "Links a domain specific hazard to a related device function." ;
+             rdfs:label "has device function" .
 
 ###  https://w3id.org/riskman/ontology#hasHarm
 :hasHarm rdf:type owl:ObjectProperty ;
-         rdfs:label "has harm" ;
          owl:propertyChainAxiom 
                     ( 
                       :hasAnalyzedRisk
                       :hasHarm
                     ) ;
          rdfs:range :Harm ;
-         rdfs:domain :Risk .
-
-
+         rdfs:domain :Risk ;
+         rdfs:comment "Links a risk to the harm it involves." ;
+         rdfs:label "has harm" .
 
 ###  https://w3id.org/riskman/ontology#hasHazard
 :hasHazard rdf:type owl:ObjectProperty ;
-           rdfs:label "has hazard" ;
            rdfs:domain :DomainSpecificHazard ;
-           rdfs:range :Hazard .
-
+           rdfs:range :Hazard ;
+           rdfs:comment "Links a domain specific hazard to its underlying hazard." ;
+           rdfs:label "has hazard" .
 
 ###  https://w3id.org/riskman/ontology#hasHazardousSituation
 :hasHazardousSituation rdf:type owl:ObjectProperty ;
-                    rdfs:label "has hazardous situation" ;
                     rdfs:domain :AnalyzedRisk ;
-                    rdfs:range :HazardousSituation .
-
+                    rdfs:range :HazardousSituation ;
+                    rdfs:comment "Links an analyzed risk to a hazardous situation." ;
+                    rdfs:label "has hazardous situation" .
 
 ###  https://w3id.org/riskman/ontology#hasImplementationManifest
 :hasImplementationManifest rdf:type owl:ObjectProperty ;
-                    rdfs:label "has implementation manifest" ;
                     rdfs:domain :SDA ;
-                    rdfs:range :ImplementationManifest .
+                    rdfs:range :ImplementationManifest ;
+                    rdfs:comment "Links an SDA to its supporting implementation manifest." ;
+                    rdfs:label "has implementation manifest" .
 
 ###  https://w3id.org/riskman/ontology#hasPatientProblem
 :hasPatientProblem rdf:type owl:ObjectProperty ;
                     rdfs:domain :AnalyzedRisk ;
                     rdfs:range :PatientProblem ;
+                    rdfs:comment "Links an analyzed risk to the corresponding patient problem, usually represented by an IMDRF code, in risk reports." ;
                     rdfs:label "has patient problem" .
 
 ###  https://w3id.org/riskman/ontology#hasParentHazard
 :hasParentHazard rdf:type owl:ObjectProperty, owl:TransitiveProperty ;
-                 rdfs:label "has parent hazard" ;
                  rdfs:domain :Hazard ;
-                 rdfs:range :Hazard .
+                 rdfs:range :Hazard ;
+                 rdfs:comment "Links a hazard to its parent hazard in a hierarchical relationship." ;
+                 rdfs:label "has parent hazard" .
 
 
 ###  https://w3id.org/riskman/ontology#hasParentSituation
 :hasParentSituation rdf:type owl:ObjectProperty, owl:TransitiveProperty ;
                     rdfs:domain :HazardousSituation ;
                     rdfs:range :HazardousSituation ;
-                    rdfs:label "has parent situation" .
-
+                    rdfs:label "has parent situation" ;
+                    rdfs:comment "Links a hazardous situation to its parent situation in a hierarchical relationship." .
 
 ###  https://w3id.org/riskman/ontology#hasResidualRiskLevel
 :hasResidualRiskLevel rdf:type owl:ObjectProperty ;
-             rdfs:label "has residual risk level" ;
              rdfs:domain :ControlledRisk ;
              rdfs:range :RiskLevel ;
-             rdfs:subPropertyOf :hasRiskLevel .
-
+             rdfs:subPropertyOf :hasRiskLevel ;
+             rdfs:comment "Links a controlled risk to its residual risk level after mitigation." ;
+             rdfs:label "has residual risk level" .
 
 ###  https://w3id.org/riskman/ontology#hasInitialRiskLevel
 :hasInitialRiskLevel rdf:type owl:ObjectProperty ;
-            rdfs:label "has initial risk level" ;
             rdfs:domain :AnalyzedRisk ;
             rdfs:range :RiskLevel ;
-            rdfs:subPropertyOf :hasRiskLevel .
+            rdfs:subPropertyOf :hasRiskLevel ;
+            rdfs:comment "Links an analyzed risk to its initial risk level before mitigation." ;
+            rdfs:label "has initial risk level" .
 
 ###  https://w3id.org/riskman/ontology#hasRiskLevel
 :hasRiskLevel rdf:type owl:ObjectProperty ;
-              rdfs:label "has risk level" ;
               rdfs:range :RiskLevel ;
-              rdfs:domain :Risk .
-
+              rdfs:domain :Risk ;
+              rdfs:comment "Links a risk to its risk level, combining probability and severity." ;
+              rdfs:label "has risk level" .
 
 ###  https://w3id.org/riskman/ontology#hasPrecedingEvent
 :hasPrecedingEvent rdf:type owl:ObjectProperty, owl:TransitiveProperty ;
-                    rdfs:label "has preceding event" ;
                     rdfs:domain :Event ;
-                    rdfs:range :Event .
-
+                    rdfs:range :Event ;
+                    rdfs:comment "Links an event to a preceding event that may lead to it." ;
+                    rdfs:label "has preceding event" .
 
 ###  https://w3id.org/riskman/ontology#hasSafetyAssurance
 :hasSafetyAssurance rdf:type owl:ObjectProperty ;
-                    rdfs:label "has safety assurance" ;
                     rdfs:domain :AssuranceSDA ;
-                    rdfs:range :SafetyAssurance .
-
+                    rdfs:range :SafetyAssurance ;
+                    rdfs:comment "Links an SDA to its related safety assurance." ;
+                    rdfs:label "has safety assurance" .
 
 ###  https://w3id.org/riskman/ontology#hasSubSDA
 :hasSubSDA rdf:type owl:ObjectProperty ;
-           rdfs:label "has sub SDA" ;
            rdfs:domain :SDA ;
-           rdfs:range :SDA .
-
+           rdfs:range :SDA ;
+           rdfs:comment "Links an SDA to a related subordinate SDA." ;
+           rdfs:label "has sub SDA" .
 
 ###  https://w3id.org/riskman/ontology#isMitigatedBy
 :isMitigatedBy rdf:type owl:ObjectProperty ;
-               rdfs:label "is mitigated by" ;
                rdfs:domain :ControlledRisk ;
-               rdfs:range :SDA .
+               rdfs:range :SDA ;
+               rdfs:comment "Links a controlled risk to the SDA that mitigates it." ;
+               rdfs:label "is mitigated by" .
 
 
 ###  https://w3id.org/riskman/ontology#isPartOfDeviceComponent
 :isPartOfDeviceComponent rdf:type owl:ObjectProperty, owl:TransitiveProperty ;
-                    rdfs:label "is part of device component" ;
                     rdfs:domain :DeviceComponent ;
-                    rdfs:range :DeviceComponent .
+                    rdfs:range :DeviceComponent ;
+                    rdfs:comment "Links a device component to another device component it is part of." ;
+                    rdfs:label "is part of device component" .
 
 ###  https://w3id.org/riskman/ontology#hasProbability
 :hasProbability rdf:type owl:ObjectProperty ;
@@ -524,21 +533,25 @@ _:ekfz schema:name "EKFZ, TU Dresden" .
 #    General axioms
 #################################################################
 
-# [ rdf:type owl:AllDisjointClasses ;
-#   owl:members ( :AnalyzedRisk
-#                 :DeviceComponent
-#                 :DeviceContext
-#                 :DomainSpecificHazard
-#                 :Event
-#                 :DeviceFunction
-#                 :Harm
-#                 :Hazard
-#                 :HazardousSituation
-#                 :ImplementationManifest
-#                 :ControlledRisk
-#                 :RiskLevel
-#                 :SDA
-#               )
-# ] .
-
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+# disjointness
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AnalyzedRisk
+                :DeviceComponent
+                :DeviceContext
+                :DeviceProblem
+                :DomainSpecificHazard
+                :Event
+                :DeviceFunction
+                :Harm
+                :Hazard
+                :HazardousSituation
+                :ImplementationManifest
+                :ControlledRisk
+                :PatientProblem
+                :Probability
+                :Severity
+                :SafetyAssurance
+                :RiskLevel
+                :SDA
+              )
+] .
