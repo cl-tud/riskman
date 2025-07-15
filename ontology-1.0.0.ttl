@@ -26,49 +26,76 @@
                                       schema:dateModified "2024-04-13"^^xsd:date ;
                                       vann:preferredNamespacePrefix "riskman"  ;
                                       vann:preferredNamespaceURI "https://w3id.org/riskman/ontology#" ;
-                                      dcterms:creator [
-                                      schema:name "Dörthe Arndt" ;
-                                      schema:url <https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en> ;
-                                      schema:affiliation _:iccl_tud 
-                                    ] ,[
-                                      schema:name "Martin Diller" ;
-                                      schema:url <https://iccl.inf.tu-dresden.de/web/Martin_Diller/en> ;
-                                      schema:affiliation _:iccl_tud 
-                                    ] ,[  
-                                      schema:name "Piotr Gorczyca" ;
-                                      schema:url <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en> ;
-                                      schema:affiliation _:iccl_tud
-                                    ] ,[
-                                      schema:name "Pascal Kettmann" ;
-                                      schema:url <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en> ;
-                                      schema:affiliation _:iccl_tud
-                                    ] ,[
-                                      schema:name "Stephan Mennicke" ;
-                                      schema:url <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en> ;
-                                      schema:affiliation _:iccl_tud
-                                    ] ,[
-                                      schema:name "Hannes Straß" ;
-                                      schema:url <https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en> ;
-                                      schema:affiliation _:iccl_tud
-                                    ] ;
-                                    dcterms:contributor [
-                                      schema:name "Evi Hartig" ;
-                                      schema:affiliation _:ekfz
-                                    ] , [                                                               
-                                      schema:name "Sarah Tsurkan" ;
-                                      schema:affiliation _:ekfz
-                                    ] , [ 
-                                      schema:name "Georg Heidenreich" ;
-                                      schema:affiliation _:siemens_healthineers
-                                    ] .
+                                      dcterms:creator _:person_arndt, _:person_diller, _:person_gorczyca, _:person_kettmann, _:person_mennicke, _:person_strass ;
+                                      dcterms:author _:person_arndt, _:person_diller, _:person_gorczyca, _:person_kettmann, _:person_mennicke, _:person_strass ;
+                                      dcterms:contributor _:person_hartig, _:person_tsurkan, _:person_heidenreich . 
+
+# Named blank nodes for creators/authors
+_:person_arndt
+    a schema:Person ;
+    schema:name "Dörthe Arndt" ;
+    schema:url <https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en> ;
+    schema:affiliation _:iccl_tud .
+
+_:person_diller
+    a schema:Person ;
+    schema:name "Martin Diller" ;
+    schema:url <https://iccl.inf.tu-dresden.de/web/Martin_Diller/en> ;
+    schema:affiliation _:iccl_tud .
+
+_:person_gorczyca
+    a schema:Person ;
+    schema:name "Piotr Gorczyca" ;
+    schema:url <https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en> ;
+    schema:affiliation _:iccl_tud .
+
+_:person_kettmann
+    a schema:Person ;
+    schema:name "Pascal Kettmann" ;
+    schema:url <https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann/en> ;
+    schema:affiliation _:iccl_tud .
+
+_:person_mennicke
+    a schema:Person ;
+    schema:name "Stephan Mennicke" ;
+    schema:url <https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en> ;
+    schema:affiliation _:iccl_tud .
+
+_:person_strass
+    a schema:Person ;
+    schema:name "Hannes Straß" ;
+    schema:url <https://iccl.inf.tu-dresden.de/web/Hannes_Stra%C3%9F/en> ;
+    schema:affiliation _:iccl_tud .
+
+_:person_hartig
+    a schema:Person ;
+    schema:name "Evi Hartig" ;
+    schema:affiliation _:ekfz .
+
+_:person_tsurkan
+    a schema:Person ;
+    schema:name "Sarah Tsurkan" ;
+    schema:affiliation _:ekfz .
+
+_:person_heidenreich
+    a schema:Person ;
+    schema:name "Georg Heidenreich" ;
+    schema:affiliation _:siemens_healthineers .
 
 
-_:iccl_tud schema:name "ICCL, TU Dresden" ;
-  schema:url <https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic> .
+# Organizations
+_:iccl_tud
+    a schema:Organization ;
+    schema:name "ICCL, TU Dresden" ;
+    schema:url <https://iccl.inf.tu-dresden.de/web/International_Center_for_Computational_Logic> .
 
-_:siemens_healthineers schema:name "Siemens Healthineers" .
+_:ekfz
+    a schema:Organization ;
+    schema:name "EKFZ, TU Dresden" .
 
-_:ekfz schema:name "EKFZ, TU Dresden" .                                    
+_:siemens_healthineers
+    a schema:Organization ;
+    schema:name "Siemens Healthineers" .
 
 #################################################################
 #    Object Properties
