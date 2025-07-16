@@ -20,6 +20,7 @@
                                       dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                       dcterms:title "Digital Risk Management Ontology" ; 
                                       dcterms:created "2023-09-12"^^xsd:date ;
+                                      schema:citation "Gorczyca, P., Arndt, D., Diller, M., Hampe, J., Heidenreich, G., Kettmann, P., Krötzsch, M., Mennicke, S., Rudolph, S., & Strass, H. (2025). Supporting Risk Management for Medical Devices via the RISKMAN Ontology and Shapes. To appear in Proceedings of the 21st International Conference on Semantic Systems (SEMANTiCS 2025), Vienna, Austria, September 03–05, 2025." ;
                                       owl:versionInfo "1.0.0" ;
                                       rdfs:label "The Riskman Ontology" ;
                                       rdfs:seeAlso <https://w3id.org/riskman/> ;
