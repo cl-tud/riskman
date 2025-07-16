@@ -1,6 +1,7 @@
 @prefix : <https://w3id.org/riskman/ontology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns: <http://purl.org/ontology/bibo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -21,7 +22,10 @@
                                       dcterms:title "Digital Risk Management Ontology" ; 
                                       dcterms:created "2023-09-12"^^xsd:date ;
                                       dcterms:issued "2025-07-15"^^xsd:date ;
+                                      ns:status "Published" ;
+                                      dcterms:source <https://w3id.org/riskman/repo/> ;
                                       schema:citation "Gorczyca, P., Arndt, D., Diller, M., Hampe, J., Heidenreich, G., Kettmann, P., Krötzsch, M., Mennicke, S., Rudolph, S., & Strass, H. (2025). Supporting Risk Management for Medical Devices via the RISKMAN Ontology and Shapes. To appear in Proceedings of the 21st International Conference on Semantic Systems (SEMANTiCS 2025), Vienna, Austria, September 03–05, 2025." ;
+                                      schema:logo <https://raw.githubusercontent.com/cl-tud/riskman/refs/heads/main/assets/riskman_green.png> ;
                                       owl:versionInfo "1.0.0" ;
                                       rdfs:label "The Riskman Ontology" ;
                                       rdfs:seeAlso <https://w3id.org/riskman/> ;
